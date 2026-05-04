@@ -37,7 +37,7 @@ export default function Hero() {
             <div className="lg:col-span-7">
               <div
                 className="font-brand text-accent tracking-[0.04em] leading-none"
-                style={{ fontSize: "clamp(64px, 9vw, 132px)" }}
+                style={{ fontSize: "clamp(64px, 9vw, 132px)", marginLeft: "-0.05em" }}
               >
                 {SITE.brand}
               </div>
