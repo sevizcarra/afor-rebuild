@@ -3,13 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --color-navy-deep: #0F1024;
-  --color-navy: #1A1A2E;
-  --color-orange: #FF5A1F;
-  --color-green: #91F527;
-  --color-off-white: #F5F5F2;
-  --color-gray-line: #2A2B3F;
-  --color-gray-text: #8A8B9A;
+  --color-ink: #0A0A0A;
+  --color-paper: #FAFAF7;
+  --color-bone: #F2F0EB;
+  --color-accent: #B8470A;
 }
 
 @layer base {
@@ -20,47 +17,29 @@
     -moz-osx-font-smoothing: grayscale;
   }
   body {
-    background-color: var(--color-off-white);
-    color: var(--color-navy-deep);
+    background-color: var(--color-paper);
+    color: var(--color-ink);
     font-family: var(--font-inter), system-ui, sans-serif;
-    font-size: 17px;
-    line-height: 1.55;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 400;
   }
   ::selection {
-    background-color: var(--color-orange);
+    background-color: var(--color-accent);
     color: white;
   }
   *:focus-visible {
-    outline: 2px solid var(--color-orange);
-    outline-offset: 2px;
+    outline: 1px solid var(--color-accent);
+    outline-offset: 3px;
   }
 }
 
 @layer utilities {
-  .eyebrow {
-    @apply text-eyebrow uppercase tracking-[0.15em] font-mono font-medium;
+  .label {
+    @apply text-label uppercase tracking-[0.12em] font-mono font-medium;
   }
   .container-edge {
-    @apply mx-auto px-6 md:px-10 lg:px-16;
-    max-width: 1440px;
-  }
-  .accent-line {
-    @apply inline-block h-px w-20 bg-orange;
-  }
-  .accent-line-green {
-    @apply inline-block h-px w-20 bg-green;
-  }
-  /* Botones */
-  .btn-primary {
-    @apply inline-flex items-center gap-3 bg-orange text-white px-7 py-4 font-medium tracking-wide
-           transition-colors duration-200 hover:bg-green hover:text-navy-deep;
-  }
-  .btn-ghost {
-    @apply inline-flex items-center gap-3 border border-off-white/40 text-off-white px-7 py-4 font-medium
-           tracking-wide transition-colors duration-200 hover:bg-off-white hover:text-navy-deep;
-  }
-  .link-arrow {
-    @apply inline-flex items-center gap-2 text-green transition-transform duration-200
-           hover:translate-x-1;
+    @apply mx-auto px-6 md:px-10 lg:px-20;
+    max-width: 1480px;
   }
 }

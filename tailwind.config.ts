@@ -8,32 +8,33 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Brand palette — strict, do not improvise
-        "navy-deep": "#0F1024",
-        navy: "#1A1A2E",
-        orange: "#FF5A1F",
-        green: "#91F527",
-        "off-white": "#F5F5F2",
-        "gray-line": "#2A2B3F",
-        "gray-text": "#8A8B9A",
+        // HATCH-like sober palette
+        ink: "#0A0A0A",          // texto y fondos oscuros
+        paper: "#FAFAF7",        // fondo dominante
+        bone: "#F2F0EB",         // fondos secundarios calidos
+        accent: "#B8470A",       // naranja apagado UNICO
+        "gray-700": "#3A3A38",
+        "gray-500": "#7A7A78",
+        "gray-300": "#C9C7C2",
+        "gray-200": "#E8E6E1",
+        "gray-100": "#EFEDE8",
       },
       fontFamily: {
-        display: ["var(--font-audiowide)", "system-ui", "sans-serif"],
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-        heading: ["var(--font-inter-tight)", "system-ui", "sans-serif"],
+        display: ["var(--font-inter-tight)", "system-ui", "sans-serif"],
         mono: ["var(--font-jetbrains-mono)", "ui-monospace", "monospace"],
       },
       fontSize: {
-        // Aggressive Worley-style scale via clamp()
-        "hero": ["clamp(64px, 9vw, 140px)", { lineHeight: "0.95", letterSpacing: "-0.02em" }],
-        "h1": ["clamp(48px, 6vw, 96px)", { lineHeight: "1.0", letterSpacing: "-0.02em" }],
-        "h2": ["clamp(40px, 5vw, 72px)", { lineHeight: "1.05", letterSpacing: "-0.015em" }],
-        "h3": ["clamp(28px, 3vw, 44px)", { lineHeight: "1.1", letterSpacing: "-0.01em" }],
-        "h4": ["24px", { lineHeight: "1.2" }],
-        "body-lg": ["20px", { lineHeight: "1.4" }],
-        "body": ["17px", { lineHeight: "1.55" }],
-        "body-sm": ["14px", { lineHeight: "1.5" }],
-        "eyebrow": ["12px", { lineHeight: "1.3", letterSpacing: "0.15em" }],
+        // Sober editorial scale
+        "display": ["clamp(56px, 7vw, 110px)", { lineHeight: "1.02", letterSpacing: "-0.025em" }],
+        "h1": ["clamp(40px, 4.5vw, 68px)", { lineHeight: "1.08", letterSpacing: "-0.02em" }],
+        "h2": ["clamp(32px, 3.5vw, 52px)", { lineHeight: "1.1", letterSpacing: "-0.015em" }],
+        "h3": ["clamp(24px, 2.4vw, 32px)", { lineHeight: "1.2", letterSpacing: "-0.01em" }],
+        "h4": ["20px", { lineHeight: "1.3" }],
+        "lead": ["19px", { lineHeight: "1.5" }],
+        "body": ["16px", { lineHeight: "1.6" }],
+        "small": ["14px", { lineHeight: "1.55" }],
+        "label": ["12px", { lineHeight: "1.3", letterSpacing: "0.12em" }],
       },
       transitionTimingFunction: {
         "out-expo": "cubic-bezier(0.16, 1, 0.3, 1)",

@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { HERO, HERO_IMAGES } from "@/lib/content";
 import clsx from "clsx";
 
-const ROTATE_MS = 7000;
+const ROTATE_MS = 8000;
 
 export default function Hero() {
   const [idx, setIdx] = useState(0);
@@ -15,15 +15,14 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="top" className="relative h-screen w-full overflow-hidden bg-navy-deep">
-      {/* Background images */}
+    <section id="top" className="relative h-screen w-full overflow-hidden bg-ink">
       <AnimatePresence mode="sync">
         <motion.div
           key={idx}
-          initial={{ opacity: 0, scale: 1.05 }}
+          initial={{ opacity: 0, scale: 1.04 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ opacity: { duration: 1.6, ease: "easeInOut" }, scale: { duration: ROTATE_MS / 1000, ease: "linear" } }}
+          transition={{ opacity: { duration: 1.8, ease: "easeInOut" }, scale: { duration: ROTATE_MS / 1000, ease: "linear" } }}
           className="absolute inset-0"
         >
           <img
@@ -35,84 +34,70 @@ export default function Hero() {
         </motion.div>
       </AnimatePresence>
 
-      {/* Overlay sutil */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(180deg, rgba(15,16,36,0.35) 0%, rgba(15,16,36,0.05) 40%, rgba(15,16,36,0.75) 100%)",
-        }}
-      />
+      {/* Overlay sutil — solo abajo para legibilidad */}
+      <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/20 to-ink/30" />
 
-      {/* Content - alineado a la izquierda con mas respiro */}
-      <div className="relative z-10 h-full container-edge flex flex-col justify-end pb-24 md:pb-32">
+      <div className="relative z-10 h-full container-edge flex flex-col justify-end pb-24 md:pb-32 max-w-5xl">
         <motion.span
-          initial={{ opacity: 0, y: 12 }}
+          initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="eyebrow text-orange mb-8"
+          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+          className="label text-paper/80 mb-10"
         >
           {HERO.eyebrow}
         </motion.span>
         <motion.h1
-          initial={{ opacity: 0, y: 18 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="font-heading font-medium text-off-white max-w-5xl"
-          style={{
-            fontSize: "clamp(56px, 8vw, 120px)",
-            lineHeight: "1.02",
-            letterSpacing: "-0.025em",
-          }}
+          transition={{ duration: 1, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+          className="font-display text-display font-medium text-paper"
         >
-          {HERO.title[0]}
-          <br />
-          {HERO.title[1]}
+          {HERO.title[0]}<br />{HERO.title[1]}
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-10 text-body-lg text-off-white/80 max-w-2xl font-light"
+          transition={{ duration: 0.9, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+          className="mt-10 text-lead text-paper/85 max-w-2xl font-light leading-relaxed"
         >
           {HERO.subtitle}
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.9, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
           className="mt-12 flex flex-col sm:flex-row sm:items-center gap-8"
         >
           <a
             href={HERO.ctaPrimary.href}
-            className="inline-flex items-center gap-3 text-off-white border-b border-off-white/40 pb-1 hover:border-orange hover:text-orange transition-colors duration-300"
+            className="inline-flex items-center gap-3 text-paper border-b border-paper/50 pb-2 hover:border-accent transition-colors duration-300 group"
           >
-            {HERO.ctaPrimary.label}
-            <span className="text-orange">→</span>
+            <span>{HERO.ctaPrimary.label}</span>
+            <span className="text-accent transition-transform duration-300 group-hover:translate-x-1">→</span>
           </a>
-          <a href={HERO.ctaSecondary.href} className="text-body text-off-white/60 hover:text-off-white transition-colors">
+          <a href={HERO.ctaSecondary.href} className="text-small text-paper/65 hover:text-paper transition-colors duration-300">
             {HERO.ctaSecondary.label}
           </a>
         </motion.div>
       </div>
 
-      {/* Indicador del carrusel - mas fino */}
+      {/* Indicador minimal */}
       <div className="absolute bottom-10 left-0 right-0 z-10 container-edge flex items-end justify-between">
-        <div className="flex gap-4">
+        <div className="flex gap-3">
           {HERO_IMAGES.map((_, i) => (
             <button
               key={i}
               onClick={() => setIdx(i)}
               className={clsx(
-                "h-px w-12 transition-colors duration-500",
-                i === idx ? "bg-orange" : "bg-off-white/20"
+                "h-px w-10 transition-colors duration-700",
+                i === idx ? "bg-paper" : "bg-paper/20"
               )}
               aria-label={`Slide ${i + 1}`}
             />
           ))}
         </div>
-        <span className="font-mono text-body-sm text-off-white/40 tracking-wider">
-          {String(idx + 1).padStart(2, "0")} / {String(HERO_IMAGES.length).padStart(2, "0")}
+        <span className="font-mono text-small text-paper/50 tabular-nums tracking-wider">
+          {String(idx + 1).padStart(2, "0")} <span className="opacity-40">/ {String(HERO_IMAGES.length).padStart(2, "0")}</span>
         </span>
       </div>
     </section>

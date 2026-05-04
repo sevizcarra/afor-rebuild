@@ -1,11 +1,9 @@
-// Centralized copy — easy to edit / translate later.
-
 export const SITE = {
   brand: "AFOR",
   slogan: "Making ideas grow",
   email: "contacto@afor.cl",
   phone: "+56 9 6350 1854",
-  address: "Las Condes, Santiago",
+  address: "Las Condes, Santiago, Chile",
   intranet: "https://intranet.afor.cl",
   dossierUrl: "/AFOR_Dossier_2025.pdf",
 };
@@ -18,31 +16,22 @@ export const NAV_LINKS = [
 ];
 
 export const HERO = {
-  eyebrow: "ARQUITECTURA · INGENIERÍA · PROJECT MANAGEMENT",
+  eyebrow: "Arquitectura · Ingeniería · Project Management",
   title: ["Making ideas", "grow."],
   subtitle:
     "Firma dedicada al proyecto del cliente. Diez años en gran minería e industria. Sin overhead, sin diluir. El senior que firma es el que ejecuta.",
   ctaPrimary: { label: "Ver proyectos", href: "#proyectos" },
-  ctaSecondary: { label: "→ Conoce el equipo", href: "#nosotros" },
+  ctaSecondary: { label: "Conoce el equipo", href: "#nosotros" },
 };
 
 export const HERO_IMAGES = [
-  {
-    src: "/images/hero/hero-01-instalacion-tecnica.jpg",
-    alt: "Instalación técnica con cielo de listones de madera y climatización en obra",
-  },
-  {
-    src: "/images/hero/hero-02-obra-gruesa.jpg",
-    alt: "Obra gruesa con estructura metálica vista y conos de seguridad",
-  },
-  {
-    src: "/images/hero/hero-03-tabiqueria.jpg",
-    alt: "Tabiquería en obra con perfilería metálica y paneles OSB",
-  },
+  { src: "/images/hero/hero-01.jpg", alt: "Facilities Camiones Autónomos — Minera Escondida" },
+  { src: "/images/hero/hero-02.jpg", alt: "Edificio CHO — BHP Puerto Coloso" },
+  { src: "/images/hero/hero-03.jpg", alt: "Sala de Control GOM — Minera Escondida" },
 ];
 
 export const ABOUT = {
-  eyebrow: "01 — QUIÉNES SOMOS",
+  eyebrow: "Quiénes somos",
   title: ["No vendemos horas.", "Vendemos criterio."],
   paragraphs: [
     "Nos integramos al equipo del proyecto como una extensión de su ingeniería. Adoptamos su codificación, manuales y estándares de entrega.",
@@ -52,34 +41,14 @@ export const ABOUT = {
 };
 
 export const PILLARS = [
-  {
-    n: "01",
-    title: "ENFOQUE EN PROCESOS",
-    body:
-      "Diseñamos desde la lógica del proceso productivo. Cada metro cuadrado responde a la operación, el flujo de personal y la continuidad del servicio.",
-  },
-  {
-    n: "02",
-    title: "RIGOR NORMATIVO",
-    body:
-      "Dominio de normativas y estándares de seguridad para la gran minería e industria. Expedientes completos para aprobaciones.",
-  },
-  {
-    n: "03",
-    title: "COORDINACIÓN BIM",
-    body:
-      "Trabajamos en Revit/BIM con la codificación que su proyecto requiera. Modelos coordinados, libres de interferencias, integrados con estructural, mecánica, eléctrica e instrumentación.",
-  },
-  {
-    n: "04",
-    title: "MODELO FLEXIBLE",
-    body:
-      "Equipo dedicado solo cuando su proyecto lo requiera. Sin overhead permanente. Acoplamiento a sus procesos, manuales y plazos.",
-  },
+  { n: "01", title: "Enfoque en procesos", body: "Diseñamos desde la lógica del proceso productivo. Cada metro cuadrado responde a la operación, el flujo de personal y la continuidad del servicio." },
+  { n: "02", title: "Rigor normativo", body: "Dominio de normativas y estándares de seguridad para la gran minería e industria. Expedientes completos para aprobaciones." },
+  { n: "03", title: "Coordinación BIM", body: "Trabajamos en Revit/BIM con la codificación que su proyecto requiera. Modelos coordinados, libres de interferencias, integrados con estructural, mecánica, eléctrica e instrumentación." },
+  { n: "04", title: "Modelo flexible", body: "Equipo dedicado solo cuando su proyecto lo requiera. Sin overhead permanente. Acoplamiento a sus procesos, manuales y plazos." },
 ];
 
 export const SERVICES = {
-  eyebrow: "02 — SERVICIOS",
+  eyebrow: "Servicios",
   title: ["Servicios técnicos", "integrales."],
   items: [
     "Master Plan de Arquitectura para Faenas e Instalaciones",
@@ -93,11 +62,7 @@ export const SERVICES = {
 };
 
 export const STATS = {
-  big: {
-    value: "10+",
-    caption:
-      "Años de experiencia integrando arquitectura, ingeniería y project management en proyectos críticos.",
-  },
+  big: { value: "10+", caption: "Años de experiencia integrando arquitectura, ingeniería y project management en proyectos críticos." },
   mini: [
     { value: "20+", label: "Proyectos ejecutados desde 2017" },
     { value: "15", label: "Desarrollos de ingeniería propia" },
@@ -106,48 +71,12 @@ export const STATS = {
 };
 
 export const FEATURED_PROJECTS = [
-  {
-    img: "/images/projects/edificio-cho.jpg",
-    eyebrow: "BHP-COLOSO · 2025",
-    title: "Remediación Edificio CHO",
-    caption: "Ingeniería de Detalle · Ejecutado",
-    span: "wide", // 2 columnas
-  },
-  {
-    img: "/images/projects/facilities-enat.jpg",
-    eyebrow: "ESCONDIDA · EN-AT",
-    title: "Facilities Camiones Autónomos",
-    caption: "Ingeniería Interim · BIM",
-    span: "tall",
-  },
-  {
-    img: "/images/projects/gt-chile.jpg",
-    eyebrow: "GRANT THORNTON · CHILE",
-    title: "Oficinas Corporativas",
-    caption: "Habilitación · Ejecutado",
-    span: "normal",
-  },
-  {
-    img: "/images/projects/las-yacas.jpg",
-    eyebrow: "MINERA LAS YACAS · VICUÑA",
-    title: "Barrio Cívico e Infraestructura",
-    caption: "Master Plan · Faena",
-    span: "normal",
-  },
-  {
-    img: "/images/projects/santa-alejandra.jpg",
-    eyebrow: "MECASFY · SANTA ALEJANDRA",
-    title: "Edificio Industrial y Corporativo",
-    caption: "Diseño Integral",
-    span: "wide",
-  },
-  {
-    img: "/images/projects/gom-enat.jpg",
-    eyebrow: "ESCONDIDA · GOM",
-    title: "Sala de Control GOM",
-    caption: "Ingeniería de Detalle",
-    span: "normal",
-  },
+  { img: "/images/projects/edificio-cho.jpg", eyebrow: "BHP Coloso · 2025", title: "Remediación Edificio CHO", caption: "Ingeniería de Detalle · Ejecutado" },
+  { img: "/images/projects/facilities-enat.jpg", eyebrow: "Escondida · EN-AT", title: "Facilities Camiones Autónomos", caption: "Ingeniería Interim · BIM" },
+  { img: "/images/projects/gt-chile.jpg", eyebrow: "Grant Thornton Chile", title: "Oficinas Corporativas", caption: "Habilitación · Ejecutado" },
+  { img: "/images/projects/las-yacas.jpg", eyebrow: "Minera Las Yacas", title: "Barrio Cívico e Infraestructura", caption: "Master Plan · Faena" },
+  { img: "/images/projects/santa-alejandra.jpg", eyebrow: "Mecasfy · Santa Alejandra", title: "Edificio Industrial y Corporativo", caption: "Diseño Integral" },
+  { img: "/images/projects/gom-enat.jpg", eyebrow: "Escondida · GOM", title: "Sala de Control GOM", caption: "Ingeniería de Detalle" },
 ];
 
 export const PORTFOLIO = [
@@ -160,7 +89,7 @@ export const PORTFOLIO = [
   { year: "2023", project: "Garita y Accesos – Cerro Colorado", company: "BHP" },
   { year: "2023", project: "Casas de Cambio – Spence Growth Options", company: "BHP" },
   { year: "2022", project: "Truck Shop Norte – Spence", company: "BHP" },
-  { year: "2022", project: "Sala Eléctrica e Instrumentación – Quebrada Blanca", company: "Teck" },
+  { year: "2022", project: "Sala Eléctrica – Quebrada Blanca", company: "Teck" },
   { year: "2022", project: "Master Plan Faena – Salar de Atacama", company: "SQM" },
   { year: "2021", project: "Centro de Operaciones Integradas (COI)", company: "Codelco" },
   { year: "2021", project: "Edificio Servicios – Distrito Norte", company: "Codelco" },
@@ -173,7 +102,7 @@ export const PORTFOLIO = [
 ];
 
 export const CONTACT = {
-  eyebrow: "HABLEMOS",
+  eyebrow: "Hablemos",
   title: ["¿Tu próximo", "proyecto?"],
   body: "Cuéntanos qué necesitas. Respondemos en 24 horas.",
 };

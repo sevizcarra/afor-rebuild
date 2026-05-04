@@ -1,91 +1,64 @@
 "use client";
 import { motion } from "framer-motion";
-import clsx from "clsx";
 import { FEATURED_PROJECTS } from "@/lib/content";
-
-const spanClass = (span: string) => {
-  switch (span) {
-    case "wide":
-      return "md:col-span-2 aspect-[16/10]";
-    case "tall":
-      return "md:row-span-2 aspect-[3/4]";
-    default:
-      return "aspect-[4/3]";
-  }
-};
 
 export default function FeaturedProjects() {
   return (
-    <section id="proyectos" className="bg-off-white py-32 md:py-44">
+    <section id="proyectos" className="bg-paper py-32 md:py-44">
       <div className="container-edge">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-20"
+          transition={{ duration: 0.7 }}
+          className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16 md:mb-20"
         >
-          <div>
-            <div className="flex items-center gap-4 mb-10">
-              <span className="accent-line" />
-              <span className="eyebrow text-orange">03 — PROYECTOS DESTACADOS</span>
-            </div>
-            <h2
-              className="font-heading font-medium text-navy-deep"
-              style={{ fontSize: "clamp(36px, 4.5vw, 64px)", lineHeight: "1.1", letterSpacing: "-0.015em" }}
-            >
+          <div className="lg:col-span-7">
+            <span className="label text-accent">Proyectos destacados</span>
+            <h2 className="mt-6 font-display font-medium text-h1 text-ink">
               Procesos.<br />No catálogo.
             </h2>
           </div>
-          <p className="max-w-md text-body text-navy-deep/65 font-light">
+          <p className="lg:col-span-5 lg:pt-12 text-body text-gray-700 max-w-md">
             Una selección representativa. Para BHP, Codelco e ingenierías Tier 1.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 auto-rows-fr">
+        {/* Grid regular 3 columnas — sin asimetria brutalista */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14">
           {FEATURED_PROJECTS.map((p, i) => (
             <motion.article
               key={p.title}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.6, delay: i * 0.06, ease: [0.16, 1, 0.3, 1] }}
-              className={clsx(
-                "group relative overflow-hidden bg-navy-deep cursor-pointer",
-                spanClass(p.span)
-              )}
+              transition={{ duration: 0.6, delay: i * 0.05, ease: [0.16, 1, 0.3, 1] }}
+              className="group cursor-pointer"
             >
-              <img
-                src={p.img}
-                alt={p.title}
-                className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 group-hover:scale-[1.04]"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/95 via-navy-deep/30 to-transparent transition-opacity duration-500 group-hover:from-navy-deep" />
-              <div className="absolute inset-x-0 bottom-0 p-7 md:p-10">
-                <div className="font-mono text-body-sm text-orange mb-3 tracking-widest">
-                  {p.eyebrow}
-                </div>
-                <h3
-                  className="font-heading font-medium text-off-white leading-tight"
-                  style={{ fontSize: "clamp(20px, 2vw, 32px)" }}
-                >
-                  {p.title}
-                </h3>
-                <p className="mt-3 text-body-sm text-off-white/65 font-light">
-                  {p.caption}
-                </p>
+              <div className="relative overflow-hidden bg-gray-200 aspect-[4/5] mb-6">
+                <img
+                  src={p.img}
+                  alt={p.title}
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 group-hover:scale-[1.03]"
+                  loading="lazy"
+                />
               </div>
+              <div className="font-mono text-small text-gray-500 mb-2 tracking-wider">{p.eyebrow}</div>
+              <h3 className="font-display font-medium text-h4 text-ink leading-snug mb-2 transition-colors duration-300 group-hover:text-accent">
+                {p.title}
+              </h3>
+              <p className="text-small text-gray-700">{p.caption}</p>
             </motion.article>
           ))}
         </div>
 
-        <div className="mt-20 flex justify-end">
+        <div className="mt-20">
           <a
             href="#portafolio"
-            className="text-body text-navy-deep border-b border-navy-deep/30 pb-1 hover:border-orange hover:text-orange transition-colors duration-300"
+            className="inline-flex items-center gap-3 text-body text-ink border-b border-ink/30 pb-2 hover:border-accent hover:text-accent transition-colors duration-300 group"
           >
-            Ver portafolio completo →
+            <span>Ver portafolio completo</span>
+            <span className="text-accent transition-transform duration-300 group-hover:translate-x-1">→</span>
           </a>
         </div>
       </div>

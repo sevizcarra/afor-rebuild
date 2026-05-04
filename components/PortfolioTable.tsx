@@ -4,32 +4,26 @@ import { PORTFOLIO } from "@/lib/content";
 
 export default function PortfolioTable() {
   return (
-    <section id="portafolio" className="bg-navy-deep py-32 md:py-44 border-t border-gray-line/50">
+    <section id="portafolio" className="bg-bone py-32 md:py-44 border-t border-gray-200">
       <div className="container-edge">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.7 }}
           className="mb-16"
         >
-          <div className="flex items-center gap-4 mb-10">
-            <span className="accent-line-green" />
-            <span className="eyebrow text-green">04 — TRAYECTORIA</span>
-          </div>
-          <h2
-            className="font-heading font-medium text-off-white max-w-3xl"
-            style={{ fontSize: "clamp(36px, 4.5vw, 64px)", lineHeight: "1.1", letterSpacing: "-0.015em" }}
-          >
-            +20 proyectos para gran minería desde 2017.
+          <span className="label text-accent">Trayectoria completa</span>
+          <h2 className="mt-6 font-display font-medium text-h1 text-ink max-w-3xl">
+            +20 proyectos para gran<br />minería desde 2017.
           </h2>
         </motion.div>
 
-        <div className="border-t border-gray-line/40">
-          <div className="hidden md:grid grid-cols-[100px_1fr_280px] gap-8 py-5 border-b border-gray-line/40">
-            <span className="eyebrow text-gray-text">Año</span>
-            <span className="eyebrow text-gray-text">Proyecto</span>
-            <span className="eyebrow text-gray-text">Cliente</span>
+        <div className="border-t border-ink/15">
+          <div className="hidden md:grid grid-cols-[80px_1fr_280px] gap-8 py-4 border-b border-ink/15">
+            <span className="label text-gray-500">Año</span>
+            <span className="label text-gray-500">Proyecto</span>
+            <span className="label text-gray-500">Cliente</span>
           </div>
           {PORTFOLIO.map((row, i) => (
             <motion.div
@@ -37,12 +31,12 @@ export default function PortfolioTable() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, margin: "-30px" }}
-              transition={{ duration: 0.4, delay: i * 0.02 }}
-              className="grid grid-cols-1 md:grid-cols-[100px_1fr_280px] gap-2 md:gap-8 py-6 border-b border-gray-line/40 transition-colors duration-300 hover:bg-green/5"
+              transition={{ duration: 0.4, delay: i * 0.015 }}
+              className="grid grid-cols-1 md:grid-cols-[80px_1fr_280px] gap-2 md:gap-8 py-5 border-b border-ink/10 transition-colors duration-300 hover:bg-paper/60"
             >
-              <span className="font-mono text-body-sm text-orange tracking-wider">{row.year}</span>
-              <span className="text-body text-off-white/90 font-light">{row.project}</span>
-              <span className="text-body-sm text-gray-text">{row.company}</span>
+              <span className="font-mono text-small text-gray-500 tabular-nums">{row.year}</span>
+              <span className="text-body text-ink">{row.project}</span>
+              <span className="text-small text-gray-700">{row.company}</span>
             </motion.div>
           ))}
         </div>

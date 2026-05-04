@@ -4,43 +4,36 @@ import { STATS } from "@/lib/content";
 
 export default function StatHighlight() {
   return (
-    <section className="bg-navy py-32 md:py-44">
-      <div className="container-edge grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-32 items-center">
+    <section className="bg-bone py-32 md:py-44 border-t border-gray-200">
+      <div className="container-edge grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-20">
         <motion.div
-          initial={{ opacity: 0, x: -16 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="lg:col-span-7"
         >
+          <span className="label text-accent">Trayectoria</span>
           <div
-            className="font-display text-orange leading-[0.85] tracking-tight"
-            style={{ fontSize: "clamp(110px, 16vw, 220px)" }}
+            className="mt-8 font-display text-ink leading-[0.9] tracking-tight font-medium"
+            style={{ fontSize: "clamp(120px, 18vw, 240px)" }}
           >
             {STATS.big.value}
           </div>
-          <p className="mt-8 text-body-lg text-off-white/80 max-w-md font-light leading-relaxed">
-            {STATS.big.caption}
-          </p>
+          <p className="mt-8 text-lead text-gray-700 max-w-md leading-relaxed">{STATS.big.caption}</p>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, x: 16 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-          className="space-y-px"
+          className="lg:col-span-5 lg:pt-32 space-y-px"
         >
           {STATS.mini.map((s, i) => (
-            <div
-              key={i}
-              className="border-t border-green/30 last:border-b py-8 flex items-baseline gap-10"
-            >
-              <span className="font-display text-5xl text-off-white tabular-nums w-24">
-                {s.value}
-              </span>
-              <span className="text-body-sm text-gray-text uppercase tracking-widest font-mono leading-relaxed">
-                {s.label}
-              </span>
+            <div key={i} className="border-t border-ink/15 last:border-b py-6 flex items-baseline justify-between">
+              <span className="font-display text-h3 text-ink tabular-nums font-medium">{s.value}</span>
+              <span className="text-small text-gray-700 max-w-[220px] text-right leading-snug">{s.label}</span>
             </div>
           ))}
         </motion.div>

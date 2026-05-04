@@ -6,7 +6,7 @@ import clsx from "clsx";
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
+    const onScroll = () => setScrolled(window.scrollY > 80);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -16,24 +16,23 @@ export default function Nav() {
     <header
       className={clsx(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
-        scrolled
-          ? "bg-navy-deep/85 backdrop-blur-lg"
-          : "bg-transparent"
+        scrolled ? "bg-paper/95 backdrop-blur-md border-b border-gray-200" : "bg-paper/0"
       )}
     >
-      <nav className={clsx("container-edge flex items-center justify-between transition-all duration-500", scrolled ? "h-14" : "h-20")}>
-        {/* Logo */}
-        <a href="#top" className="font-display text-xl text-off-white tracking-[0.2em]">
+      <nav className={clsx("container-edge flex items-center justify-between transition-all duration-500", scrolled ? "h-16" : "h-20")}>
+        <a href="#top" className={clsx("font-display font-semibold tracking-[0.18em] text-xl transition-colors", scrolled ? "text-ink" : "text-paper")}>
           {SITE.brand}
         </a>
 
-        {/* Menu centrado */}
-        <ul className="hidden md:flex items-center gap-12 absolute left-1/2 -translate-x-1/2">
+        <ul className="hidden md:flex items-center gap-10">
           {NAV_LINKS.map((l) => (
             <li key={l.href}>
               <a
                 href={l.href}
-                className="text-body-sm text-off-white/70 hover:text-off-white font-normal tracking-wide transition-colors"
+                className={clsx(
+                  "text-small font-normal transition-colors duration-300",
+                  scrolled ? "text-ink/70 hover:text-ink" : "text-paper/80 hover:text-paper"
+                )}
               >
                 {l.label}
               </a>
@@ -41,10 +40,14 @@ export default function Nav() {
           ))}
         </ul>
 
-        {/* CTA con borde fino, no relleno */}
         <a
           href="#contacto"
-          className="text-body-sm text-off-white px-5 py-2 border border-off-white/30 hover:border-orange hover:text-orange transition-colors duration-300 tracking-wide"
+          className={clsx(
+            "text-small px-5 py-2 transition-colors duration-300",
+            scrolled
+              ? "text-ink border-b border-ink/30 hover:border-accent hover:text-accent"
+              : "text-paper border-b border-paper/40 hover:border-accent hover:text-accent"
+          )}
         >
           Hablemos
         </a>
