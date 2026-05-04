@@ -49,13 +49,10 @@ export default function Hero() {
               </p>
             </div>
 
-            {/* DER — Eyebrow + descripcion */}
-            <div className="lg:col-span-5 lg:border-l lg:border-paper/10 lg:pl-12 space-y-6">
-              <span className="block text-label uppercase tracking-[0.2em] font-mono text-accent">
-                {HERO.eyebrow}
-              </span>
-              <p className="text-small text-paper/80 font-light leading-relaxed">
-                Diez años en gran minería e industria. Sin overhead, sin diluir. El senior que firma es el que ejecuta.
+            {/* DER — Resumen de la compania */}
+            <div className="lg:col-span-5 lg:border-l lg:border-paper/10 lg:pl-12">
+              <p className="text-body text-paper font-light leading-relaxed">
+                Firma chilena especializada en el diseño de <span className="text-paper">facilities</span> para operaciones mineras e industriales. Diseñamos y coordinamos oficinas, casas de cambio, salas técnicas, truck shops y áreas de almacenamiento. Diez años aplicando criterio arquitectónico al lenguaje de la ingeniería para BHP, Codelco e ingenierías Tier 1.
               </p>
             </div>
 
