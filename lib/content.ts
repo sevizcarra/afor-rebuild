@@ -1,3 +1,5 @@
+// Centralized copy — foco: facilities para mineria e industria.
+
 export const SITE = {
   brand: "AFOR",
   slogan: "Making ideas grow",
@@ -16,10 +18,10 @@ export const NAV_LINKS = [
 ];
 
 export const HERO = {
-  eyebrow: "Arquitectura · Ingeniería · Project Management",
+  eyebrow: "Facilities · Minería · Industria",
   title: ["Making ideas", "grow."],
   subtitle:
-    "Firma dedicada al proyecto del cliente. Diez años en gran minería e industria. Sin overhead, sin diluir. El senior que firma es el que ejecuta.",
+    "Diseñamos y coordinamos facilities para operaciones mineras e industriales. Diez años de criterio aplicado a oficinas, casas de cambio, salas de control y técnicas, RESPEL y truck shops para BHP, Codelco e ingenierías Tier 1.",
   ctaPrimary: { label: "Ver proyectos", href: "#proyectos" },
   ctaSecondary: { label: "Conoce el equipo", href: "#nosotros" },
 };
@@ -30,53 +32,81 @@ export const HERO_IMAGES = [
   { src: "/images/hero/hero-03.jpg", alt: "" },
 ];
 
+// Frase corta del banner inferior (titular de posicionamiento)
+export const HERO_BANNER_TITLE = ["Facilities pensadas", "como infraestructura crítica."];
+export const HERO_BANNER_SHORT = "Diez años diseñando facilities mineras e industriales. Sin overhead, sin diluir. El senior que firma es el que ejecuta.";
+
 export const ABOUT = {
   eyebrow: "Quiénes somos",
   title: ["No vendemos horas.", "Vendemos criterio."],
   paragraphs: [
-    "Nos integramos al equipo del proyecto como una extensión de su ingeniería. Adoptamos su codificación, manuales y estándares de entrega.",
+    "Diseñamos facilities para minería e industria — oficinas, casas de cambio, salas de control, salas eléctricas y técnicas, truck shops, RESPEL y almacenamiento. Nos integramos al equipo del proyecto como una extensión de su ingeniería: adoptamos su codificación, manuales y estándares de entrega.",
     "Una dirección estratégica con diez años en la industria. Una gerencia comercial con dieciocho años construyendo cuentas mineras grandes. Sin capas intermedias, sin account manager.",
     "El senior que firma es el mismo que está al teléfono.",
   ],
 };
 
 export const PILLARS = [
-  { n: "01", title: "Enfoque en procesos", body: "Diseñamos desde la lógica del proceso productivo. Cada metro cuadrado responde a la operación, el flujo de personal y la continuidad del servicio." },
-  { n: "02", title: "Rigor normativo", body: "Dominio de normativas y estándares de seguridad para la gran minería e industria. Expedientes completos para aprobaciones." },
-  { n: "03", title: "Coordinación BIM", body: "Trabajamos en Revit/BIM con la codificación que su proyecto requiera. Modelos coordinados, libres de interferencias, integrados con estructural, mecánica, eléctrica e instrumentación." },
-  { n: "04", title: "Modelo flexible", body: "Equipo dedicado solo cuando su proyecto lo requiera. Sin overhead permanente. Acoplamiento a sus procesos, manuales y plazos." },
+  {
+    n: "01",
+    title: "Diseño operacional",
+    body:
+      "Cada facility se diseña desde la lógica del proceso productivo y del flujo operacional. Cada metro cuadrado responde a operación, seguridad y continuidad de servicio.",
+  },
+  {
+    n: "02",
+    title: "Rigor normativo",
+    body:
+      "Dominio de normativas y estándares de seguridad para gran minería e industria. Expedientes completos para aprobaciones internas y de autoridades.",
+  },
+  {
+    n: "03",
+    title: "Coordinación BIM",
+    body:
+      "Trabajamos en Revit/BIM con la codificación que su proyecto requiera. Modelos coordinados, libres de interferencias, integrados con estructural, mecánica, eléctrica e instrumentación.",
+  },
+  {
+    n: "04",
+    title: "Modelo flexible",
+    body:
+      "Equipo dedicado solo cuando su proyecto lo requiera. Sin overhead permanente. Acoplamiento a sus procesos, manuales y plazos.",
+  },
 ];
 
 export const SERVICES = {
   eyebrow: "Servicios",
-  title: ["Servicios técnicos", "integrales."],
+  title: ["Facilities,", "end-to-end."],
   items: [
-    "Master Plan de Arquitectura para Faenas e Instalaciones",
-    "Edificación: Oficinas y Casas de Cambio",
-    "Salas de Control, Servidores, Eléctricas y Técnicas",
-    "RESPEL, Almacenamiento y Truck Shops",
-    "Revisión de contraparte de planos y documentos",
+    "Master Plan de facilities para faenas e instalaciones",
+    "Oficinas administrativas y casas de cambio",
+    "Salas de control, servidores, eléctricas y técnicas",
+    "Edificación técnica para RESPEL, almacenamiento y truck shops",
+    "Coordinación multidisciplinar y revisión de contraparte",
     "Supervisión de terreno y avances",
-    "Project Management para proyectos multidisciplinares",
+    "Project Management dedicado para proyectos multidisciplinares",
   ],
 };
 
 export const STATS = {
-  big: { value: "10+", caption: "Años de experiencia integrando arquitectura, ingeniería y project management en proyectos críticos." },
+  big: {
+    value: "10+",
+    caption:
+      "Años diseñando y coordinando facilities para operaciones mineras e industriales en Chile.",
+  },
   mini: [
-    { value: "20+", label: "Proyectos ejecutados desde 2017" },
+    { value: "20+", label: "Facilities ejecutadas desde 2017" },
     { value: "15", label: "Desarrollos de ingeniería propia" },
     { value: "4", label: "Revisiones de contraparte para Tier 1" },
   ],
 };
 
 export const FEATURED_PROJECTS = [
-  { img: "/images/projects/edificio-cho.jpg", eyebrow: "BHP Coloso · 2025", title: "Remediación Edificio CHO", caption: "Ingeniería de Detalle · Ejecutado" },
-  { img: "/images/projects/facilities-enat.jpg", eyebrow: "Escondida · EN-AT", title: "Facilities Camiones Autónomos", caption: "Ingeniería Interim · BIM" },
+  { img: "/images/projects/edificio-cho.jpg", eyebrow: "BHP Coloso · 2025", title: "Remediación Edificio CHO", caption: "Facility técnica · Ejecutado" },
+  { img: "/images/projects/facilities-enat.jpg", eyebrow: "Escondida · EN-AT", title: "Facilities Camiones Autónomos", caption: "Sala de control + auxiliares · BIM" },
   { img: "/images/projects/gt-chile.jpg", eyebrow: "Grant Thornton Chile", title: "Oficinas Corporativas", caption: "Habilitación · Ejecutado" },
-  { img: "/images/projects/las-yacas.jpg", eyebrow: "Minera Las Yacas", title: "Barrio Cívico e Infraestructura", caption: "Master Plan · Faena" },
-  { img: "/images/projects/santa-alejandra.jpg", eyebrow: "Mecasfy · Santa Alejandra", title: "Edificio Industrial y Corporativo", caption: "Diseño Integral" },
-  { img: "/images/projects/gom-enat.jpg", eyebrow: "Escondida · GOM", title: "Sala de Control GOM", caption: "Ingeniería de Detalle" },
+  { img: "/images/projects/las-yacas.jpg", eyebrow: "Minera Las Yacas", title: "Barrio Cívico e Infraestructura", caption: "Master plan de facilities · Faena" },
+  { img: "/images/projects/santa-alejandra.jpg", eyebrow: "Mecasfy · Santa Alejandra", title: "Edificio Industrial y Corporativo", caption: "Facility industrial · Diseño integral" },
+  { img: "/images/projects/gom-enat.jpg", eyebrow: "Escondida · GOM", title: "Sala de Control GOM", caption: "Facility técnica · Ingeniería de detalle" },
 ];
 
 export const PORTFOLIO = [
@@ -103,6 +133,6 @@ export const PORTFOLIO = [
 
 export const CONTACT = {
   eyebrow: "Hablemos",
-  title: ["¿Tu próximo", "proyecto?"],
+  title: ["¿Tu próxima", "facility?"],
   body: "Cuéntanos qué necesitas. Respondemos en 24 horas.",
 };
