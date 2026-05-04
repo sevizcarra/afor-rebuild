@@ -25,9 +25,27 @@ export const HERO = {
 };
 
 export const HERO_IMAGES = [
-  { src: "/images/hero/hero-01.jpg", alt: "Facilities Camiones Autónomos — Minera Escondida" },
-  { src: "/images/hero/hero-02.jpg", alt: "Edificio CHO — BHP Puerto Coloso" },
-  { src: "/images/hero/hero-03.jpg", alt: "Sala de Control GOM — Minera Escondida" },
+  {
+    src: "/images/hero/hero-01.jpg",
+    alt: "Tabiquería en obra con perfilería metálica y paneles OSB",
+    project: "Casa de cambio",
+    client: "BHP · Coloso",
+    year: "2025",
+  },
+  {
+    src: "/images/hero/hero-02.jpg",
+    alt: "Obra gruesa con estructura metálica y losa perforada",
+    project: "Edificio de servicios",
+    client: "Codelco · Distrito Norte",
+    year: "2024",
+  },
+  {
+    src: "/images/hero/hero-03.jpg",
+    alt: "Sala técnica con cielo de listones de madera y trabajador en obra",
+    project: "Sala técnica",
+    client: "Escondida · EN-AT",
+    year: "2024",
+  },
 ];
 
 export const ABOUT = {
