@@ -42,7 +42,7 @@ export default function Hero() {
                 {SITE.brand}
               </div>
               <p
-                className="font-mono font-normal text-paper/85 uppercase"
+                className="font-sans font-light text-paper/85 uppercase"
                 style={{ fontSize: "clamp(13px, 1.4vw, 20px)", lineHeight: "1.2", letterSpacing: "0.22em", marginTop: "8px" }}
               >
                 {SITE.slogan}
