@@ -58,22 +58,15 @@ export default function Hero() {
         <div className="container-edge py-10 md:py-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
 
-            {/* IZQ — Wordmark AFOR + slogan, ficha editorial */}
+            {/* IZQ — Wordmark AFOR + slogan */}
             <div className="lg:col-span-7">
-              {/* Linea superior corta como rubric */}
-              <div className="h-px w-12 bg-accent mb-6" />
-
               <div
                 className="font-brand text-paper tracking-[0.04em] leading-none"
                 style={{ fontSize: "clamp(64px, 9vw, 132px)" }}
               >
                 {SITE.brand}
               </div>
-
-              {/* Linea fina debajo del wordmark */}
-              <div className="h-px w-full bg-paper/15 my-6" />
-
-              <p className="font-mono text-small uppercase tracking-[0.25em] text-paper/75">
+              <p className="mt-4 font-display font-light text-body md:text-lead text-paper/80 lowercase tracking-tight">
                 {SITE.slogan}
               </p>
             </div>
