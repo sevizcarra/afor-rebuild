@@ -82,11 +82,10 @@ export default function Hero() {
                   ideas
                 </div>
                 <div
-                  className="font-brand text-accent mt-1"
+                  className="font-brand text-accent mt-1 tracking-[0.04em]"
                   style={{
                     fontSize: "clamp(48px, 6.5vw, 96px)",
                     lineHeight: "0.95",
-                    letterSpacing: "-0.025em",
                   }}
                 >
                   grow.
