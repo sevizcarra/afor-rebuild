@@ -8,7 +8,6 @@ export default function Contact() {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Hook to your backend / form provider here. For now, mailto fallback.
     const data = new FormData(e.currentTarget);
     const subject = encodeURIComponent(`Contacto AFOR — ${data.get("name") || "Sin nombre"}`);
     const body = encodeURIComponent(
@@ -23,30 +22,33 @@ export default function Contact() {
   };
 
   return (
-    <section id="contacto" className="bg-navy-deep py-28 md:py-36 border-t border-gray-line">
-      <div className="container-edge grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+    <section id="contacto" className="bg-navy-deep py-32 md:py-44 border-t border-gray-line/50">
+      <div className="container-edge grid grid-cols-1 lg:grid-cols-2 gap-20 lg:gap-32">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="flex items-center gap-4 mb-8">
+          <div className="flex items-center gap-4 mb-10">
             <span className="accent-line-green" />
             <span className="eyebrow text-green">{CONTACT.eyebrow}</span>
           </div>
-          <h2 className="font-heading font-bold text-h2 text-off-white">
+          <h2
+            className="font-heading font-medium text-off-white"
+            style={{ fontSize: "clamp(40px, 5vw, 72px)", lineHeight: "1.05", letterSpacing: "-0.02em" }}
+          >
             {CONTACT.title[0]}<br />{CONTACT.title[1]}
           </h2>
-          <p className="mt-8 text-body-lg text-off-white/75 max-w-md">{CONTACT.body}</p>
+          <p className="mt-10 text-body-lg text-off-white/70 max-w-md font-light leading-relaxed">{CONTACT.body}</p>
 
-          <ul className="mt-12 space-y-4 font-mono text-body">
+          <ul className="mt-16 space-y-5 font-mono text-body">
             <li>
-              <a href={`mailto:${SITE.email}`} className="text-off-white hover:text-orange transition-colors">
+              <a href={`mailto:${SITE.email}`} className="text-off-white hover:text-orange transition-colors duration-300 border-b border-off-white/20 pb-1">
                 {SITE.email}
               </a>
             </li>
-            <li className="text-off-white">{SITE.phone}</li>
+            <li className="text-off-white/85">{SITE.phone}</li>
             <li className="text-gray-text">{SITE.address}</li>
           </ul>
         </motion.div>
@@ -56,8 +58,8 @@ export default function Contact() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="space-y-8"
+          transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+          className="space-y-10"
         >
           {[
             { name: "name", label: "Nombre", type: "text" },
@@ -65,23 +67,23 @@ export default function Contact() {
             { name: "company", label: "Empresa", type: "text" },
           ].map((f) => (
             <div key={f.name} className="relative">
-              <label htmlFor={f.name} className="eyebrow text-gray-text block mb-3">{f.label}</label>
+              <label htmlFor={f.name} className="eyebrow text-gray-text block mb-4">{f.label}</label>
               <input
                 id={f.name}
                 name={f.name}
                 type={f.type}
                 required
-                className="w-full bg-transparent border-0 border-b border-gray-line text-off-white text-body-lg py-3 focus:border-orange focus:outline-none transition-colors"
+                className="w-full bg-transparent border-0 border-b border-gray-line text-off-white text-body-lg py-3 focus:border-orange focus:outline-none transition-colors duration-300 font-light"
               />
             </div>
           ))}
 
           <div className="relative">
-            <label htmlFor="type" className="eyebrow text-gray-text block mb-3">Tipo de proyecto</label>
+            <label htmlFor="type" className="eyebrow text-gray-text block mb-4">Tipo de proyecto</label>
             <select
               id="type"
               name="type"
-              className="w-full bg-navy-deep border-0 border-b border-gray-line text-off-white text-body-lg py-3 focus:border-orange focus:outline-none transition-colors appearance-none cursor-pointer"
+              className="w-full bg-navy-deep border-0 border-b border-gray-line text-off-white text-body-lg py-3 focus:border-orange focus:outline-none transition-colors duration-300 appearance-none cursor-pointer font-light"
             >
               <option>Mining Facilities</option>
               <option>Industrial Facilities</option>
@@ -93,18 +95,22 @@ export default function Contact() {
           </div>
 
           <div className="relative">
-            <label htmlFor="message" className="eyebrow text-gray-text block mb-3">Mensaje</label>
+            <label htmlFor="message" className="eyebrow text-gray-text block mb-4">Mensaje</label>
             <textarea
               id="message"
               name="message"
               rows={4}
               required
-              className="w-full bg-transparent border-0 border-b border-gray-line text-off-white text-body py-3 focus:border-orange focus:outline-none transition-colors resize-none"
+              className="w-full bg-transparent border-0 border-b border-gray-line text-off-white text-body py-3 focus:border-orange focus:outline-none transition-colors duration-300 resize-none font-light"
             />
           </div>
 
-          <button type="submit" className="btn-primary w-full justify-center">
-            {submitted ? "Enviando…" : "Enviar →"}
+          <button
+            type="submit"
+            className="text-body text-off-white border-b border-off-white/30 pb-2 hover:border-orange hover:text-orange transition-colors duration-300 inline-flex items-center gap-3 group"
+          >
+            {submitted ? "Enviando…" : "Enviar mensaje"}
+            <span className="text-orange transition-transform duration-300 group-hover:translate-x-1">→</span>
           </button>
         </motion.form>
       </div>

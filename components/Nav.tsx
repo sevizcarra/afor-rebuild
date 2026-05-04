@@ -6,7 +6,7 @@ import clsx from "clsx";
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 80);
+    const onScroll = () => setScrolled(window.scrollY > 40);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -15,29 +15,37 @@ export default function Nav() {
   return (
     <header
       className={clsx(
-        "fixed top-0 left-0 right-0 z-50 transition-colors duration-300",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
         scrolled
-          ? "bg-navy-deep/80 backdrop-blur-md border-b border-gray-line"
+          ? "bg-navy-deep/85 backdrop-blur-lg"
           : "bg-transparent"
       )}
     >
-      <nav className="container-edge h-20 flex items-center justify-between">
-        <a href="#top" className="font-display text-2xl text-off-white tracking-wider">
+      <nav className={clsx("container-edge flex items-center justify-between transition-all duration-500", scrolled ? "h-14" : "h-20")}>
+        {/* Logo */}
+        <a href="#top" className="font-display text-xl text-off-white tracking-[0.2em]">
           {SITE.brand}
         </a>
-        <ul className="hidden md:flex items-center gap-10">
+
+        {/* Menu centrado */}
+        <ul className="hidden md:flex items-center gap-12 absolute left-1/2 -translate-x-1/2">
           {NAV_LINKS.map((l) => (
             <li key={l.href}>
               <a
                 href={l.href}
-                className="text-body-sm text-off-white/80 hover:text-off-white transition-colors uppercase tracking-wide"
+                className="text-body-sm text-off-white/70 hover:text-off-white font-normal tracking-wide transition-colors"
               >
                 {l.label}
               </a>
             </li>
           ))}
         </ul>
-        <a href="#contacto" className="btn-primary text-body-sm py-3 px-5">
+
+        {/* CTA con borde fino, no relleno */}
+        <a
+          href="#contacto"
+          className="text-body-sm text-off-white px-5 py-2 border border-off-white/30 hover:border-orange hover:text-orange transition-colors duration-300 tracking-wide"
+        >
           Hablemos
         </a>
       </nav>
