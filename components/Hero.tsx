@@ -60,15 +60,37 @@ export default function Hero() {
 
             {/* IZQ — TITULO + CTAs */}
             <div className="lg:col-span-7">
-              <h1
-                className="font-display font-light text-paper"
-                style={{
-                  fontSize: "clamp(40px, 5.5vw, 80px)",
-                  lineHeight: "0.98",
-                  letterSpacing: "-0.025em",
-                }}
-              >
-                {HERO.title[0]} {HERO.title[1]}
+              <h1 className="text-paper leading-none">
+                <div
+                  className="font-display font-light"
+                  style={{
+                    fontSize: "clamp(28px, 3.6vw, 52px)",
+                    lineHeight: "1.0",
+                    letterSpacing: "-0.01em",
+                  }}
+                >
+                  Making
+                </div>
+                <div
+                  className="font-display font-light"
+                  style={{
+                    fontSize: "clamp(28px, 3.6vw, 52px)",
+                    lineHeight: "1.0",
+                    letterSpacing: "-0.01em",
+                  }}
+                >
+                  ideas
+                </div>
+                <div
+                  className="font-brand text-accent mt-1"
+                  style={{
+                    fontSize: "clamp(48px, 6.5vw, 96px)",
+                    lineHeight: "0.95",
+                    letterSpacing: "-0.025em",
+                  }}
+                >
+                  grow.
+                </div>
               </h1>
               <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-5">
                 <a
