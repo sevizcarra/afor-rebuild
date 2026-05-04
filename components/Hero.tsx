@@ -17,9 +17,9 @@ export default function Hero() {
   const active = HERO_IMAGES[idx];
 
   return (
-    <section id="top" className="relative h-screen w-full overflow-hidden bg-ink flex flex-col">
-      {/* ======= ZONA FOTO — protagonista ~70% ======= */}
-      <div className="relative flex-1 overflow-hidden">
+    <section id="top" className="relative h-screen w-full overflow-hidden bg-ink flex flex-col justify-end">
+      {/* ======= FOTO — cubre toda la section, el banner translucido la deja ver ======= */}
+      <div className="absolute inset-0 overflow-hidden">
         <AnimatePresence mode="sync">
           <motion.div
             key={idx}
