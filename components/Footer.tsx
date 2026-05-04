@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container-edge">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
           <div>
-            <div className="font-display text-2xl text-paper tracking-[0.18em] font-semibold">{SITE.brand}</div>
+            <div className="font-brand text-3xl text-paper tracking-[0.04em]">{SITE.brand}</div>
             <p className="mt-4 text-small text-paper/50 font-mono uppercase tracking-widest">{SITE.slogan}</p>
           </div>
           <ul className="md:text-right space-y-3 text-small">

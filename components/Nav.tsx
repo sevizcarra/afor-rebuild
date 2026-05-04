@@ -20,7 +20,7 @@ export default function Nav() {
       )}
     >
       <nav className={clsx("container-edge flex items-center justify-between transition-all duration-500", scrolled ? "h-16" : "h-20")}>
-        <a href="#top" className={clsx("font-display font-semibold tracking-[0.18em] text-xl transition-colors duration-300 hover:text-accent", scrolled ? "text-ink" : "text-paper")}>
+        <a href="#top" className={clsx("font-brand tracking-[0.04em] text-2xl transition-colors duration-300 hover:text-accent", scrolled ? "text-ink" : "text-paper")}>
           {SITE.brand}
         </a>
 

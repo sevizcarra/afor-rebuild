@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Inter_Tight, JetBrains_Mono } from "next/font/google";
+import { Inter, Inter_Tight, JetBrains_Mono, Archivo_Black } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
@@ -20,6 +20,13 @@ const jetbrains = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
 });
 
+const archivoBlack = Archivo_Black({
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-archivo-black",
+});
+
 export const metadata: Metadata = {
   title: "AFOR — Making ideas grow",
   description:
@@ -38,7 +45,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es" className={`${inter.variable} ${interTight.variable} ${jetbrains.variable}`}>
+    <html lang="es" className={`${inter.variable} ${interTight.variable} ${jetbrains.variable} ${archivoBlack.variable}`}>
       <body>{children}</body>
     </html>
   );

@@ -8,11 +8,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // HATCH-like sober palette
-        ink: "#0A0A0A",          // texto y fondos oscuros
-        paper: "#FAFAF7",        // fondo dominante
-        bone: "#F2F0EB",         // fondos secundarios calidos
-        accent: "#B8470A",       // naranja apagado UNICO
+        ink: "#0A0A0A",
+        paper: "#FAFAF7",
+        bone: "#F2F0EB",
+        accent: "#B8470A",
         "gray-700": "#3A3A38",
         "gray-500": "#7A7A78",
         "gray-300": "#C9C7C2",
@@ -22,10 +21,10 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
         display: ["var(--font-inter-tight)", "system-ui", "sans-serif"],
+        brand: ["var(--font-archivo-black)", "Arial Black", "system-ui", "sans-serif"],
         mono: ["var(--font-jetbrains-mono)", "ui-monospace", "monospace"],
       },
       fontSize: {
-        // Sober editorial scale
         "display": ["clamp(56px, 7vw, 110px)", { lineHeight: "1.02", letterSpacing: "-0.025em" }],
         "h1": ["clamp(40px, 4.5vw, 68px)", { lineHeight: "1.08", letterSpacing: "-0.02em" }],
         "h2": ["clamp(32px, 3.5vw, 52px)", { lineHeight: "1.1", letterSpacing: "-0.015em" }],
