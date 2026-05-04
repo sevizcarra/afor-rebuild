@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { HERO, HERO_IMAGES } from "@/lib/content";
+import { HERO, HERO_IMAGES, SITE } from "@/lib/content";
 import clsx from "clsx";
 
 const ROTATE_MS = 8000;
@@ -58,31 +58,24 @@ export default function Hero() {
         <div className="container-edge py-10 md:py-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
 
-            {/* IZQ — TITULO + CTAs */}
+            {/* IZQ — Wordmark AFOR + slogan, ficha editorial */}
             <div className="lg:col-span-7">
-              <h1
-                className="font-display text-paper"
-                style={{
-                  fontSize: "clamp(40px, 5vw, 72px)",
-                  fontWeight: 500,
-                  lineHeight: "1.05",
-                  letterSpacing: "-0.025em",
-                }}
+              {/* Linea superior corta como rubric */}
+              <div className="h-px w-12 bg-accent mb-6" />
+
+              <div
+                className="font-brand text-paper tracking-[0.04em] leading-none"
+                style={{ fontSize: "clamp(64px, 9vw, 132px)" }}
               >
-                Making ideas grow.
-              </h1>
-              <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-5">
-                <a
-                  href={HERO.ctaPrimary.href}
-                  className="inline-flex items-center gap-3 bg-accent text-paper px-7 py-3.5 hover:bg-paper hover:text-ink transition-colors duration-300 group text-body"
-                >
-                  <span>{HERO.ctaPrimary.label}</span>
-                  <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
-                </a>
-                <a href={HERO.ctaSecondary.href} className="text-small text-paper/70 hover:text-accent transition-colors duration-300 px-2 font-light">
-                  {HERO.ctaSecondary.label}
-                </a>
+                {SITE.brand}
               </div>
+
+              {/* Linea fina debajo del wordmark */}
+              <div className="h-px w-full bg-paper/15 my-6" />
+
+              <p className="font-mono text-small uppercase tracking-[0.25em] text-paper/75">
+                {SITE.slogan}
+              </p>
             </div>
 
             {/* DER — Eyebrow, subtitle, controles */}
