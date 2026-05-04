@@ -11,7 +11,7 @@ const config: Config = {
         ink: "#0A0A0A",
         paper: "#FAFAF7",
         bone: "#F2F0EB",
-        accent: "#B8470A",
+        accent: "#E94A38",
         "gray-700": "#3A3A38",
         "gray-500": "#7A7A78",
         "gray-300": "#C9C7C2",
