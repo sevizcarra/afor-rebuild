@@ -97,10 +97,10 @@ export default function Contact() {
 
           <button
             type="submit"
-            className="text-body text-ink border-b border-ink/30 pb-2 hover:border-accent hover:text-accent transition-colors duration-300 inline-flex items-center gap-3 group"
+            className="bg-accent text-paper px-7 py-4 hover:bg-ink transition-colors duration-300 inline-flex items-center gap-3 group text-body font-medium"
           >
             <span>{submitted ? "Enviando…" : "Enviar mensaje"}</span>
-            <span className="text-accent transition-transform duration-300 group-hover:translate-x-1">→</span>
+            <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
           </button>
         </motion.form>
       </div>

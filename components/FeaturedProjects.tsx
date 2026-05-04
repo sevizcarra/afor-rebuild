@@ -24,7 +24,6 @@ export default function FeaturedProjects() {
           </p>
         </motion.div>
 
-        {/* Grid regular 3 columnas — sin asimetria brutalista */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14">
           {FEATURED_PROJECTS.map((p, i) => (
             <motion.article
@@ -39,11 +38,13 @@ export default function FeaturedProjects() {
                 <img
                   src={p.img}
                   alt={p.title}
-                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 group-hover:scale-[1.03]"
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-1000 group-hover:scale-[1.04]"
                   loading="lazy"
                 />
+                {/* Tinte naranja sutil al hover */}
+                <div className="absolute inset-0 bg-accent/0 group-hover:bg-accent/15 transition-colors duration-500 mix-blend-multiply" />
               </div>
-              <div className="font-mono text-small text-gray-500 mb-2 tracking-wider">{p.eyebrow}</div>
+              <div className="font-mono text-small text-accent mb-2 tracking-wider transition-colors duration-300">{p.eyebrow}</div>
               <h3 className="font-display font-medium text-h4 text-ink leading-snug mb-2 transition-colors duration-300 group-hover:text-accent">
                 {p.title}
               </h3>
@@ -55,10 +56,10 @@ export default function FeaturedProjects() {
         <div className="mt-20">
           <a
             href="#portafolio"
-            className="inline-flex items-center gap-3 text-body text-ink border-b border-ink/30 pb-2 hover:border-accent hover:text-accent transition-colors duration-300 group"
+            className="inline-flex items-center gap-3 bg-ink text-paper px-7 py-4 hover:bg-accent transition-colors duration-300 group text-body font-medium"
           >
             <span>Ver portafolio completo</span>
-            <span className="text-accent transition-transform duration-300 group-hover:translate-x-1">→</span>
+            <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
           </a>
         </div>
       </div>

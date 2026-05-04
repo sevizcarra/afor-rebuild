@@ -20,7 +20,7 @@ export default function Nav() {
       )}
     >
       <nav className={clsx("container-edge flex items-center justify-between transition-all duration-500", scrolled ? "h-16" : "h-20")}>
-        <a href="#top" className={clsx("font-display font-semibold tracking-[0.18em] text-xl transition-colors", scrolled ? "text-ink" : "text-paper")}>
+        <a href="#top" className={clsx("font-display font-semibold tracking-[0.18em] text-xl transition-colors duration-300 hover:text-accent", scrolled ? "text-ink" : "text-paper")}>
           {SITE.brand}
         </a>
 
@@ -30,11 +30,12 @@ export default function Nav() {
               <a
                 href={l.href}
                 className={clsx(
-                  "text-small font-normal transition-colors duration-300",
+                  "relative text-small font-normal transition-colors duration-300 group py-2",
                   scrolled ? "text-ink/70 hover:text-ink" : "text-paper/80 hover:text-paper"
                 )}
               >
                 {l.label}
+                <span className="absolute left-0 right-0 bottom-0 h-px bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
               </a>
             </li>
           ))}
@@ -43,10 +44,10 @@ export default function Nav() {
         <a
           href="#contacto"
           className={clsx(
-            "text-small px-5 py-2 transition-colors duration-300",
+            "text-small px-5 py-2.5 transition-all duration-300 font-medium",
             scrolled
-              ? "text-ink border-b border-ink/30 hover:border-accent hover:text-accent"
-              : "text-paper border-b border-paper/40 hover:border-accent hover:text-accent"
+              ? "bg-accent text-paper hover:bg-ink"
+              : "bg-accent text-paper hover:bg-paper hover:text-ink"
           )}
         >
           Hablemos

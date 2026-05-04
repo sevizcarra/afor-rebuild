@@ -26,10 +26,14 @@ export default function Pillars() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.6, delay: i * 0.06, ease: [0.16, 1, 0.3, 1] }}
-              className="border-t border-ink/15 pt-8"
+              className="group relative pt-8"
             >
+              {/* Barra superior — accent visible */}
+              <div className="absolute top-0 left-0 right-0 h-px bg-ink/15">
+                <div className="absolute top-0 left-0 h-px w-12 bg-accent transition-all duration-500 group-hover:w-24" />
+              </div>
               <div className="flex items-baseline justify-between mb-6">
-                <span className="font-mono text-small text-gray-500 tracking-wider">{p.n}</span>
+                <span className="font-mono text-small text-accent tracking-wider">{p.n}</span>
               </div>
               <h3 className="font-display font-medium text-h3 text-ink mb-5 leading-snug">{p.title}</h3>
               <p className="text-body text-gray-700 leading-relaxed max-w-md">{p.body}</p>

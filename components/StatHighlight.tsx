@@ -15,7 +15,7 @@ export default function StatHighlight() {
         >
           <span className="label text-accent">Trayectoria</span>
           <div
-            className="mt-8 font-display text-ink leading-[0.9] tracking-tight font-medium"
+            className="mt-8 font-display text-accent leading-[0.9] tracking-tight font-medium"
             style={{ fontSize: "clamp(120px, 18vw, 240px)" }}
           >
             {STATS.big.value}
