@@ -16,6 +16,7 @@ export default function Hero() {
 
   return (
     <section id="top" className="relative h-screen w-full overflow-hidden bg-ink">
+      {/* Fotos rotando */}
       <AnimatePresence mode="sync">
         <motion.div
           key={idx}
@@ -29,49 +30,43 @@ export default function Hero() {
         </motion.div>
       </AnimatePresence>
 
-      <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/20 to-ink/30" />
+      {/* Overlay base oscuro para soporte general */}
+      <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/10 to-ink/20" />
 
-      <div className="relative z-10 h-full container-edge flex flex-col justify-end pb-24 md:pb-32 max-w-5xl">
-        <motion.span
-          initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-          className="label text-accent mb-10"
-        >
-          {HERO.eyebrow}
-        </motion.span>
-        <motion.h1
-          initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="font-display text-display font-medium text-paper"
-        >
-          {HERO.title[0]}<br />{HERO.title[1]}
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-10 text-lead text-paper/85 max-w-2xl font-light leading-relaxed"
-        >
-          {HERO.subtitle}
-        </motion.p>
+      {/* Contenedor full height — banner se posiciona abajo */}
+      <div className="relative z-10 h-full flex flex-col justify-end pb-24 md:pb-32">
+        {/* BANNER full width translucido */}
         <motion.div
-          initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-12 flex flex-col sm:flex-row sm:items-center gap-6"
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+          className="bg-paper/10 backdrop-blur-[3px] border-y border-paper/15 py-12 md:py-16"
         >
-          {/* CTA principal con fondo naranja - mas presencia */}
-          <a
-            href={HERO.ctaPrimary.href}
-            className="inline-flex items-center gap-3 bg-accent text-paper px-7 py-4 hover:bg-ink transition-colors duration-300 group text-body font-medium"
-          >
-            <span>{HERO.ctaPrimary.label}</span>
-            <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
-          </a>
-          <a href={HERO.ctaSecondary.href} className="text-small text-paper/70 hover:text-accent transition-colors duration-300 px-2">
-            {HERO.ctaSecondary.label}
-          </a>
+          <div className="container-edge max-w-5xl">
+            <span className="block label text-accent mb-8">{HERO.eyebrow}</span>
+            <h1 className="font-display text-display font-medium text-paper">
+              {HERO.title[0]}<br />{HERO.title[1]}
+            </h1>
+            <p className="mt-8 text-lead text-paper/85 max-w-2xl font-light leading-relaxed">
+              {HERO.subtitle}
+            </p>
+            <div className="mt-10 flex flex-col sm:flex-row sm:items-center gap-6">
+              <a
+                href={HERO.ctaPrimary.href}
+                className="inline-flex items-center gap-3 bg-accent text-paper px-7 py-4 hover:bg-ink transition-colors duration-300 group text-body font-medium"
+              >
+                <span>{HERO.ctaPrimary.label}</span>
+                <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+              </a>
+              <a href={HERO.ctaSecondary.href} className="text-small text-paper/70 hover:text-accent transition-colors duration-300 px-2">
+                {HERO.ctaSecondary.label}
+              </a>
+            </div>
+          </div>
         </motion.div>
       </div>
 
+      {/* Indicador minimal */}
       <div className="absolute bottom-10 left-0 right-0 z-10 container-edge flex items-end justify-between">
         <div className="flex gap-3">
           {HERO_IMAGES.map((_, i) => (
