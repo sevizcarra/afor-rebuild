@@ -42,7 +42,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-        className="relative bg-ink"
+        className="relative bg-ink/80 backdrop-blur-md"
       >
         {/* linea superior — progreso del slide activo */}
         <div className="absolute -top-px left-0 right-0 h-px bg-paper/10">
