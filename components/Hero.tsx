@@ -66,7 +66,10 @@ export default function Hero() {
               >
                 {SITE.brand}
               </div>
-              <p className="mt-4 font-display font-light text-body md:text-lead text-paper/80 lowercase tracking-tight">
+              <p
+                className="mt-1 font-display font-light text-paper/85 lowercase tracking-tight"
+                style={{ fontSize: "clamp(22px, 2.6vw, 38px)", lineHeight: "1.1" }}
+              >
                 {SITE.slogan}
               </p>
             </div>
