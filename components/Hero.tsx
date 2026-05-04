@@ -44,9 +44,8 @@ export default function Hero() {
         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
         className="relative bg-ink"
       >
-        {/* linea superior naranja: contadores del carrusel */}
+        {/* linea superior — progreso del slide activo */}
         <div className="absolute -top-px left-0 right-0 h-px bg-paper/10">
-          {/* progreso del slide activo */}
           <motion.div
             key={idx}
             initial={{ width: "0%" }}
@@ -85,7 +84,7 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* DER — Eyebrow, subtitle, metadata + controles */}
+            {/* DER — Eyebrow, subtitle, controles */}
             <div className="lg:col-span-5 lg:border-l lg:border-paper/10 lg:pl-12 space-y-6">
               <span className="block text-label uppercase tracking-[0.2em] font-mono text-accent">
                 {HERO.eyebrow}
@@ -94,39 +93,19 @@ export default function Hero() {
                 {HERO.subtitle}
               </p>
 
-              {/* Metadata del proyecto activo + controles */}
-              <div className="pt-6 border-t border-paper/10 flex items-end justify-between gap-4">
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={idx}
-                    initial={{ opacity: 0, y: 6 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -6 }}
-                    transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                  >
-                    <div className="font-mono text-label uppercase tracking-widest text-paper/50 mb-1">
-                      {String(idx + 1).padStart(2, "0")} / {String(HERO_IMAGES.length).padStart(2, "0")}
-                    </div>
-                    <div className="text-small text-paper font-light">
-                      {active.project} · <span className="text-paper/65">{active.client}</span>
-                    </div>
-                  </motion.div>
-                </AnimatePresence>
-
-                {/* Indicadores clickeables */}
-                <div className="flex gap-1.5 shrink-0">
-                  {HERO_IMAGES.map((_, i) => (
-                    <button
-                      key={i}
-                      onClick={() => setIdx(i)}
-                      className={clsx(
-                        "h-1 transition-all duration-500",
-                        i === idx ? "w-8 bg-accent" : "w-3 bg-paper/25 hover:bg-paper/50"
-                      )}
-                      aria-label={`Slide ${i + 1}`}
-                    />
-                  ))}
-                </div>
+              {/* Indicadores clickeables — sin metadata */}
+              <div className="pt-6 border-t border-paper/10 flex justify-end gap-1.5">
+                {HERO_IMAGES.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setIdx(i)}
+                    className={clsx(
+                      "h-1 transition-all duration-500",
+                      i === idx ? "w-8 bg-accent" : "w-3 bg-paper/25 hover:bg-paper/50"
+                    )}
+                    aria-label={`Slide ${i + 1}`}
+                  />
+                ))}
               </div>
             </div>
 
