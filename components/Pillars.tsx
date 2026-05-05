@@ -40,7 +40,7 @@ const textVariants = {
 
 export default function Pillars() {
   return (
-    <section className="bg-bone py-32 md:py-44 border-t border-gray-200 overflow-hidden">
+    <section className="py-32 md:py-44 overflow-hidden" style={{ background: "linear-gradient(135deg, #F2651A 0%, #E84E10 45%, #B83E0C 100%)" }}>
       <div className="container-edge">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -49,8 +49,8 @@ export default function Pillars() {
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="mb-20 md:mb-28 max-w-3xl"
         >
-          <span className="label text-accent">Cómo trabajamos</span>
-          <h2 className="mt-6 font-display font-medium text-ink" style={{ fontSize: "clamp(40px, 5vw, 72px)", lineHeight: "1.05", letterSpacing: "-0.02em" }}>
+          <span className="label text-paper">Cómo trabajamos</span>
+          <h2 className="mt-6 font-display font-medium text-paper" style={{ fontSize: "clamp(40px, 5vw, 72px)", lineHeight: "1.05", letterSpacing: "-0.02em" }}>
             Cuatro principios.<br />Sin atajos.
           </h2>
         </motion.div>
@@ -70,7 +70,7 @@ export default function Pillars() {
               <motion.div
                 variants={numberVariants}
                 custom={i}
-                className="font-display font-light text-ink/15 leading-none mb-6 transition-colors duration-700 group-hover:text-accent select-none"
+                className="font-display font-light text-paper/20 leading-none mb-6 transition-colors duration-700 group-hover:text-paper select-none"
                 style={{ fontSize: "clamp(72px, 9vw, 140px)", letterSpacing: "-0.04em" }}
               >
                 {p.n}
@@ -80,14 +80,14 @@ export default function Pillars() {
               <motion.div
                 variants={lineVariants}
                 custom={i}
-                className="h-px bg-ink/15 mb-8 origin-left transition-colors duration-700 group-hover:bg-accent"
+                className="h-px bg-paper/25 mb-8 origin-left transition-colors duration-700 group-hover:bg-paper"
               />
 
               {/* Titulo */}
               <motion.h3
                 variants={textVariants}
                 custom={i}
-                className="font-display font-medium text-ink mb-6 leading-tight"
+                className="font-display font-medium text-paper mb-6 leading-tight"
                 style={{ fontSize: "clamp(24px, 2.4vw, 36px)", letterSpacing: "-0.015em" }}
               >
                 {p.title}
@@ -98,7 +98,7 @@ export default function Pillars() {
                 variants={textVariants}
                 custom={i}
                 transition={{ delay: i * 0.12 + 0.45 }}
-                className="text-body text-gray-700 leading-relaxed max-w-md"
+                className="text-body text-paper/85 leading-relaxed max-w-md"
               >
                 {p.body}
               </motion.p>
