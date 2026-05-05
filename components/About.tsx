@@ -25,7 +25,7 @@ export default function About() {
             variants={v}
             className="lg:col-span-7 font-display font-medium text-h1 text-ink"
           >
-            No vendemos horas.<br /><span className="inline-block text-paper px-4 py-2 mt-2 whitespace-nowrap" style={{ backgroundColor: "#A04220" }}>Entregamos <span className="font-serif italic font-normal">criterio técnico</span>.</span>
+            No contamos horas.<br /><span className="inline-block text-paper px-4 py-2 mt-2 whitespace-nowrap" style={{ backgroundColor: "#A04220" }}>Aplicamos <span className="font-serif italic font-normal">criterio técnico</span>.</span>
           </motion.h2>
           <motion.div
             initial="hidden"
