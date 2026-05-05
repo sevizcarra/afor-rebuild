@@ -6,7 +6,7 @@ const v = { hidden: { opacity: 0, y: 16 }, visible: { opacity: 1, y: 0, transiti
 
 export default function About() {
   return (
-    <section id="nosotros" className="bg-paper py-32 md:py-44">
+    <section id="nosotros" className="bg-accent py-32 md:py-44">
       <div className="container-edge">
         <motion.div
           initial="hidden"
@@ -15,7 +15,7 @@ export default function About() {
           variants={v}
           className="mb-16 md:mb-20 max-w-md"
         >
-          <span className="label text-accent">{ABOUT.eyebrow}</span>
+          <span className="label text-ink">{ABOUT.eyebrow}</span>
         </motion.div>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-24">
           <motion.h2
@@ -33,7 +33,7 @@ export default function About() {
             viewport={{ once: true, margin: "-100px" }}
             variants={v}
             transition={{ delay: 0.15 }}
-            className="lg:col-span-5 space-y-6 text-body text-gray-700 font-normal leading-relaxed"
+            className="lg:col-span-5 space-y-6 text-body text-ink/80 font-normal leading-relaxed"
           >
             {ABOUT.paragraphs.map((p, i) => (
               <p key={i} className={i === ABOUT.paragraphs.length - 1 ? "text-lead text-ink" : ""}>{p}</p>
