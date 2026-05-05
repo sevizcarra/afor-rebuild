@@ -36,7 +36,7 @@ export default function About() {
             className="lg:col-span-5 space-y-6 text-body text-ink/80 font-normal leading-relaxed"
           >
             {ABOUT.paragraphs.map((p, i) => (
-              <p key={i} className={i === ABOUT.paragraphs.length - 1 ? "text-lead text-ink" : ""}>{p}</p>
+              <p key={i}>{p}</p>
             ))}
           </motion.div>
         </div>
