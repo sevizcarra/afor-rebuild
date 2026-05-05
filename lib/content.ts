@@ -40,9 +40,9 @@ export const ABOUT = {
   eyebrow: "Quiénes somos",
   title: ["No vendemos horas.", "Vendemos criterio."],
   paragraphs: [
-    "Diseñamos facilities para minería e industria — oficinas, casas de cambio, salas de control, salas eléctricas y técnicas, truck shops, RESPEL y almacenamiento. Nos integramos al equipo del proyecto como una extensión de su ingeniería: adoptamos su codificación, manuales y estándares de entrega.",
-    "Una dirección estratégica con diez años en la industria. Una gerencia comercial con dieciocho años construyendo cuentas mineras grandes. Sin capas intermedias, sin account manager.",
-    "El senior que firma es el mismo que está al teléfono.",
+    "Desarrollamos facilities para minería e industria: oficinas, casas de cambio, salas de control, salas eléctricas y técnicas, truck shops, RESPEL y áreas de almacenamiento. Integramos arquitectura, ingeniería y coordinación multidisciplinar bajo una misma dirección técnica.",
+    "Nos incorporamos al equipo del proyecto como una extensión de su ingeniería. Adoptamos la codificación, manuales y estándares de entrega del mandante, y operamos bajo sus protocolos internos para garantizar entregables compatibles con su sistema de gestión documental.",
+    "El equipo que toma el proyecto desde el levantamiento técnico es el mismo que coordina la entrega final. Continuidad técnica completa, sin transferencias internas ni intermediarios.",
   ],
 };
 
