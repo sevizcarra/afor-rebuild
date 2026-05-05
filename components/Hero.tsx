@@ -33,20 +33,30 @@ export default function Hero() {
         <div className="container-edge py-10 md:py-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
 
-            {/* IZQ — Wordmark AFOR + slogan */}
+            {/* IZQ — Wordmark AFOR + slogan enmarcado a 50% del AFOR */}
             <div className="lg:col-span-7">
-              <div
-                className="font-brand text-accent tracking-[0.04em] leading-none"
-                style={{ fontSize: "clamp(64px, 9vw, 132px)", marginLeft: "-0.05em" }}
-              >
-                {SITE.brand}
+              <div className="inline-block">
+                <div
+                  className="font-brand text-accent tracking-[0.04em] leading-none"
+                  style={{ fontSize: "clamp(64px, 9vw, 132px)", marginLeft: "-0.05em" }}
+                >
+                  {SITE.brand}
+                </div>
+                <p
+                  className="font-sans font-light text-paper/85 uppercase"
+                  style={{
+                    fontSize: "clamp(11px, 1.2vw, 17px)",
+                    lineHeight: "1.2",
+                    letterSpacing: "0.18em",
+                    marginTop: "10px",
+                    width: "48%",
+                    textAlign: "justify",
+                    textAlignLast: "justify",
+                  }}
+                >
+                  {SITE.slogan}
+                </p>
               </div>
-              <p
-                className="font-sans font-light text-paper/85 uppercase"
-                style={{ fontSize: "clamp(13px, 1.4vw, 20px)", lineHeight: "1.2", letterSpacing: "0.22em", marginTop: "8px" }}
-              >
-                {SITE.slogan}
-              </p>
             </div>
 
             {/* DER — Resumen de la compania */}
