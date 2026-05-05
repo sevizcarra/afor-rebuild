@@ -46,7 +46,7 @@ export default function Hero() {
             {/* DER — Resumen de la compania */}
             <div className="lg:col-span-5 lg:border-l lg:border-paper/10 lg:pl-12">
               <p className="text-body text-paper font-light leading-relaxed">
-                Firma chilena especializada en el diseño de <span className="text-paper">facilities</span> para operaciones mineras e industriales. Diseñamos y coordinamos oficinas, casas de cambio, salas técnicas, truck shops y áreas de almacenamiento. Diez años aplicando criterio arquitectónico al lenguaje de la ingeniería para BHP, Codelco e ingenierías Tier 1.
+                Somos una firma chilena especializada en el diseño de <span className="text-paper">facilities</span> para operaciones mineras e industriales. Somos especialistas en el desarrollo de proyectos con más de diez años aplicando desarrollo arquitectónico y de ingeniería a los requerimientos de la industria.
               </p>
             </div>
 
