@@ -43,3 +43,26 @@
     max-width: 1480px;
   }
 }
+
+@keyframes shimmer-warm {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.shimmer-warm {
+  background: linear-gradient(
+    110deg,
+    #F6BF03 0%,
+    #FF8C00 20%,
+    #E84E10 40%,
+    #E12F28 60%,
+    #C2185B 80%,
+    #E84E10 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer-warm 8s ease-in-out infinite;
+}

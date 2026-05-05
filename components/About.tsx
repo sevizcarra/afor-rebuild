@@ -25,7 +25,7 @@ export default function About() {
             variants={v}
             className="lg:col-span-7 font-display font-medium text-h1 text-accent"
           >
-            No contamos horas.<br />Aplicamos <span className="font-serif italic font-normal">criterio técnico</span>.
+            No contamos horas.<br />Aplicamos <span className="font-serif italic font-normal shimmer-warm">criterio técnico</span>.
           </motion.h2>
           <motion.div
             initial="hidden"
