@@ -46,7 +46,7 @@ export default function Hero() {
             {/* DER — Resumen de la compania */}
             <div className="lg:col-span-5 lg:border-l lg:border-paper/10 lg:pl-12">
               <p className="text-body text-paper font-light leading-relaxed">
-                Somos una firma chilena especializada en el desarrollo de <span className="text-paper">facilities</span> para operaciones mineras e industriales. Más de diez años integrando arquitectura, ingeniería y criterio técnico en proyectos críticos del sector. Sin overhead, sin diluir: el senior que firma es el que ejecuta.
+                Somos una firma chilena especializada en el desarrollo de <span className="text-paper">facilities</span> para operaciones mineras e industriales. Más de diez años integrando arquitectura, ingeniería y criterio técnico en proyectos críticos del sector. Trabajamos bajo un modelo dedicado: el equipo senior asume la responsabilidad técnica de cada proyecto, desde el desarrollo hasta la ejecución.
               </p>
             </div>
 
