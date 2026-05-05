@@ -25,7 +25,7 @@ export default function About() {
             variants={v}
             className="lg:col-span-7 font-display font-medium text-h1 text-ink"
           >
-            {ABOUT.title[0]}<br />{ABOUT.title[1]}
+            No vendemos horas.<br />Entregamos <span className="font-serif italic font-normal text-paper">criterio técnico</span>.
           </motion.h2>
           <motion.div
             initial="hidden"

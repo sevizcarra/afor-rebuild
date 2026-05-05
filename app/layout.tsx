@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Inter, Inter_Tight, JetBrains_Mono, Audiowide } from "next/font/google";
+import { Inter, Inter_Tight, JetBrains_Mono, Audiowide, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--font-inter" });
 const interTight = Inter_Tight({ subsets: ["latin"], display: "swap", variable: "--font-inter-tight" });
 const jetbrains = JetBrains_Mono({ subsets: ["latin"], display: "swap", variable: "--font-jetbrains-mono" });
 const audiowide = Audiowide({ weight: "400", subsets: ["latin"], display: "swap", variable: "--font-audiowide" });
+const instrumentSerif = Instrument_Serif({ weight: "400", subsets: ["latin"], display: "swap", variable: "--font-instrument-serif", style: ["normal", "italic"] });
 
 export const metadata: Metadata = {
   title: "AFOR — Making ideas grow",
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es" className={`${inter.variable} ${interTight.variable} ${jetbrains.variable} ${audiowide.variable}`}>
+    <html lang="es" className={`${inter.variable} ${interTight.variable} ${jetbrains.variable} ${audiowide.variable} ${instrumentSerif.variable}`}>
       <body>{children}</body>
     </html>
   );

@@ -23,6 +23,7 @@ const config: Config = {
         display: ["var(--font-inter-tight)", "system-ui", "sans-serif"],
         brand: ["var(--font-audiowide)", "Impact", "system-ui", "sans-serif"],
         mono: ["var(--font-jetbrains-mono)", "ui-monospace", "monospace"],
+        serif: ["var(--font-instrument-serif)", "Georgia", "serif"],
       },
       fontSize: {
         "display": ["clamp(56px, 7vw, 110px)", { lineHeight: "1.02", letterSpacing: "-0.025em" }],
