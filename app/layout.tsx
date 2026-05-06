@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Sora, JetBrains_Mono } from "next/font/google";
+import { Sora, JetBrains_Mono, Audiowide } from "next/font/google";
 import "./globals.css";
 
 const sora = Sora({
@@ -14,6 +14,13 @@ const jetbrains = JetBrains_Mono({
   display: "swap",
   variable: "--font-jetbrains-mono",
   weight: ["400", "500"],
+});
+
+const audiowide = Audiowide({
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-audiowide",
 });
 
 export const metadata: Metadata = {
@@ -44,7 +51,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es" className={`${sora.variable} ${jetbrains.variable}`}>
+    <html lang="es" className={`${sora.variable} ${jetbrains.variable} ${audiowide.variable}`}>
       <body>{children}</body>
     </html>
   );

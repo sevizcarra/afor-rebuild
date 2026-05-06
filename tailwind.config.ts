@@ -20,7 +20,7 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-sora)", "system-ui", "sans-serif"],
         mono: ["var(--font-jetbrains-mono)", "ui-monospace", "monospace"],
-        brand: ["var(--font-sora)", "system-ui", "sans-serif"],
+        brand: ["var(--font-audiowide)", "Impact", "system-ui", "sans-serif"],
       },
       fontSize: {
         "hero": ["clamp(48px, 6vw, 88px)", { lineHeight: "1.05", letterSpacing: "-0.02em" }],
