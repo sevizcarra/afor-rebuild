@@ -42,4 +42,11 @@
     @apply mx-auto px-6 md:px-10 lg:px-20;
     max-width: 1440px;
   }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
 }

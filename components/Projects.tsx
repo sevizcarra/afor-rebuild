@@ -1,10 +1,15 @@
 "use client";
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { FEATURED_PROJECTS, PORTFOLIO } from "@/lib/content";
+import clsx from "clsx";
 
 export default function Projects() {
+  const [idx, setIdx] = useState(0);
+  const active = FEATURED_PROJECTS[idx];
+
   return (
-    <section id="proyectos" className="bg-bone py-32 md:py-44">
+    <section id="proyectos" className="bg-paper py-32 md:py-44">
       <div className="container-edge">
         {/* Header */}
         <motion.div
@@ -21,35 +26,84 @@ export default function Projects() {
             </h2>
           </div>
           <p className="lg:col-span-5 lg:pt-8 text-body text-gray-700 max-w-md">
-            Selección de proyectos en gran minería e industria para BHP, Codelco e ingenierías Tier 1.
+            Selección de proyectos representativos en gran minería e industria.
           </p>
         </motion.div>
 
-        {/* Grid de 5 destacados con foto */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 mb-32 md:mb-40">
-          {FEATURED_PROJECTS.map((p, i) => (
-            <motion.article
-              key={p.title}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.7, delay: i * 0.06, ease: [0.16, 1, 0.3, 1] }}
-              className="group cursor-default"
-            >
-              <div className="relative overflow-hidden bg-gray-200 aspect-[4/5] mb-6">
+        {/* CARRUSEL — selector de proyectos */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6 }}
+          className="border-t border-ink/15 mb-12"
+        >
+          <div className="overflow-x-auto -mx-6 md:-mx-10 lg:-mx-20 px-6 md:px-10 lg:px-20 scrollbar-hide">
+            <ul className="flex gap-1 md:gap-2 min-w-max">
+              {FEATURED_PROJECTS.map((p, i) => (
+                <li key={p.id}>
+                  <button
+                    onClick={() => setIdx(i)}
+                    className={clsx(
+                      "flex flex-col items-start gap-2 py-5 px-4 md:px-6 transition-colors duration-300 border-t-2 -mt-px relative whitespace-nowrap",
+                      i === idx
+                        ? "border-accent text-ink"
+                        : "border-transparent text-gray-500 hover:text-ink"
+                    )}
+                  >
+                    <span className="font-mono text-label tracking-wider">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span className="font-sans text-small font-medium">
+                      {p.title}
+                    </span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </motion.div>
+
+        {/* CARD del proyecto activo */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={active.id}
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+            className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start mb-32 md:mb-40"
+          >
+            <div className="lg:col-span-7">
+              <div className="relative aspect-[4/3] overflow-hidden bg-gray-200">
                 <img
-                  src={p.img}
-                  alt={p.title}
+                  src={active.image}
+                  alt={active.title}
                   className="absolute inset-0 h-full w-full object-cover"
                   loading="lazy"
                 />
               </div>
-              <div className="font-mono text-small text-accent mb-2 tracking-wider">{p.eyebrow}</div>
-              <h3 className="font-sans font-medium text-h4 text-ink mb-2">{p.title}</h3>
-              <p className="text-small text-gray-500">{p.caption}</p>
-            </motion.article>
-          ))}
-        </div>
+            </div>
+
+            <div className="lg:col-span-5 lg:pt-2">
+              <div className="font-mono text-small text-accent tracking-wider mb-4">
+                {active.client} · {active.year}
+              </div>
+              <h3 className="font-sans font-medium text-h2 text-ink mb-3">{active.title}</h3>
+              <p className="text-small text-gray-500 mb-8">{active.category}</p>
+              <p className="text-body text-gray-700 mb-12 leading-relaxed">{active.body}</p>
+
+              <dl className="grid grid-cols-2 gap-x-8 gap-y-6 border-t border-ink/15 pt-8">
+                {active.highlights.map((h) => (
+                  <div key={h.label}>
+                    <dt className="label text-gray-500 mb-2">{h.label}</dt>
+                    <dd className="font-sans font-medium text-h4 text-ink">{h.value}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </motion.div>
+        </AnimatePresence>
 
         {/* Tabla de trayectoria completa */}
         <motion.div

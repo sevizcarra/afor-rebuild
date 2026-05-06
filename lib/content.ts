@@ -53,29 +53,104 @@ export const SERVICES = {
   ],
 };
 
-export const CASE_STUDY = {
-  eyebrow: "Caso destacado",
-  client: "BHP · Puerto Coloso",
-  year: "2025",
-  title: "Remediación Edificio CHO",
-  category: "Facility técnica · Ingeniería de detalle",
-  image: "/images/projects/edificio-cho.jpg",
-  body:
-    "Remediación integral de 420 m² para reconvertir el edificio CHO en una facility técnica de alta disponibilidad. Distribución interna, accesos, sala técnica para equipos eléctricos y UPS, oficinas, áreas de cowork y mejoras arquitectónicas en cielos, mobiliario y sistemas auxiliares.",
-  highlights: [
-    { label: "Superficie", value: "420 m²" },
-    { label: "Cliente", value: "BHP / ARCADIS" },
-    { label: "Año", value: "2025" },
-    { label: "Tipo", value: "Remediación · Ejecutado" },
-  ],
-};
-
+// Cada proyecto destacado con estructura completa (carrusel)
 export const FEATURED_PROJECTS = [
-  { img: "/images/projects/facilities-enat.jpg", eyebrow: "Escondida · EN-AT", title: "Facilities Camiones Autónomos", caption: "Sala de control + auxiliares · BIM" },
-  { img: "/images/projects/gom-enat.jpg", eyebrow: "Escondida · GOM", title: "Sala de Control GOM", caption: "Facility técnica · Ingeniería de detalle" },
-  { img: "/images/projects/gt-chile.jpg", eyebrow: "Grant Thornton Chile", title: "Oficinas Corporativas", caption: "Habilitación · Ejecutado" },
-  { img: "/images/projects/las-yacas.jpg", eyebrow: "Minera Las Yacas", title: "Barrio Cívico e Infraestructura", caption: "Master plan · Faena" },
-  { img: "/images/projects/santa-alejandra.jpg", eyebrow: "Mecasfy · Santa Alejandra", title: "Edificio Industrial y Corporativo", caption: "Facility industrial · Diseño integral" },
+  {
+    id: "cho",
+    image: "/images/projects/edificio-cho.jpg",
+    client: "BHP · Puerto Coloso",
+    year: "2025",
+    title: "Remediación Edificio CHO",
+    category: "Facility técnica · Ingeniería de detalle",
+    body:
+      "Remediación integral de 420 m² para reconvertir el edificio CHO en una facility técnica de alta disponibilidad. Distribución interna, accesos, sala técnica para equipos eléctricos y UPS, oficinas, áreas de cowork y mejoras arquitectónicas en cielos, mobiliario y sistemas auxiliares.",
+    highlights: [
+      { label: "Superficie", value: "420 m²" },
+      { label: "Cliente", value: "BHP / ARCADIS" },
+      { label: "Año", value: "2025" },
+      { label: "Estado", value: "Ejecutado" },
+    ],
+  },
+  {
+    id: "enat",
+    image: "/images/projects/facilities-enat.jpg",
+    client: "Minera Escondida · EN-AT",
+    year: "2025",
+    title: "Facilities Camiones Autónomos",
+    category: "Sala de control + auxiliares · BIM",
+    body:
+      "Diseño de facilities de soporte para el programa de Camiones Autónomos en Minera Escondida. Sala de Control de Perforadoras con piso técnico elevado, revestimientos de madera, estaciones de monitoreo multiscreen, climatización de precisión y señalética normativa. Ingeniería Interim apta para construcción.",
+    highlights: [
+      { label: "Programa", value: "EN-AT" },
+      { label: "Cliente", value: "Minera Escondida" },
+      { label: "Año", value: "2025" },
+      { label: "Tipo", value: "Ingeniería Interim · BIM" },
+    ],
+  },
+  {
+    id: "gom",
+    image: "/images/projects/gom-enat.jpg",
+    client: "Minera Escondida · EN-AT",
+    year: "2024",
+    title: "Sala de Control GOM",
+    category: "Facility técnica · Ingeniería de detalle",
+    body:
+      "Intervención integral del recinto con cielo metálico lineal, revestimiento mural en listonería de madera, iluminación LED lineal empotrada y distribución ergonómica de puestos de operación con brazos articulados y monitores multipantalla. Diseño que prioriza concentración operacional, confort acústico y control lumínico para jornadas extendidas.",
+    highlights: [
+      { label: "Programa", value: "GOM EN-AT" },
+      { label: "Cliente", value: "Minera Escondida" },
+      { label: "Año", value: "2024" },
+      { label: "Tipo", value: "Ingeniería de detalle" },
+    ],
+  },
+  {
+    id: "yacas",
+    image: "/images/projects/las-yacas.jpg",
+    client: "Minera Las Yacas · Vicuña",
+    year: "2023",
+    title: "Barrio Cívico e Infraestructura",
+    category: "Master plan de facilities · Faena",
+    body:
+      "Diseño arquitectónico del barrio cívico e infraestructura de apoyo para el proyecto minero Las Yacas. Definición de oficinas administrativas, control de ingreso, baños y salas de cambio con distribución modular orientada a optimizar flujos de circulación y cumplimiento normativo. Layouts de emplazamiento, estacionamientos y accesos vehiculares integrados al plan general de faena.",
+    highlights: [
+      { label: "Tipo", value: "Master Plan" },
+      { label: "Cliente", value: "Minera Las Yacas" },
+      { label: "Año", value: "2023" },
+      { label: "Sector", value: "Vicuña" },
+    ],
+  },
+  {
+    id: "mecasfy",
+    image: "/images/projects/santa-alejandra.jpg",
+    client: "Mecasfy · Santa Alejandra",
+    year: "2024",
+    title: "Edificio Industrial y Corporativo",
+    category: "Facility industrial · Diseño integral",
+    body:
+      "Diseño arquitectónico de edificio industrial y corporativo para Mecasfy. Nave industrial con oficinas administrativas integradas, fachada de policarbonato translúcido con estructura metálica vista, accesos vehiculares y peatonales diferenciados, paisajismo perimetral y estacionamientos.",
+    highlights: [
+      { label: "Tipo", value: "Diseño integral" },
+      { label: "Cliente", value: "Mecasfy" },
+      { label: "Año", value: "2024" },
+      { label: "Sector", value: "Santa Alejandra" },
+    ],
+  },
+  {
+    id: "gt",
+    image: "/images/projects/gt-chile.jpg",
+    client: "Grant Thornton Chile",
+    year: "2024",
+    title: "Oficinas Corporativas",
+    category: "Habilitación · Ejecutado",
+    body:
+      "Habilitación de nuevas oficinas corporativas para Grant Thornton Chile. Diseño elegante y moderno con mobiliario de madera natural, cielo expuesto con iluminación lineal LED, estanterías metálicas con vegetación integrada como separadores de ambientes y estaciones de trabajo colaborativas. Prioridad en luz natural, calidez de materiales y distribución abierta.",
+    highlights: [
+      { label: "Tipo", value: "Habilitación corporativa" },
+      { label: "Cliente", value: "Grant Thornton Chile" },
+      { label: "Año", value: "2024" },
+      { label: "Estado", value: "Ejecutado" },
+    ],
+  },
 ];
 
 export const PORTFOLIO = [
