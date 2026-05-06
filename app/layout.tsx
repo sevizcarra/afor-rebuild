@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono, Audiowide } from "next/font/google";
+import { Plus_Jakarta_Sans, JetBrains_Mono, Audiowide } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
+const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-inter",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-plus-jakarta",
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
 });
 
 const jetbrains = JetBrains_Mono({
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es" className={`${inter.variable} ${jetbrains.variable} ${audiowide.variable}`}>
+    <html lang="es" className={`${plusJakarta.variable} ${jetbrains.variable} ${audiowide.variable}`}>
       <body>{children}</body>
     </html>
   );
