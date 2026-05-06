@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FEATURED_PROJECTS, PORTFOLIO } from "@/lib/content";
+import { FEATURED_PROJECTS } from "@/lib/content";
 import clsx from "clsx";
 
 const AUTO_ROTATE_MS = 3000;
@@ -153,38 +153,6 @@ export default function Projects() {
           ))}
         </div>
 
-        {/* Tabla de trayectoria */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-12"
-        >
-          <span className="label text-gray-500">Trayectoria completa</span>
-        </motion.div>
-
-        <div className="border-t border-ink/15">
-          <div className="hidden md:grid grid-cols-[80px_1fr_280px] gap-8 py-4 border-b border-ink/15">
-            <span className="label text-gray-500">Año</span>
-            <span className="label text-gray-500">Proyecto</span>
-            <span className="label text-gray-500">Cliente</span>
-          </div>
-          {PORTFOLIO.map((row, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true, margin: "-30px" }}
-              transition={{ duration: 0.4, delay: i * 0.02 }}
-              className="grid grid-cols-1 md:grid-cols-[80px_1fr_280px] gap-2 md:gap-8 py-5 border-b border-ink/15"
-            >
-              <span className="font-mono text-small text-gray-500 tabular-nums">{row.year}</span>
-              <span className="text-body text-ink">{row.project}</span>
-              <span className="text-small text-gray-500">{row.company}</span>
-            </motion.div>
-          ))}
-        </div>
       </div>
     </section>
   );
