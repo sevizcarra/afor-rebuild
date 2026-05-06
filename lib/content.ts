@@ -43,13 +43,34 @@ export const SERVICES = {
   eyebrow: "Servicios",
   title: "Disciplinas técnicas integradas.",
   items: [
-    "Master Plan de facilities para faenas e instalaciones",
-    "Oficinas administrativas y casas de cambio",
-    "Salas de control, servidores, eléctricas y técnicas",
-    "Edificación técnica para RESPEL, almacenamiento y truck shops",
-    "Coordinación multidisciplinar y revisión de contraparte",
-    "Supervisión de terreno y avances",
-    "Project Management para proyectos multidisciplinares",
+    {
+      title: "Master Plan de facilities",
+      body: "Diseño conceptual de instalaciones para faenas mineras e industriales: layouts, programa arquitectónico, flujos operacionales, estimación de superficies y plan maestro coordinado con disciplinas estructurales y MEP.",
+    },
+    {
+      title: "Oficinas administrativas y casas de cambio",
+      body: "Diseño y ejecución de espacios para personal: oficinas técnicas, salas de reunión, comedores, casas de cambio para operadores, vestuarios y baños bajo normativa minera.",
+    },
+    {
+      title: "Salas de control, servidores, eléctricas y técnicas",
+      body: "Recintos críticos con piso técnico, climatización de precisión, control lumínico y acústico, distribución ergonómica de puestos de operación con monitores multipantalla y revestimientos especializados.",
+    },
+    {
+      title: "RESPEL, almacenamiento y truck shops",
+      body: "Edificación técnica para residuos peligrosos, bodegas industriales y talleres de mantenimiento de equipos pesados, con cumplimiento normativo y seguridad operacional certificada.",
+    },
+    {
+      title: "Coordinación multidisciplinar y revisión de contraparte",
+      body: "Integración de disciplinas estructural, mecánica, eléctrica, instrumentación y civil. Revisión técnica de planos y documentos de terceros bajo los estándares del mandante.",
+    },
+    {
+      title: "Supervisión de terreno y avances",
+      body: "Inspección técnica en obra, control de avances físicos, validación de entregables, gestión de no conformidades y cierre de proyecto con documentación as-built.",
+    },
+    {
+      title: "Project Management multidisciplinar",
+      body: "Gestión integral de proyectos: planificación, control de plazos y costos, coordinación de proveedores, gestión de riesgos y reporte ejecutivo al mandante.",
+    },
   ],
 };
 
