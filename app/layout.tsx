@@ -24,28 +24,63 @@ const audiowide = Audiowide({
 });
 
 export const metadata: Metadata = {
-  title: "AFOR — Facilities para minería e industria",
+  metadataBase: new URL("https://afor.cl"),
+  title: {
+    default: "AFOR — Facilities para minería e industria | Arquitectura e Ingeniería",
+    template: "%s | AFOR",
+  },
   description:
-    "Firma chilena especializada en el desarrollo de facilities para operaciones mineras e industriales. Más de diez años de experiencia técnica para BHP, Codelco e ingenierías Tier 1.",
+    "Firma chilena de arquitectura, ingeniería y project management especializada en el desarrollo de facilities para gran minería e industria: oficinas, casas de cambio, salas de control, salas eléctricas y técnicas, RESPEL, almacenamiento y truck shops. Más de 10 años de experiencia técnica con BHP, Codelco, Antofagasta Minerals, ARCADIS y otras ingenierías Tier 1.",
   keywords: [
-    "facilities minería",
+    "facilities mineras",
     "facilities industriales",
+    "arquitectura minería Chile",
+    "ingeniería facilities",
+    "casas de cambio minería",
     "salas de control",
-    "casas de cambio",
-    "truck shop",
+    "truck shop minería",
     "RESPEL",
+    "almacenamiento industrial",
+    "project management minería",
+    "coordinación BIM",
+    "Revit minería",
     "BHP",
     "Codelco",
+    "Antofagasta Minerals",
+    "ARCADIS",
+    "Worley",
+    "JRI",
+    "ingeniería de detalle",
     "AFOR",
+    "consultoría arquitectónica industrial",
   ],
   authors: [{ name: "AFOR" }],
+  creator: "AFOR",
+  publisher: "AFOR",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "AFOR — Facilities para minería e industria",
-    description: "Firma chilena especializada en facilities mineras e industriales.",
+    description:
+      "Firma chilena de arquitectura, ingeniería y project management para facilities mineras e industriales. Más de 10 años con BHP, Codelco e ingenierías Tier 1.",
     url: "https://afor.cl",
     siteName: "AFOR",
     locale: "es_CL",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AFOR — Facilities para minería e industria",
+    description: "Firma chilena especializada en facilities mineras e industriales.",
   },
 };
 
