@@ -30,7 +30,7 @@ export default function Hero() {
       >
         <div className="max-w-4xl">
           <span className="label text-paper/70 mb-6 block">{HERO.eyebrow}</span>
-          <h1 className="font-sans font-medium text-paper text-hero">
+          <h1 className="font-brand text-paper text-hero tracking-[0.04em]">
             {SITE.brand}.
           </h1>
           <p className="mt-8 max-w-2xl text-lead text-paper/85 font-light">

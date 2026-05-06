@@ -23,7 +23,7 @@ export default function Nav() {
         <a
           href="#top"
           className={clsx(
-            "font-sans font-bold text-lg tracking-[0.18em] transition-colors duration-300",
+            "font-brand text-lg tracking-[0.05em] transition-colors duration-300",
             scrolled ? "text-ink" : "text-paper"
           )}
         >
