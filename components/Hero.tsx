@@ -22,7 +22,7 @@ export default function Hero() {
         transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
         className="relative z-10 container-edge pb-16 md:pb-20"
       >
-        <div className="max-w-4xl">
+        <div className="max-w-4xl" style={{ marginLeft: "-0.04em" }}>
           <span className="label text-paper/70 mb-6 block">{t("eyebrow")}</span>
           <h1 className="font-brand text-paper text-hero tracking-[0.04em]">{tSite("brand")}.</h1>
           <p className="mt-8 max-w-2xl text-lead text-paper/85 font-light">{t("summary")}</p>
