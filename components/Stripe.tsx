@@ -6,7 +6,7 @@ export default function Stripe() {
   const t = useTranslations("stripe");
   return (
     <section className="bg-accent py-20 md:py-28">
-      <div className="container-edge">
+      <div className="px-6 md:px-10 lg:px-20">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
