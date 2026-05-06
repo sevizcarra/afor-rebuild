@@ -19,7 +19,7 @@ export default function About() {
             variants={fadeIn}
             className="lg:col-span-7 font-sans font-medium text-h1 text-ink"
           >
-            {ABOUT.title}
+            No contamos horas. Aplicamos <span className="text-accent">criterio técnico</span>.
           </motion.h2>
           <motion.div
             initial="hidden"

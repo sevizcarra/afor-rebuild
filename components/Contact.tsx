@@ -27,7 +27,7 @@ export default function Contact() {
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         >
           <h2 className=" font-sans font-medium text-h1 text-ink">
-            {CONTACT.title}
+            Iniciemos un <span className="text-accent">proyecto</span>.
           </h2>
           <p className="mt-8 text-body text-gray-700 max-w-md">{CONTACT.body}</p>
 

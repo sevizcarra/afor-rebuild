@@ -16,7 +16,7 @@ export default function Services() {
         >
           <div className="lg:col-span-7">
             <h2 className="font-sans font-medium text-h1 text-paper">
-              {SERVICES.title}
+              Disciplinas <span className="text-accent">técnicas</span> integradas.
             </h2>
           </div>
           <p className="lg:col-span-5 lg:pt-8 text-body text-paper/65 max-w-md">

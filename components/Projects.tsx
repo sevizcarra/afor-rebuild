@@ -54,7 +54,7 @@ export default function Projects() {
         >
           <div className="lg:col-span-7">
             <h2 className=" font-sans font-medium text-h1 text-ink">
-              Más de 20 facilities ejecutadas y revisadas desde 2017.
+              Más de <span className="text-accent">20 facilities</span> ejecutadas y revisadas desde 2017.
             </h2>
           </div>
           <p className="lg:col-span-5 lg:pt-8 text-body text-gray-700 max-w-md">
