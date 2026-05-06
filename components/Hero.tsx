@@ -20,7 +20,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-        className="relative z-10 container-edge pb-16 md:pb-20"
+        className="relative z-10 pb-16 md:pb-20 px-6 md:px-10 lg:px-20"
       >
         <div className="max-w-4xl" style={{ marginLeft: "-0.04em" }}>
           <span className="label text-paper/70 mb-6 block">{t("eyebrow")}</span>
