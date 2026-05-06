@@ -12,10 +12,10 @@ export default function Stripe() {
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         >
           <p className="font-mono text-label uppercase tracking-[0.18em] text-paper/70 mb-6">
-            Trayectoria · 2017 — 2025
+            Método de trabajo
           </p>
           <h3 className="font-sans font-medium text-paper" style={{ fontSize: "clamp(36px, 4.5vw, 64px)", lineHeight: "1.1", letterSpacing: "-0.02em" }}>
-            +20 facilities ejecutadas para BHP, Codelco<br className="hidden md:block" /> e ingenierías Tier 1.
+            Una extensión técnica de su ingeniería para el desarrollo<br className="hidden md:block" /> integral de facilities en gran minería e industria.
           </h3>
         </motion.div>
       </div>
