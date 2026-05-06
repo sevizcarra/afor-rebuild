@@ -37,8 +37,8 @@ export default function Contact() {
                 {SITE.email}
               </a>
             </li>
-            <li className="text-gray-700 font-mono">{SITE.phone}</li>
-            <li className="text-gray-500 font-mono">{SITE.address}</li>
+            <li className="text-gray-700">{SITE.phone}</li>
+            <li className="text-gray-500">{SITE.address}</li>
           </ul>
         </motion.div>
 

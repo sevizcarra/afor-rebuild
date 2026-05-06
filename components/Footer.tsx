@@ -17,7 +17,7 @@ export default function Footer() {
         </div>
         <div className="border-t border-paper/15 pt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-small text-paper/45">
           <span>© {new Date().getFullYear()} AFOR. Todos los derechos reservados.</span>
-          <span className="font-mono">{SITE.address}</span>
+          <span>{SITE.address}</span>
         </div>
       </div>
     </footer>
