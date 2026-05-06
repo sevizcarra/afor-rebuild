@@ -4,7 +4,7 @@
     "slogan": "Facilities para minería e industria",
     "address": "Las Condes, Santiago, Chile",
     "metaTitle": "AFOR — Facilities para minería e industria | Arquitectura e Ingeniería",
-    "metaDescription": "Firma chilena de arquitectura, ingeniería y project management especializada en el desarrollo de facilities para gran minería e industria. Más de 10 años con BHP, Codelco e ingenierías Tier 1."
+    "metaDescription": "Firma chilena de arquitectura, ingeniería y project management especializada en el desarrollo de facilities para gran minería e industria. Más de 10 años con BHP e ingenierías Tier 1."
   },
   "nav": {
     "about": "Nosotros",
@@ -15,7 +15,7 @@
   },
   "hero": {
     "eyebrow": "Facilities para minería e industria",
-    "summary": "Somos una firma chilena especializada en el desarrollo de facilities para operaciones mineras e industriales. Más de diez años integrando arquitectura, ingeniería y criterios técnicos en proyectos del sector."
+    "summary": "Somos una firma chilena especializada en el desarrollo de facilities para operaciones mineras e industriales. Integramos más de una década de experiencia del equipo en proyectos del sector."
   },
   "stripe": {
     "lineOne": "Ingeniería integral para el desarrollo",
@@ -42,7 +42,7 @@
   "projects": {
     "titleStart": "Más de ",
     "titleHighlight": "20 facilities",
-    "titleEnd": " ejecutadas y revisadas desde 2017.",
+    "titleEnd": " en gran minería e industria.",
     "subtitle": "Selección de proyectos representativos en gran minería e industria.",
     "labels": {
       "surface": "Superficie",

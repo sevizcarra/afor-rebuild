@@ -17,7 +17,6 @@ export default function Footer() {
           </div>
           <ul className="md:text-right space-y-3 text-small">
             <li><a href="/AFOR_Dossier_2025.pdf" className="text-paper/70 hover:text-accent transition-colors">{t("links.dossier")}</a></li>
-            <li><a href="https://intranet.afor.cl" className="text-paper/70 hover:text-accent transition-colors">{t("links.team")}</a></li>
             <li><a href={`mailto:${SITE_EMAIL}`} className="text-paper/70 hover:text-accent transition-colors">{SITE_EMAIL}</a></li>
           </ul>
         </div>
