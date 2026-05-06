@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FEATURED_PROJECTS, PORTFOLIO } from "@/lib/content";
 import clsx from "clsx";
 
-const AUTO_ROTATE_MS = 6500;
+const AUTO_ROTATE_MS = 3000;
 
 export default function Projects() {
   const [[idx, dir], setPair] = useState<[number, number]>([0, 0]);
