@@ -18,37 +18,37 @@ export default function Contact() {
   };
 
   return (
-    <section id="contacto" className="bg-paper py-32 md:py-44 border-t border-gray-200">
-      <div className="container-edge grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32">
+    <section id="contacto" className="bg-bone py-32 md:py-44">
+      <div className="container-edge grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
         <motion.div
-          initial={{ opacity: 0, y: 12 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         >
           <span className="label text-accent">{CONTACT.eyebrow}</span>
-          <h2 className="mt-6 font-display font-medium text-h1 text-ink">
-            {CONTACT.title[0]}<br />{CONTACT.title[1]}
+          <h2 className="mt-6 font-sans font-medium text-h1 text-ink">
+            {CONTACT.title}
           </h2>
-          <p className="mt-8 text-lead text-gray-700 max-w-md leading-relaxed">{CONTACT.body}</p>
+          <p className="mt-8 text-body text-gray-700 max-w-md">{CONTACT.body}</p>
 
-          <ul className="mt-14 space-y-4 font-mono text-body">
+          <ul className="mt-14 space-y-4 text-body">
             <li>
-              <a href={`mailto:${SITE.email}`} className="text-ink border-b border-ink/30 pb-1 hover:border-accent hover:text-accent transition-colors duration-300">
+              <a href={`mailto:${SITE.email}`} className="text-ink border-b border-ink/40 pb-1 hover:text-accent hover:border-accent transition-colors">
                 {SITE.email}
               </a>
             </li>
-            <li className="text-gray-700">{SITE.phone}</li>
-            <li className="text-gray-500">{SITE.address}</li>
+            <li className="text-gray-700 font-mono">{SITE.phone}</li>
+            <li className="text-gray-500 font-mono">{SITE.address}</li>
           </ul>
         </motion.div>
 
         <motion.form
           onSubmit={handleSubmit}
-          initial={{ opacity: 0, y: 12 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.7, delay: 0.1 }}
+          transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
           className="space-y-9"
         >
           {[
@@ -63,7 +63,7 @@ export default function Contact() {
                 name={f.name}
                 type={f.type}
                 required
-                className="w-full bg-transparent border-0 border-b border-ink/20 text-ink text-body py-3 focus:border-accent focus:outline-none transition-colors duration-300"
+                className="w-full bg-transparent border-0 border-b border-ink/25 text-ink text-body py-3 focus:border-accent focus:outline-none transition-colors"
               />
             </div>
           ))}
@@ -73,11 +73,11 @@ export default function Contact() {
             <select
               id="type"
               name="type"
-              className="w-full bg-paper border-0 border-b border-ink/20 text-ink text-body py-3 focus:border-accent focus:outline-none transition-colors duration-300 appearance-none cursor-pointer"
+              className="w-full bg-bone border-0 border-b border-ink/25 text-ink text-body py-3 focus:border-accent focus:outline-none transition-colors appearance-none cursor-pointer"
             >
               <option>Mining Facilities</option>
               <option>Industrial Facilities</option>
-              <option>Plot Plan</option>
+              <option>Master Plan</option>
               <option>Project Management</option>
               <option>Coordinación multidisciplinar</option>
               <option>Otro</option>
@@ -91,16 +91,15 @@ export default function Contact() {
               name="message"
               rows={4}
               required
-              className="w-full bg-transparent border-0 border-b border-ink/20 text-ink text-body py-3 focus:border-accent focus:outline-none transition-colors duration-300 resize-none"
+              className="w-full bg-transparent border-0 border-b border-ink/25 text-ink text-body py-3 focus:border-accent focus:outline-none transition-colors resize-none"
             />
           </div>
 
           <button
             type="submit"
-            className="bg-accent text-paper px-7 py-4 hover:bg-ink transition-colors duration-300 inline-flex items-center gap-3 group text-body font-medium"
+            className="text-body text-ink border-b border-ink pb-1 hover:text-accent hover:border-accent transition-colors"
           >
-            <span>{submitted ? "Enviando…" : "Enviar mensaje"}</span>
-            <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+            {submitted ? "Enviando…" : "Enviar mensaje →"}
           </button>
         </motion.form>
       </div>

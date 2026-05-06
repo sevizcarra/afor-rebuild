@@ -1,17 +1,25 @@
 import type { Metadata } from "next";
-import { Inter, Inter_Tight, JetBrains_Mono, Audiowide, Instrument_Serif } from "next/font/google";
+import { Inter_Tight, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--font-inter" });
-const interTight = Inter_Tight({ subsets: ["latin"], display: "swap", variable: "--font-inter-tight" });
-const jetbrains = JetBrains_Mono({ subsets: ["latin"], display: "swap", variable: "--font-jetbrains-mono" });
-const audiowide = Audiowide({ weight: "400", subsets: ["latin"], display: "swap", variable: "--font-audiowide" });
-const instrumentSerif = Instrument_Serif({ weight: "400", subsets: ["latin"], display: "swap", variable: "--font-instrument-serif", style: ["normal", "italic"] });
+const interTight = Inter_Tight({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter-tight",
+  weight: ["300", "400", "500", "600", "700"],
+});
+
+const jetbrains = JetBrains_Mono({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-jetbrains-mono",
+  weight: ["400", "500"],
+});
 
 export const metadata: Metadata = {
-  title: "AFOR — Making ideas grow",
+  title: "AFOR — Facilities para minería e industria",
   description:
-    "Diseñamos facilities para minería e industria: oficinas, casas de cambio, salas de control, RESPEL y truck shops. Diez años de criterio aplicado para BHP, Codelco e ingenierías Tier 1.",
+    "Firma chilena especializada en el desarrollo de facilities para operaciones mineras e industriales. Más de diez años de experiencia técnica para BHP, Codelco e ingenierías Tier 1.",
   keywords: [
     "facilities minería",
     "facilities industriales",
@@ -26,7 +34,7 @@ export const metadata: Metadata = {
   authors: [{ name: "AFOR" }],
   openGraph: {
     title: "AFOR — Facilities para minería e industria",
-    description: "Firma chilena especializada en facilities mineras e industriales. Diez años de criterio. Sin overhead, sin diluir.",
+    description: "Firma chilena especializada en facilities mineras e industriales.",
     url: "https://afor.cl",
     siteName: "AFOR",
     locale: "es_CL",
@@ -36,7 +44,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es" className={`${inter.variable} ${interTight.variable} ${jetbrains.variable} ${audiowide.variable} ${instrumentSerif.variable}`}>
+    <html lang="es" className={`${interTight.variable} ${jetbrains.variable}`}>
       <body>{children}</body>
     </html>
   );

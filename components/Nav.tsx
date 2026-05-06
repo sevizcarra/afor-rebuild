@@ -15,42 +15,43 @@ export default function Nav() {
   return (
     <header
       className={clsx(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
-        scrolled ? "bg-paper/95 backdrop-blur-md border-b border-gray-200" : "bg-paper/0"
+        "fixed top-0 left-0 right-0 z-50 transition-colors duration-500",
+        scrolled ? "bg-paper/95 backdrop-blur-md border-b border-gray-200" : "bg-transparent"
       )}
     >
       <nav className={clsx("container-edge flex items-center justify-between transition-all duration-500", scrolled ? "h-16" : "h-20")}>
-        <a href="#top" className={clsx("font-brand tracking-[0.04em] text-2xl transition-colors duration-300 hover:text-accent", scrolled ? "text-ink" : "text-paper")}>
+        <a
+          href="#top"
+          className={clsx(
+            "font-sans font-bold text-lg tracking-[0.18em] transition-colors duration-300",
+            scrolled ? "text-ink" : "text-paper"
+          )}
+        >
           {SITE.brand}
         </a>
-
         <ul className="hidden md:flex items-center gap-10">
           {NAV_LINKS.map((l) => (
             <li key={l.href}>
               <a
                 href={l.href}
                 className={clsx(
-                  "relative text-small font-normal transition-colors duration-300 group py-2",
-                  scrolled ? "text-ink/70 hover:text-ink" : "text-paper/80 hover:text-paper"
+                  "text-small font-normal transition-colors duration-300",
+                  scrolled ? "text-ink/70 hover:text-accent" : "text-paper/80 hover:text-paper"
                 )}
               >
                 {l.label}
-                <span className="absolute left-0 right-0 bottom-0 h-px bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
               </a>
             </li>
           ))}
         </ul>
-
         <a
           href="#contacto"
           className={clsx(
-            "text-small px-5 py-2.5 transition-all duration-300 font-medium",
-            scrolled
-              ? "bg-accent text-paper hover:bg-ink"
-              : "bg-accent text-paper hover:bg-paper hover:text-ink"
+            "text-small transition-colors duration-300",
+            scrolled ? "text-ink hover:text-accent" : "text-paper hover:text-accent"
           )}
         >
-          Hablemos
+          Hablemos →
         </a>
       </nav>
     </header>

@@ -19,9 +19,9 @@
   body {
     background-color: var(--color-paper);
     color: var(--color-ink);
-    font-family: var(--font-inter), system-ui, sans-serif;
+    font-family: var(--font-inter-tight), system-ui, sans-serif;
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.65;
     font-weight: 400;
   }
   ::selection {
@@ -40,29 +40,6 @@
   }
   .container-edge {
     @apply mx-auto px-6 md:px-10 lg:px-20;
-    max-width: 1480px;
+    max-width: 1440px;
   }
-}
-
-@keyframes shimmer-warm {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-}
-
-.shimmer-warm {
-  background: linear-gradient(
-    110deg,
-    #F6BF03 0%,
-    #FF8C00 20%,
-    #E84E10 40%,
-    #E12F28 60%,
-    #C2185B 80%,
-    #E84E10 100%
-  );
-  background-size: 200% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-  animation: shimmer-warm 8s ease-in-out infinite;
 }

@@ -1,8 +1,6 @@
-// Centralized copy — foco: facilities para mineria e industria.
-
 export const SITE = {
   brand: "AFOR",
-  slogan: "Making ideas grow",
+  slogan: "Facilities para minería e industria",
   email: "contacto@afor.cl",
   phone: "+56 9 6350 1854",
   address: "Las Condes, Santiago, Chile",
@@ -14,31 +12,19 @@ export const NAV_LINKS = [
   { label: "Nosotros", href: "#nosotros" },
   { label: "Servicios", href: "#servicios" },
   { label: "Proyectos", href: "#proyectos" },
+  { label: "Recursos", href: "#recursos" },
   { label: "Contacto", href: "#contacto" },
 ];
 
 export const HERO = {
-  eyebrow: "Facilities · Minería · Industria",
-  title: ["Making ideas", "grow."],
-  subtitle:
-    "Diseñamos y coordinamos facilities para operaciones mineras e industriales. Diez años de criterio aplicado a oficinas, casas de cambio, salas de control y técnicas, RESPEL y truck shops para BHP, Codelco e ingenierías Tier 1.",
-  ctaPrimary: { label: "Ver proyectos", href: "#proyectos" },
-  ctaSecondary: { label: "Conoce el equipo", href: "#nosotros" },
+  eyebrow: "Facilities para minería e industria",
+  summary:
+    "Somos una firma chilena especializada en el desarrollo de facilities para operaciones mineras e industriales. Más de diez años integrando arquitectura, ingeniería y criterios técnicos en proyectos del sector.",
 };
-
-export const HERO_IMAGES = [
-  { src: "/images/hero/hero-01.jpg", alt: "" },
-  { src: "/images/hero/hero-02.jpg", alt: "" },
-  { src: "/images/hero/hero-03.jpg", alt: "" },
-];
-
-// Frase corta del banner inferior (titular de posicionamiento)
-export const HERO_BANNER_TITLE = ["Facilities pensadas", "como infraestructura crítica."];
-export const HERO_BANNER_SHORT = "Diez años diseñando facilities mineras e industriales. Sin overhead, sin diluir. El senior que firma es el que ejecuta.";
 
 export const ABOUT = {
   eyebrow: "Quiénes somos",
-  title: ["No vendemos horas.", "Vendemos criterio."],
+  title: "No contamos horas. Aplicamos criterio técnico.",
   paragraphs: [
     "Desarrollamos facilities para minería e industria: oficinas, casas de cambio, salas de control, salas eléctricas y técnicas, truck shops, RESPEL y áreas de almacenamiento. Integramos arquitectura, ingeniería y coordinación multidisciplinar bajo una misma dirección técnica.",
     "Nos incorporamos al equipo del proyecto como una extensión de su ingeniería. Adoptamos la codificación, manuales y estándares de entrega del mandante, y operamos bajo sus protocolos internos para garantizar entregables compatibles con su sistema de gestión documental.",
@@ -46,36 +32,16 @@ export const ABOUT = {
   ],
 };
 
-export const PILLARS = [
-  {
-    n: "01",
-    title: "Diseño operacional",
-    body:
-      "Cada facility se diseña desde la lógica del proceso productivo y del flujo operacional. Cada metro cuadrado responde a operación, seguridad y continuidad de servicio.",
-  },
-  {
-    n: "02",
-    title: "Rigor normativo",
-    body:
-      "Dominio de normativas y estándares de seguridad para gran minería e industria. Expedientes completos para aprobaciones internas y de autoridades.",
-  },
-  {
-    n: "03",
-    title: "Coordinación BIM",
-    body:
-      "Trabajamos en Revit/BIM con la codificación que su proyecto requiera. Modelos coordinados, libres de interferencias, integrados con estructural, mecánica, eléctrica e instrumentación.",
-  },
-  {
-    n: "04",
-    title: "Modelo flexible",
-    body:
-      "Equipo dedicado solo cuando su proyecto lo requiera. Sin overhead permanente. Acoplamiento a sus procesos, manuales y plazos.",
-  },
+export const PRINCIPLES = [
+  { n: "01", title: "Diseño operacional", body: "Cada facility responde a la lógica del proceso productivo: operación, flujo de personal, seguridad y continuidad de servicio." },
+  { n: "02", title: "Rigor normativo", body: "Dominio de normativas y estándares de seguridad para gran minería e industria. Expedientes completos para aprobaciones." },
+  { n: "03", title: "Coordinación BIM", body: "Trabajamos en Revit/BIM con la codificación que su proyecto requiera. Modelos coordinados, sin interferencias." },
+  { n: "04", title: "Integración al equipo", body: "Equipo dedicado al proyecto, sin overhead. Acoplamiento a sus procesos, manuales y plazos." },
 ];
 
 export const SERVICES = {
   eyebrow: "Servicios",
-  title: ["Facilities,", "end-to-end."],
+  title: "Disciplinas técnicas integradas.",
   items: [
     "Master Plan de facilities para faenas e instalaciones",
     "Oficinas administrativas y casas de cambio",
@@ -83,30 +49,33 @@ export const SERVICES = {
     "Edificación técnica para RESPEL, almacenamiento y truck shops",
     "Coordinación multidisciplinar y revisión de contraparte",
     "Supervisión de terreno y avances",
-    "Project Management dedicado para proyectos multidisciplinares",
+    "Project Management para proyectos multidisciplinares",
   ],
 };
 
-export const STATS = {
-  big: {
-    value: "10+",
-    caption:
-      "Años diseñando y coordinando facilities para operaciones mineras e industriales en Chile.",
-  },
-  mini: [
-    { value: "20+", label: "Facilities ejecutadas desde 2017" },
-    { value: "15", label: "Desarrollos de ingeniería propia" },
-    { value: "4", label: "Revisiones de contraparte para Tier 1" },
+export const CASE_STUDY = {
+  eyebrow: "Caso destacado",
+  client: "BHP · Puerto Coloso",
+  year: "2025",
+  title: "Remediación Edificio CHO",
+  category: "Facility técnica · Ingeniería de detalle",
+  image: "/images/projects/edificio-cho.jpg",
+  body:
+    "Remediación integral de 420 m² para reconvertir el edificio CHO en una facility técnica de alta disponibilidad. Distribución interna, accesos, sala técnica para equipos eléctricos y UPS, oficinas, áreas de cowork y mejoras arquitectónicas en cielos, mobiliario y sistemas auxiliares.",
+  highlights: [
+    { label: "Superficie", value: "420 m²" },
+    { label: "Cliente", value: "BHP / ARCADIS" },
+    { label: "Año", value: "2025" },
+    { label: "Tipo", value: "Remediación · Ejecutado" },
   ],
 };
 
 export const FEATURED_PROJECTS = [
-  { img: "/images/projects/edificio-cho.jpg", eyebrow: "BHP Coloso · 2025", title: "Remediación Edificio CHO", caption: "Facility técnica · Ejecutado" },
   { img: "/images/projects/facilities-enat.jpg", eyebrow: "Escondida · EN-AT", title: "Facilities Camiones Autónomos", caption: "Sala de control + auxiliares · BIM" },
-  { img: "/images/projects/gt-chile.jpg", eyebrow: "Grant Thornton Chile", title: "Oficinas Corporativas", caption: "Habilitación · Ejecutado" },
-  { img: "/images/projects/las-yacas.jpg", eyebrow: "Minera Las Yacas", title: "Barrio Cívico e Infraestructura", caption: "Master plan de facilities · Faena" },
-  { img: "/images/projects/santa-alejandra.jpg", eyebrow: "Mecasfy · Santa Alejandra", title: "Edificio Industrial y Corporativo", caption: "Facility industrial · Diseño integral" },
   { img: "/images/projects/gom-enat.jpg", eyebrow: "Escondida · GOM", title: "Sala de Control GOM", caption: "Facility técnica · Ingeniería de detalle" },
+  { img: "/images/projects/gt-chile.jpg", eyebrow: "Grant Thornton Chile", title: "Oficinas Corporativas", caption: "Habilitación · Ejecutado" },
+  { img: "/images/projects/las-yacas.jpg", eyebrow: "Minera Las Yacas", title: "Barrio Cívico e Infraestructura", caption: "Master plan · Faena" },
+  { img: "/images/projects/santa-alejandra.jpg", eyebrow: "Mecasfy · Santa Alejandra", title: "Edificio Industrial y Corporativo", caption: "Facility industrial · Diseño integral" },
 ];
 
 export const PORTFOLIO = [
@@ -131,8 +100,36 @@ export const PORTFOLIO = [
   { year: "2017", project: "Instalaciones Auxiliares – Spence Growth Options", company: "ARCADIS" },
 ];
 
+export const RESOURCES = {
+  eyebrow: "Recursos",
+  title: "Material para licitaciones y procesos formales.",
+  items: [
+    {
+      title: "Dossier corporativo 2025",
+      description: "Presentación completa con trayectoria, equipo, metodología de trabajo y portafolio detallado.",
+      cta: "Descargar PDF",
+      href: "/AFOR_Dossier_2025.pdf",
+      meta: "PDF · 1.9 MB",
+    },
+    {
+      title: "Ficha técnica de empresa",
+      description: "RUT, certificaciones, datos de contacto formales y representante legal para procesos de inscripción.",
+      cta: "Solicitar ficha",
+      href: "mailto:contacto@afor.cl?subject=Solicitud%20de%20ficha%20t%C3%A9cnica",
+      meta: "Por email",
+    },
+    {
+      title: "Acceso al equipo",
+      description: "Portal interno para coordinación con clientes activos y equipos en proyectos multidisciplinares.",
+      cta: "Acceder al portal",
+      href: "https://intranet.afor.cl",
+      meta: "Solo clientes",
+    },
+  ],
+};
+
 export const CONTACT = {
-  eyebrow: "Hablemos",
-  title: ["¿Tu próxima", "facility?"],
-  body: "Cuéntanos qué necesitas. Respondemos en 24 horas.",
+  eyebrow: "Contacto",
+  title: "Iniciemos un proyecto.",
+  body: "Cuéntanos qué necesitas. Respondemos en 24 horas hábiles.",
 };
