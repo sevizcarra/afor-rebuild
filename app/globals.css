@@ -19,7 +19,7 @@
   body {
     background-color: var(--color-paper);
     color: var(--color-ink);
-    font-family: var(--font-sora), system-ui, sans-serif;
+    font-family: var(--font-inter), system-ui, sans-serif;
     font-size: 16px;
     line-height: 1.65;
     font-weight: 400;
