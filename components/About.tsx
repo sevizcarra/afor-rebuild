@@ -45,6 +45,13 @@ export default function About() {
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.6, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
             >
+              {p.image ? (
+                <div className="relative aspect-[4/3] overflow-hidden bg-gray-200 mb-6">
+                  <img src={p.image} alt={p.title} className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+                </div>
+              ) : (
+                <div className="aspect-[4/3] bg-gray-200 mb-6" aria-hidden="true" />
+              )}
               <span className="font-mono text-small text-accent tracking-wider">{p.n}</span>
               <h3 className="mt-4 font-sans font-medium text-h3 text-ink">{p.title}</h3>
               <p className="mt-3 text-body text-gray-700 leading-relaxed">{p.body}</p>

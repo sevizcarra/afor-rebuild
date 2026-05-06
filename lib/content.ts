@@ -32,10 +32,10 @@ export const ABOUT = {
 };
 
 export const PRINCIPLES = [
-  { n: "01", title: "Diseño operacional", body: "Cada facility responde a la lógica del proceso productivo: operación, flujo de personal, seguridad y continuidad de servicio." },
-  { n: "02", title: "Rigor normativo", body: "Dominio de normativas y estándares de seguridad para gran minería e industria. Expedientes completos para aprobaciones." },
-  { n: "03", title: "Coordinación BIM", body: "Trabajamos en Revit/BIM con la codificación que su proyecto requiera. Modelos coordinados, sin interferencias." },
-  { n: "04", title: "Integración al equipo", body: "Equipo dedicado al proyecto, sin overhead. Acoplamiento a sus procesos, manuales y plazos." },
+  { n: "01", title: "Diseño operacional", body: "Cada facility responde a la lógica del proceso productivo: operación, flujo de personal, seguridad y continuidad de servicio.", image: "/images/principios/principio-01-operacional.jpg" },
+  { n: "02", title: "Rigor normativo", body: "Dominio de normativas y estándares de seguridad para gran minería e industria. Expedientes completos para aprobaciones.", image: "/images/principios/principio-02-normativo.jpg" },
+  { n: "03", title: "Coordinación BIM", body: "Trabajamos en Revit/BIM con la codificación que su proyecto requiera. Modelos coordinados, sin interferencias.", image: "" },
+  { n: "04", title: "Integración al equipo", body: "Equipo dedicado al proyecto, sin overhead. Acoplamiento a sus procesos, manuales y plazos.", image: "" },
 ];
 
 export const SERVICES = {
