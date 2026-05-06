@@ -15,8 +15,7 @@ export default function Services() {
           className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-24 md:mb-32"
         >
           <div className="lg:col-span-7">
-            <span className="label text-accent">{SERVICES.eyebrow}</span>
-            <h2 className="mt-6 font-sans font-medium text-h1 text-paper">
+            <h2 className=" font-sans font-medium text-h1 text-paper">
               {SERVICES.title}
             </h2>
           </div>

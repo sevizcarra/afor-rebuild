@@ -11,17 +11,6 @@ export default function About() {
   return (
     <section id="nosotros" className="bg-paper py-32 md:py-44">
       <div className="container-edge">
-        {/* Bloque superior: titulo + parrafos */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
-          variants={fadeIn}
-          className="mb-24 md:mb-32 max-w-md"
-        >
-          <span className="label text-accent">{ABOUT.eyebrow}</span>
-        </motion.div>
-
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 mb-32 md:mb-40">
           <motion.h2
             initial="hidden"
@@ -47,16 +36,6 @@ export default function About() {
         </div>
 
         {/* Bloque inferior: 4 principios */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
-          variants={fadeIn}
-          className="mb-12 max-w-2xl"
-        >
-          <span className="label text-accent">Cómo trabajamos</span>
-        </motion.div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-10 border-t border-ink/15 pt-12">
           {PRINCIPLES.map((p, i) => (
             <motion.div

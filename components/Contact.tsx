@@ -26,8 +26,7 @@ export default function Contact() {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         >
-          <span className="label text-accent">{CONTACT.eyebrow}</span>
-          <h2 className="mt-6 font-sans font-medium text-h1 text-ink">
+          <h2 className=" font-sans font-medium text-h1 text-ink">
             {CONTACT.title}
           </h2>
           <p className="mt-8 text-body text-gray-700 max-w-md">{CONTACT.body}</p>

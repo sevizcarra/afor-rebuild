@@ -53,8 +53,7 @@ export default function Projects() {
           className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16 md:mb-20"
         >
           <div className="lg:col-span-7">
-            <span className="label text-accent">Proyectos</span>
-            <h2 className="mt-6 font-sans font-medium text-h1 text-ink">
+            <h2 className=" font-sans font-medium text-h1 text-ink">
               Más de 20 facilities ejecutadas desde 2017.
             </h2>
           </div>
