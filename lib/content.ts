@@ -10,8 +10,8 @@ export const SITE = {
 
 export const NAV_LINKS = [
   { label: "Nosotros", href: "#nosotros" },
-  { label: "Servicios", href: "#servicios" },
   { label: "Proyectos", href: "#proyectos" },
+  { label: "Servicios", href: "#servicios" },
   { label: "Recursos", href: "#recursos" },
   { label: "Contacto", href: "#contacto" },
 ];
