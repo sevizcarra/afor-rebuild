@@ -15,7 +15,7 @@ export default function Stripe() {
             Método de trabajo
           </p>
           <h3 className="font-sans font-medium text-paper" style={{ fontSize: "clamp(36px, 4.5vw, 64px)", lineHeight: "1.1", letterSpacing: "-0.02em" }}>
-            Una extensión técnica de su ingeniería para el desarrollo<br className="hidden md:block" /> integral de facilities en gran minería e industria.
+            Ingeniería integral para el desarrollo de facilities<br className="hidden md:block" /> para gran minería e industria.
           </h3>
         </motion.div>
       </div>
