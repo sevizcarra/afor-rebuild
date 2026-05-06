@@ -68,7 +68,7 @@ export default function Projects() {
           <div className="flex items-center justify-between">
             <div className="font-mono text-small text-gray-500 tracking-wider tabular-nums">
               {String(idx + 1).padStart(2, "0")} <span className="text-gray-300">/ {String(total).padStart(2, "0")}</span>
-              <span className="ml-6 text-ink hidden md:inline">{active.title}</span>
+              <span className="ml-6 text-ink hidden md:inline font-sans">{active.title}</span>
             </div>
             <div className="flex gap-2">
               <button
