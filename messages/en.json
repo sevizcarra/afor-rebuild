@@ -62,10 +62,22 @@
         "category": "Technical facility · Detailed engineering",
         "body": "Comprehensive remediation of 420 m² to convert the CHO building into a high-availability technical facility. Internal layout, accesses, technical room for electrical equipment and UPS, offices, cowork areas and architectural improvements in ceilings, furniture and auxiliary systems.",
         "highlights": [
-          { "label": "Surface", "value": "420 m²" },
-          { "label": "Client", "value": "BHP / ARCADIS" },
-          { "label": "Year", "value": "2025" },
-          { "label": "Status", "value": "Completed" }
+          {
+            "label": "Surface",
+            "value": "420 m²"
+          },
+          {
+            "label": "Client",
+            "value": "BHP / ARCADIS"
+          },
+          {
+            "label": "Year",
+            "value": "2025"
+          },
+          {
+            "label": "Status",
+            "value": "Completed"
+          }
         ]
       },
       {
@@ -76,10 +88,22 @@
         "category": "Control room + auxiliaries · BIM",
         "body": "Design of supporting facilities for the Autonomous Trucks program at Minera Escondida. Drilling Control Room with raised technical floor, wood finishes, multiscreen monitoring stations, precision climate control and regulatory signage. Interim engineering ready for construction.",
         "highlights": [
-          { "label": "Program", "value": "EN-AT" },
-          { "label": "Client", "value": "Minera Escondida" },
-          { "label": "Year", "value": "2025" },
-          { "label": "Type", "value": "Interim Engineering · BIM" }
+          {
+            "label": "Program",
+            "value": "EN-AT"
+          },
+          {
+            "label": "Client",
+            "value": "Minera Escondida"
+          },
+          {
+            "label": "Year",
+            "value": "2025"
+          },
+          {
+            "label": "Type",
+            "value": "Interim Engineering · BIM"
+          }
         ]
       },
       {
@@ -90,10 +114,22 @@
         "category": "Technical facility · Detailed engineering",
         "body": "Complete intervention with linear metal ceiling, wooden batten wall finish, recessed linear LED lighting and ergonomic distribution of operator stations with articulated arms and multi-screen monitors. Design that prioritizes operational concentration, acoustic comfort and luminous control for extended shifts.",
         "highlights": [
-          { "label": "Program", "value": "GOM EN-AT" },
-          { "label": "Client", "value": "Minera Escondida" },
-          { "label": "Year", "value": "2024" },
-          { "label": "Type", "value": "Detailed engineering" }
+          {
+            "label": "Program",
+            "value": "GOM EN-AT"
+          },
+          {
+            "label": "Client",
+            "value": "Minera Escondida"
+          },
+          {
+            "label": "Year",
+            "value": "2024"
+          },
+          {
+            "label": "Type",
+            "value": "Detailed engineering"
+          }
         ]
       },
       {
@@ -104,10 +140,22 @@
         "category": "Master plan of facilities · Site",
         "body": "Architectural design of the civic district and supporting infrastructure for the Las Yacas mining project. Definition of administrative offices, access control, restrooms and change rooms with modular distribution oriented to optimize circulation flows and regulatory compliance. Site layouts, parking and vehicle accesses integrated with the general site plan.",
         "highlights": [
-          { "label": "Type", "value": "Master Plan" },
-          { "label": "Client", "value": "Minera Las Yacas" },
-          { "label": "Year", "value": "2023" },
-          { "label": "Sector", "value": "Vicuña" }
+          {
+            "label": "Type",
+            "value": "Master Plan"
+          },
+          {
+            "label": "Client",
+            "value": "Minera Las Yacas"
+          },
+          {
+            "label": "Year",
+            "value": "2023"
+          },
+          {
+            "label": "Sector",
+            "value": "Vicuña"
+          }
         ]
       },
       {
@@ -118,10 +166,22 @@
         "category": "Industrial facility · Integral design",
         "body": "Architectural design of an industrial and corporate building for Mecasfy. Industrial warehouse with integrated administrative offices, translucent polycarbonate facade with exposed metallic structure, differentiated vehicle and pedestrian accesses, perimeter landscaping and parking.",
         "highlights": [
-          { "label": "Type", "value": "Integral design" },
-          { "label": "Client", "value": "Mecasfy" },
-          { "label": "Year", "value": "2024" },
-          { "label": "Sector", "value": "Santa Alejandra" }
+          {
+            "label": "Type",
+            "value": "Integral design"
+          },
+          {
+            "label": "Client",
+            "value": "Mecasfy"
+          },
+          {
+            "label": "Year",
+            "value": "2024"
+          },
+          {
+            "label": "Sector",
+            "value": "Santa Alejandra"
+          }
         ]
       },
       {
@@ -132,10 +192,22 @@
         "category": "Fit-out · Completed",
         "body": "Fit-out of new corporate offices for Grant Thornton Chile. Elegant and modern design with natural wood furniture, exposed ceiling with linear LED lighting, metal shelves with integrated vegetation as room dividers and collaborative workstations. Priority on natural light, warmth of materials and open distribution.",
         "highlights": [
-          { "label": "Type", "value": "Corporate fit-out" },
-          { "label": "Client", "value": "Grant Thornton Chile" },
-          { "label": "Year", "value": "2024" },
-          { "label": "Status", "value": "Completed" }
+          {
+            "label": "Type",
+            "value": "Corporate fit-out"
+          },
+          {
+            "label": "Client",
+            "value": "Grant Thornton Chile"
+          },
+          {
+            "label": "Year",
+            "value": "2024"
+          },
+          {
+            "label": "Status",
+            "value": "Completed"
+          }
         ]
       }
     ],
@@ -195,7 +267,14 @@
       "submitting": "Sending…",
       "submitSuccess": "Message sent",
       "submitError": "Send error",
-      "types": ["Mining Facilities", "Industrial Facilities", "Master Plan", "Project Management", "Multidisciplinary coordination", "Other"]
+      "types": [
+        "Mining Facilities",
+        "Industrial Facilities",
+        "Master Plan",
+        "Project Management",
+        "Multidisciplinary coordination",
+        "Other"
+      ]
     }
   },
   "footer": {
@@ -207,7 +286,6 @@
   },
   "languages": {
     "es": "ES",
-    "en": "EN",
-    "pt": "PT"
+    "en": "EN"
   }
 }

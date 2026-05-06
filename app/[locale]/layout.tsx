@@ -1,43 +1,107 @@
 import type { Metadata } from "next";
-import { Inter, Inter_Tight, JetBrains_Mono, Audiowide, Instrument_Serif } from "next/font/google";
-import "./globals.css";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages, setRequestLocale, getTranslations } from "next-intl/server";
+import { notFound } from "next/navigation";
+import { Plus_Jakarta_Sans, JetBrains_Mono, Audiowide } from "next/font/google";
+import { routing } from "@/i18n/routing";
+import "../globals.css";
 
-const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--font-inter" });
-const interTight = Inter_Tight({ subsets: ["latin"], display: "swap", variable: "--font-inter-tight" });
-const jetbrains = JetBrains_Mono({ subsets: ["latin"], display: "swap", variable: "--font-jetbrains-mono" });
-const audiowide = Audiowide({ weight: "400", subsets: ["latin"], display: "swap", variable: "--font-audiowide" });
-const instrumentSerif = Instrument_Serif({ weight: "400", subsets: ["latin"], display: "swap", variable: "--font-instrument-serif", style: ["normal", "italic"] });
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-plus-jakarta",
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
+});
 
-export const metadata: Metadata = {
-  title: "AFOR — Making ideas grow",
-  description:
-    "Diseñamos facilities para minería e industria: oficinas, casas de cambio, salas de control, RESPEL y truck shops. Diez años de criterio aplicado para BHP, Codelco e ingenierías Tier 1.",
-  keywords: [
-    "facilities minería",
-    "facilities industriales",
-    "salas de control",
-    "casas de cambio",
-    "truck shop",
-    "RESPEL",
-    "BHP",
-    "Codelco",
-    "AFOR",
-  ],
-  authors: [{ name: "AFOR" }],
-  openGraph: {
-    title: "AFOR — Facilities para minería e industria",
-    description: "Firma chilena especializada en facilities mineras e industriales. Diez años de criterio. Sin overhead, sin diluir.",
-    url: "https://afor.cl",
-    siteName: "AFOR",
-    locale: "es_CL",
-    type: "website",
-  },
-};
+const jetbrains = JetBrains_Mono({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-jetbrains-mono",
+  weight: ["400", "500"],
+});
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+const audiowide = Audiowide({
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-audiowide",
+});
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "site" });
+  return {
+    metadataBase: new URL("https://afor.cl"),
+    title: t("metaTitle"),
+    description: t("metaDescription"),
+    keywords: [
+      "facilities mineras",
+      "facilities industriales",
+      "arquitectura minería Chile",
+      "ingeniería facilities",
+      "casas de cambio minería",
+      "salas de control",
+      "truck shop minería",
+      "RESPEL",
+      "almacenamiento industrial",
+      "project management minería",
+      "coordinación BIM",
+      "Revit minería",
+      "BHP",
+      "Codelco",
+      "Antofagasta Minerals",
+      "ARCADIS",
+      "Worley",
+      "JRI",
+      "AFOR",
+    ],
+    authors: [{ name: "AFOR" }],
+    creator: "AFOR",
+    publisher: "AFOR",
+    robots: { index: true, follow: true },
+    openGraph: {
+      title: t("metaTitle"),
+      description: t("metaDescription"),
+      url: "https://afor.cl",
+      siteName: "AFOR",
+      locale: locale === "es" ? "es_CL" : "en_US",
+      type: "website",
+    },
+    alternates: {
+      canonical: `https://afor.cl/${locale === "es" ? "" : locale}`,
+      languages: {
+        "es-CL": "https://afor.cl",
+        "en-US": "https://afor.cl/en",
+      },
+    },
+  };
+}
+
+export default async function LocaleLayout({
+  children,
+  params,
+}: {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  if (!routing.locales.includes(locale as typeof routing.locales[number])) {
+    notFound();
+  }
+  setRequestLocale(locale);
+  const messages = await getMessages();
+
   return (
-    <html lang="es" className={`${inter.variable} ${interTight.variable} ${jetbrains.variable} ${audiowide.variable} ${instrumentSerif.variable}`}>
-      <body>{children}</body>
+    <html lang={locale} className={`${plusJakarta.variable} ${jetbrains.variable} ${audiowide.variable}`}>
+      <body>
+        <NextIntlClientProvider messages={messages}>
+          {children}
+        </NextIntlClientProvider>
+      </body>
     </html>
   );
 }

@@ -62,10 +62,22 @@
         "category": "Facility técnica · Ingeniería de detalle",
         "body": "Remediación integral de 420 m² para reconvertir el edificio CHO en una facility técnica de alta disponibilidad. Distribución interna, accesos, sala técnica para equipos eléctricos y UPS, oficinas, áreas de cowork y mejoras arquitectónicas en cielos, mobiliario y sistemas auxiliares.",
         "highlights": [
-          { "label": "Superficie", "value": "420 m²" },
-          { "label": "Cliente", "value": "BHP / ARCADIS" },
-          { "label": "Año", "value": "2025" },
-          { "label": "Estado", "value": "Ejecutado" }
+          {
+            "label": "Superficie",
+            "value": "420 m²"
+          },
+          {
+            "label": "Cliente",
+            "value": "BHP / ARCADIS"
+          },
+          {
+            "label": "Año",
+            "value": "2025"
+          },
+          {
+            "label": "Estado",
+            "value": "Ejecutado"
+          }
         ]
       },
       {
@@ -76,10 +88,22 @@
         "category": "Sala de control + auxiliares · BIM",
         "body": "Diseño de facilities de soporte para el programa de Camiones Autónomos en Minera Escondida. Sala de Control de Perforadoras con piso técnico elevado, revestimientos de madera, estaciones de monitoreo multiscreen, climatización de precisión y señalética normativa. Ingeniería Interim apta para construcción.",
         "highlights": [
-          { "label": "Programa", "value": "EN-AT" },
-          { "label": "Cliente", "value": "Minera Escondida" },
-          { "label": "Año", "value": "2025" },
-          { "label": "Tipo", "value": "Ingeniería Interim · BIM" }
+          {
+            "label": "Programa",
+            "value": "EN-AT"
+          },
+          {
+            "label": "Cliente",
+            "value": "Minera Escondida"
+          },
+          {
+            "label": "Año",
+            "value": "2025"
+          },
+          {
+            "label": "Tipo",
+            "value": "Ingeniería Interim · BIM"
+          }
         ]
       },
       {
@@ -90,10 +114,22 @@
         "category": "Facility técnica · Ingeniería de detalle",
         "body": "Intervención integral del recinto con cielo metálico lineal, revestimiento mural en listonería de madera, iluminación LED lineal empotrada y distribución ergonómica de puestos de operación con brazos articulados y monitores multipantalla. Diseño que prioriza concentración operacional, confort acústico y control lumínico para jornadas extendidas.",
         "highlights": [
-          { "label": "Programa", "value": "GOM EN-AT" },
-          { "label": "Cliente", "value": "Minera Escondida" },
-          { "label": "Año", "value": "2024" },
-          { "label": "Tipo", "value": "Ingeniería de detalle" }
+          {
+            "label": "Programa",
+            "value": "GOM EN-AT"
+          },
+          {
+            "label": "Cliente",
+            "value": "Minera Escondida"
+          },
+          {
+            "label": "Año",
+            "value": "2024"
+          },
+          {
+            "label": "Tipo",
+            "value": "Ingeniería de detalle"
+          }
         ]
       },
       {
@@ -104,10 +140,22 @@
         "category": "Master plan de facilities · Faena",
         "body": "Diseño arquitectónico del barrio cívico e infraestructura de apoyo para el proyecto minero Las Yacas. Definición de oficinas administrativas, control de ingreso, baños y salas de cambio con distribución modular orientada a optimizar flujos de circulación y cumplimiento normativo. Layouts de emplazamiento, estacionamientos y accesos vehiculares integrados al plan general de faena.",
         "highlights": [
-          { "label": "Tipo", "value": "Master Plan" },
-          { "label": "Cliente", "value": "Minera Las Yacas" },
-          { "label": "Año", "value": "2023" },
-          { "label": "Sector", "value": "Vicuña" }
+          {
+            "label": "Tipo",
+            "value": "Master Plan"
+          },
+          {
+            "label": "Cliente",
+            "value": "Minera Las Yacas"
+          },
+          {
+            "label": "Año",
+            "value": "2023"
+          },
+          {
+            "label": "Sector",
+            "value": "Vicuña"
+          }
         ]
       },
       {
@@ -118,10 +166,22 @@
         "category": "Facility industrial · Diseño integral",
         "body": "Diseño arquitectónico de edificio industrial y corporativo para Mecasfy. Nave industrial con oficinas administrativas integradas, fachada de policarbonato translúcido con estructura metálica vista, accesos vehiculares y peatonales diferenciados, paisajismo perimetral y estacionamientos.",
         "highlights": [
-          { "label": "Tipo", "value": "Diseño integral" },
-          { "label": "Cliente", "value": "Mecasfy" },
-          { "label": "Año", "value": "2024" },
-          { "label": "Sector", "value": "Santa Alejandra" }
+          {
+            "label": "Tipo",
+            "value": "Diseño integral"
+          },
+          {
+            "label": "Cliente",
+            "value": "Mecasfy"
+          },
+          {
+            "label": "Año",
+            "value": "2024"
+          },
+          {
+            "label": "Sector",
+            "value": "Santa Alejandra"
+          }
         ]
       },
       {
@@ -132,10 +192,22 @@
         "category": "Habilitación · Ejecutado",
         "body": "Habilitación de nuevas oficinas corporativas para Grant Thornton Chile. Diseño elegante y moderno con mobiliario de madera natural, cielo expuesto con iluminación lineal LED, estanterías metálicas con vegetación integrada como separadores de ambientes y estaciones de trabajo colaborativas. Prioridad en luz natural, calidez de materiales y distribución abierta.",
         "highlights": [
-          { "label": "Tipo", "value": "Habilitación corporativa" },
-          { "label": "Cliente", "value": "Grant Thornton Chile" },
-          { "label": "Año", "value": "2024" },
-          { "label": "Estado", "value": "Ejecutado" }
+          {
+            "label": "Tipo",
+            "value": "Habilitación corporativa"
+          },
+          {
+            "label": "Cliente",
+            "value": "Grant Thornton Chile"
+          },
+          {
+            "label": "Año",
+            "value": "2024"
+          },
+          {
+            "label": "Estado",
+            "value": "Ejecutado"
+          }
         ]
       }
     ],
@@ -195,7 +267,14 @@
       "submitting": "Enviando…",
       "submitSuccess": "Mensaje enviado",
       "submitError": "Error al enviar",
-      "types": ["Mining Facilities", "Industrial Facilities", "Master Plan", "Project Management", "Coordinación multidisciplinar", "Otro"]
+      "types": [
+        "Mining Facilities",
+        "Industrial Facilities",
+        "Master Plan",
+        "Project Management",
+        "Coordinación multidisciplinar",
+        "Otro"
+      ]
     }
   },
   "footer": {
@@ -207,7 +286,6 @@
   },
   "languages": {
     "es": "ES",
-    "en": "EN",
-    "pt": "PT"
+    "en": "EN"
   }
 }
