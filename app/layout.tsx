@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Inter_Tight, JetBrains_Mono, Audiowide } from "next/font/google";
+import { Sora, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const interTight = Inter_Tight({
+const sora = Sora({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-inter-tight",
-  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-sora",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
 });
 
 const jetbrains = JetBrains_Mono({
@@ -14,13 +14,6 @@ const jetbrains = JetBrains_Mono({
   display: "swap",
   variable: "--font-jetbrains-mono",
   weight: ["400", "500"],
-});
-
-const audiowide = Audiowide({
-  weight: "400",
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-audiowide",
 });
 
 export const metadata: Metadata = {
@@ -51,7 +44,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es" className={`${interTight.variable} ${jetbrains.variable} ${audiowide.variable}`}>
+    <html lang="es" className={`${sora.variable} ${jetbrains.variable}`}>
       <body>{children}</body>
     </html>
   );
