@@ -12,7 +12,7 @@ export default function Stripe() {
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         >
 <h3 className="font-sans font-medium text-paper" style={{ fontSize: "clamp(36px, 4.5vw, 64px)", lineHeight: "1.1", letterSpacing: "-0.02em" }}>
-            Más de 20 facilities revisados y ejecutados<br className="hidden md:block" /> desde 2017.
+            Ingeniería integral para el desarrollo<br className="hidden md:block" /> de facilities para gran minería e industria.
           </h3>
         </motion.div>
       </div>
