@@ -43,7 +43,7 @@ export const SERVICES = {
   title: "Disciplinas técnicas integradas.",
   items: [
     {
-      title: "Master Plan de facilities",
+      title: "Plot Plan para facilities",
       body: "Diseño conceptual de instalaciones para faenas mineras e industriales: layouts, programa arquitectónico, flujos operacionales, estimación de superficies y plan maestro coordinado con disciplinas estructurales y MEP.",
     },
     {
