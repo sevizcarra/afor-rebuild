@@ -5,8 +5,27 @@ import { FEATURED_PROJECTS, PORTFOLIO } from "@/lib/content";
 import clsx from "clsx";
 
 export default function Projects() {
-  const [idx, setIdx] = useState(0);
+  const [[idx, dir], setPair] = useState<[number, number]>([0, 0]);
+  const total = FEATURED_PROJECTS.length;
   const active = FEATURED_PROJECTS[idx];
+
+  const goTo = (newIdx: number) => {
+    const wrappedIdx = (newIdx + total) % total;
+    const direction = wrappedIdx > idx ? 1 : -1;
+    // Si saltamos por el wrap, mantener direccion intuitiva
+    if (idx === total - 1 && wrappedIdx === 0) setPair([wrappedIdx, 1]);
+    else if (idx === 0 && wrappedIdx === total - 1) setPair([wrappedIdx, -1]);
+    else setPair([wrappedIdx, direction]);
+  };
+
+  const next = () => goTo(idx + 1);
+  const prev = () => goTo(idx - 1);
+
+  const slideVariants = {
+    enter: (d: number) => ({ x: d > 0 ? 60 : -60, opacity: 0 }),
+    center: { x: 0, opacity: 1 },
+    exit: (d: number) => ({ x: d > 0 ? -60 : 60, opacity: 0 }),
+  };
 
   return (
     <section id="proyectos" className="bg-paper py-32 md:py-44">
@@ -17,7 +36,7 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-20 md:mb-24"
+          className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16 md:mb-20"
         >
           <div className="lg:col-span-7">
             <span className="label text-accent">Proyectos</span>
@@ -30,80 +49,89 @@ export default function Projects() {
           </p>
         </motion.div>
 
-        {/* CARRUSEL — selector de proyectos */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6 }}
-          className="border-t border-ink/15 mb-12"
-        >
-          <div className="overflow-x-auto -mx-6 md:-mx-10 lg:-mx-20 px-6 md:px-10 lg:px-20 scrollbar-hide">
-            <ul className="flex gap-1 md:gap-2 min-w-max">
-              {FEATURED_PROJECTS.map((p, i) => (
-                <li key={p.id}>
-                  <button
-                    onClick={() => setIdx(i)}
-                    className={clsx(
-                      "flex flex-col items-start gap-2 py-5 px-4 md:px-6 transition-colors duration-300 border-t-2 -mt-px relative whitespace-nowrap",
-                      i === idx
-                        ? "border-accent text-ink"
-                        : "border-transparent text-gray-500 hover:text-ink"
-                    )}
-                  >
-                    <span className="font-mono text-label tracking-wider">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <span className="font-sans text-small font-medium">
-                      {p.title}
-                    </span>
-                  </button>
-                </li>
-              ))}
-            </ul>
+        {/* CONTROLES superiores: contador + flechas */}
+        <div className="flex items-center justify-between border-t border-ink/15 pt-6 mb-12">
+          <div className="font-mono text-small text-gray-500 tracking-wider tabular-nums">
+            {String(idx + 1).padStart(2, "0")} <span className="text-gray-300">/ {String(total).padStart(2, "0")}</span>
+            <span className="ml-6 text-ink hidden md:inline">{active.title}</span>
           </div>
-        </motion.div>
+          <div className="flex gap-2">
+            <button
+              onClick={prev}
+              aria-label="Proyecto anterior"
+              className="w-12 h-12 border border-ink/20 flex items-center justify-center text-ink hover:border-accent hover:text-accent transition-colors duration-300"
+            >
+              ←
+            </button>
+            <button
+              onClick={next}
+              aria-label="Siguiente proyecto"
+              className="w-12 h-12 border border-ink/20 flex items-center justify-center text-ink hover:border-accent hover:text-accent transition-colors duration-300"
+            >
+              →
+            </button>
+          </div>
+        </div>
 
-        {/* CARD del proyecto activo */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={active.id}
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
-            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start mb-32 md:mb-40"
-          >
-            <div className="lg:col-span-7">
-              <div className="relative aspect-[4/3] overflow-hidden bg-gray-200">
-                <img
-                  src={active.image}
-                  alt={active.title}
-                  className="absolute inset-0 h-full w-full object-cover"
-                  loading="lazy"
-                />
+        {/* CARD ACTIVO con slide horizontal */}
+        <div className="relative overflow-hidden mb-12">
+          <AnimatePresence mode="wait" custom={dir}>
+            <motion.div
+              key={active.id}
+              custom={dir}
+              variants={slideVariants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+              className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start"
+            >
+              <div className="lg:col-span-7">
+                <div className="relative aspect-[4/3] overflow-hidden bg-gray-200">
+                  <img
+                    src={active.image}
+                    alt={active.title}
+                    className="absolute inset-0 h-full w-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
               </div>
-            </div>
 
-            <div className="lg:col-span-5 lg:pt-2">
-              <div className="font-mono text-small text-accent tracking-wider mb-4">
-                {active.client} · {active.year}
+              <div className="lg:col-span-5 lg:pt-2">
+                <div className="font-mono text-small text-accent tracking-wider mb-4">
+                  {active.client} · {active.year}
+                </div>
+                <h3 className="font-sans font-medium text-h2 text-ink mb-3">{active.title}</h3>
+                <p className="text-small text-gray-500 mb-8">{active.category}</p>
+                <p className="text-body text-gray-700 mb-12 leading-relaxed">{active.body}</p>
+
+                <dl className="grid grid-cols-2 gap-x-8 gap-y-6 border-t border-ink/15 pt-8">
+                  {active.highlights.map((h) => (
+                    <div key={h.label}>
+                      <dt className="label text-gray-500 mb-2">{h.label}</dt>
+                      <dd className="font-sans font-medium text-h4 text-ink">{h.value}</dd>
+                    </div>
+                  ))}
+                </dl>
               </div>
-              <h3 className="font-sans font-medium text-h2 text-ink mb-3">{active.title}</h3>
-              <p className="text-small text-gray-500 mb-8">{active.category}</p>
-              <p className="text-body text-gray-700 mb-12 leading-relaxed">{active.body}</p>
+            </motion.div>
+          </AnimatePresence>
+        </div>
 
-              <dl className="grid grid-cols-2 gap-x-8 gap-y-6 border-t border-ink/15 pt-8">
-                {active.highlights.map((h) => (
-                  <div key={h.label}>
-                    <dt className="label text-gray-500 mb-2">{h.label}</dt>
-                    <dd className="font-sans font-medium text-h4 text-ink">{h.value}</dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
-          </motion.div>
-        </AnimatePresence>
+        {/* Indicadores inferiores tipo dot */}
+        <div className="flex justify-center gap-2 mb-32 md:mb-40">
+          {FEATURED_PROJECTS.map((p, i) => (
+            <button
+              key={p.id}
+              onClick={() => goTo(i)}
+              aria-label={`Ir a proyecto ${i + 1}`}
+              className={clsx(
+                "h-1 transition-all duration-500",
+                i === idx ? "w-12 bg-accent" : "w-3 bg-ink/20 hover:bg-ink/40"
+              )}
+            />
+          ))}
+        </div>
 
         {/* Tabla de trayectoria completa */}
         <motion.div
