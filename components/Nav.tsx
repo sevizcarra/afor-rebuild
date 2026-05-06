@@ -1,16 +1,55 @@
 "use client";
 import { useEffect, useState } from "react";
-import { NAV_LINKS, SITE } from "@/lib/content";
+import { useTranslations, useLocale } from "next-intl";
+import { Link, usePathname, useRouter } from "@/i18n/routing";
 import clsx from "clsx";
 
+const LOCALES = ["es", "en", "pt"] as const;
+
+function LanguageSwitcher({ scrolled }: { scrolled: boolean }) {
+  const locale = useLocale();
+  const pathname = usePathname();
+  const router = useRouter();
+  const t = useTranslations("languages");
+
+  return (
+    <div className="hidden md:flex items-center gap-3 text-small">
+      {LOCALES.map((l) => (
+        <button
+          key={l}
+          onClick={() => router.replace(pathname, { locale: l })}
+          className={clsx(
+            "transition-colors duration-300 font-mono tracking-wider",
+            l === locale
+              ? scrolled ? "text-accent" : "text-accent"
+              : scrolled ? "text-ink/40 hover:text-ink" : "text-paper/40 hover:text-paper"
+          )}
+        >
+          {t(l as "es" | "en" | "pt")}
+        </button>
+      ))}
+    </div>
+  );
+}
+
 export default function Nav() {
+  const t = useTranslations("nav");
+  const tSite = useTranslations("site");
   const [scrolled, setScrolled] = useState(false);
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 80);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const links = [
+    { label: t("about"), href: "#nosotros" },
+    { label: t("projects"), href: "#proyectos" },
+    { label: t("services"), href: "#servicios" },
+    { label: t("contact"), href: "#contacto" },
+  ];
 
   return (
     <header
@@ -20,17 +59,18 @@ export default function Nav() {
       )}
     >
       <nav className={clsx("container-edge flex items-center justify-between transition-all duration-500", scrolled ? "h-16" : "h-20")}>
-        <a
-          href="#top"
+        <Link
+          href="/"
           className={clsx(
-            "font-brand text-lg tracking-[0.05em] transition-colors duration-300",
+            "font-brand tracking-[0.05em] text-lg transition-colors duration-300",
             scrolled ? "text-ink" : "text-paper"
           )}
         >
-          {SITE.brand}
-        </a>
+          {tSite("brand")}
+        </Link>
+
         <ul className="hidden md:flex items-center gap-10">
-          {NAV_LINKS.map((l) => (
+          {links.map((l) => (
             <li key={l.href}>
               <a
                 href={l.href}
@@ -44,15 +84,19 @@ export default function Nav() {
             </li>
           ))}
         </ul>
-        <a
-          href="#contacto"
-          className={clsx(
-            "text-small transition-colors duration-300",
-            scrolled ? "text-ink hover:text-accent" : "text-paper hover:text-accent"
-          )}
-        >
-          Hablemos →
-        </a>
+
+        <div className="flex items-center gap-6">
+          <LanguageSwitcher scrolled={scrolled} />
+          <a
+            href="#contacto"
+            className={clsx(
+              "text-small transition-colors duration-300",
+              scrolled ? "text-ink hover:text-accent" : "text-paper hover:text-accent"
+            )}
+          >
+            {t("cta")}
+          </a>
+        </div>
       </nav>
     </header>
   );

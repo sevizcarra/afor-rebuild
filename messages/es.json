@@ -1,0 +1,213 @@
+{
+  "site": {
+    "brand": "AFOR",
+    "slogan": "Facilities para minería e industria",
+    "address": "Las Condes, Santiago, Chile",
+    "metaTitle": "AFOR — Facilities para minería e industria | Arquitectura e Ingeniería",
+    "metaDescription": "Firma chilena de arquitectura, ingeniería y project management especializada en el desarrollo de facilities para gran minería e industria. Más de 10 años con BHP, Codelco e ingenierías Tier 1."
+  },
+  "nav": {
+    "about": "Nosotros",
+    "projects": "Proyectos",
+    "services": "Servicios",
+    "contact": "Contacto",
+    "cta": "Hablemos →"
+  },
+  "hero": {
+    "eyebrow": "Facilities para minería e industria",
+    "summary": "Somos una firma chilena especializada en el desarrollo de facilities para operaciones mineras e industriales. Más de diez años integrando arquitectura, ingeniería y criterios técnicos en proyectos del sector."
+  },
+  "stripe": {
+    "lineOne": "Ingeniería integral para el desarrollo",
+    "lineTwo": "de facilities para minería e industria."
+  },
+  "about": {
+    "titleStart": "No contamos horas. Aplicamos ",
+    "titleHighlight": "criterio técnico",
+    "titleEnd": ".",
+    "p1": "Desarrollamos facilities para minería e industria: oficinas, casas de cambio, salas de control, salas eléctricas y técnicas, truck shops, RESPEL y áreas de almacenamiento. Integramos arquitectura, ingeniería y coordinación multidisciplinar bajo una misma dirección técnica.",
+    "p2": "Nos incorporamos al equipo del proyecto como una extensión de su ingeniería. Adoptamos la codificación, manuales y estándares de entrega del mandante, y operamos bajo sus protocolos internos para garantizar entregables compatibles con su sistema de gestión documental.",
+    "p3": "El equipo que toma el proyecto desde el levantamiento técnico es el mismo que coordina la entrega final. Continuidad técnica completa, sin transferencias internas ni intermediarios."
+  },
+  "principles": {
+    "p1Title": "Diseño operacional",
+    "p1Body": "Cada facility responde a la lógica del proceso productivo: operación, flujo de personal, seguridad y continuidad de servicio.",
+    "p2Title": "Rigor normativo",
+    "p2Body": "Dominio de normativas y estándares de seguridad para gran minería e industria. Expedientes completos para aprobaciones.",
+    "p3Title": "Coordinación BIM",
+    "p3Body": "Trabajamos en Revit/BIM con la codificación que su proyecto requiera. Modelos coordinados, sin interferencias.",
+    "p4Title": "Integración al equipo",
+    "p4Body": "Equipo dedicado al proyecto, sin overhead. Acoplamiento a sus procesos, manuales y plazos."
+  },
+  "projects": {
+    "titleStart": "Más de ",
+    "titleHighlight": "20 facilities",
+    "titleEnd": " ejecutadas y revisadas desde 2017.",
+    "subtitle": "Selección de proyectos representativos en gran minería e industria.",
+    "labels": {
+      "surface": "Superficie",
+      "client": "Cliente",
+      "year": "Año",
+      "status": "Estado",
+      "type": "Tipo",
+      "program": "Programa",
+      "sector": "Sector"
+    },
+    "list": [
+      {
+        "id": "cho",
+        "client": "BHP · Puerto Coloso",
+        "year": "2025",
+        "title": "Remediación Edificio CHO",
+        "category": "Facility técnica · Ingeniería de detalle",
+        "body": "Remediación integral de 420 m² para reconvertir el edificio CHO en una facility técnica de alta disponibilidad. Distribución interna, accesos, sala técnica para equipos eléctricos y UPS, oficinas, áreas de cowork y mejoras arquitectónicas en cielos, mobiliario y sistemas auxiliares.",
+        "highlights": [
+          { "label": "Superficie", "value": "420 m²" },
+          { "label": "Cliente", "value": "BHP / ARCADIS" },
+          { "label": "Año", "value": "2025" },
+          { "label": "Estado", "value": "Ejecutado" }
+        ]
+      },
+      {
+        "id": "enat",
+        "client": "Minera Escondida · EN-AT",
+        "year": "2025",
+        "title": "Facilities Camiones Autónomos",
+        "category": "Sala de control + auxiliares · BIM",
+        "body": "Diseño de facilities de soporte para el programa de Camiones Autónomos en Minera Escondida. Sala de Control de Perforadoras con piso técnico elevado, revestimientos de madera, estaciones de monitoreo multiscreen, climatización de precisión y señalética normativa. Ingeniería Interim apta para construcción.",
+        "highlights": [
+          { "label": "Programa", "value": "EN-AT" },
+          { "label": "Cliente", "value": "Minera Escondida" },
+          { "label": "Año", "value": "2025" },
+          { "label": "Tipo", "value": "Ingeniería Interim · BIM" }
+        ]
+      },
+      {
+        "id": "gom",
+        "client": "Minera Escondida · EN-AT",
+        "year": "2024",
+        "title": "Sala de Control GOM",
+        "category": "Facility técnica · Ingeniería de detalle",
+        "body": "Intervención integral del recinto con cielo metálico lineal, revestimiento mural en listonería de madera, iluminación LED lineal empotrada y distribución ergonómica de puestos de operación con brazos articulados y monitores multipantalla. Diseño que prioriza concentración operacional, confort acústico y control lumínico para jornadas extendidas.",
+        "highlights": [
+          { "label": "Programa", "value": "GOM EN-AT" },
+          { "label": "Cliente", "value": "Minera Escondida" },
+          { "label": "Año", "value": "2024" },
+          { "label": "Tipo", "value": "Ingeniería de detalle" }
+        ]
+      },
+      {
+        "id": "yacas",
+        "client": "Minera Las Yacas · Vicuña",
+        "year": "2023",
+        "title": "Barrio Cívico e Infraestructura",
+        "category": "Master plan de facilities · Faena",
+        "body": "Diseño arquitectónico del barrio cívico e infraestructura de apoyo para el proyecto minero Las Yacas. Definición de oficinas administrativas, control de ingreso, baños y salas de cambio con distribución modular orientada a optimizar flujos de circulación y cumplimiento normativo. Layouts de emplazamiento, estacionamientos y accesos vehiculares integrados al plan general de faena.",
+        "highlights": [
+          { "label": "Tipo", "value": "Master Plan" },
+          { "label": "Cliente", "value": "Minera Las Yacas" },
+          { "label": "Año", "value": "2023" },
+          { "label": "Sector", "value": "Vicuña" }
+        ]
+      },
+      {
+        "id": "mecasfy",
+        "client": "Mecasfy · Santa Alejandra",
+        "year": "2024",
+        "title": "Edificio Industrial y Corporativo",
+        "category": "Facility industrial · Diseño integral",
+        "body": "Diseño arquitectónico de edificio industrial y corporativo para Mecasfy. Nave industrial con oficinas administrativas integradas, fachada de policarbonato translúcido con estructura metálica vista, accesos vehiculares y peatonales diferenciados, paisajismo perimetral y estacionamientos.",
+        "highlights": [
+          { "label": "Tipo", "value": "Diseño integral" },
+          { "label": "Cliente", "value": "Mecasfy" },
+          { "label": "Año", "value": "2024" },
+          { "label": "Sector", "value": "Santa Alejandra" }
+        ]
+      },
+      {
+        "id": "gt",
+        "client": "Grant Thornton Chile",
+        "year": "2024",
+        "title": "Oficinas Corporativas",
+        "category": "Habilitación · Ejecutado",
+        "body": "Habilitación de nuevas oficinas corporativas para Grant Thornton Chile. Diseño elegante y moderno con mobiliario de madera natural, cielo expuesto con iluminación lineal LED, estanterías metálicas con vegetación integrada como separadores de ambientes y estaciones de trabajo colaborativas. Prioridad en luz natural, calidez de materiales y distribución abierta.",
+        "highlights": [
+          { "label": "Tipo", "value": "Habilitación corporativa" },
+          { "label": "Cliente", "value": "Grant Thornton Chile" },
+          { "label": "Año", "value": "2024" },
+          { "label": "Estado", "value": "Ejecutado" }
+        ]
+      }
+    ],
+    "controls": {
+      "previous": "Proyecto anterior",
+      "next": "Siguiente proyecto"
+    }
+  },
+  "services": {
+    "titleStart": "Disciplinas ",
+    "titleHighlight": "técnicas",
+    "titleEnd": " integradas.",
+    "subtitle": "Servicios técnicos integrados al equipo del proyecto, bajo los protocolos del mandante.",
+    "items": [
+      {
+        "title": "Plot Plan para facilities",
+        "body": "Diseño conceptual de instalaciones para faenas mineras e industriales: layouts, programa arquitectónico, flujos operacionales, estimación de superficies y plan maestro coordinado con disciplinas estructurales y MEP."
+      },
+      {
+        "title": "Oficinas administrativas y casas de cambio",
+        "body": "Diseño y ejecución de espacios para personal: oficinas técnicas, salas de reunión, comedores, casas de cambio para operadores, vestuarios y baños bajo normativa minera."
+      },
+      {
+        "title": "Salas de control, servidores, eléctricas y técnicas",
+        "body": "Recintos críticos con piso técnico, climatización de precisión, control lumínico y acústico, distribución ergonómica de puestos de operación con monitores multipantalla y revestimientos especializados."
+      },
+      {
+        "title": "RESPEL, almacenamiento y truck shops",
+        "body": "Edificación técnica para residuos peligrosos, bodegas industriales y talleres de mantenimiento de equipos pesados, con cumplimiento normativo y seguridad operacional certificada."
+      },
+      {
+        "title": "Coordinación multidisciplinar y revisión de contraparte",
+        "body": "Integración de disciplinas estructural, mecánica, eléctrica, instrumentación y civil. Revisión técnica de planos y documentos de terceros bajo los estándares del mandante."
+      },
+      {
+        "title": "Supervisión de terreno y avances",
+        "body": "Inspección técnica en obra, control de avances físicos, validación de entregables, gestión de no conformidades y cierre de proyecto con documentación as-built."
+      },
+      {
+        "title": "Project Management multidisciplinar",
+        "body": "Gestión integral de proyectos: planificación, control de plazos y costos, coordinación de proveedores, gestión de riesgos y reporte ejecutivo al mandante."
+      }
+    ]
+  },
+  "contact": {
+    "titleStart": "Iniciemos un ",
+    "titleHighlight": "proyecto",
+    "titleEnd": ".",
+    "body": "Cuéntanos qué necesitas. Respondemos en 24 horas hábiles.",
+    "form": {
+      "name": "Nombre",
+      "email": "Correo",
+      "company": "Empresa",
+      "type": "Tipo de proyecto",
+      "message": "Mensaje",
+      "submit": "Enviar mensaje →",
+      "submitting": "Enviando…",
+      "submitSuccess": "Mensaje enviado",
+      "submitError": "Error al enviar",
+      "types": ["Mining Facilities", "Industrial Facilities", "Master Plan", "Project Management", "Coordinación multidisciplinar", "Otro"]
+    }
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "links": {
+      "dossier": "Dossier 2025",
+      "team": "Acceso equipo"
+    }
+  },
+  "languages": {
+    "es": "ES",
+    "en": "EN",
+    "pt": "PT"
+  }
+}

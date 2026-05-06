@@ -1,12 +1,14 @@
 "use client";
 import { motion } from "framer-motion";
-import { SERVICES } from "@/lib/content";
+import { useTranslations } from "next-intl";
 
 export default function Services() {
+  const t = useTranslations("services");
+  const items = t.raw("items") as { title: string; body: string }[];
+
   return (
     <section id="servicios" className="bg-ink py-32 md:py-44">
       <div className="container-edge">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -16,17 +18,14 @@ export default function Services() {
         >
           <div className="lg:col-span-7">
             <h2 className="font-sans font-medium text-h1 text-paper">
-              Disciplinas <span className="text-accent">técnicas</span> integradas.
+              {t("titleStart")}<span className="text-accent">{t("titleHighlight")}</span>{t("titleEnd")}
             </h2>
           </div>
-          <p className="lg:col-span-5 lg:pt-8 text-body text-paper/65 max-w-md">
-            Servicios técnicos integrados al equipo del proyecto, bajo los protocolos del mandante.
-          </p>
+          <p className="lg:col-span-5 lg:pt-8 text-body text-paper/65 max-w-md">{t("subtitle")}</p>
         </motion.div>
 
-        {/* Lista vertical limpia */}
         <ul className="border-t border-paper/15">
-          {SERVICES.items.map((item, i) => (
+          {items.map((item, i) => (
             <motion.li
               key={i}
               initial={{ opacity: 0, y: 8 }}

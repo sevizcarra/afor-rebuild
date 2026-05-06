@@ -1,10 +1,16 @@
 "use client";
 import { useState, FormEvent } from "react";
 import { motion } from "framer-motion";
-import { CONTACT, SITE } from "@/lib/content";
+import { useTranslations } from "next-intl";
+
+const SITE_EMAIL = "contacto@afor.cl";
+const SITE_PHONE = "+56 9 6350 1854";
 
 export default function Contact() {
+  const t = useTranslations("contact");
+  const tSite = useTranslations("site");
   const [submitted, setSubmitted] = useState(false);
+  const types = t.raw("form.types") as string[];
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -13,7 +19,7 @@ export default function Contact() {
     const body = encodeURIComponent(
       `Nombre: ${data.get("name")}\nEmpresa: ${data.get("company")}\nEmail: ${data.get("email")}\nTipo: ${data.get("type")}\n\n${data.get("message")}`
     );
-    window.location.href = `mailto:${SITE.email}?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:${SITE_EMAIL}?subject=${subject}&body=${body}`;
     setSubmitted(true);
   };
 
@@ -26,19 +32,19 @@ export default function Contact() {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         >
-          <h2 className=" font-sans font-medium text-h1 text-ink">
-            Iniciemos un <span className="text-accent">proyecto</span>.
+          <h2 className="font-sans font-medium text-h1 text-ink">
+            {t("titleStart")}<span className="text-accent">{t("titleHighlight")}</span>{t("titleEnd")}
           </h2>
-          <p className="mt-8 text-body text-gray-700 max-w-md">{CONTACT.body}</p>
+          <p className="mt-8 text-body text-gray-700 max-w-md">{t("body")}</p>
 
           <ul className="mt-14 space-y-4 text-body">
             <li>
-              <a href={`mailto:${SITE.email}`} className="text-ink border-b border-ink/40 pb-1 hover:text-accent hover:border-accent transition-colors">
-                {SITE.email}
+              <a href={`mailto:${SITE_EMAIL}`} className="text-ink border-b border-ink/40 pb-1 hover:text-accent hover:border-accent transition-colors">
+                {SITE_EMAIL}
               </a>
             </li>
-            <li className="text-gray-700">{SITE.phone}</li>
-            <li className="text-gray-500">{SITE.address}</li>
+            <li className="text-gray-700">{SITE_PHONE}</li>
+            <li className="text-gray-500">{tSite("address")}</li>
           </ul>
         </motion.div>
 
@@ -51,12 +57,12 @@ export default function Contact() {
           className="space-y-9"
         >
           {[
-            { name: "name", label: "Nombre", type: "text" },
-            { name: "email", label: "Correo", type: "email" },
-            { name: "company", label: "Empresa", type: "text" },
+            { name: "name", labelKey: "name", type: "text" },
+            { name: "email", labelKey: "email", type: "email" },
+            { name: "company", labelKey: "company", type: "text" },
           ].map((f) => (
             <div key={f.name}>
-              <label htmlFor={f.name} className="label text-gray-500 block mb-3">{f.label}</label>
+              <label htmlFor={f.name} className="label text-gray-500 block mb-3">{t(`form.${f.labelKey}` as never)}</label>
               <input
                 id={f.name}
                 name={f.name}
@@ -68,23 +74,20 @@ export default function Contact() {
           ))}
 
           <div>
-            <label htmlFor="type" className="label text-gray-500 block mb-3">Tipo de proyecto</label>
+            <label htmlFor="type" className="label text-gray-500 block mb-3">{t("form.type")}</label>
             <select
               id="type"
               name="type"
               className="w-full bg-bone border-0 border-b border-ink/25 text-ink text-body py-3 focus:border-accent focus:outline-none transition-colors appearance-none cursor-pointer"
             >
-              <option>Mining Facilities</option>
-              <option>Industrial Facilities</option>
-              <option>Master Plan</option>
-              <option>Project Management</option>
-              <option>Coordinación multidisciplinar</option>
-              <option>Otro</option>
+              {types.map((tp) => (
+                <option key={tp}>{tp}</option>
+              ))}
             </select>
           </div>
 
           <div>
-            <label htmlFor="message" className="label text-gray-500 block mb-3">Mensaje</label>
+            <label htmlFor="message" className="label text-gray-500 block mb-3">{t("form.message")}</label>
             <textarea
               id="message"
               name="message"
@@ -98,7 +101,7 @@ export default function Contact() {
             type="submit"
             className="text-body text-ink border-b border-ink pb-1 hover:text-accent hover:border-accent transition-colors"
           >
-            {submitted ? "Enviando…" : "Enviar mensaje →"}
+            {submitted ? t("form.submitting") : t("form.submit")}
           </button>
         </motion.form>
       </div>
