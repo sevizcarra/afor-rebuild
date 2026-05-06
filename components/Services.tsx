@@ -12,10 +12,10 @@ export default function Services() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-24 md:mb-32"
+          className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-20 md:mb-24"
         >
           <div className="lg:col-span-7">
-            <h2 className=" font-sans font-medium text-h1 text-paper">
+            <h2 className="font-sans font-medium text-h1 text-paper">
               {SERVICES.title}
             </h2>
           </div>
@@ -24,45 +24,31 @@ export default function Services() {
           </p>
         </motion.div>
 
-        {/* Grid de servicios — 2 columnas en desktop con respiro generoso */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 lg:gap-x-24 gap-y-16 md:gap-y-20">
+        {/* Lista vertical limpia */}
+        <ul className="border-t border-paper/15">
           {SERVICES.items.map((item, i) => (
-            <motion.article
+            <motion.li
               key={i}
-              initial={{ opacity: 0, y: 24 }}
+              initial={{ opacity: 0, y: 8 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.7, delay: i * 0.07, ease: [0.16, 1, 0.3, 1] }}
-              className="group relative pt-8"
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: i * 0.05 }}
+              className="border-b border-paper/15 group"
             >
-              {/* Linea superior — base + accent que crece al hover */}
-              <div className="absolute top-0 left-0 right-0 h-px bg-paper/15">
-                <div className="absolute top-0 left-0 h-px w-12 bg-accent transition-all duration-700 ease-out group-hover:w-full" />
-              </div>
-
-              {/* Numero arriba, en accent, mono */}
-              <div className="flex items-baseline justify-between mb-6">
-                <span className="font-mono text-small text-accent tracking-wider">
-                  {String(i + 1).padStart(2, "0")} <span className="text-paper/30">/ {String(SERVICES.items.length).padStart(2, "0")}</span>
+              <div className="grid grid-cols-12 gap-6 md:gap-10 py-8 md:py-10 items-baseline">
+                <span className="col-span-2 md:col-span-1 font-sans text-small text-accent tabular-nums">
+                  {String(i + 1).padStart(2, "0")}
                 </span>
-                <span className="text-paper/30 group-hover:text-accent transition-colors duration-500 text-xl font-light">+</span>
+                <h3 className="col-span-10 md:col-span-5 font-sans font-medium text-paper text-h3 leading-snug transition-colors duration-300 group-hover:text-accent">
+                  {item.title}
+                </h3>
+                <p className="col-span-12 md:col-span-6 text-body text-paper/65 leading-relaxed">
+                  {item.body}
+                </p>
               </div>
-
-              {/* Titulo */}
-              <h3
-                className="font-sans font-medium text-paper mb-5 leading-tight"
-                style={{ fontSize: "clamp(24px, 2.4vw, 34px)", letterSpacing: "-0.015em" }}
-              >
-                {item.title}
-              </h3>
-
-              {/* Body */}
-              <p className="text-body text-paper/65 leading-relaxed max-w-md">
-                {item.body}
-              </p>
-            </motion.article>
+            </motion.li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );
