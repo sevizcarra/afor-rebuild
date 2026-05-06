@@ -4,7 +4,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { Link, usePathname, useRouter } from "@/i18n/routing";
 import clsx from "clsx";
 
-const LOCALES = ["es", "en", "pt"] as const;
+const LOCALES = ["es", "en"] as const;
 
 function LanguageSwitcher({ scrolled }: { scrolled: boolean }) {
   const locale = useLocale();
@@ -25,7 +25,7 @@ function LanguageSwitcher({ scrolled }: { scrolled: boolean }) {
               : scrolled ? "text-ink/40 hover:text-ink" : "text-paper/40 hover:text-paper"
           )}
         >
-          {t(l as "es" | "en" | "pt")}
+          {t(l as "es" | "en")}
         </button>
       ))}
     </div>
