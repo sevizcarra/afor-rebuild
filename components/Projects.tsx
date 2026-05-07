@@ -1,10 +1,10 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useInView, animate } from "framer-motion";
 import { useTranslations } from "next-intl";
 import clsx from "clsx";
 
-const AUTO_ROTATE_MS = 3000;
+const AUTO_ROTATE_MS = 3500;
 
 const PROJECT_IMAGES: Record<string, string> = {
   cho: "/images/projects/edificio-cho.jpg",
@@ -24,6 +24,35 @@ type Project = {
   body: string;
   highlights: { label: string; value: string }[];
 };
+
+function CountUp({ to, duration = 1.6 }: { to: number; duration?: number }) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const inView = useInView(ref, { once: true, margin: "-80px" });
+  const [val, setVal] = useState(0);
+  useEffect(() => {
+    if (!inView) return;
+    const controls = animate(0, to, {
+      duration,
+      ease: [0.16, 1, 0.3, 1],
+      onUpdate: (v) => setVal(Math.round(v)),
+    });
+    return () => controls.stop();
+  }, [inView, to, duration]);
+  return <span ref={ref}>{val}</span>;
+}
+
+function HighlightTitle({ text }: { text: string }) {
+  const match = text.match(/^(\d+)(.*)$/);
+  if (!match) return <>{text}</>;
+  const n = parseInt(match[1], 10);
+  const rest = match[2];
+  return (
+    <>
+      <CountUp to={n} />
+      {rest}
+    </>
+  );
+}
 
 export default function Projects() {
   const t = useTranslations("projects");
@@ -65,14 +94,14 @@ export default function Projects() {
     <section id="proyectos" className="bg-paper py-32 md:py-44">
       <div className="container-edge max-w-5xl mx-auto text-center">
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
           className="mb-16 md:mb-20"
         >
           <h2 className="font-sans font-medium text-h1 text-ink">
-            {t("titleStart")}{t("titleHighlight")}{t("titleEnd")}
+            {t("titleStart")}<HighlightTitle text={t("titleHighlight")} />{t("titleEnd")}
           </h2>
           <p className="mt-6 text-body text-ink max-w-xl mx-auto">{t("subtitle")}</p>
         </motion.div>
@@ -82,7 +111,7 @@ export default function Projects() {
             <button
               onClick={() => handleManual(idx - 1)}
               aria-label={t("controls.previous")}
-              className="w-10 h-10 border border-gray-300 flex items-center justify-center text-ink hover:border-ink transition-colors duration-300"
+              className="w-10 h-10 flex items-center justify-center text-ink hover:opacity-50 transition-opacity duration-300"
             >←</button>
             <div className="font-mono text-small text-gray-500 tracking-wider tabular-nums">
               {String(idx + 1).padStart(2, "0")} <span className="text-gray-300">/ {String(total).padStart(2, "0")}</span>
@@ -90,7 +119,7 @@ export default function Projects() {
             <button
               onClick={() => handleManual(idx + 1)}
               aria-label={t("controls.next")}
-              className="w-10 h-10 border border-gray-300 flex items-center justify-center text-ink hover:border-ink transition-colors duration-300"
+              className="w-10 h-10 flex items-center justify-center text-ink hover:opacity-50 transition-opacity duration-300"
             >→</button>
           </div>
         </div>
@@ -104,12 +133,17 @@ export default function Projects() {
               initial="enter"
               animate="center"
               exit="exit"
-              transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
               className="text-center"
             >
-              <div className="relative aspect-[16/10] overflow-hidden bg-gray-100 mx-auto max-w-3xl mb-10">
+              <motion.div
+                initial={{ scale: 1.04 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
+                className="relative aspect-[16/10] overflow-hidden bg-gray-100 mx-auto max-w-3xl mb-10"
+              >
                 <img src={PROJECT_IMAGES[active.id]} alt={active.title} className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
-              </div>
+              </motion.div>
               <div className="max-w-2xl mx-auto">
                 <div className="text-small text-gray-500 tracking-wider mb-4 uppercase">{active.client} · {active.year}</div>
                 <h3 className="font-sans font-medium text-h2 text-ink mb-3">{active.title}</h3>

@@ -7,6 +7,29 @@ const fadeIn = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] } },
 };
 
+function PillarSticky({ n, title, body }: { n: string; title: string; body: string }) {
+  return (
+    <div className="relative h-[140vh]">
+      <div className="sticky top-0 h-screen flex items-center justify-center">
+        <div className="relative max-w-2xl mx-auto text-center px-6">
+          <span
+            aria-hidden="true"
+            className="absolute inset-0 flex items-center justify-center font-brand leading-none select-none pointer-events-none -z-10 text-gray-100"
+            style={{ fontSize: "clamp(200px, 28vw, 380px)" }}
+          >
+            {n}
+          </span>
+          <div className="relative z-10">
+            <span className="font-mono text-small text-gray-500 tracking-wider">{n}</span>
+            <h3 className="mt-4 font-sans font-medium text-h2 text-ink">{title}</h3>
+            <p className="mt-6 text-body text-ink leading-relaxed">{body}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function About() {
   const t = useTranslations("about");
   const tP = useTranslations("principles");
@@ -36,23 +59,12 @@ export default function About() {
           <p>{t("p2")}</p>
           <p>{t("p3")}</p>
         </motion.div>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-20 max-w-3xl mx-auto mt-32">
-          {principles.map((p, i) => (
-            <motion.div
-              key={p.n}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.6, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
-              className="text-center"
-            >
-              <span className="font-mono text-small text-gray-500 tracking-wider">{p.n}</span>
-              <h3 className="mt-4 font-sans font-medium text-h3 text-ink">{p.title}</h3>
-              <p className="mt-3 text-body text-ink leading-relaxed">{p.body}</p>
-            </motion.div>
-          ))}
-        </div>
+      <div className="mt-24">
+        {principles.map((p) => (
+          <PillarSticky key={p.n} {...p} />
+        ))}
       </div>
     </section>
   );
