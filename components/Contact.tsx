@@ -24,8 +24,8 @@ export default function Contact() {
   };
 
   return (
-    <section id="contacto" className="bg-bone py-32 md:py-44">
-      <div className="container-edge grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+    <section id="contacto" className="bg-paper py-32 md:py-44 border-t border-gray-200">
+      <div className="container-edge max-w-3xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -33,17 +33,17 @@ export default function Contact() {
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         >
           <h2 className="font-sans font-medium text-h1 text-ink">
-            {t("titleStart")}<span className="text-accent">{t("titleHighlight")}</span>{t("titleEnd")}
+            {t("titleStart")}{t("titleHighlight")}{t("titleEnd")}
           </h2>
-          <p className="mt-8 text-body text-gray-700 max-w-md">{t("body")}</p>
+          <p className="mt-8 text-body text-ink max-w-xl mx-auto">{t("body")}</p>
 
-          <ul className="mt-14 space-y-4 text-body">
+          <ul className="mt-14 space-y-3 text-body">
             <li>
-              <a href={`mailto:${SITE_EMAIL}`} className="text-ink border-b border-ink/40 pb-1 hover:text-accent hover:border-accent transition-colors">
+              <a href={`mailto:${SITE_EMAIL}`} className="text-ink border-b border-gray-300 pb-1 hover:border-ink transition-colors">
                 {SITE_EMAIL}
               </a>
             </li>
-            <li className="text-gray-700">{SITE_PHONE}</li>
+            <li className="text-ink">{SITE_PHONE}</li>
             <li className="text-gray-500">{tSite("address")}</li>
           </ul>
         </motion.div>
@@ -54,7 +54,7 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="space-y-9"
+          className="mt-20 space-y-9 max-w-xl mx-auto text-left"
         >
           {[
             { name: "name", labelKey: "name", type: "text" },
@@ -62,23 +62,23 @@ export default function Contact() {
             { name: "company", labelKey: "company", type: "text" },
           ].map((f) => (
             <div key={f.name}>
-              <label htmlFor={f.name} className="label text-gray-500 block mb-3">{t(`form.${f.labelKey}` as never)}</label>
+              <label htmlFor={f.name} className="label text-gray-500 block mb-3 text-center">{t(`form.${f.labelKey}` as never)}</label>
               <input
                 id={f.name}
                 name={f.name}
                 type={f.type}
                 required
-                className="w-full bg-transparent border-0 border-b border-ink/25 text-ink text-body py-3 focus:border-accent focus:outline-none transition-colors"
+                className="w-full bg-transparent border-0 border-b border-gray-300 text-ink text-body py-3 text-center focus:border-ink focus:outline-none transition-colors"
               />
             </div>
           ))}
 
           <div>
-            <label htmlFor="type" className="label text-gray-500 block mb-3">{t("form.type")}</label>
+            <label htmlFor="type" className="label text-gray-500 block mb-3 text-center">{t("form.type")}</label>
             <select
               id="type"
               name="type"
-              className="w-full bg-bone border-0 border-b border-ink/25 text-ink text-body py-3 focus:border-accent focus:outline-none transition-colors appearance-none cursor-pointer"
+              className="w-full bg-paper border-0 border-b border-gray-300 text-ink text-body py-3 text-center focus:border-ink focus:outline-none transition-colors appearance-none cursor-pointer"
             >
               {types.map((tp) => (
                 <option key={tp}>{tp}</option>
@@ -87,22 +87,24 @@ export default function Contact() {
           </div>
 
           <div>
-            <label htmlFor="message" className="label text-gray-500 block mb-3">{t("form.message")}</label>
+            <label htmlFor="message" className="label text-gray-500 block mb-3 text-center">{t("form.message")}</label>
             <textarea
               id="message"
               name="message"
               rows={4}
               required
-              className="w-full bg-transparent border-0 border-b border-ink/25 text-ink text-body py-3 focus:border-accent focus:outline-none transition-colors resize-none"
+              className="w-full bg-transparent border-0 border-b border-gray-300 text-ink text-body py-3 text-center focus:border-ink focus:outline-none transition-colors resize-none"
             />
           </div>
 
-          <button
-            type="submit"
-            className="text-body text-ink border-b border-ink pb-1 hover:text-accent hover:border-accent transition-colors"
-          >
-            {submitted ? t("form.submitting") : t("form.submit")}
-          </button>
+          <div className="text-center pt-4">
+            <button
+              type="submit"
+              className="text-body text-ink border-b border-ink pb-1 hover:opacity-60 transition-opacity"
+            >
+              {submitted ? t("form.submitting") : t("form.submit")}
+            </button>
+          </div>
         </motion.form>
       </div>
     </section>

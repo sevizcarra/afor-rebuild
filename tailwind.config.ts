@@ -8,14 +8,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#0A0A0A",
-        paper: "#FAFAF7",
-        bone: "#F2F0EB",
-        accent: "#B8470A",
-        "gray-700": "#3A3A38",
-        "gray-500": "#7A7A78",
-        "gray-300": "#C9C7C2",
-        "gray-200": "#E8E6E1",
+        // minimal paleta: blanco/negro + grises sutiles
+        ink: "#000000",
+        paper: "#FFFFFF",
+        bone: "#FFFFFF",
+        accent: "#000000",          // sin acento — todo negro
+        "gray-700": "#1A1A1A",
+        "gray-500": "#666666",
+        "gray-300": "#CCCCCC",
+        "gray-200": "#EAEAEA",
+        "gray-100": "#F4F4F4",
       },
       fontFamily: {
         sans: ["var(--font-plus-jakarta)", "system-ui", "sans-serif"],

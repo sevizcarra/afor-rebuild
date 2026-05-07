@@ -5,16 +5,19 @@ import { useTranslations } from "next-intl";
 export default function Stripe() {
   const t = useTranslations("stripe");
   return (
-    <section className="bg-accent py-20 md:py-28">
-      <div className="px-6 md:px-10 lg:px-20">
+    <section className="bg-paper py-24 md:py-32 border-t border-b border-gray-200">
+      <div className="px-6 max-w-4xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         >
-          <h3 className="font-sans font-medium text-paper" style={{ fontSize: "clamp(36px, 4.5vw, 64px)", lineHeight: "1.1", letterSpacing: "-0.02em" }}>
-            {t("lineOne")}<br className="hidden md:block" /> {t("lineTwo")}
+          <h3
+            className="font-sans font-light text-ink"
+            style={{ fontSize: "clamp(28px, 3.6vw, 48px)", lineHeight: "1.2", letterSpacing: "-0.02em" }}
+          >
+            {t("lineOne")} {t("lineTwo")}
           </h3>
         </motion.div>
       </div>

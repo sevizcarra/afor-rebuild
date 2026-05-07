@@ -63,53 +63,39 @@ export default function Projects() {
 
   return (
     <section id="proyectos" className="bg-paper py-32 md:py-44">
-      <div className="container-edge">
+      <div className="container-edge max-w-5xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16 md:mb-20"
+          className="mb-16 md:mb-20"
         >
-          <div className="lg:col-span-7">
-            <h2 className="font-sans font-medium text-h1 text-ink">
-              {t("titleStart")}<span className="text-accent">{t("titleHighlight")}</span>{t("titleEnd")}
-            </h2>
-          </div>
-          <p className="lg:col-span-5 lg:pt-8 text-body text-gray-700 max-w-md">{t("subtitle")}</p>
+          <h2 className="font-sans font-medium text-h1 text-ink">
+            {t("titleStart")}{t("titleHighlight")}{t("titleEnd")}
+          </h2>
+          <p className="mt-6 text-body text-ink max-w-xl mx-auto">{t("subtitle")}</p>
         </motion.div>
 
-        <div className="relative border-t border-ink/15 pt-6 mb-12">
-          <div className="flex items-center justify-between">
+        <div className="relative mb-10">
+          <div className="flex items-center justify-center gap-6 mb-4">
+            <button
+              onClick={() => handleManual(idx - 1)}
+              aria-label={t("controls.previous")}
+              className="w-10 h-10 border border-gray-300 flex items-center justify-center text-ink hover:border-ink transition-colors duration-300"
+            >←</button>
             <div className="font-mono text-small text-gray-500 tracking-wider tabular-nums">
               {String(idx + 1).padStart(2, "0")} <span className="text-gray-300">/ {String(total).padStart(2, "0")}</span>
-              <span className="ml-6 text-ink hidden md:inline font-sans">{active.title}</span>
             </div>
-            <div className="flex gap-2">
-              <button
-                onClick={() => handleManual(idx - 1)}
-                aria-label={t("controls.previous")}
-                className="w-12 h-12 border border-ink/20 flex items-center justify-center text-ink hover:border-accent hover:text-accent transition-colors duration-300"
-              >←</button>
-              <button
-                onClick={() => handleManual(idx + 1)}
-                aria-label={t("controls.next")}
-                className="w-12 h-12 border border-ink/20 flex items-center justify-center text-ink hover:border-accent hover:text-accent transition-colors duration-300"
-              >→</button>
-            </div>
-          </div>
-          <div className="absolute left-0 right-0 top-0 h-px bg-ink/15 overflow-hidden">
-            <motion.div
-              key={`${idx}-${paused}`}
-              initial={{ width: "0%" }}
-              animate={{ width: paused ? "0%" : "100%" }}
-              transition={{ duration: paused ? 0 : AUTO_ROTATE_MS / 1000, ease: "linear" }}
-              className="h-px bg-accent"
-            />
+            <button
+              onClick={() => handleManual(idx + 1)}
+              aria-label={t("controls.next")}
+              className="w-10 h-10 border border-gray-300 flex items-center justify-center text-ink hover:border-ink transition-colors duration-300"
+            >→</button>
           </div>
         </div>
 
-        <div className="relative overflow-hidden mb-12" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
+        <div className="relative overflow-hidden mb-10" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
           <AnimatePresence mode="wait" custom={dir}>
             <motion.div
               key={active.id}
@@ -119,22 +105,20 @@ export default function Projects() {
               animate="center"
               exit="exit"
               transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
-              className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start"
+              className="text-center"
             >
-              <div className="lg:col-span-7">
-                <div className="relative aspect-[4/3] overflow-hidden bg-gray-200">
-                  <img src={PROJECT_IMAGES[active.id]} alt={active.title} className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
-                </div>
+              <div className="relative aspect-[16/10] overflow-hidden bg-gray-100 mx-auto max-w-3xl mb-10">
+                <img src={PROJECT_IMAGES[active.id]} alt={active.title} className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
               </div>
-              <div className="lg:col-span-5 lg:pt-2">
-                <div className="text-small text-accent tracking-wider mb-4 uppercase">{active.client} · {active.year}</div>
+              <div className="max-w-2xl mx-auto">
+                <div className="text-small text-gray-500 tracking-wider mb-4 uppercase">{active.client} · {active.year}</div>
                 <h3 className="font-sans font-medium text-h2 text-ink mb-3">{active.title}</h3>
                 <p className="text-small text-gray-500 mb-8">{active.category}</p>
-                <p className="text-body text-gray-700 mb-12 leading-relaxed">{active.body}</p>
+                <p className="text-body text-ink mb-12 leading-relaxed">{active.body}</p>
 
-                <dl className="grid grid-cols-2 gap-x-8 gap-y-6 border-t border-ink/15 pt-8">
+                <dl className="grid grid-cols-2 gap-x-8 gap-y-6 max-w-md mx-auto">
                   {active.highlights.map((h) => (
-                    <div key={h.label}>
+                    <div key={h.label} className="text-center">
                       <dt className="label text-gray-500 mb-2">{h.label}</dt>
                       <dd className="font-sans font-medium text-h4 text-ink">{h.value}</dd>
                     </div>
@@ -153,7 +137,7 @@ export default function Projects() {
               aria-label={`${i + 1}`}
               className={clsx(
                 "h-1 transition-all duration-500",
-                i === idx ? "w-12 bg-accent" : "w-3 bg-ink/20 hover:bg-ink/40"
+                i === idx ? "w-10 bg-ink" : "w-2 bg-gray-300 hover:bg-gray-500"
               )}
             />
           ))}

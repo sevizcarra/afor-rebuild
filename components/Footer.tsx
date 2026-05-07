@@ -8,21 +8,25 @@ export default function Footer() {
   const tSite = useTranslations("site");
 
   return (
-    <footer className="bg-ink py-20">
-      <div className="container-edge">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-14">
-          <div>
-            <div className="font-brand text-2xl text-paper tracking-[0.05em]">{tSite("brand")}</div>
-            <p className="mt-4 text-small text-paper/55 leading-relaxed">{tSite("slogan")}</p>
-          </div>
-          <ul className="md:text-right space-y-3 text-small">
-            <li><a href="/AFOR_Dossier_2025.pdf" className="text-paper/70 hover:text-accent transition-colors">{t("links.dossier")}</a></li>
-            <li><a href={`mailto:${SITE_EMAIL}`} className="text-paper/70 hover:text-accent transition-colors">{SITE_EMAIL}</a></li>
-          </ul>
+    <footer className="bg-paper py-20 border-t border-gray-200">
+      <div className="container-edge max-w-3xl mx-auto text-center">
+        <div className="font-brand text-2xl text-ink tracking-[0.05em]">{tSite("brand")}</div>
+        <p className="mt-4 text-small text-ink leading-relaxed">{tSite("slogan")}</p>
+
+        <div className="my-10 flex items-center justify-center gap-3">
+          <span className="block h-1 w-1 rounded-full bg-gray-300" />
+          <span className="block h-1 w-1 rounded-full bg-gray-300" />
+          <span className="block h-1 w-1 rounded-full bg-gray-300" />
         </div>
-        <div className="border-t border-paper/15 pt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-small text-paper/45">
-          <span>© {new Date().getFullYear()} AFOR. {t("rights")}</span>
-          <span>{tSite("address")}</span>
+
+        <ul className="space-y-3 text-small">
+          <li><a href="/AFOR_Dossier_2025.pdf" className="text-ink hover:opacity-60 transition-opacity">{t("links.dossier")}</a></li>
+          <li><a href={`mailto:${SITE_EMAIL}`} className="text-ink hover:opacity-60 transition-opacity">{SITE_EMAIL}</a></li>
+        </ul>
+
+        <div className="mt-14 pt-8 border-t border-gray-200 text-small text-gray-500 space-y-2">
+          <div>© {new Date().getFullYear()} AFOR. {t("rights")}</div>
+          <div>{tSite("address")}</div>
         </div>
       </div>
     </footer>
