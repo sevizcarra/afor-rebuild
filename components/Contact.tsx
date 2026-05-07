@@ -24,7 +24,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contacto" className="bg-paper py-32 md:py-44 border-t border-gray-200">
+    <section id="contacto" className="bg-paper py-32 md:py-44">
       <div className="container-edge max-w-3xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -39,7 +39,7 @@ export default function Contact() {
 
           <ul className="mt-14 space-y-3 text-body">
             <li>
-              <a href={`mailto:${SITE_EMAIL}`} className="text-ink border-b border-gray-300 pb-1 hover:border-ink transition-colors">
+              <a href={`mailto:${SITE_EMAIL}`} className="text-ink hover:opacity-60 transition-opacity">
                 {SITE_EMAIL}
               </a>
             </li>
@@ -68,7 +68,7 @@ export default function Contact() {
                 name={f.name}
                 type={f.type}
                 required
-                className="w-full bg-transparent border-0 border-b border-gray-300 text-ink text-body py-3 text-center focus:border-ink focus:outline-none transition-colors"
+                className="w-full bg-transparent border-0 border-b border-gray-200 text-ink text-body py-3 text-center focus:border-ink focus:outline-none transition-colors"
               />
             </div>
           ))}
@@ -78,7 +78,7 @@ export default function Contact() {
             <select
               id="type"
               name="type"
-              className="w-full bg-paper border-0 border-b border-gray-300 text-ink text-body py-3 text-center focus:border-ink focus:outline-none transition-colors appearance-none cursor-pointer"
+              className="w-full bg-paper border-0 border-b border-gray-200 text-ink text-body py-3 text-center focus:border-ink focus:outline-none transition-colors appearance-none cursor-pointer"
             >
               {types.map((tp) => (
                 <option key={tp}>{tp}</option>
@@ -93,14 +93,14 @@ export default function Contact() {
               name="message"
               rows={4}
               required
-              className="w-full bg-transparent border-0 border-b border-gray-300 text-ink text-body py-3 text-center focus:border-ink focus:outline-none transition-colors resize-none"
+              className="w-full bg-transparent border-0 border-b border-gray-200 text-ink text-body py-3 text-center focus:border-ink focus:outline-none transition-colors resize-none"
             />
           </div>
 
           <div className="text-center pt-4">
             <button
               type="submit"
-              className="text-body text-ink border-b border-ink pb-1 hover:opacity-60 transition-opacity"
+              className="text-body text-ink hover:opacity-60 transition-opacity"
             >
               {submitted ? t("form.submitting") : t("form.submit")}
             </button>

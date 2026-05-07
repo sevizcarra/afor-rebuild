@@ -37,13 +37,7 @@ export default function About() {
           <p>{t("p3")}</p>
         </motion.div>
 
-        <div className="my-20 mx-auto flex items-center justify-center gap-3">
-          <span className="block h-1 w-1 rounded-full bg-gray-300" />
-          <span className="block h-1 w-1 rounded-full bg-gray-300" />
-          <span className="block h-1 w-1 rounded-full bg-gray-300" />
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-20 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-20 max-w-3xl mx-auto mt-32">
           {principles.map((p, i) => (
             <motion.div
               key={p.n}

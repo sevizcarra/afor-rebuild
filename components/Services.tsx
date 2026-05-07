@@ -7,7 +7,7 @@ export default function Services() {
   const items = t.raw("items") as { title: string; body: string }[];
 
   return (
-    <section id="servicios" className="bg-paper py-32 md:py-44 border-t border-gray-200">
+    <section id="servicios" className="bg-paper py-32 md:py-44">
       <div className="container-edge max-w-4xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 16 }}

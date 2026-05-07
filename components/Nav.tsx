@@ -53,7 +53,7 @@ export default function Nav() {
     <header
       className={clsx(
         "fixed top-0 left-0 right-0 z-50 transition-colors duration-500 bg-paper",
-        scrolled ? "border-b border-gray-200" : ""
+        ""
       )}
     >
       <nav className={clsx("container-edge flex flex-col items-center justify-center gap-3 transition-all duration-500 py-4", scrolled ? "py-3" : "py-5")}>

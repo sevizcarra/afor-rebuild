@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 export default function Stripe() {
   const t = useTranslations("stripe");
   return (
-    <section className="bg-paper py-24 md:py-32 border-t border-b border-gray-200">
+    <section className="bg-paper py-24 md:py-32">
       <div className="px-6 max-w-4xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 16 }}

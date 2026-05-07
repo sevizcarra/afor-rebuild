@@ -19,12 +19,7 @@ export default function Hero() {
       >
         <span className="label text-gray-500 mb-8 block">{t("eyebrow")}</span>
         <h1 className="font-brand text-ink text-hero tracking-[0.04em]">{tSite("brand")}.</h1>
-        <div className="my-10 flex items-center justify-center gap-3">
-          <span className="block h-px w-10 bg-gray-300" />
-          <span className="block h-1 w-1 rounded-full bg-gray-300" />
-          <span className="block h-px w-10 bg-gray-300" />
-        </div>
-        <p className="text-lead text-ink font-light">{t("summary")}</p>
+        <p className="mt-12 text-lead text-ink font-light">{t("summary")}</p>
       </motion.div>
     </section>
   );
