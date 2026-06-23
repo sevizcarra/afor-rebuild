@@ -6,13 +6,18 @@ export default function Footer() {
   const tSite = useTranslations("site");
 
   return (
-    <footer className="relative bg-paper text-ink py-10 px-8 md:px-12">
-      <div className="flex items-center justify-between gap-6 flex-wrap text-small text-gray-500">
-        <div>
-          <span className="font-sans font-bold text-ink">{tSite("brand")}.</span>
-          <span className="ml-3">{t("expansion")}</span>
+    <footer className="relative bg-copper text-paper py-8 px-8 md:px-12 border-t border-paper/40">
+      <div className="grid grid-cols-12 gap-6 items-center label text-paper/70 tabular">
+        <div className="col-span-12 md:col-span-4">
+          <span className="text-paper font-semibold">{tSite("brand")}</span>
+          <span className="ml-3 text-paper/60 normal-case tracking-normal">{t("expansion")}</span>
         </div>
-        <div>© {new Date().getFullYear()} AFOR · {t("rights")}</div>
+        <div className="col-span-12 md:col-span-4 md:text-center text-paper/60 normal-case tracking-normal">
+          {tSite("address")}
+        </div>
+        <div className="col-span-12 md:col-span-4 md:text-right text-paper/60">
+          © {new Date().getFullYear()} · {t("rights")}
+        </div>
       </div>
     </footer>
   );

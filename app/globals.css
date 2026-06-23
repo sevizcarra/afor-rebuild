@@ -7,7 +7,7 @@ html, body {
   color: #111111;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-feature-settings: "kern", "calt", "ss01";
+  font-feature-settings: "kern", "calt", "ss01", "cv11";
 }
 
 body {
@@ -19,9 +19,11 @@ body {
 img, svg { display: block; }
 
 .label {
-  font-size: 12px;
+  font-size: 11px;
   line-height: 1.2;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   font-weight: 500;
 }
+
+.tabular { font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1, "zero" 1; }
