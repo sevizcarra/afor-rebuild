@@ -2,51 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --color-ink: #0A0A0A;
-  --color-paper: #FAFAF7;
-  --color-bone: #F2F0EB;
-  --color-accent: #B8470A;
+html, body {
+  background: #2B2B2B;
+  color: #FFFFFF;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "kern", "calt", "ss01";
 }
 
-@layer base {
-  html {
-    -webkit-text-size-adjust: 100%;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  body {
-    background-color: var(--color-paper);
-    color: var(--color-ink);
-    font-family: var(--font-plus-jakarta), system-ui, sans-serif;
-    font-size: 16px;
-    line-height: 1.65;
-    font-weight: 400;
-  }
-  ::selection {
-    background-color: var(--color-accent);
-    color: white;
-  }
-  *:focus-visible {
-    outline: 1px solid var(--color-accent);
-    outline-offset: 3px;
-  }
+body {
+  font-family: var(--font-inter), system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
 }
 
-@layer utilities {
-  .label {
-    @apply text-label uppercase tracking-[0.12em] font-sans font-medium;
-  }
-  .container-edge {
-    @apply mx-auto px-6 md:px-10 lg:px-20;
-    max-width: 1440px;
-  }
-  .scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;
-  }
+* { border-radius: 0; }
+img, svg { display: block; }
+
+.label {
+  font-size: 11px;
+  line-height: 1.2;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
 }
+
+.mono {
+  font-feature-settings: "tnum" 1, "zero" 1;
+  letter-spacing: 0.02em;
+}
+
+.grid-frame {
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: calc(100% / 12) 100%;
+}
+
+.grid-frame-dark {
+  background-image:
+    linear-gradient(to right, rgba(0,0,0,0.06) 1px, transparent 1px);
+  background-size: calc(100% / 12) 100%;
+}
+
+.hairline-x { border-top: 1px solid currentColor; }
+.hairline-y { border-left: 1px solid currentColor; }

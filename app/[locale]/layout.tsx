@@ -2,29 +2,15 @@ import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { Plus_Jakarta_Sans, JetBrains_Mono, Audiowide } from "next/font/google";
+import { Inter } from "next/font/google";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
 
-const plusJakarta = Plus_Jakarta_Sans({
+const inter = Inter({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-plus-jakarta",
-  weight: ["200", "300", "400", "500", "600", "700", "800"],
-});
-
-const jetbrains = JetBrains_Mono({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-jetbrains-mono",
-  weight: ["400", "500"],
-});
-
-const audiowide = Audiowide({
-  weight: "400",
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-audiowide",
+  variable: "--font-inter",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export function generateStaticParams() {
@@ -39,25 +25,18 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: t("metaTitle"),
     description: t("metaDescription"),
     keywords: [
-      "facilities mineras",
-      "facilities industriales",
-      "arquitectura minería Chile",
-      "ingeniería facilities",
-      "casas de cambio minería",
+      "infraestructura no procesante",
+      "non-process infrastructure",
+      "casas de cambio",
       "salas de control",
-      "truck shop minería",
-      "RESPEL",
-      "almacenamiento industrial",
-      "project management minería",
-      "coordinación BIM",
-      "Revit minería",
+      "comedores industriales",
+      "talleres mineros",
+      "bodegas mineras",
       "BHP",
       "ARCADIS",
       "AFOR",
     ],
     authors: [{ name: "AFOR" }],
-    creator: "AFOR",
-    publisher: "AFOR",
     robots: { index: true, follow: true },
     openGraph: {
       title: t("metaTitle"),
@@ -92,7 +71,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${plusJakarta.variable} ${jetbrains.variable} ${audiowide.variable}`}>
+    <html lang={locale} className={inter.variable}>
       <body>
         <NextIntlClientProvider messages={messages}>
           {children}
