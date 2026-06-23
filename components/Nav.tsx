@@ -21,25 +21,25 @@ export default function Nav() {
   ];
 
   return (
-    <header className="absolute top-0 left-0 right-0 z-50 text-paper">
-      <nav className="grid grid-cols-12 gap-6 items-center px-8 md:px-12 py-6 border-b border-paper/20">
-        <Link href="/" className="col-span-3 font-sans font-semibold text-h4 tracking-[-0.01em]">
+    <header className="absolute top-0 left-0 right-0 z-50 text-ink">
+      <nav className="grid grid-cols-12 gap-6 items-center px-8 md:px-12 py-6">
+        <Link href="/" className="col-span-3 font-sans font-semibold text-h3 tracking-[-0.01em]">
           {tSite("brand")}
         </Link>
         <ul className="col-span-6 hidden md:flex items-center justify-center gap-10 text-small">
           {links.map((l) => (
             <li key={l.href}>
-              <a href={l.href} className="text-paper/80 hover:text-paper transition-colors">{l.label}</a>
+              <a href={l.href} className="text-gray-700 hover:text-ink transition-colors">{l.label}</a>
             </li>
           ))}
         </ul>
         <div className="col-span-3 flex items-center justify-end gap-3 text-small tabular">
           {LOCALES.map((l, i) => (
             <span key={l} className="contents">
-              {i > 0 && <span className="text-paper/30">/</span>}
+              {i > 0 && <span className="text-gray-300">/</span>}
               <button
                 onClick={() => router.replace(pathname, { locale: l })}
-                className={clsx("transition-colors", l === locale ? "text-paper" : "text-paper/40 hover:text-paper/70")}
+                className={clsx("transition-colors", l === locale ? "text-ink" : "text-gray-400 hover:text-gray-700")}
               >
                 {tLang(l as "es" | "en")}
               </button>
