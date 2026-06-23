@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 html, body {
-  background: #2B2B2B;
-  color: #FFFFFF;
+  background: #FFFFFF;
+  color: #111111;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: "kern", "calt", "ss01";
@@ -19,29 +19,9 @@ body {
 img, svg { display: block; }
 
 .label {
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.2;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   font-weight: 500;
 }
-
-.mono {
-  font-feature-settings: "tnum" 1, "zero" 1;
-  letter-spacing: 0.02em;
-}
-
-.grid-frame {
-  background-image:
-    linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px);
-  background-size: calc(100% / 12) 100%;
-}
-
-.grid-frame-dark {
-  background-image:
-    linear-gradient(to right, rgba(0,0,0,0.06) 1px, transparent 1px);
-  background-size: calc(100% / 12) 100%;
-}
-
-.hairline-x { border-top: 1px solid currentColor; }
-.hairline-y { border-left: 1px solid currentColor; }

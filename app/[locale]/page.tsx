@@ -11,7 +11,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
   const { locale } = await params;
   setRequestLocale(locale);
   return (
-    <main className="bg-ink text-paper">
+    <main className="bg-paper text-ink">
       <Nav />
       <Hero />
       <What />
