@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
+import Icon from "./Icon";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 16 },
@@ -13,6 +14,8 @@ const PRINCIPLES_IMAGES = [
   "/images/principios/principio-03-bim.jpg",
   "/images/principios/principio-04-integracion.jpg",
 ];
+
+const ICONS = ["precision", "operation", "code", "integration"] as const;
 
 export default function About() {
   const t = useTranslations("about");
@@ -27,10 +30,32 @@ export default function About() {
   return (
     <section id="nosotros" className="bg-paper py-32 md:py-44">
       <div className="container-edge">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 mb-32 md:mb-40">
+        {/* Banda KPIs corporativos */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 mb-24 md:mb-32"
+        >
+          {[
+            { kpi: "10+", label: "Años de experiencia técnica del equipo", c: "accent" },
+            { kpi: "20+", label: "Facilities desarrollados", c: "accent" },
+            { kpi: "BHP", label: "Cliente directo en faena Puerto Coloso", c: "bhp" },
+            { kpi: "BIM", label: "Coordinación multidisciplinaria con Revit", c: "accent" },
+          ].map((it) => (
+            <div key={it.label} className={`border-l-2 pl-4 ${it.c === "bhp" ? "border-bhp" : "border-accent"}`}>
+              <div className="font-sans font-semibold text-h1 text-ink tabular-nums">{it.kpi}</div>
+              <div className="mt-2 text-small text-gray-500">{it.label}</div>
+            </div>
+          ))}
+        </motion.div>
+
+        {/* Título + 3 párrafos (intacto en estructura) */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 mb-24 md:mb-32">
           <motion.h2
             initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={fadeIn}
-            className="lg:col-span-7 font-sans font-medium text-h1 text-ink"
+            className="lg:col-span-7 font-sans font-light text-h1 text-ink"
           >
             {t("titleStart")}<span className="text-accent">{t("titleHighlight")}</span>{t("titleEnd")}
           </motion.h2>
@@ -45,27 +70,31 @@ export default function About() {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-10 border-t border-ink/15 pt-12">
+        {/* Principios como CARDS con iconos + imagen */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
           {principles.map((p, i) => (
-            <motion.div
+            <motion.article
               key={p.n}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.6, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
-              className="border-t-2 border-accent/0 hover:border-accent transition-colors duration-500 pt-2 -mt-2"
+              transition={{ duration: 0.6, delay: i * 0.07, ease: [0.16, 1, 0.3, 1] }}
+              className="bg-paper border border-gray-200 hover:border-gray-300 transition-all duration-300 hover:shadow-lg flex flex-col overflow-hidden"
             >
-              {p.image ? (
-                <div className="relative aspect-[4/3] overflow-hidden bg-gray-200 mb-6">
-                  <img src={p.image} alt={p.title} className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
+              <div className="relative aspect-[4/3] overflow-hidden bg-gray-200">
+                <img src={p.image} alt={p.title} loading="lazy" className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 hover:scale-105" />
+                <div className="absolute top-3 left-3 w-9 h-9 flex items-center justify-center rounded-sm bg-paper/90 text-accent backdrop-blur-sm">
+                  <Icon name={ICONS[i] as never} size={18} />
                 </div>
-              ) : (
-                <div className="aspect-[4/3] bg-gray-200 mb-6" aria-hidden="true" />
-              )}
-              <span className="font-mono text-small text-accent tracking-wider">{p.n}</span>
-              <h3 className="mt-4 font-sans font-medium text-h3 text-ink">{p.title}</h3>
-              <p className="mt-3 text-body text-gray-700 leading-relaxed">{p.body}</p>
-            </motion.div>
+              </div>
+              <div className="p-6 flex-1">
+                <div className="flex items-baseline gap-2 mb-2">
+                  <span className="font-mono text-small text-bhp tabular-nums">{p.n}</span>
+                  <h3 className="font-sans font-medium text-h3 text-ink">{p.title}</h3>
+                </div>
+                <p className="mt-2 text-body text-gray-700 leading-relaxed">{p.body}</p>
+              </div>
+            </motion.article>
           ))}
         </div>
       </div>

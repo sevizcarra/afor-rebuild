@@ -1,6 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
+import Icon from "./Icon";
+
+const ICONS = ["masterplan", "build", "remodel", "interim", "controlroom", "respel", "review"] as const;
 
 export default function Services() {
   const t = useTranslations("services");
@@ -17,7 +20,7 @@ export default function Services() {
           className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-20 md:mb-24"
         >
           <div className="lg:col-span-7">
-            <h2 className="font-sans font-medium text-h1 text-paper">
+            <h2 className="font-sans font-light text-h1 text-paper">
               {t("titleStart")}<span className="text-accent">{t("titleHighlight")}</span>{t("titleEnd")}
             </h2>
           </div>
@@ -34,11 +37,14 @@ export default function Services() {
               transition={{ duration: 0.5, delay: i * 0.05 }}
               className="border-b border-paper/15 group"
             >
-              <div className="grid grid-cols-12 gap-6 md:gap-10 py-8 md:py-10 items-baseline">
-                <span className="col-span-2 md:col-span-1 font-sans text-small text-accent tabular-nums">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
+              <div className="grid grid-cols-12 gap-6 md:gap-10 py-8 md:py-10 items-center">
+                <div className="col-span-2 md:col-span-1 flex items-center gap-3">
+                  <span className="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-sm bg-paper/5 text-accent group-hover:bg-accent group-hover:text-ink transition-colors">
+                    <Icon name={ICONS[i] as never} size={18} />
+                  </span>
+                </div>
                 <h3 className="col-span-10 md:col-span-5 font-sans font-medium text-paper text-h3 leading-snug transition-colors duration-300 group-hover:text-accent">
+                  <span className="font-mono text-small text-bhp tabular-nums mr-3">{String(i + 1).padStart(2, "0")}</span>
                   {item.title}
                 </h3>
                 <p className="col-span-12 md:col-span-6 text-body text-paper/65 leading-relaxed">
