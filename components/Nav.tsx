@@ -35,25 +35,30 @@ export default function Nav() {
       scrolled ? "bg-paper/95 backdrop-blur border-b border-gray-200" : "bg-transparent",
     )}>
       <nav className="max-w-[1320px] mx-auto flex items-center justify-between px-6 md:px-10 h-16">
-        <Link href="/" className="flex items-center gap-2 text-ink">
+        <Link href="/" className={clsx("flex items-center gap-2 transition-colors", scrolled ? "text-ink" : "text-paper")}>
           <span className="block w-2.5 h-2.5 bg-accent rounded-sm" aria-hidden="true" />
           <span className="font-sans font-semibold text-h3 tracking-[-0.01em]">{tSite("brand")}</span>
         </Link>
-        <ul className="hidden md:flex items-center gap-8 text-small text-gray-700">
+        <ul className={clsx("hidden md:flex items-center gap-8 text-small transition-colors", scrolled ? "text-gray-700" : "text-paper/85")}>
           {links.map((l) => (
             <li key={l.href}>
-              <a href={l.href} className="hover:text-ink transition-colors">{l.label}</a>
+              <a href={l.href} className={clsx("transition-colors", scrolled ? "hover:text-ink" : "hover:text-accent")}>{l.label}</a>
             </li>
           ))}
         </ul>
         <div className="flex items-center gap-5">
-          <div className="hidden md:flex items-center gap-2 text-small text-gray-500 tabular">
+          <div className={clsx("hidden md:flex items-center gap-2 text-small tabular transition-colors", scrolled ? "text-gray-500" : "text-paper/70")}>
             {LOCALES.map((l, i) => (
               <span key={l} className="contents">
-                {i > 0 && <span className="text-gray-300">/</span>}
+                {i > 0 && <span className={clsx(scrolled ? "text-gray-300" : "text-paper/30")}>/</span>}
                 <button
                   onClick={() => router.replace(pathname, { locale: l })}
-                  className={clsx("transition-colors", l === locale ? "text-ink" : "hover:text-gray-700")}
+                  className={clsx(
+                    "transition-colors",
+                    l === locale
+                      ? (scrolled ? "text-ink" : "text-paper")
+                      : (scrolled ? "hover:text-gray-700" : "hover:text-paper")
+                  )}
                 >
                   {tLang(l as "es" | "en")}
                 </button>
@@ -62,7 +67,12 @@ export default function Nav() {
           </div>
           <a
             href="#contacto"
-            className="inline-flex items-center gap-1.5 text-small font-medium bg-ink text-paper px-4 py-2 rounded-md hover:bg-accent transition-colors"
+            className={clsx(
+              "inline-flex items-center gap-1.5 text-small font-medium px-4 py-2 rounded-md transition-colors",
+              scrolled
+                ? "bg-ink text-paper hover:bg-accent"
+                : "bg-paper text-ink hover:bg-accent"
+            )}
           >
             {t("contact")} →
           </a>

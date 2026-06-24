@@ -9,78 +9,91 @@ const fadeIn = {
 
 export default function Hero() {
   const t = useTranslations("hero");
-  const tSite = useTranslations("site");
 
   return (
-    <section id="top" className="relative bg-paper pt-32 md:pt-40 pb-20 md:pb-28 overflow-hidden">
-      {/* Composición sutil de fondo: bloque calipso suave a la derecha + grid sutil */}
-      <div aria-hidden="true" className="absolute right-0 top-32 hidden md:block">
-        <div className="w-[420px] h-[420px] bg-accent-soft" style={{ borderRadius: "10px" }} />
-      </div>
-
-      <div className="relative max-w-[1320px] mx-auto px-6 md:px-10">
-        <motion.div initial="hidden" animate="visible" variants={fadeIn}>
-          <div className="inline-flex items-center gap-2 text-small text-accent font-medium mb-6">
-            <span className="block w-1.5 h-1.5 rounded-full bg-accent" />
-            {t("expansion")}
-          </div>
-        </motion.div>
-
-        <div className="grid grid-cols-12 gap-6 md:gap-10 items-center">
-          <motion.div
-            initial="hidden" animate="visible" variants={fadeIn}
-            transition={{ delay: 0.05, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="col-span-12 md:col-span-7"
+    <>
+      {/* HERO con video de fondo */}
+      <section id="top" className="relative min-h-[640px] h-[88vh] w-full overflow-hidden bg-ink">
+        {/* Video full */}
+        <div className="absolute inset-0">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            className="h-full w-full object-cover"
           >
-            <h1 className="font-sans font-medium text-display text-ink max-w-2xl">
-              {t("lead")}
-            </h1>
-          </motion.div>
-
-          <motion.div
-            initial="hidden" animate="visible" variants={fadeIn}
-            transition={{ delay: 0.18, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="col-span-12 md:col-span-5 space-y-6"
-          >
-            <p className="text-lead text-gray-700 max-w-md">
-              {t("discipline")}.
-            </p>
-            <div className="flex flex-wrap gap-3 pt-2">
-              <a
-                href="#activos"
-                className="inline-flex items-center gap-2 text-small font-medium bg-ink text-paper px-5 py-2.5 rounded-md hover:bg-accent transition-colors"
-              >
-                Ver activos →
-              </a>
-              <a
-                href="#método"
-                className="inline-flex items-center gap-2 text-small font-medium text-ink border border-gray-300 px-5 py-2.5 rounded-md hover:border-ink transition-colors"
-              >
-                Cómo trabajamos
-              </a>
-            </div>
-          </motion.div>
+            <source src="/videos/hero.mp4" type="video/mp4" />
+          </video>
+          {/* Overlay gradient para legibilidad */}
+          <div className="absolute inset-0 bg-gradient-to-b from-ink/60 via-ink/30 to-ink/70" />
+          <div className="absolute inset-0 bg-gradient-to-r from-ink/40 via-transparent to-transparent" />
         </div>
 
-        {/* Tira de validación corporativa abajo */}
-        <motion.div
-          initial="hidden" animate="visible" variants={fadeIn}
-          transition={{ delay: 0.4, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-20 md:mt-28 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10"
-        >
-          {[
-            { kpi: "10+", label: "Años de experiencia técnica del equipo" },
-            { kpi: "20+", label: "Facilities desarrollados en minería e industria" },
-            { kpi: "BHP", label: "Cliente directo en faena Puerto Coloso" },
-            { kpi: "BIM", label: "Coordinación multidisciplinaria con Revit" },
-          ].map((it) => (
-            <div key={it.label} className="border-l-2 border-accent pl-4">
-              <div className="font-sans font-semibold text-h1 text-ink tabular">{it.kpi}</div>
-              <div className="mt-2 text-small text-gray-500">{it.label}</div>
-            </div>
-          ))}
-        </motion.div>
-      </div>
-    </section>
+        {/* Contenido */}
+        <div className="relative z-10 h-full flex items-end pb-16 md:pb-20">
+          <div className="w-full max-w-[1320px] mx-auto px-6 md:px-10">
+            <motion.div
+              initial="hidden" animate="visible" variants={fadeIn}
+              className="max-w-3xl"
+            >
+              <div className="inline-flex items-center gap-2 text-small text-accent font-medium mb-5">
+                <span className="block w-1.5 h-1.5 rounded-full bg-accent" />
+                {t("expansion")}
+              </div>
+
+              <motion.h1
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.9, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+                className="font-sans font-medium text-display text-paper"
+              >
+                {t("lead")}
+              </motion.h1>
+
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.9, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
+                className="mt-8 flex flex-wrap gap-3"
+              >
+                <a
+                  href="#activos"
+                  className="inline-flex items-center gap-2 text-small font-medium bg-accent text-ink px-5 py-3 rounded-md hover:bg-paper transition-colors"
+                >
+                  Ver activos →
+                </a>
+                <a
+                  href="#método"
+                  className="inline-flex items-center gap-2 text-small font-medium text-paper border border-paper/40 px-5 py-3 rounded-md hover:bg-paper/10 hover:border-paper transition-colors"
+                >
+                  Cómo trabajamos
+                </a>
+              </motion.div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Banda KPIs corporativos separada en blanco */}
+      <section className="relative bg-paper border-b border-gray-200">
+        <div className="max-w-[1320px] mx-auto px-6 md:px-10 py-12 md:py-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
+            {[
+              { kpi: "10+", label: "Años de experiencia técnica del equipo" },
+              { kpi: "20+", label: "Facilities desarrollados en minería e industria" },
+              { kpi: "BHP", label: "Cliente directo en faena Puerto Coloso" },
+              { kpi: "BIM", label: "Coordinación multidisciplinaria con Revit" },
+            ].map((it) => (
+              <div key={it.label} className="border-l-2 border-accent pl-4">
+                <div className="font-sans font-semibold text-h1 text-ink tabular">{it.kpi}</div>
+                <div className="mt-2 text-small text-gray-500">{it.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
