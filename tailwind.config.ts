@@ -14,6 +14,8 @@ const config: Config = {
         accent: "#3FAFA9",     // óxido de cobre, tono más profundo y corporativo
         "accent-soft": "#E8F6F5",
         copper: "#3FAFA9",     // alias
+        bhp: "#E25200",        // naranjo BHP para acentos puntuales
+        "bhp-soft": "#FCE9DC",
         "gray-700": "#2A3942",
         "gray-500": "#5B6B75",
         "gray-400": "#8A98A2",

@@ -10,6 +10,15 @@ const fadeIn = {
 
 const ICONS = ["changeHouse", "controlRoom", "dining", "workshop", "warehouse"] as const;
 
+// Mapeo de imagenes ambientales para cada categoria de activo
+const IMAGES = [
+  "/images/principios/principio-02-normativo.jpg",     // 01 casas de cambio (interior tabiqueria)
+  "/images/projects/gom-enat.jpg",                      // 02 salas de control (sala real)
+  "/images/projects/gt-chile.jpg",                      // 03 comedores (interior corporativo)
+  "/images/projects/santa-alejandra.jpg",               // 04 talleres (industrial)
+  "/images/projects/facilities-enat.jpg",               // 05 bodegas (infraestructura)
+];
+
 export default function Assets() {
   const t = useTranslations("assets");
   const list = t.raw("list") as { n: string; title: string; body: string }[];
@@ -29,23 +38,36 @@ export default function Assets() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {list.map((item, i) => (
-            <motion.div
+            <motion.article
               key={item.n}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.6, delay: i * 0.05, ease: [0.16, 1, 0.3, 1] }}
-              className="card p-8 group"
+              className="card overflow-hidden flex flex-col group"
             >
-              <div className="flex items-start justify-between mb-6">
-                <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-accent-soft text-accent transition-colors group-hover:bg-accent group-hover:text-paper">
-                  <Icon name={ICONS[i] as never} size={24} />
+              {/* Imagen + ícono superpuesto */}
+              <div className="relative aspect-[16/10] overflow-hidden bg-gray-100">
+                <img
+                  src={IMAGES[i]}
+                  alt={item.title}
+                  loading="lazy"
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/40 to-transparent" />
+                <div className="absolute top-4 left-4 w-10 h-10 flex items-center justify-center rounded-md bg-paper/95 text-accent backdrop-blur-sm">
+                  <Icon name={ICONS[i] as never} size={20} />
                 </div>
-                <span className="text-small text-gray-400 tabular font-medium">{item.n}</span>
+                <div className="absolute top-4 right-4 text-small font-medium text-paper tabular bg-ink/40 backdrop-blur-sm px-2 py-1 rounded">
+                  {item.n}
+                </div>
               </div>
-              <h3 className="font-sans font-semibold text-h1 text-ink">{item.title}</h3>
-              <p className="mt-3 text-small text-gray-700 leading-relaxed">{item.body}</p>
-            </motion.div>
+              {/* Texto */}
+              <div className="p-7 flex-1">
+                <h3 className="font-sans font-semibold text-h1 text-ink">{item.title}</h3>
+                <p className="mt-3 text-small text-gray-700 leading-relaxed">{item.body}</p>
+              </div>
+            </motion.article>
           ))}
         </div>
       </div>
