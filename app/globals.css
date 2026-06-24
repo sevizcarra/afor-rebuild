@@ -4,7 +4,7 @@
 
 html, body {
   background: #FFFFFF;
-  color: #111111;
+  color: #0E1B22;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: "kern", "calt", "ss01", "cv11";
@@ -15,15 +15,26 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-* { border-radius: 0; }
 img, svg { display: block; }
 
 .label {
-  font-size: 11px;
+  font-size: 11.5px;
   line-height: 1.2;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   font-weight: 500;
 }
 
-.tabular { font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1, "zero" 1; }
+.tabular { font-variant-numeric: tabular-nums; }
+
+/* Card base */
+.card {
+  background: #FFFFFF;
+  border: 1px solid #E3E8EC;
+  border-radius: 10px;
+  transition: box-shadow .25s ease, border-color .25s ease, transform .25s ease;
+}
+.card:hover {
+  box-shadow: 0 2px 4px rgba(14,27,34,.06), 0 12px 28px rgba(14,27,34,.08);
+  border-color: #C3CCD3;
+}
