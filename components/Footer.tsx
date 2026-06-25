@@ -11,7 +11,8 @@ export default function Footer() {
     <footer className="bg-paper py-10 border-t border-gray-200">
       <div className="container-edge flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-small">
         <div className="flex items-center gap-3">
-          <span className="font-brand text-base tracking-[0.05em] text-ink">{tSite("brand")}</span>
+          <span className="block w-2 h-2 bg-bhp" aria-hidden="true" />
+          <span className="font-brand text-base tracking-[0.05em] text-ink">{tSite("brand")}<span className="text-accent">.</span></span>
           <span className="text-gray-500">{tSite("address")}</span>
         </div>
         <div className="flex items-center gap-6 text-gray-500">

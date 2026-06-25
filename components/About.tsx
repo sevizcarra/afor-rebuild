@@ -70,7 +70,7 @@ export default function About() {
               transition={{ duration: 0.6, delay: i * 0.06, ease: [0.16, 1, 0.3, 1] }}
               className="grid grid-cols-12 gap-6 py-10 md:py-12 hairline-soft-b items-start group"
             >
-              <div className="col-span-2 md:col-span-1 label text-gray-400 tabular pt-2">{p.n}</div>
+              <div className="col-span-2 md:col-span-1 label text-bhp tabular pt-2">{p.n}</div>
               <h3 className="col-span-10 md:col-span-3 font-sans font-bold text-ink text-h3">
                 {p.title}
               </h3>

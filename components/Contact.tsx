@@ -33,7 +33,7 @@ export default function Contact() {
             </p>
             <a
               href={`mailto:${SITE_EMAIL}`}
-              className="mt-10 inline-flex items-center justify-center text-small font-medium bg-paper text-ink px-7 py-3.5 hover:bg-accent transition-colors uppercase tracking-wider"
+              className="mt-10 inline-flex items-center justify-center text-small font-medium bg-paper text-ink px-7 py-3.5 hover:bg-bhp hover:text-paper transition-colors uppercase tracking-wider"
             >
               {t("cta")}
             </a>

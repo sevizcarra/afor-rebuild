@@ -104,7 +104,7 @@ export default function Projects() {
               initial={{ width: "0%" }}
               animate={{ width: paused ? "0%" : "100%" }}
               transition={{ duration: paused ? 0 : AUTO_ROTATE_MS / 1000, ease: "linear" }}
-              className="h-px bg-accent"
+              className="h-px bg-bhp"
             />
           </div>
         </div>
@@ -153,7 +153,7 @@ export default function Projects() {
               aria-label={`${i + 1}`}
               className={clsx(
                 "h-1 transition-all duration-500",
-                i === idx ? "w-12 bg-accent" : "w-3 bg-paper/25 hover:bg-paper/50"
+                i === idx ? "w-12 bg-bhp" : "w-3 bg-paper/25 hover:bg-paper/50"
               )}
             />
           ))}
