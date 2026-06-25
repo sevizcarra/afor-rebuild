@@ -46,8 +46,18 @@ export default function Hero() {
         {/* Hairline corto + summary con fondo naranjo BHP */}
         <div className="mt-8 mb-6 w-16 h-px bg-paper/60" />
 
-        <p className="max-w-xl text-lead text-paper font-light bg-bhp px-4 py-3">
-          {t("summary")}
+        <p className="max-w-xl text-lead font-light leading-[1.7]">
+          <span
+            className="text-paper"
+            style={{
+              backgroundColor: "#E25200",
+              boxDecorationBreak: "clone",
+              WebkitBoxDecorationBreak: "clone",
+              padding: "0.15em 0.5em",
+            }}
+          >
+            {t("summary")}
+          </span>
         </p>
 
         {/* Botones */}

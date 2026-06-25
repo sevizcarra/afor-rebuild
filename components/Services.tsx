@@ -42,8 +42,10 @@ export default function Services() {
               className="grid grid-cols-12 gap-6 py-8 md:py-10 items-start group"
               style={{ borderBottom: "1px solid rgba(250,250,247,0.25)" }}
             >
-              <div className="col-span-2 md:col-span-1 label text-bhp tabular pt-2 font-semibold">
-                {String(i + 1).padStart(2, "0")}
+              <div className="col-span-2 md:col-span-1 pt-1">
+                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-paper text-bhp text-[11.5px] tracking-[0.06em] tabular font-semibold">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
               </div>
               <h3 className="col-span-10 md:col-span-3 font-sans font-bold text-paper text-h3 leading-snug">
                 {item.title}
