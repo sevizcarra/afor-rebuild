@@ -24,7 +24,23 @@ export default function Contact() {
   };
 
   return (
-    <section id="contacto" className="bg-bone py-32 md:py-44">
+    <section id="contacto" className="bg-bone py-24 md:py-32">
+      <div className="container-edge">
+        <div className="grid grid-cols-12 gap-4 hairline-t pt-8 mb-12">
+          <div className="col-span-12 md:col-span-3">
+            <div className="text-[10px] tabular uppercase tracking-[0.12em] text-gray-500">04 — Contacto</div>
+          </div>
+          <motion.h2
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            className="col-span-12 md:col-span-9 font-sans font-light text-h1 text-ink"
+          >
+            {t("titleStart")}<span className="text-accent">{t("titleHighlight")}</span>{t("titleEnd")}
+          </motion.h2>
+        </div>
+      </div>
       <div className="container-edge grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -32,9 +48,6 @@ export default function Contact() {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         >
-          <h2 className="font-sans font-medium text-h1 text-ink">
-            {t("titleStart")}<span className="text-accent">{t("titleHighlight")}</span>{t("titleEnd")}
-          </h2>
           <p className="mt-8 text-body text-gray-700 max-w-md">{t("body")}</p>
 
           <ul className="mt-14 space-y-4 text-body">

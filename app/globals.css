@@ -50,3 +50,15 @@
     display: none;
   }
 }
+
+@layer utilities {
+  .tabular { font-variant-numeric: tabular-nums; }
+  .swiss-grid {
+    background-image: linear-gradient(to right, rgba(10,10,10,0.04) 1px, transparent 1px);
+    background-size: calc(100% / 12) 100%;
+  }
+  .hairline-t { border-top: 1px solid #0A0A0A; }
+  .hairline-b { border-bottom: 1px solid #0A0A0A; }
+  .hairline-soft-t { border-top: 1px solid rgba(10,10,10,0.12); }
+  .hairline-soft-b { border-bottom: 1px solid rgba(10,10,10,0.12); }
+}

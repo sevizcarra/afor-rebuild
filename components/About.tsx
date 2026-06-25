@@ -28,74 +28,83 @@ export default function About() {
   ];
 
   return (
-    <section id="nosotros" className="bg-paper py-32 md:py-44">
+    <section id="nosotros" className="bg-paper py-24 md:py-32">
       <div className="container-edge">
-        {/* Banda KPIs corporativos */}
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 mb-24 md:mb-32"
-        >
-          {[
-            { kpi: "10+", label: "Años de experiencia técnica del equipo", c: "accent" },
-            { kpi: "20+", label: "Facilities desarrollados", c: "accent" },
-            { kpi: "BHP", label: "Cliente directo en faena Puerto Coloso", c: "bhp" },
-            { kpi: "BIM", label: "Coordinación multidisciplinaria con Revit", c: "accent" },
-          ].map((it) => (
-            <div key={it.label} className={`border-l-2 pl-4 ${it.c === "bhp" ? "border-bhp" : "border-accent"}`}>
-              <div className="font-sans font-semibold text-h1 text-ink tabular-nums">{it.kpi}</div>
-              <div className="mt-2 text-small text-gray-500">{it.label}</div>
-            </div>
-          ))}
-        </motion.div>
+        {/* Banda KPIs Swiss-style con grilla 12 col + hairline */}
+        <div className="grid grid-cols-12 gap-4 hairline-t pt-6 pb-12">
+          <div className="col-span-12 md:col-span-3">
+            <div className="text-[10px] tabular uppercase tracking-[0.12em] text-gray-500">00 — Indicadores</div>
+          </div>
+          <div className="col-span-12 md:col-span-9 grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { kpi: "10+", label: "Años · experiencia equipo", c: "accent" },
+              { kpi: "20+", label: "Facilities desarrollados", c: "accent" },
+              { kpi: "BHP", label: "Cliente directo · Coloso", c: "bhp" },
+              { kpi: "BIM", label: "Coordinación Revit", c: "accent" },
+            ].map((it) => (
+              <div key={it.label} className="hairline-soft-t pt-4">
+                <div className="flex items-baseline gap-2">
+                  <span className={`block w-1.5 h-1.5 ${it.c === "bhp" ? "bg-bhp" : "bg-accent"}`} />
+                  <div className="font-sans font-light text-h2 text-ink tabular">{it.kpi}</div>
+                </div>
+                <div className="mt-2 text-[11px] uppercase tracking-[0.08em] text-gray-500">{it.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
 
-        {/* Título + 3 párrafos (intacto en estructura) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 mb-24 md:mb-32">
+        {/* Manifiesto: eyebrow + título + body sangrado */}
+        <div className="grid grid-cols-12 gap-4 hairline-t pt-8 mt-12 md:mt-16">
+          <div className="col-span-12 md:col-span-3">
+            <div className="text-[10px] tabular uppercase tracking-[0.12em] text-gray-500">01 — Posicionamiento</div>
+          </div>
           <motion.h2
             initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={fadeIn}
-            className="lg:col-span-7 font-sans font-light text-h1 text-ink"
+            className="col-span-12 md:col-span-9 font-sans font-light text-h1 text-ink leading-tight"
           >
             {t("titleStart")}<span className="text-accent">{t("titleHighlight")}</span>{t("titleEnd")}
           </motion.h2>
-          <motion.div
-            initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={fadeIn}
-            transition={{ delay: 0.15, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-5 space-y-6 text-body text-gray-700"
-          >
-            <p>{t("p1")}</p>
-            <p>{t("p2")}</p>
-            <p>{t("p3")}</p>
-          </motion.div>
         </div>
 
-        {/* Principios como CARDS con iconos + imagen */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-          {principles.map((p, i) => (
-            <motion.article
-              key={p.n}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.6, delay: i * 0.07, ease: [0.16, 1, 0.3, 1] }}
-              className="bg-paper border border-gray-200 hover:border-gray-300 transition-all duration-300 hover:shadow-lg flex flex-col overflow-hidden"
-            >
-              <div className="relative aspect-[4/3] overflow-hidden bg-gray-200">
-                <img src={p.image} alt={p.title} loading="lazy" className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 hover:scale-105" />
-                <div className="absolute top-3 left-3 w-9 h-9 flex items-center justify-center rounded-sm bg-paper/90 text-accent backdrop-blur-sm">
-                  <Icon name={ICONS[i] as never} size={18} />
-                </div>
-              </div>
-              <div className="p-6 flex-1">
-                <div className="flex items-baseline gap-2 mb-2">
-                  <span className="font-mono text-small text-bhp tabular-nums">{p.n}</span>
-                  <h3 className="font-sans font-medium text-h3 text-ink">{p.title}</h3>
-                </div>
-                <p className="mt-2 text-body text-gray-700 leading-relaxed">{p.body}</p>
-              </div>
-            </motion.article>
-          ))}
+        <div className="grid grid-cols-12 gap-4 mt-10">
+          <div className="col-span-12 md:col-start-4 md:col-span-9 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10 text-body text-gray-700">
+            <motion.p initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={fadeIn}>{t("p1")}</motion.p>
+            <motion.p initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={fadeIn} transition={{ delay: 0.1, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}>{t("p2")}</motion.p>
+            <motion.p initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={fadeIn} transition={{ delay: 0.2, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}>{t("p3")}</motion.p>
+          </div>
+        </div>
+
+        {/* Principios — cards Swiss con número grande tabular */}
+        <div className="grid grid-cols-12 gap-4 hairline-t pt-8 mt-24 md:mt-32">
+          <div className="col-span-12 md:col-span-3">
+            <div className="text-[10px] tabular uppercase tracking-[0.12em] text-gray-500">02 — Principios</div>
+          </div>
+          <div className="col-span-12 md:col-span-9">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12">
+              {principles.map((p, i) => (
+                <motion.article
+                  key={p.n}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-60px" }}
+                  transition={{ duration: 0.6, delay: i * 0.06, ease: [0.16, 1, 0.3, 1] }}
+                  className="flex flex-col"
+                >
+                  <div className="relative aspect-[4/3] overflow-hidden bg-bone mb-5">
+                    <img src={p.image} alt={p.title} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
+                    <div className="absolute top-3 left-3 w-8 h-8 flex items-center justify-center bg-paper/95 text-accent">
+                      <Icon name={ICONS[i] as never} size={16} />
+                    </div>
+                  </div>
+                  <div className="flex items-baseline gap-3 hairline-t pt-3">
+                    <span className="font-sans font-light text-h2 text-bhp tabular leading-none">{p.n}</span>
+                    <h3 className="font-sans font-medium text-h4 text-ink uppercase tracking-wide">{p.title}</h3>
+                  </div>
+                  <p className="mt-3 text-small text-gray-700 leading-relaxed">{p.body}</p>
+                </motion.article>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

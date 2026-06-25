@@ -8,21 +8,29 @@ export default function Footer() {
   const tSite = useTranslations("site");
 
   return (
-    <footer className="bg-ink py-20">
+    <footer className="bg-ink py-16 border-t border-paper/15">
       <div className="container-edge">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-14">
-          <div>
+        {/* Top: brand a la izquierda, dossier+email a la derecha */}
+        <div className="grid grid-cols-12 gap-4 pb-12">
+          <div className="col-span-12 md:col-span-5">
             <div className="font-brand text-2xl text-paper tracking-[0.05em]">{tSite("brand")}</div>
-            <p className="mt-4 text-small text-paper/55 leading-relaxed">{tSite("slogan")}</p>
+            <p className="mt-3 text-small text-paper/55 leading-relaxed max-w-xs">{tSite("slogan")}</p>
           </div>
-          <ul className="md:text-right space-y-3 text-small">
-            <li><a href="/AFOR_Dossier_2025.pdf" className="text-paper/70 hover:text-accent transition-colors">{t("links.dossier")}</a></li>
-            <li><a href={`mailto:${SITE_EMAIL}`} className="text-paper/70 hover:text-accent transition-colors">{SITE_EMAIL}</a></li>
-          </ul>
+          <div className="col-span-12 md:col-span-4 text-small text-paper/55">
+            <div className="text-[10px] tabular uppercase tracking-[0.12em] text-paper/40 mb-2">Contacto</div>
+            <a href={`mailto:${SITE_EMAIL}`} className="block text-paper hover:text-accent transition-colors">{SITE_EMAIL}</a>
+            <div className="mt-1">{tSite("address")}</div>
+          </div>
+          <div className="col-span-12 md:col-span-3 text-small text-paper/55 md:text-right">
+            <div className="text-[10px] tabular uppercase tracking-[0.12em] text-paper/40 mb-2">Documentación</div>
+            <a href="/AFOR_Dossier_2025.pdf" className="block text-paper hover:text-accent transition-colors">{t("links.dossier")} →</a>
+          </div>
         </div>
-        <div className="border-t border-paper/15 pt-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-small text-paper/45">
-          <span>© {new Date().getFullYear()} AFOR. {t("rights")}</span>
-          <span>{tSite("address")}</span>
+
+        {/* Bottom: hairline + bottom meta */}
+        <div className="border-t border-paper/15 pt-6 grid grid-cols-12 gap-4 text-[10px] tabular uppercase tracking-[0.12em] text-paper/40">
+          <div className="col-span-6">© {new Date().getFullYear()} AFOR — {t("rights")}</div>
+          <div className="col-span-6 text-right">Las Condes · Santiago · Chile</div>
         </div>
       </div>
     </footer>
