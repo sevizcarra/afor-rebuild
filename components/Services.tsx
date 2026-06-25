@@ -1,72 +1,74 @@
 "use client";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import Icon from "./Icon";
 
-const ICONS = ["masterplan", "build", "remodel", "interim", "controlroom", "respel", "review"] as const;
+const fadeIn = {
+  hidden: { opacity: 0, y: 16 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] } },
+};
+
+const TAGS = [
+  "MASTER PLAN",
+  "EDIFICACIÓN",
+  "RECINTOS TÉCNICOS",
+  "INGENIERÍA INTERIM",
+  "OPERACIÓN",
+  "RESPEL",
+  "REVISIÓN",
+];
 
 export default function Services() {
   const t = useTranslations("services");
   const items = t.raw("items") as { title: string; body: string }[];
 
   return (
-    <section id="servicios" className="bg-ink py-24 md:py-32">
+    <section id="servicios" className="relative bg-bone py-24 md:py-32">
       <div className="container-edge">
-        {/* Header Swiss con eyebrow + título */}
-        <div className="grid grid-cols-12 gap-4 pt-8" style={{ borderTop: "1px solid rgba(250,250,247,0.95)" }}>
-          <div className="col-span-12 md:col-span-3">
-            <div className="text-[10px] tabular uppercase tracking-[0.12em] text-paper/50">03 — Servicios</div>
+        {/* Header NA-style */}
+        <div className="grid grid-cols-12 gap-6 mb-16 md:mb-20">
+          <div className="col-span-12 md:col-span-8">
+            <div className="label text-gray-500 mb-5 tracking-[0.18em]">Áreas de práctica</div>
+            <motion.h2
+              initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={fadeIn}
+              className="font-sans font-bold text-ink leading-[1.05]"
+              style={{ fontSize: "clamp(40px, 5vw, 72px)", letterSpacing: "-0.025em" }}
+            >
+              Servicios <span className="font-serif italic font-normal text-accent">especializados</span>
+            </motion.h2>
           </div>
-          <motion.h2
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="col-span-12 md:col-span-9 font-sans font-light text-h1 text-paper"
-          >
-            {t("titleStart")}<span className="text-accent">{t("titleHighlight")}</span>{t("titleEnd")}
-          </motion.h2>
+          <div className="col-span-12 md:col-span-4 md:text-right">
+            <div className="text-ink/15 font-thin leading-none" style={{ fontSize: "96px" }} aria-hidden="true">+</div>
+          </div>
         </div>
 
-        <p className="grid grid-cols-12 gap-4 mt-8">
-          <span className="col-span-12 md:col-start-4 md:col-span-7 text-body text-paper/65 max-w-md">{t("subtitle")}</span>
-        </p>
-
-        {/* Header de tabla Swiss */}
-        <div className="grid grid-cols-12 gap-4 mt-20 md:mt-24 py-3 border-t border-b border-paper/15 text-[10px] tabular uppercase tracking-[0.12em] text-paper/40">
-          <div className="col-span-1">N.º</div>
-          <div className="col-span-1"></div>
-          <div className="col-span-4">Servicio</div>
-          <div className="col-span-6">Descripción técnica</div>
-        </div>
-
-        <ul>
+        {/* Lista de servicios estilo NA */}
+        <div className="hairline-t pt-2">
           {items.map((item, i) => (
-            <motion.li
+            <motion.article
               key={i}
-              initial={{ opacity: 0, y: 8 }}
+              initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: i * 0.04 }}
-              className="grid grid-cols-12 gap-4 py-6 md:py-8 border-b border-paper/15 group items-baseline"
+              transition={{ duration: 0.6, delay: i * 0.05, ease: [0.16, 1, 0.3, 1] }}
+              className="grid grid-cols-12 gap-6 py-8 md:py-10 hairline-soft-b items-start group"
             >
-              <div className="col-span-1 font-sans text-small text-bhp tabular pt-2">
+              <div className="col-span-2 md:col-span-1 label text-gray-400 tabular pt-2">
                 {String(i + 1).padStart(2, "0")}
               </div>
-              <div className="col-span-1 pt-1.5">
-                <span className="w-8 h-8 flex items-center justify-center text-accent group-hover:text-paper transition-colors">
-                  <Icon name={ICONS[i] as never} size={16} />
-                </span>
-              </div>
-              <h3 className="col-span-4 font-sans font-medium text-paper text-h3 leading-snug uppercase tracking-wide transition-colors duration-300 group-hover:text-accent">
+              <h3 className="col-span-10 md:col-span-3 font-sans font-bold text-ink text-h3 leading-snug group-hover:text-accent transition-colors">
                 {item.title}
               </h3>
-              <p className="col-span-6 text-body text-paper/65 leading-relaxed">
+              <p className="col-span-12 md:col-span-6 text-small text-gray-700 leading-relaxed">
                 {item.body}
               </p>
-            </motion.li>
+              <div className="col-span-12 md:col-span-2 md:text-right">
+                <span className="inline-block border border-gray-300 text-[10px] tabular tracking-[0.12em] uppercase text-gray-500 px-3 py-2 group-hover:border-accent group-hover:text-accent transition-colors">
+                  {TAGS[i] || "AFOR"}
+                </span>
+              </div>
+            </motion.article>
           ))}
-        </ul>
+        </div>
       </div>
     </section>
   );

@@ -6,64 +6,58 @@ export default function Hero() {
   const t = useTranslations("hero");
   const tSite = useTranslations("site");
 
-  const date = new Intl.DateTimeFormat("es-CL", { year: "numeric", month: "short", day: "2-digit" })
-    .format(new Date()).toUpperCase().replace(/\./g, "");
-
   return (
-    <section id="top" className="relative h-screen min-h-[640px] w-full overflow-hidden bg-ink flex flex-col justify-end">
+    <section id="top" className="relative h-screen min-h-[700px] w-full overflow-hidden bg-ink flex flex-col justify-end">
       <div className="absolute inset-0 overflow-hidden">
         <video autoPlay muted playsInline preload="auto" poster="/images/hero/hero-poster.jpg" className="h-full w-full object-cover">
           <source src="/videos/hero.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-ink/55 to-transparent pointer-events-none" />
-        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-ink/65 to-transparent pointer-events-none" />
+        <div className="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-ink/80 via-ink/30 to-transparent pointer-events-none" />
       </div>
 
-      {/* Metadata Swiss en las esquinas */}
-      <div className="absolute top-24 left-0 right-0 z-10 container-edge pointer-events-none">
-        <div className="grid grid-cols-12 gap-4 text-paper/80 text-[10px] tabular uppercase tracking-[0.12em]">
-          <div className="col-span-3">
-            <div className="text-paper/40">Índice</div>
-            <div className="mt-1">N.º 001 / 2025</div>
-          </div>
-          <div className="col-span-6 text-center">
-            <div className="text-paper/40">Sección</div>
-            <div className="mt-1">Identidad · Posicionamiento</div>
-          </div>
-          <div className="col-span-3 text-right">
-            <div className="text-paper/40">Fecha</div>
-            <div className="mt-1">{date}</div>
-          </div>
-        </div>
+      {/* Cruz + decorativa NA-style abajo derecha */}
+      <div aria-hidden="true" className="absolute bottom-32 right-10 hidden lg:block text-paper/15 select-none pointer-events-none">
+        <span className="font-sans font-thin leading-none" style={{ fontSize: "240px" }}>+</span>
       </div>
 
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-        className="relative z-10 pb-16 md:pb-20 container-edge"
+        className="relative z-10 pb-20 md:pb-24 container-edge"
       >
-        <div className="grid grid-cols-12 gap-4 items-end">
-          <div className="col-span-12 lg:col-span-8" style={{ marginLeft: "-0.04em" }}>
-            <span className="label text-accent mb-6 block">{t("eyebrow")}</span>
-            <h1 className="font-brand text-paper text-hero tracking-[0.04em]">{tSite("brand")}.</h1>
-            <p className="mt-8 max-w-2xl text-lead text-paper/85 font-light">{t("summary")}</p>
-          </div>
-          <div className="hidden lg:block col-span-4 text-right text-paper/70 text-small space-y-2">
-            <div className="label text-paper/40">Disciplina</div>
-            <div>Arquitectura · Ingeniería</div>
-            <div>Coordinación BIM</div>
-          </div>
+        {/* Eyebrow NA-style con bullets */}
+        <div className="label text-paper/60 mb-8 tracking-[0.18em]">
+          <span>ARQUITECTURA</span>
+          <span className="mx-3 text-accent">·</span>
+          <span>INGENIERÍA</span>
+          <span className="mx-3 text-accent">·</span>
+          <span>BIM</span>
+        </div>
+
+        {/* Wordmark mega con palabra serif italic */}
+        <h1 className="font-sans font-bold text-paper text-mega leading-[0.92]">
+          AFOR<span className="font-serif italic font-normal text-accent">.</span>
+        </h1>
+
+        {/* Hairline corto + tagline */}
+        <div className="mt-8 mb-6 w-16 h-px bg-paper/60" />
+
+        <p className="max-w-xl text-lead text-paper/80 font-light">
+          {t("summary")}
+        </p>
+
+        {/* Botones: filled + outline */}
+        <div className="mt-10 flex flex-wrap gap-3">
+          <a href="#proyectos" className="inline-flex items-center justify-center text-small font-medium bg-paper text-ink px-6 py-3 hover:bg-accent transition-colors uppercase tracking-wider">
+            Ver proyectos
+          </a>
+          <a href="#nosotros" className="inline-flex items-center gap-2 text-small font-medium text-paper border border-paper/40 px-6 py-3 hover:bg-paper/10 hover:border-paper transition-colors uppercase tracking-wider">
+            Saber más <span className="text-accent">→</span>
+          </a>
         </div>
       </motion.div>
-
-      {/* Indicador scroll abajo */}
-      <div className="absolute bottom-6 left-0 right-0 z-10 container-edge pointer-events-none">
-        <div className="grid grid-cols-12 gap-4 text-paper/50 text-[10px] tabular uppercase tracking-[0.12em]">
-          <div className="col-span-6">↓ Scroll · 04 secciones</div>
-          <div className="col-span-6 text-right">Las Condes · Santiago · CL</div>
-        </div>
-      </div>
     </section>
   );
 }

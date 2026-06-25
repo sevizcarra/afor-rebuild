@@ -1,7 +1,11 @@
 "use client";
-import { useState, FormEvent } from "react";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
+
+const fadeIn = {
+  hidden: { opacity: 0, y: 16 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] } },
+};
 
 const SITE_EMAIL = "contacto@afor.cl";
 const SITE_PHONE = "+56 9 6350 1854";
@@ -9,114 +13,70 @@ const SITE_PHONE = "+56 9 6350 1854";
 export default function Contact() {
   const t = useTranslations("contact");
   const tSite = useTranslations("site");
-  const [submitted, setSubmitted] = useState(false);
-  const types = t.raw("form.types") as string[];
-
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const data = new FormData(e.currentTarget);
-    const subject = encodeURIComponent(`Contacto AFOR — ${data.get("name") || "Sin nombre"}`);
-    const body = encodeURIComponent(
-      `Nombre: ${data.get("name")}\nEmpresa: ${data.get("company")}\nEmail: ${data.get("email")}\nTipo: ${data.get("type")}\n\n${data.get("message")}`
-    );
-    window.location.href = `mailto:${SITE_EMAIL}?subject=${subject}&body=${body}`;
-    setSubmitted(true);
-  };
 
   return (
-    <section id="contacto" className="bg-bone py-24 md:py-32">
+    <section id="contacto" className="relative bg-ink text-paper py-24 md:py-32">
       <div className="container-edge">
-        <div className="grid grid-cols-12 gap-4 hairline-t pt-8 mb-12">
-          <div className="col-span-12 md:col-span-3">
-            <div className="text-[10px] tabular uppercase tracking-[0.12em] text-gray-500">04 — Contacto</div>
+        <div className="grid grid-cols-12 gap-6 md:gap-10">
+          {/* Izquierda: cruz + + eyebrow + título + body + CTA */}
+          <div className="col-span-12 md:col-span-5">
+            <div className="text-paper/15 font-thin leading-none mb-12" style={{ fontSize: "96px" }} aria-hidden="true">+</div>
+            <div className="label text-paper/50 mb-5 tracking-[0.18em]">Contacto</div>
+            <motion.h2
+              initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={fadeIn}
+              className="font-sans font-bold text-paper leading-[1.05]"
+              style={{ fontSize: "clamp(48px, 6vw, 88px)", letterSpacing: "-0.03em" }}
+            >
+              Hablemos<span className="font-serif italic font-normal text-accent">.</span>
+            </motion.h2>
+            <p className="mt-8 text-body text-paper/65 max-w-sm">
+              Cuéntenos del proyecto: alcance, plazos y especificaciones del mandante. Respondemos en menos de 24 horas hábiles.
+            </p>
+            <a
+              href={`mailto:${SITE_EMAIL}`}
+              className="mt-10 inline-flex items-center justify-center text-small font-medium bg-paper text-ink px-7 py-3.5 hover:bg-accent transition-colors uppercase tracking-wider"
+            >
+              Escribir
+            </a>
           </div>
-          <motion.h2
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="col-span-12 md:col-span-9 font-sans font-light text-h1 text-ink"
-          >
-            {t("titleStart")}<span className="text-accent">{t("titleHighlight")}</span>{t("titleEnd")}
-          </motion.h2>
-        </div>
-      </div>
-      <div className="container-edge grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-        >
-          <p className="mt-8 text-body text-gray-700 max-w-md">{t("body")}</p>
 
-          <ul className="mt-14 space-y-4 text-body">
-            <li>
-              <a href={`mailto:${SITE_EMAIL}`} className="text-ink border-b border-ink/40 pb-1 hover:text-accent hover:border-accent transition-colors">
+          {/* Derecha: 3 cards outlined estilo NA */}
+          <div className="col-span-12 md:col-span-7 md:pl-8 space-y-4">
+            <motion.div
+              initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }} variants={fadeIn}
+              className="border border-paper/15 p-7 hover:border-accent transition-colors"
+            >
+              <div className="label text-paper/50 mb-3 tracking-[0.18em]">Email</div>
+              <a href={`mailto:${SITE_EMAIL}`} className="font-sans font-bold text-paper text-h3 hover:text-accent transition-colors">
                 {SITE_EMAIL}
               </a>
-            </li>
-            <li className="text-gray-700">{SITE_PHONE}</li>
-            <li className="text-gray-500">{tSite("address")}</li>
-          </ul>
-        </motion.div>
+            </motion.div>
 
-        <motion.form
-          onSubmit={handleSubmit}
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="space-y-9"
-        >
-          {[
-            { name: "name", labelKey: "name", type: "text" },
-            { name: "email", labelKey: "email", type: "email" },
-            { name: "company", labelKey: "company", type: "text" },
-          ].map((f) => (
-            <div key={f.name}>
-              <label htmlFor={f.name} className="label text-gray-500 block mb-3">{t(`form.${f.labelKey}` as never)}</label>
-              <input
-                id={f.name}
-                name={f.name}
-                type={f.type}
-                required
-                className="w-full bg-transparent border-0 border-b border-ink/25 text-ink text-body py-3 focus:border-accent focus:outline-none transition-colors"
-              />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <motion.div
+                initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }} variants={fadeIn}
+                transition={{ delay: 0.08, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                className="border border-paper/15 p-7 hover:border-accent transition-colors"
+              >
+                <div className="label text-paper/50 mb-3 tracking-[0.18em]">Teléfono</div>
+                <a href={`tel:${SITE_PHONE.replace(/\s/g, "")}`} className="font-sans font-bold text-paper text-h3 tabular hover:text-accent transition-colors">
+                  {SITE_PHONE}
+                </a>
+              </motion.div>
+
+              <motion.div
+                initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }} variants={fadeIn}
+                transition={{ delay: 0.16, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                className="border border-paper/15 p-7 hover:border-accent transition-colors"
+              >
+                <div className="label text-paper/50 mb-3 tracking-[0.18em]">Ubicación</div>
+                <div className="font-sans font-bold text-paper text-h3 leading-snug">
+                  {tSite("address")}
+                </div>
+              </motion.div>
             </div>
-          ))}
-
-          <div>
-            <label htmlFor="type" className="label text-gray-500 block mb-3">{t("form.type")}</label>
-            <select
-              id="type"
-              name="type"
-              className="w-full bg-bone border-0 border-b border-ink/25 text-ink text-body py-3 focus:border-accent focus:outline-none transition-colors appearance-none cursor-pointer"
-            >
-              {types.map((tp) => (
-                <option key={tp}>{tp}</option>
-              ))}
-            </select>
           </div>
-
-          <div>
-            <label htmlFor="message" className="label text-gray-500 block mb-3">{t("form.message")}</label>
-            <textarea
-              id="message"
-              name="message"
-              rows={4}
-              required
-              className="w-full bg-transparent border-0 border-b border-ink/25 text-ink text-body py-3 focus:border-accent focus:outline-none transition-colors resize-none"
-            />
-          </div>
-
-          <button
-            type="submit"
-            className="text-body text-ink border-b border-ink pb-1 hover:text-accent hover:border-accent transition-colors"
-          >
-            {submitted ? t("form.submitting") : t("form.submit")}
-          </button>
-        </motion.form>
+        </div>
       </div>
     </section>
   );

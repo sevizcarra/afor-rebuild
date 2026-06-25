@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { Plus_Jakarta_Sans, JetBrains_Mono, Audiowide } from "next/font/google";
+import { Plus_Jakarta_Sans, JetBrains_Mono, Audiowide, Instrument_Serif } from "next/font/google";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
 
@@ -25,6 +25,14 @@ const audiowide = Audiowide({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-audiowide",
+});
+
+const instrumentSerif = Instrument_Serif({
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-instrument-serif",
+  style: ["normal", "italic"],
 });
 
 export function generateStaticParams() {
@@ -92,7 +100,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${plusJakarta.variable} ${jetbrains.variable} ${audiowide.variable}`}>
+    <html lang={locale} className={`${plusJakarta.variable} ${jetbrains.variable} ${audiowide.variable} ${instrumentSerif.variable}`}>
       <body>
         <NextIntlClientProvider messages={messages}>
           {children}
