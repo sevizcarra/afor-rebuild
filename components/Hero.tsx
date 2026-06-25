@@ -35,7 +35,7 @@ export default function Hero() {
         transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
         className="relative z-10 pb-20 md:pb-24 pl-6 md:pl-10 lg:pl-16 pr-6 md:pr-10 lg:pr-16 max-w-[1400px]"
       >
-        {/* Wordmark Audiowide: aFor con punto accent */}
+        {/* Wordmark Audiowide */}
         <h1
           className="font-brand text-paper leading-[0.92] tracking-[0.02em]"
           style={{ fontSize: "clamp(96px, 14vw, 220px)" }}
@@ -43,20 +43,20 @@ export default function Hero() {
           aFor<span className="text-accent">.</span>
         </h1>
 
-        {/* Hairline corto + tagline */}
+        {/* Hairline corto + summary con fondo naranjo BHP */}
         <div className="mt-8 mb-6 w-16 h-px bg-paper/60" />
 
-        <p className="max-w-xl text-lead text-paper/80 font-light">
+        <p className="max-w-xl text-lead text-paper font-light bg-bhp px-4 py-3">
           {t("summary")}
         </p>
 
         {/* Botones */}
         <div className="mt-10 flex flex-wrap gap-3">
           <a href="#proyectos" className="inline-flex items-center justify-center text-small font-medium bg-paper text-ink px-6 py-3 hover:bg-accent transition-colors uppercase tracking-wider">
-            Ver proyectos
+            {t("cta1")}
           </a>
           <a href="#nosotros" className="inline-flex items-center gap-2 text-small font-medium text-paper border border-paper/40 px-6 py-3 hover:bg-paper/10 hover:border-paper transition-colors uppercase tracking-wider">
-            Saber más <span className="text-accent">→</span>
+            {t("cta2")} <span className="text-accent">→</span>
           </a>
         </div>
       </motion.div>

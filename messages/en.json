@@ -15,7 +15,9 @@
   },
   "hero": {
     "eyebrow": "Facilities for mining and industry",
-    "summary": "We are a Chilean firm specialized in the development of facilities for mining and industrial operations. We bring more than a decade of team experience to projects in the sector."
+    "summary": "We are a Chilean firm specialized in assets for non-process infrastructure for mining and industrial operations. We bring more than a decade of team experience to projects in the sector.",
+    "cta1": "See projects",
+    "cta2": "Learn more"
   },
   "stripe": {
     "lineOne": "Integrated engineering for the development",
@@ -27,7 +29,19 @@
     "titleEnd": ".",
     "p1": "We develop facilities for mining and industry: offices, change houses, control rooms, electrical and technical rooms, truck shops, hazardous waste storage and warehousing areas. We integrate architecture, engineering and multidisciplinary coordination under a single technical direction.",
     "p2": "We embed within the project team as an extension of your engineering. We adopt the client's coding, manuals and delivery standards, and operate under their internal protocols to ensure deliverables compatible with their document management system.",
-    "p3": "The team that takes the project from technical surveying is the same one that coordinates the final delivery. Complete technical continuity, with no internal handoffs or intermediaries."
+    "p3": "The team that takes the project from technical surveying is the same one that coordinates the final delivery. Complete technical continuity, with no internal handoffs or intermediaries.",
+    "eyebrow": "About",
+    "tags": [
+      "Operational",
+      "Compliance",
+      "BIM · Revit",
+      "Integrated"
+    ],
+    "side": [
+      "We work embedded in the client project team. No intermediaries, no internal transfers.",
+      "We approach each facility from an integrated view: architecture, engineering, BIM coordination and code, under a single technical direction.",
+      "We guarantee complete technical continuity and compatibility with the client document system."
+    ]
   },
   "principles": {
     "p1Title": "Operational design",
@@ -217,9 +231,9 @@
     }
   },
   "services": {
-    "titleStart": "Integrated ",
-    "titleHighlight": "technical",
-    "titleEnd": " disciplines.",
+    "titleStart": "Specialized ",
+    "titleHighlight": "services",
+    "titleEnd": "",
     "subtitle": "Technical services integrated with the project team, under the client's protocols.",
     "items": [
       {
@@ -250,13 +264,23 @@
         "title": "Multidisciplinary Project Management",
         "body": "Comprehensive project management: planning, deadline and cost control, supplier coordination, risk management and executive reporting to the client."
       }
+    ],
+    "eyebrow": "Practice areas",
+    "tags": [
+      "Master Plan",
+      "Building",
+      "Technical rooms",
+      "Interim Engineering",
+      "Operations",
+      "Hazardous waste",
+      "Review"
     ]
   },
   "contact": {
     "titleStart": "Let's start a ",
     "titleHighlight": "project",
     "titleEnd": ".",
-    "body": "Tell us what you need. We respond within 24 business hours.",
+    "body": "Tell us about the project: scope, deadlines and client specifications. We reply within 24 business hours.",
     "form": {
       "name": "Name",
       "email": "Email",
@@ -275,7 +299,15 @@
         "Multidisciplinary coordination",
         "Other"
       ]
-    }
+    },
+    "cta": "Write us",
+    "title": "Let's talk",
+    "labels": {
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location"
+    },
+    "eyebrow": "Contact"
   },
   "footer": {
     "rights": "All rights reserved.",

@@ -17,11 +17,13 @@ const PRINCIPLES_IMAGES = [
 export default function About() {
   const t = useTranslations("about");
   const tP = useTranslations("principles");
+  const tags = t.raw("tags") as string[];
+  const side = t.raw("side") as string[];
   const principles = [
-    { n: "01", title: tP("p1Title"), body: tP("p1Body"), tag: "OPERACIONAL", image: PRINCIPLES_IMAGES[0] },
-    { n: "02", title: tP("p2Title"), body: tP("p2Body"), tag: "NORMATIVO", image: PRINCIPLES_IMAGES[1] },
-    { n: "03", title: tP("p3Title"), body: tP("p3Body"), tag: "BIM · REVIT", image: PRINCIPLES_IMAGES[2] },
-    { n: "04", title: tP("p4Title"), body: tP("p4Body"), tag: "INTEGRADO", image: PRINCIPLES_IMAGES[3] },
+    { n: "01", title: tP("p1Title"), body: tP("p1Body"), tag: tags[0], image: PRINCIPLES_IMAGES[0] },
+    { n: "02", title: tP("p2Title"), body: tP("p2Body"), tag: tags[1], image: PRINCIPLES_IMAGES[1] },
+    { n: "03", title: tP("p3Title"), body: tP("p3Body"), tag: tags[2], image: PRINCIPLES_IMAGES[2] },
+    { n: "04", title: tP("p4Title"), body: tP("p4Body"), tag: tags[3], image: PRINCIPLES_IMAGES[3] },
   ];
 
   return (
@@ -31,7 +33,7 @@ export default function About() {
         <div className="grid grid-cols-12 gap-6 mb-16 md:mb-24">
           <div className="col-span-12 md:col-span-5">
             <div className="text-ink/15 font-thin leading-none mb-12" style={{ fontSize: "96px" }} aria-hidden="true">+</div>
-            <div className="label text-gray-500 mb-5 tracking-[0.18em]">Nosotros</div>
+            <div className="label text-gray-500 mb-5 tracking-[0.18em]">{t("eyebrow")}</div>
             <motion.h2
               initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={fadeIn}
               className="font-sans font-bold text-ink leading-[1.05]"
@@ -42,7 +44,7 @@ export default function About() {
           </div>
 
           <div className="col-span-12 md:col-span-7 md:pl-8 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-            {[t("p1"), t("p2"), t("p3")].map((txt, i) => (
+            {side.map((txt, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 12 }}

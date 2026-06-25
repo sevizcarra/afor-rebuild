@@ -15,7 +15,9 @@
   },
   "hero": {
     "eyebrow": "Facilities para minería e industria",
-    "summary": "Somos una firma chilena especializada en el desarrollo de facilities para operaciones mineras e industriales. Integramos más de una década de experiencia del equipo en proyectos del sector."
+    "summary": "Somos una firma chilena especializada en assets for non-process infrastructure para operaciones mineras e industriales. Integramos más de una década de experiencia del equipo en proyectos del sector.",
+    "cta1": "Ver proyectos",
+    "cta2": "Saber más"
   },
   "stripe": {
     "lineOne": "Ingeniería integral para el desarrollo",
@@ -27,7 +29,19 @@
     "titleEnd": " para facilities mineras.",
     "p1": "Desarrollamos facilities para minería e industria: oficinas, casas de cambio, salas de control, salas eléctricas y técnicas, truck shops, RESPEL y áreas de almacenamiento. Integramos arquitectura, ingeniería y coordinación multidisciplinar bajo una misma dirección técnica.",
     "p2": "Nos incorporamos al equipo del proyecto como una extensión de su ingeniería. Adoptamos la codificación, manuales y estándares de entrega del mandante, y operamos bajo sus protocolos internos para garantizar entregables compatibles con su sistema de gestión documental.",
-    "p3": "El equipo que toma el proyecto desde el levantamiento técnico es el mismo que coordina la entrega final. Continuidad técnica completa, sin transferencias internas ni intermediarios."
+    "p3": "El equipo que toma el proyecto desde el levantamiento técnico es el mismo que coordina la entrega final. Continuidad técnica completa, sin transferencias internas ni intermediarios.",
+    "eyebrow": "Nosotros",
+    "tags": [
+      "Operacional",
+      "Normativo",
+      "BIM · Revit",
+      "Integrado"
+    ],
+    "side": [
+      "Trabajamos integrados al equipo de proyecto del mandante. Sin intermediarios, sin transferencias internas.",
+      "Abordamos cada facility desde una visión integrada: arquitectura, ingeniería, coordinación BIM y normativa, bajo una misma dirección técnica.",
+      "Garantizamos continuidad técnica completa y compatibilidad con el sistema documental del cliente."
+    ]
   },
   "principles": {
     "p1Title": "Diseño operacional",
@@ -217,9 +231,9 @@
     }
   },
   "services": {
-    "titleStart": "Disciplinas ",
-    "titleHighlight": "técnicas",
-    "titleEnd": " integradas.",
+    "titleStart": "Servicios ",
+    "titleHighlight": "especializados",
+    "titleEnd": "",
     "subtitle": "Servicios técnicos integrados al equipo del proyecto, bajo los protocolos del mandante.",
     "items": [
       {
@@ -250,6 +264,16 @@
         "title": "Project Management multidisciplinar",
         "body": "Gestión integral de proyectos: planificación, control de plazos y costos, coordinación de proveedores, gestión de riesgos y reporte ejecutivo al mandante."
       }
+    ],
+    "eyebrow": "Áreas de práctica",
+    "tags": [
+      "Master Plan",
+      "Edificación",
+      "Recintos técnicos",
+      "Ingeniería Interim",
+      "Operación",
+      "RESPEL",
+      "Revisión"
     ]
   },
   "contact": {
@@ -275,7 +299,15 @@
         "Coordinación multidisciplinar",
         "Otro"
       ]
-    }
+    },
+    "cta": "Escribir",
+    "title": "Hablemos",
+    "labels": {
+      "email": "Email",
+      "phone": "Teléfono",
+      "location": "Ubicación"
+    },
+    "eyebrow": "Contacto"
   },
   "footer": {
     "rights": "Todos los derechos reservados.",
