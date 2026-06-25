@@ -37,7 +37,7 @@ export default function About() {
               className="font-sans font-bold text-ink leading-[1.05]"
               style={{ fontSize: "clamp(36px, 4vw, 56px)", letterSpacing: "-0.02em" }}
             >
-              No contamos horas. Aplicamos <span className="font-serif italic font-normal text-accent">criterio técnico</span>.
+              {t("titleStart")}<span className="font-serif italic font-normal text-accent">{t("titleHighlight")}</span>{t("titleEnd")}
             </motion.h2>
           </div>
 
