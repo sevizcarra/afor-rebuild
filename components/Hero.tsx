@@ -33,14 +33,14 @@ export default function Hero() {
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-        className="relative z-10 pb-20 md:pb-24 container-edge"
+        className="relative z-10 pb-20 md:pb-24 pl-6 md:pl-10 lg:pl-16 pr-6 md:pr-10 lg:pr-16 max-w-[1400px]"
       >
-        {/* Wordmark estilo logo lowercase con punto accent */}
+        {/* Wordmark Audiowide: aFor con punto accent */}
         <h1
-          className="font-sans font-black text-paper leading-[0.92] lowercase"
-          style={{ fontSize: "clamp(96px, 14vw, 220px)", letterSpacing: "-0.04em" }}
+          className="font-brand text-paper leading-[0.92] tracking-[0.02em]"
+          style={{ fontSize: "clamp(96px, 14vw, 220px)" }}
         >
-          afor<span className="text-accent">.</span>
+          aFor<span className="text-accent">.</span>
         </h1>
 
         {/* Hairline corto + tagline */}
