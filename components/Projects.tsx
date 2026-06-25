@@ -62,7 +62,7 @@ export default function Projects() {
   };
 
   return (
-    <section id="proyectos" className="bg-paper py-32 md:py-44">
+    <section id="proyectos" className="bg-anthracite py-32 md:py-44">
       <div className="container-edge">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -72,33 +72,33 @@ export default function Projects() {
           className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16 md:mb-20"
         >
           <div className="lg:col-span-7">
-            <h2 className="font-sans font-medium text-h1 text-ink">
+            <h2 className="font-sans font-medium text-h1 text-paper">
               {t("titleStart")}<span className="text-accent">{t("titleHighlight")}</span>{t("titleEnd")}
             </h2>
           </div>
-          <p className="lg:col-span-5 lg:pt-8 text-body text-gray-700 max-w-md">{t("subtitle")}</p>
+          <p className="lg:col-span-5 lg:pt-8 text-body text-paper/70 max-w-md">{t("subtitle")}</p>
         </motion.div>
 
-        <div className="relative border-t border-ink/15 pt-6 mb-12">
+        <div className="relative border-t border-paper/20 pt-6 mb-12">
           <div className="flex items-center justify-between">
-            <div className="font-mono text-small text-gray-500 tracking-wider tabular-nums">
-              {String(idx + 1).padStart(2, "0")} <span className="text-gray-300">/ {String(total).padStart(2, "0")}</span>
-              <span className="ml-6 text-ink hidden md:inline font-sans">{active.title}</span>
+            <div className="font-mono text-small text-paper/50 tracking-wider tabular-nums">
+              {String(idx + 1).padStart(2, "0")} <span className="text-paper/30">/ {String(total).padStart(2, "0")}</span>
+              <span className="ml-6 text-paper hidden md:inline font-sans">{active.title}</span>
             </div>
             <div className="flex gap-2">
               <button
                 onClick={() => handleManual(idx - 1)}
                 aria-label={t("controls.previous")}
-                className="w-12 h-12 border border-ink/20 flex items-center justify-center text-ink hover:border-accent hover:text-accent transition-colors duration-300"
+                className="w-12 h-12 border border-paper/30 flex items-center justify-center text-paper hover:border-accent hover:text-accent transition-colors duration-300"
               >←</button>
               <button
                 onClick={() => handleManual(idx + 1)}
                 aria-label={t("controls.next")}
-                className="w-12 h-12 border border-ink/20 flex items-center justify-center text-ink hover:border-accent hover:text-accent transition-colors duration-300"
+                className="w-12 h-12 border border-paper/30 flex items-center justify-center text-paper hover:border-accent hover:text-accent transition-colors duration-300"
               >→</button>
             </div>
           </div>
-          <div className="absolute left-0 right-0 top-0 h-px bg-ink/15 overflow-hidden">
+          <div className="absolute left-0 right-0 top-0 h-px bg-paper/20 overflow-hidden">
             <motion.div
               key={`${idx}-${paused}`}
               initial={{ width: "0%" }}
@@ -122,21 +122,21 @@ export default function Projects() {
               className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start"
             >
               <div className="lg:col-span-7">
-                <div className="relative aspect-[4/3] overflow-hidden bg-gray-200">
+                <div className="relative aspect-[4/3] overflow-hidden bg-anthracite-soft">
                   <img src={PROJECT_IMAGES[active.id]} alt={active.title} className="absolute inset-0 h-full w-full object-cover" loading="lazy" />
                 </div>
               </div>
               <div className="lg:col-span-5 lg:pt-2">
                 <div className="text-small text-accent tracking-wider mb-4 uppercase">{active.client} · {active.year}</div>
-                <h3 className="font-sans font-medium text-h2 text-ink mb-3">{active.title}</h3>
-                <p className="text-small text-gray-500 mb-8">{active.category}</p>
-                <p className="text-body text-gray-700 mb-12 leading-relaxed">{active.body}</p>
+                <h3 className="font-sans font-medium text-h2 text-paper mb-3">{active.title}</h3>
+                <p className="text-small text-paper/55 mb-8">{active.category}</p>
+                <p className="text-body text-paper/75 mb-12 leading-relaxed">{active.body}</p>
 
-                <dl className="grid grid-cols-2 gap-x-8 gap-y-6 border-t border-ink/15 pt-8">
+                <dl className="grid grid-cols-2 gap-x-8 gap-y-6 border-t border-paper/20 pt-8">
                   {active.highlights.map((h) => (
                     <div key={h.label}>
-                      <dt className="label text-gray-500 mb-2">{h.label}</dt>
-                      <dd className="font-sans font-medium text-h4 text-ink">{h.value}</dd>
+                      <dt className="label text-paper/50 mb-2">{h.label}</dt>
+                      <dd className="font-sans font-medium text-h4 text-paper">{h.value}</dd>
                     </div>
                   ))}
                 </dl>
@@ -153,7 +153,7 @@ export default function Projects() {
               aria-label={`${i + 1}`}
               className={clsx(
                 "h-1 transition-all duration-500",
-                i === idx ? "w-12 bg-accent" : "w-3 bg-ink/20 hover:bg-ink/40"
+                i === idx ? "w-12 bg-accent" : "w-3 bg-paper/25 hover:bg-paper/50"
               )}
             />
           ))}

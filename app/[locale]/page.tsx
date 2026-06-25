@@ -14,8 +14,8 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
     <main>
       <Nav />
       <Hero />
-      <About />
       <Projects />
+      <About />
       <Services />
       <Contact />
       <Footer />

@@ -14,6 +14,8 @@ const config: Config = {
         accent: "#3FAFA9",
         "accent-soft": "#E8F6F5",
         bhp: "#E25200",
+        anthracite: "#2C2F33",
+        "anthracite-soft": "#3A3D42",
         "bhp-soft": "#FCE9DC",
         "gray-700": "#3A3A38",
         "gray-500": "#7A7A78",
