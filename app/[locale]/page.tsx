@@ -1,7 +1,6 @@
 import { setRequestLocale } from "next-intl/server";
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
-import Stripe from "@/components/Stripe";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
 import Services from "@/components/Services";
@@ -15,7 +14,6 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
     <main>
       <Nav />
       <Hero />
-      <Stripe />
       <About />
       <Projects />
       <Services />
