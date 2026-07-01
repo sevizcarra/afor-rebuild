@@ -43,7 +43,7 @@ export default function Projects() {
         </div>
 
         {/* Cards estilo James Blade: full-width con overlay + tags + counter */}
-        <div className="space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
           {list.map((p, i) => (
             <motion.article
               key={p.id}
@@ -51,7 +51,7 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true, margin: "-120px" }}
               transition={{ duration: 1, delay: i * 0.12, ease: [0.16, 1, 0.3, 1] }}
-              className="relative rounded-3xl overflow-hidden group aspect-[16/8] bg-anthracite-soft"
+              className="relative rounded-2xl overflow-hidden group aspect-[4/3] bg-anthracite-soft"
             >
               <img
                 src={PROJECT_IMAGES[p.id]}
@@ -63,12 +63,12 @@ export default function Projects() {
               <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/40 to-transparent" />
 
               {/* Content overlay */}
-              <div className="absolute inset-0 flex flex-col justify-between p-8 md:p-10">
+              <div className="absolute inset-0 flex flex-col justify-between p-6 md:p-7">
                 {/* Top: título + counter */}
                 <div className="flex items-start justify-between gap-6">
                   <h3
                     className="font-sans font-semibold text-paper leading-[1.05] tracking-[-0.015em] max-w-2xl"
-                    style={{ fontSize: "clamp(22px, 2.6vw, 36px)" }}
+                    style={{ fontSize: "clamp(20px, 1.8vw, 26px)" }}
                   >
                     {p.title}
                   </h3>
@@ -78,21 +78,19 @@ export default function Projects() {
                 </div>
 
                 {/* Bottom: tags + body */}
-                <div className="grid grid-cols-12 gap-4 items-end">
-                  <div className="col-span-12 md:col-span-6">
-                    <div className="flex flex-wrap gap-2 mb-3">
-                      {p.category.split(" · ").slice(0, 3).map((tag) => (
-                        <span key={tag} className="chip-outline">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                    <p className="mono-cap text-paper/75 !text-[11.5px] !leading-[1.6]">
-                      {p.client} · {p.year}
-                    </p>
+                <div className="space-y-3">
+                  <div className="flex flex-wrap gap-1.5">
+                    {p.category.split(" · ").slice(0, 2).map((tag) => (
+                      <span key={tag} className="chip-outline !text-[10.5px] !py-1 !px-2.5">
+                        {tag}
+                      </span>
+                    ))}
                   </div>
-                  <p className="col-span-12 md:col-span-6 mono-cap text-paper/80 !text-[11px] !leading-[1.65] md:text-right md:max-w-md md:ml-auto">
+                  <p className="text-paper/85 text-[12.5px] leading-[1.5] line-clamp-3">
                     {p.body}
+                  </p>
+                  <p className="text-paper/60 text-[11px]">
+                    {p.client} · {p.year}
                   </p>
                 </div>
               </div>
