@@ -29,11 +29,11 @@ export default function Services() {
           {items.map((item, i) => (
             <motion.article
               key={i}
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: i * 0.04 }}
-              className="grid grid-cols-12 gap-6 py-8 md:py-10 border-b border-ink/10 group items-start"
+              initial={{ opacity: 0, x: -32 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.7, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
+              className="grid grid-cols-12 gap-6 py-8 md:py-10 border-b border-ink/10 group items-start hover:bg-ink/[0.02] transition-colors"
             >
               <div className="col-span-2 md:col-span-1 mono-cap text-accent pt-1">
                 {String(i + 1).padStart(2, "0")}

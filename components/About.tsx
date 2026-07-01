@@ -53,11 +53,11 @@ export default function About() {
           {principles.map((p, i) => (
             <motion.article
               key={p.n}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.6, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
-              className="relative rounded-2xl overflow-hidden border border-ink/10 aspect-square group"
+              initial={{ opacity: 0, y: 40, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.85, delay: i * 0.15, ease: [0.16, 1, 0.3, 1] }}
+              className="relative rounded-2xl overflow-hidden border border-ink/10 aspect-square group hover:scale-[1.02] hover:shadow-2xl transition-transform"
             >
               {/* Foto de fondo */}
               <img

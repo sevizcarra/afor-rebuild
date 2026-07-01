@@ -47,10 +47,10 @@ export default function Projects() {
           {list.map((p, i) => (
             <motion.article
               key={p.id}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.7, delay: i * 0.06, ease: [0.16, 1, 0.3, 1] }}
+              initial={{ opacity: 0, y: 60, scale: 0.97 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true, margin: "-120px" }}
+              transition={{ duration: 1, delay: i * 0.12, ease: [0.16, 1, 0.3, 1] }}
               className="relative rounded-3xl overflow-hidden group aspect-[16/8] bg-anthracite-soft"
             >
               <img
@@ -58,6 +58,7 @@ export default function Projects() {
                 alt={p.title}
                 loading="lazy"
                 className="absolute inset-0 h-full w-full object-cover transition-all duration-700 group-hover:scale-105"
+                style={{ objectPosition: p.id === "gom" ? "50% 20%" : "50% 50%" }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/40 to-transparent" />
 
