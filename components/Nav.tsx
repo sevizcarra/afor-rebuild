@@ -40,14 +40,6 @@ export default function Nav() {
             aFor<span className="text-accent align-baseline">.</span>
           </Link>
 
-          {/* Chip central + */}
-          <button
-            aria-label="Menu"
-            className="chip !bg-anthracite-soft/80 !text-paper backdrop-blur w-11 h-11 !p-0 justify-center border border-paper/10"
-          >
-            +
-          </button>
-
           {/* Chip Contact right */}
           <div className="flex items-center gap-2">
             <div className="hidden md:flex items-center gap-2 mr-2">
