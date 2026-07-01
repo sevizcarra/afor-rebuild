@@ -309,7 +309,8 @@
     "labels": {
       "email": "Email",
       "phone": "Phone",
-      "location": "Location"
+      "location": "Location",
+      "whatsapp": "WhatsApp"
     },
     "eyebrow": "Contact"
   },

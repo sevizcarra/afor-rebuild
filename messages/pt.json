@@ -292,7 +292,8 @@
     "labels": {
       "email": "Email",
       "phone": "Telefone",
-      "location": "Localização"
+      "location": "Localização",
+      "whatsapp": "WhatsApp"
     },
     "form": {
       "name": "Nome",

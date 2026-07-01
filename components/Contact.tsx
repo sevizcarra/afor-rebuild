@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 
 const SITE_EMAIL = "contacto@afor.cl";
 const SITE_PHONE = "+56 9 6350 1854";
+const WHATSAPP_URL = "https://wa.me/56963501854?text=Hola%20AFOR%2C%20me%20interesa%20conversar%20sobre%20un%20proyecto";
 
 export default function Contact() {
   const t = useTranslations("contact");
@@ -38,11 +39,16 @@ export default function Contact() {
           </a>
 
           <a
-            href={`tel:${SITE_PHONE.replace(/\s/g, "")}`}
-            className="bg-anthracite-soft border border-ink/10 rounded-3xl p-8 hover:border-ink/15 transition-colors block"
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-anthracite-soft border border-ink/10 rounded-3xl p-8 hover:border-ink/15 transition-colors block group"
           >
-            <div className="mono-cap text-ink/50 mb-4">{t("labels.phone")}</div>
-            <div className="font-sans font-semibold text-ink text-lg md:text-xl tracking-[-0.01em] tabular-nums">{SITE_PHONE}</div>
+            <div className="mono-cap text-ink/50 mb-4">{t("labels.whatsapp")}</div>
+            <div className="flex items-center gap-3">
+              <span className="font-sans font-semibold text-ink text-lg md:text-xl tracking-[-0.01em] tabular-nums">{SITE_PHONE}</span>
+              <span className="text-accent group-hover:translate-x-0.5 transition-transform">↗</span>
+            </div>
           </a>
 
           <div className="bg-anthracite-soft border border-ink/10 rounded-3xl p-8">
