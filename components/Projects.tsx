@@ -8,6 +8,7 @@ const PROJECT_IMAGES: Record<string, string> = {
   gom: "/images/projects/gom-enat.jpg",
   smh: "/images/projects/sala-control-smh-spence.jpg",
   sshh: "/images/projects/sshh-universidad.jpg",
+  dti: "/images/projects/cubierta-dti.jpg",
   yacas: "/images/projects/las-yacas.jpg",
   mecasfy: "/images/projects/santa-alejandra.jpg",
   gt: "/images/projects/gt-chile.jpg",

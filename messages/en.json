@@ -268,6 +268,28 @@
             "value": "End-to-end PM"
           }
         ]
+      },
+      {
+        "id": "dti",
+        "client": "Institutional Infrastructure — DTI",
+        "year": "2024",
+        "title": "DTI Roof",
+        "category": "Technical roof · Data center",
+        "body": "End-to-end project management for the replacement of the technical roof over a 600 m² institutional server room. New bay-registrable structure engineered to host precision equipment that tolerates no pauses and no leaks: constant HVAC, electrical redundancy, and a 24/7 operation that cannot be stopped during construction. Pre-painted metal profiles, underlay membrane, thermal sealing, and a work plan coordinated with the datacenter shift schedule —each panel installed without disconnecting a single rack— to intervene the institution's digital core while the machine keeps running.",
+        "highlights": [
+          {
+            "label": "Area",
+            "value": "600 m²"
+          },
+          {
+            "label": "Use",
+            "value": "24/7 data center"
+          },
+          {
+            "label": "AFOR role",
+            "value": "End-to-end PM"
+          }
+        ]
       }
     ],
     "controls": {

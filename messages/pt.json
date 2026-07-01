@@ -275,6 +275,28 @@
             "value": "Gerenciamento integral"
           }
         ]
+      },
+      {
+        "id": "dti",
+        "client": "Infraestrutura Institucional — DTI",
+        "year": "2024",
+        "title": "Cobertura DTI",
+        "category": "Cobertura técnica · Data center",
+        "body": "Gerenciamento integral da substituição da cobertura técnica de uma sala de servidores institucionais de 600 m². Nova estrutura registrável por trecho, concebida para abrigar equipamentos de precisão que não admitem pausas nem vazamentos: climatização constante, redundância elétrica e uma operação 24/7 que não pode parar durante a obra. Perfilaria metálica pré-pintada, manta sob cobertura, selos térmicos e um plano de obras coordenado com os turnos do datacenter —cada painel montado sem desconectar um único rack— para intervir no coração digital da instituição com a máquina em funcionamento.",
+        "highlights": [
+          {
+            "label": "Área",
+            "value": "600 m²"
+          },
+          {
+            "label": "Uso",
+            "value": "Data center 24/7"
+          },
+          {
+            "label": "Papel AFOR",
+            "value": "Gerenciamento integral"
+          }
+        ]
       }
     ]
   },
