@@ -4,7 +4,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { Link, usePathname, useRouter } from "@/i18n/routing";
 import clsx from "clsx";
 
-const LOCALES = ["es", "en"] as const;
+const LOCALES = ["es", "en", "pt"] as const;
 
 export default function Nav() {
   const t = useTranslations("nav");
@@ -52,7 +52,7 @@ export default function Nav() {
                       "mono-cap transition-colors",
                       l === locale ? "text-ink" : "text-ink/40 hover:text-ink/70"
                     )}
-                  >{tLang(l as "es" | "en")}</button>
+                  >{tLang(l as "es" | "en" | "pt")}</button>
                 </span>
               ))}
             </div>

@@ -1,36 +1,38 @@
 {
   "site": {
     "brand": "AFOR",
-    "slogan": "Facilities para minería e industria",
+    "slogan": "Ativos para infraestrutura não-processo em mineração e indústria.",
     "address": "Las Condes, Santiago, Chile",
-    "metaTitle": "AFOR — Facilities para minería e industria | Arquitectura e Ingeniería",
-    "metaDescription": "Firma chilena de arquitectura, ingeniería y project management especializada en el desarrollo de facilities para gran minería e industria. Más de 10 años con BHP e ingenierías Tier 1."
+    "metaTitle": "AFOR — Facilities para mineração e indústria | Arquitetura e Engenharia",
+    "metaDescription": "Firma chilena de arquitetura, engenharia e project management especializada no desenvolvimento de facilities para grande mineração e indústria. Mais de 10 anos com BHP e engenharias Tier 1."
   },
   "nav": {
-    "about": "Nosotros",
-    "projects": "Proyectos",
-    "services": "Servicios",
-    "contact": "Contacto",
-    "cta": "Hablemos →"
+    "about": "Sobre nós",
+    "projects": "Projetos",
+    "services": "Serviços",
+    "contact": "Contato",
+    "cta": "Contato",
+    "team": "Acesso equipe"
   },
   "hero": {
-    "eyebrow": "Facilities para minería e industria",
-    "summary": "Somos una firma chilena especializada en activos de infraestructura no-proceso para operaciones mineras e industriales. Integramos más de una década de experiencia del equipo en proyectos del sector.",
-    "cta1": "Ver proyectos",
-    "cta2": "Saber más"
+    "eyebrow": "Facilities para mineração e indústria",
+    "summary": "Somos uma firma chilena especializada em ativos para infraestrutura não-processo para operações de mineração e industriais. Integramos mais de uma década de experiência da equipe em projetos do setor.",
+    "cta1": "Ver projetos",
+    "cta2": "Saber mais"
   },
   "stripe": {
     "lineOne": "Ingeniería integral para el desarrollo",
     "lineTwo": "de facilities para minería e industria."
   },
   "about": {
-    "titleStart": "Ingeniería ",
+    "eyebrow": "Sobre nós",
+    "cta": "Saber mais",
+    "titleStart": "Engenharia ",
     "titleHighlight": "integral",
-    "titleEnd": " para facilities mineras.",
-    "p1": "Desarrollamos facilities para minería e industria: oficinas, casas de cambio, salas de control, salas eléctricas y técnicas, truck shops, RESPEL y áreas de almacenamiento. Integramos arquitectura, ingeniería y coordinación multidisciplinar bajo una misma dirección técnica.",
-    "p2": "Nos incorporamos al equipo del proyecto como una extensión de su ingeniería. Adoptamos la codificación, manuales y estándares de entrega del mandante, y operamos bajo sus protocolos internos para garantizar entregables compatibles con su sistema de gestión documental.",
-    "p3": "El equipo que toma el proyecto desde el levantamiento técnico es el mismo que coordina la entrega final. Continuidad técnica completa, sin transferencias internas ni intermediarios.",
-    "eyebrow": "Nosotros",
+    "titleEnd": " para facilities de mineração.",
+    "p1": "Desenvolvemos facilities para mineração e indústria: escritórios, casas de mudança, salas de controle, salas elétricas e técnicas, oficinas de caminhões, RESPEL e áreas de armazenamento. Integramos arquitetura, engenharia e coordenação multidisciplinar sob uma mesma direção técnica.",
+    "p2": "Nos incorporamos à equipe do projeto como uma extensão de sua engenharia. Adotamos a codificação, manuais e padrões de entrega do mandante, e operamos sob seus protocolos internos para garantir entregáveis compatíveis com seu sistema de gestão documental.",
+    "p3": "A equipe que toma o projeto desde o levantamento técnico é a mesma que coordena a entrega final. Continuidade técnica completa, sem transferências internas nem intermediários.",
     "tags": [
       "Operacional",
       "Normativo",
@@ -38,35 +40,40 @@
       "Integrado"
     ],
     "side": [
-      "Trabajamos integrados al equipo de proyecto del mandante. Sin intermediarios, sin transferencias internas.",
-      "Abordamos cada facility desde una visión integrada: arquitectura, ingeniería, coordinación BIM y normativa, bajo una misma dirección técnica.",
-      "Garantizamos continuidad técnica completa y compatibilidad con el sistema documental del cliente."
-    ],
-    "cta": "Saber más"
+      "Trabalhamos integrados à equipe de projeto do mandante. Sem intermediários, sem transferências internas.",
+      "Abordamos cada facility desde uma visão integrada: arquitetura, engenharia, coordenação BIM e normativa, sob uma mesma direção técnica.",
+      "Garantimos continuidade técnica completa e compatibilidade com o sistema documental do cliente."
+    ]
   },
   "principles": {
-    "p1Title": "Diseño operacional",
-    "p1Body": "Cada facility responde a la lógica del proceso productivo: operación, flujo de personal, seguridad y continuidad de servicio.",
+    "p1Title": "Desenho operacional",
+    "p1Body": "Cada facility responde à lógica do processo produtivo: operação, fluxo de pessoal, segurança e continuidade de serviço.",
     "p2Title": "Rigor normativo",
-    "p2Body": "Dominio de normativas y estándares de seguridad para gran minería e industria. Expedientes completos para aprobaciones.",
-    "p3Title": "Coordinación BIM",
-    "p3Body": "Trabajamos en Revit/BIM con la codificación que su proyecto requiera. Modelos coordinados, sin interferencias.",
-    "p4Title": "Integración al equipo",
-    "p4Body": "Equipo dedicado al proyecto, sin overhead. Acoplamiento a sus procesos, manuales y plazos."
+    "p2Body": "Domínio de normativas e padrões de segurança para grande mineração e indústria. Dossiês completos para aprovações.",
+    "p3Title": "Coordenação BIM",
+    "p3Body": "Trabalhamos em Revit/BIM com a codificação que seu projeto requer. Modelos coordenados, sem interferências.",
+    "p4Title": "Integração à equipe",
+    "p4Body": "Equipe dedicada ao projeto, sem overhead. Acoplamento a seus processos, manuais e prazos."
   },
   "projects": {
-    "titleStart": "Más de ",
+    "titleStart": "Mais de ",
     "titleHighlight": "20 facilities",
-    "titleEnd": " en gran minería e industria.",
-    "subtitle": "Selección de proyectos representativos en gran minería e industria.",
+    "titleEnd": " em grande mineração e indústria.",
+    "subtitle": "Seleção de projetos representativos em grande mineração e indústria.",
+    "eyebrow": "Projetos destacados",
+    "heading": "Projetos destacados",
+    "controls": {
+      "previous": "Anterior",
+      "next": "Seguinte"
+    },
     "labels": {
-      "surface": "Superficie",
+      "surface": "Superfície",
       "client": "Cliente",
-      "year": "Año",
+      "year": "Ano",
       "status": "Estado",
       "type": "Tipo",
       "program": "Programa",
-      "sector": "Sector"
+      "sector": "Setor"
     },
     "list": [
       {
@@ -225,99 +232,90 @@
           }
         ]
       }
-    ],
-    "controls": {
-      "previous": "Proyecto anterior",
-      "next": "Siguiente proyecto"
-    },
-    "eyebrow": "Proyectos destacados",
-    "heading": "Proyectos destacados"
+    ]
   },
   "services": {
-    "titleStart": "Servicios ",
+    "titleStart": "Serviços ",
     "titleHighlight": "especializados",
     "titleEnd": "",
-    "subtitle": "Servicios técnicos integrados al equipo del proyecto, bajo los protocolos del mandante.",
+    "subtitle": "Disciplinas técnicas integradas.",
+    "heading": "Serviços",
+    "eyebrow": "Áreas de prática",
+    "tags": [
+      "Master Plan",
+      "Edificação",
+      "Recintos técnicos",
+      "Engenharia Interim",
+      "Operação",
+      "RESPEL",
+      "Revisão"
+    ],
     "items": [
       {
         "title": "Plot Plan para facilities",
-        "body": "Diseño conceptual de instalaciones para faenas mineras e industriales: layouts, programa arquitectónico, flujos operacionales, estimación de superficies y plan maestro coordinado con disciplinas estructurales y MEP."
+        "body": "Desenho conceitual de instalações para faenas mineiras e industriais: layouts, programa arquitetônico, fluxos operacionais, estimativa de superfícies e plano mestre coordenado com disciplinas estruturais e MEP."
       },
       {
-        "title": "Oficinas administrativas y casas de cambio",
-        "body": "Diseño y ejecución de espacios para personal: oficinas técnicas, salas de reunión, comedores, casas de cambio para operadores, vestuarios y baños bajo normativa minera."
+        "title": "Escritórios administrativos e casas de mudança",
+        "body": "Desenho e execução de espaços para pessoal: escritórios técnicos, salas de reunião, refeitórios, casas de mudança para operadores, vestiários e banheiros sob normativa mineira."
       },
       {
-        "title": "Salas de control, servidores, eléctricas y técnicas",
-        "body": "Recintos críticos con piso técnico, climatización de precisión, control lumínico y acústico, distribución ergonómica de puestos de operación con monitores multipantalla y revestimientos especializados."
+        "title": "Salas de controle, servidores, elétricas e técnicas",
+        "body": "Recintos críticos com piso técnico, climatização de precisão, controle luminoso e acústico, distribuição ergonômica de postos de operação com monitores multitela e revestimentos especializados."
       },
       {
-        "title": "RESPEL, almacenamiento y truck shops",
-        "body": "Edificación técnica para residuos peligrosos, bodegas industriales y talleres de mantenimiento de equipos pesados, con cumplimiento normativo y seguridad operacional certificada."
+        "title": "Engenharia interim",
+        "body": "Documentação técnica intermediária apta para construção. Compatibilização, ajustes e coordenação com disciplinas."
       },
       {
-        "title": "Coordinación multidisciplinar y revisión de contraparte",
-        "body": "Integración de disciplinas estructural, mecánica, eléctrica, instrumentación y civil. Revisión técnica de planos y documentos de terceros bajo los estándares del mandante."
+        "title": "Coordenação de operação",
+        "body": "Suporte técnico durante construção: revisão de RFI, aclarações e compatibilização em obra."
       },
       {
-        "title": "Supervisión de terreno y avances",
-        "body": "Inspección técnica en obra, control de avances físicos, validación de entregables, gestión de no conformidades y cierre de proyecto con documentación as-built."
+        "title": "RESPEL e áreas de armazenamento",
+        "body": "Edificação técnica para resíduos perigosos, oficinas de caminhões e áreas industriais especializadas."
       },
       {
-        "title": "Project Management multidisciplinar",
-        "body": "Gestión integral de proyectos: planificación, control de plazos y costos, coordinación de proveedores, gestión de riesgos y reporte ejecutivo al mandante."
+        "title": "Revisão de contraparte",
+        "body": "Análise técnica de planos e documentos de terceiros. Detecção de interferências e cumprimento normativo."
       }
-    ],
-    "eyebrow": "Áreas de práctica",
-    "tags": [
-      "Master Plan",
-      "Edificación",
-      "Recintos técnicos",
-      "Ingeniería Interim",
-      "Operación",
-      "RESPEL",
-      "Revisión"
-    ],
-    "heading": "Servicios"
+    ]
   },
   "contact": {
-    "titleStart": "Iniciemos un ",
-    "titleHighlight": "proyecto",
+    "eyebrow": "Contato",
+    "title": "Vamos conversar",
+    "titleStart": "Iniciemos um ",
+    "titleHighlight": "projeto",
     "titleEnd": ".",
-    "body": "Cuéntanos qué necesitas. Respondemos en 24 horas hábiles.",
-    "form": {
-      "name": "Nombre",
-      "email": "Correo",
-      "company": "Empresa",
-      "type": "Tipo de proyecto",
-      "message": "Mensaje",
-      "submit": "Enviar mensaje →",
-      "submitting": "Enviando…",
-      "submitSuccess": "Mensaje enviado",
-      "submitError": "Error al enviar",
-      "types": [
-        "Mining Facilities",
-        "Industrial Facilities",
-        "Master Plan",
-        "Project Management",
-        "Coordinación multidisciplinar",
-        "Otro"
-      ]
-    },
-    "cta": "Escribir",
-    "title": "Hablemos",
+    "body": "Conte-nos sobre o projeto: escopo, prazos e especificações do mandante. Respondemos em menos de 24 horas úteis.",
+    "cta": "Escrever",
     "labels": {
       "email": "Email",
-      "phone": "Teléfono",
-      "location": "Ubicación"
+      "phone": "Telefone",
+      "location": "Localização"
     },
-    "eyebrow": "Contacto"
+    "form": {
+      "name": "Nome",
+      "email": "Email",
+      "company": "Empresa",
+      "type": "Tipo de projeto",
+      "message": "Mensagem",
+      "submit": "Enviar",
+      "submitting": "Enviando…",
+      "types": [
+        "Facility mineira",
+        "Instalações industriais",
+        "Revisão técnica",
+        "Outro"
+      ]
+    }
   },
   "footer": {
-    "rights": "Todos los derechos reservados.",
+    "rights": "Todos os direitos reservados.",
+    "expansion": "Assets For Non-Process Infrastructure",
     "links": {
       "dossier": "Dossier 2025",
-      "team": "Acceso equipo"
+      "team": "Acesso equipe"
     }
   },
   "languages": {

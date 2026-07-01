@@ -32,13 +32,13 @@ export default function Projects() {
         <div className="mb-16 md:mb-20">
           <div className="mono-cap text-ink/70 flex items-center gap-2 mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-            Selected Works
+            {t("eyebrow")}
           </div>
           <h2
             className="font-sans font-semibold text-ink leading-[1.05] tracking-[-0.02em] max-w-4xl"
             style={{ fontSize: "clamp(36px, 5vw, 64px)" }}
           >
-            Proyectos destacados<span className="text-accent">.</span>
+            {t("heading")}<span className="text-accent">.</span>
           </h2>
         </div>
 

@@ -41,7 +41,8 @@
       "We work embedded in the client project team. No intermediaries, no internal transfers.",
       "We approach each facility from an integrated view: architecture, engineering, BIM coordination and code, under a single technical direction.",
       "We guarantee complete technical continuity and compatibility with the client document system."
-    ]
+    ],
+    "cta": "Learn more"
   },
   "principles": {
     "p1Title": "Operational design",
@@ -228,7 +229,9 @@
     "controls": {
       "previous": "Previous project",
       "next": "Next project"
-    }
+    },
+    "eyebrow": "Selected works",
+    "heading": "Featured projects"
   },
   "services": {
     "titleStart": "Specialized ",
@@ -274,7 +277,8 @@
       "Operations",
       "Hazardous waste",
       "Review"
-    ]
+    ],
+    "heading": "Services"
   },
   "contact": {
     "titleStart": "Let's start a ",
@@ -318,6 +322,7 @@
   },
   "languages": {
     "es": "ES",
-    "en": "EN"
+    "en": "EN",
+    "pt": "PT"
   }
 }

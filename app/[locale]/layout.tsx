@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { Plus_Jakarta_Sans, JetBrains_Mono, Audiowide, Instrument_Serif } from "next/font/google";
+import { DM_Sans, JetBrains_Mono, Audiowide, Instrument_Serif } from "next/font/google";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
 
-const plusJakarta = Plus_Jakarta_Sans({
+const dmSans = DM_Sans({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-plus-jakarta",
+  variable: "--font-dm-sans",
   weight: ["200", "300", "400", "500", "600", "700", "800"],
 });
 
@@ -72,7 +72,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       description: t("metaDescription"),
       url: "https://afor.cl",
       siteName: "AFOR",
-      locale: locale === "es" ? "es_CL" : "en_US",
+      locale: locale === "es" ? "es_CL" : locale === "pt" ? "pt_BR" : "en_US",
       type: "website",
     },
     alternates: {
@@ -80,6 +80,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       languages: {
         "es-CL": "https://afor.cl",
         "en-US": "https://afor.cl/en",
+        "pt-BR": "https://afor.cl/pt",
       },
     },
   };
@@ -100,7 +101,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${plusJakarta.variable} ${jetbrains.variable} ${audiowide.variable} ${instrumentSerif.variable}`}>
+    <html lang={locale} className={`${dmSans.variable} ${jetbrains.variable} ${audiowide.variable} ${instrumentSerif.variable}`}>
       <body>
         <NextIntlClientProvider messages={messages}>
           {children}

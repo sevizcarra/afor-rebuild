@@ -14,7 +14,7 @@ export default function Contact() {
       <div className="px-6 md:px-10">
         <div className="mono-cap text-ink/70 flex items-center gap-2 mb-6">
           <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-          {t("eyebrow") || "Contact"}
+          {t("eyebrow")}
         </div>
 
         <motion.h2

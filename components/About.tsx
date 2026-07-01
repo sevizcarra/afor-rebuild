@@ -32,10 +32,10 @@ export default function About() {
         <div className="flex flex-wrap items-center justify-between gap-4 mb-16 md:mb-20">
           <div className="mono-cap text-ink/70 flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-            {t("eyebrow") || "Nosotros"}
+            {t("eyebrow")}
           </div>
           <button className="chip">
-            Saber más <span className="text-ink/50">↗</span>
+            {t("cta")} <span className="text-ink/50">↗</span>
           </button>
         </div>
 

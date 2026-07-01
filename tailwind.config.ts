@@ -26,7 +26,7 @@ const config: Config = {
         "gray-200": "#E8E6E1",
       },
       fontFamily: {
-        sans: ["var(--font-plus-jakarta)", "system-ui", "sans-serif"],
+        sans: ["var(--font-dm-sans)", "system-ui", "sans-serif"],
         mono: ["var(--font-jetbrains-mono)", "ui-monospace", "monospace"],
         brand: ["var(--font-audiowide)", "Impact", "system-ui", "sans-serif"],
         serif: ["var(--font-instrument-serif)", "Georgia", "serif"],

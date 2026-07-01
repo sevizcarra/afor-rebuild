@@ -14,13 +14,13 @@ export default function Services() {
         <div className="mb-16 md:mb-20">
           <div className="mono-cap text-ink/70 flex items-center gap-2 mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-            {t("eyebrow") || "Practice"}
+            {t("eyebrow")}
           </div>
           <h2
             className="font-sans font-semibold text-ink leading-[1.05] tracking-[-0.02em]"
             style={{ fontSize: "clamp(36px, 5vw, 64px)" }}
           >
-            Servicios<span className="text-accent">.</span>
+            {t("heading")}<span className="text-accent">.</span>
           </h2>
         </div>
 
