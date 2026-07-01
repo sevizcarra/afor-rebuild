@@ -125,7 +125,7 @@
         "id": "gom",
         "client": "Minera Escondida · EN-AT",
         "year": "2024",
-        "title": "Sala de Control GOM",
+        "title": "Sala de Control — GOM MEL",
         "category": "Facility técnica · Ingeniería de detalle",
         "body": "Intervención integral del recinto con cielo metálico lineal, revestimiento mural en listonería de madera, iluminación LED lineal empotrada y distribución ergonómica de puestos de operación con brazos articulados y monitores multipantalla. Diseño que prioriza concentración operacional, confort acústico y control lumínico para jornadas extendidas.",
         "highlights": [
@@ -144,6 +144,28 @@
           {
             "label": "Tipo",
             "value": "Ingeniería de detalle"
+          }
+        ]
+      },
+      {
+        "id": "smh",
+        "client": "SMH — Minera Spence",
+        "year": "2024",
+        "title": "Sala de Control — SMH Spence",
+        "category": "Sala de control · Interior",
+        "body": "Nueva sala de control para operaciones con revestimientos melamínicos y detalles en aluminio. Cielo de perfilería lineal U con iluminación incorporada, resolviendo acústica y confort visual para turnos de 12 horas.",
+        "highlights": [
+          {
+            "label": "Superficie",
+            "value": "180 m²"
+          },
+          {
+            "label": "Terminaciones",
+            "value": "Melamina + Aluminio"
+          },
+          {
+            "label": "Cielo",
+            "value": "Perfilería lineal U"
           }
         ]
       },

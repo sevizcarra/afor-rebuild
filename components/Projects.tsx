@@ -6,6 +6,7 @@ const PROJECT_IMAGES: Record<string, string> = {
   cho: "/images/projects/edificio-cho.jpg",
   enat: "/images/projects/facilities-enat.jpg",
   gom: "/images/projects/gom-enat.jpg",
+  smh: "/images/projects/sala-control-smh-spence.jpg",
   yacas: "/images/projects/las-yacas.jpg",
   mecasfy: "/images/projects/santa-alejandra.jpg",
   gt: "/images/projects/gt-chile.jpg",

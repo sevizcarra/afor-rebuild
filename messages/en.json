@@ -125,7 +125,7 @@
         "id": "gom",
         "client": "Minera Escondida · EN-AT",
         "year": "2024",
-        "title": "GOM Control Room",
+        "title": "Control Room — GOM MEL",
         "category": "Technical facility · Detailed engineering",
         "body": "Complete intervention with linear metal ceiling, wooden batten wall finish, recessed linear LED lighting and ergonomic distribution of operator stations with articulated arms and multi-screen monitors. Design that prioritizes operational concentration, acoustic comfort and luminous control for extended shifts.",
         "highlights": [
@@ -144,6 +144,28 @@
           {
             "label": "Type",
             "value": "Detailed engineering"
+          }
+        ]
+      },
+      {
+        "id": "smh",
+        "client": "SMH — Spence Mine",
+        "year": "2024",
+        "title": "Control Room — SMH Spence",
+        "category": "Control room · Interior",
+        "body": "New operations control room featuring melamine wall claddings and aluminum trims. Linear U-profile ceiling with integrated lighting, engineered for acoustic performance and visual comfort across 12-hour shifts.",
+        "highlights": [
+          {
+            "label": "Area",
+            "value": "180 m²"
+          },
+          {
+            "label": "Finishes",
+            "value": "Melamine + Aluminum"
+          },
+          {
+            "label": "Ceiling",
+            "value": "Linear U-profile"
           }
         ]
       },
