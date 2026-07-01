@@ -43,14 +43,7 @@ export default function Hero() {
           aFor<span className="text-accent">.</span>
         </h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-8 max-w-xl mono-cap text-ink/70 !text-[12px] !leading-[1.7]"
-        >
-          {t("summary")}
-        </motion.p>
+        
       </motion.div>
     </section>
   );

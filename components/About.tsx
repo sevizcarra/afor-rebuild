@@ -16,6 +16,7 @@ const PRINCIPLES_IMAGES = [
 
 export default function About() {
   const t = useTranslations("about");
+  const tHero = useTranslations("hero");
   const tP = useTranslations("principles");
   const tags = t.raw("tags") as string[];
   const principles = [
@@ -28,25 +29,38 @@ export default function About() {
   return (
     <section id="nosotros" className="relative bg-anthracite text-ink py-24 md:py-32">
       <div className="px-6 md:px-10">
-        {/* Header: eyebrow + CTA Saber más */}
-        <div className="flex flex-wrap items-center justify-between gap-4 mb-16 md:mb-20">
-          <div className="mono-cap text-ink/70 flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-            {t("eyebrow")}
+        {/* Header Swiss: hairline + eyebrow tabular numerico + CTA opcional a la derecha */}
+        <div className="grid grid-cols-12 gap-6 pt-8 mb-14 md:mb-20 border-t border-ink">
+          <div className="col-span-6 md:col-span-3">
+            <div className="flex items-center gap-2 text-[12px] tabular-nums tracking-[0.02em] text-ink/70">
+              <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+              01 — {t("eyebrow")}
+            </div>
           </div>
-          <button className="chip">
-            {t("cta")} <span className="text-ink/50">↗</span>
-          </button>
+          <div className="col-span-6 md:col-span-9 flex justify-end">
+            <button className="chip">
+              {t("cta")} <span className="text-ink/50">↗</span>
+            </button>
+          </div>
         </div>
 
-        {/* Title */}
-        <motion.h2
-          initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={fadeIn}
-          className="font-sans font-semibold text-ink leading-[1.05] tracking-[-0.02em] mb-16 md:mb-24 max-w-4xl"
-          style={{ fontSize: "clamp(36px, 5vw, 64px)" }}
-        >
-          {t("titleStart")}<span className="text-accent">{t("titleHighlight")}</span>{t("titleEnd")}
-        </motion.h2>
+        {/* Titulo + summary en grilla Swiss (7/5) */}
+        <div className="grid grid-cols-12 gap-6 md:gap-10 mb-20 md:mb-24 items-end">
+          <motion.h2
+            initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={fadeIn}
+            className="col-span-12 md:col-span-7 font-sans font-semibold text-ink leading-[1.05] tracking-[-0.02em]"
+            style={{ fontSize: "clamp(36px, 4.6vw, 60px)" }}
+          >
+            {t("titleStart")}<span className="text-accent">{t("titleHighlight")}</span>{t("titleEnd")}
+          </motion.h2>
+          <motion.p
+            initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={fadeIn}
+            transition={{ delay: 0.15, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            className="col-span-12 md:col-span-5 text-ink/70 text-[15px] leading-[1.65] max-w-md md:ml-auto"
+          >
+            {tHero("summary")}
+          </motion.p>
+        </div>
 
         {/* Principios con foto de fondo */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
