@@ -50,7 +50,8 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="bg-anthracite-soft rounded-3xl mb-20 md:mb-24"
+          style={{ backgroundColor: "#FAFAF7" }}
+          className="rounded-3xl mb-20 md:mb-24"
         >
           <div className="grid grid-cols-12 gap-0 items-stretch">
             <div className="col-span-12 md:col-span-7 p-8 md:p-12 md:pr-14 md:border-r border-ink/10">
