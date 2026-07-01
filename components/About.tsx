@@ -27,7 +27,7 @@ export default function About() {
   ];
 
   return (
-    <section id="nosotros" className="relative bg-anthracite text-ink py-24 md:py-32">
+    <section id="nosotros" className="relative bg-anthracite text-ink pt-24 md:pt-32 pb-10 md:pb-14">
       <div className="px-6 md:px-10">
         {/* Header Swiss: hairline + eyebrow tabular numerico + CTA opcional a la derecha */}
         <div className="grid grid-cols-12 gap-6 pt-8 mb-14 md:mb-20 border-t border-ink">
