@@ -19,8 +19,8 @@ export default function Hero() {
           className="h-full w-full object-cover"
           style={{
             filter: "grayscale(100%) contrast(1.05)",
-            maskImage: "linear-gradient(to bottom, black 0%, black 45%, transparent 92%)",
-            WebkitMaskImage: "linear-gradient(to bottom, black 0%, black 45%, transparent 92%)",
+            maskImage: "linear-gradient(to bottom, black 0%, black 30%, transparent 65%)",
+            WebkitMaskImage: "linear-gradient(to bottom, black 0%, black 30%, transparent 65%)",
           }}
         >
           <source src="/videos/hero.mp4" type="video/mp4" />
