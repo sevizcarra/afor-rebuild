@@ -253,6 +253,28 @@
             "value": "Ejecutado"
           }
         ]
+      },
+      {
+        "id": "sshh",
+        "client": "Infraestrutura Universitária",
+        "year": "2023",
+        "title": "Sanitários — Infraestrutura Universitária",
+        "category": "Bateria sanitária · Alto tráfego",
+        "body": "Gerenciamento integral de uma bateria de sanitários concebida para o pulso constante do fluxo universitário: milhares de usos diários, ciclos de limpeza intensivos e uma vida útil medida em décadas. Divisórias modulares em cinza grafite, paredes com revestimento cimentício, piso porcelanato de alta resistência e uma trama estrutural aparente pintada em preto que ordena a circulação sem disfarçar a arquitetura. Iluminação LED embutida de temperatura neutra, sinalização acessível integrada e uma série de detalhes construtivos —rodapés, ventilações, ferragens— pensados para resistir ao uso mais exigente sem perder caráter nem padrão de acabamento.",
+        "highlights": [
+          {
+            "label": "Uso",
+            "value": "Alto tráfego"
+          },
+          {
+            "label": "Padrão",
+            "value": "Institucional"
+          },
+          {
+            "label": "Papel AFOR",
+            "value": "Gerenciamento integral"
+          }
+        ]
       }
     ]
   },

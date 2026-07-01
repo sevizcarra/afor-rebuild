@@ -7,6 +7,7 @@ const PROJECT_IMAGES: Record<string, string> = {
   enat: "/images/projects/facilities-enat.jpg",
   gom: "/images/projects/gom-enat.jpg",
   smh: "/images/projects/sala-control-smh-spence.jpg",
+  sshh: "/images/projects/sshh-universidad.jpg",
   yacas: "/images/projects/las-yacas.jpg",
   mecasfy: "/images/projects/santa-alejandra.jpg",
   gt: "/images/projects/gt-chile.jpg",
@@ -44,7 +45,7 @@ export default function Projects() {
         </div>
 
         {/* Cards estilo James Blade: full-width con overlay + tags + counter */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
           {list.map((p, i) => (
             <motion.article
               key={p.id}

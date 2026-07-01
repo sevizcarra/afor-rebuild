@@ -246,6 +246,28 @@
             "value": "Completed"
           }
         ]
+      },
+      {
+        "id": "sshh",
+        "client": "University Infrastructure",
+        "year": "2023",
+        "title": "Restrooms — University Infrastructure",
+        "category": "Restroom facility · High traffic",
+        "body": "End-to-end project management of a restroom facility built for the relentless rhythm of campus life: thousands of daily uses, intensive cleaning cycles, and a service life measured in decades. Modular partitions in graphite gray, cementitious wall claddings, heavy-duty porcelain flooring, and an exposed steel frame painted matte black that organizes circulation without concealing the architecture. Recessed LED lighting at neutral color temperature, integrated accessible signage, and a suite of construction details —skirtings, ventilation grilles, ironmongery— engineered to withstand the most demanding use while holding institutional-grade finish.",
+        "highlights": [
+          {
+            "label": "Use",
+            "value": "High traffic"
+          },
+          {
+            "label": "Standard",
+            "value": "Institutional"
+          },
+          {
+            "label": "AFOR role",
+            "value": "End-to-end PM"
+          }
+        ]
       }
     ],
     "controls": {

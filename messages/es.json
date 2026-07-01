@@ -246,6 +246,28 @@
             "value": "Ejecutado"
           }
         ]
+      },
+      {
+        "id": "sshh",
+        "client": "Infraestructura Universitaria",
+        "year": "2023",
+        "title": "SSHH — Infraestructura Universitaria",
+        "category": "Baterías sanitarias · Alto tráfico",
+        "body": "Gerenciamiento integral de una batería de servicios higiénicos concebida para el pulso constante del flujo universitario: miles de usos diarios, ciclos de aseo intensivos y una vida útil que se mide en décadas. Tabiques modulares en gris grafito, muros con revestimiento cementicio, piso de porcelanato de alta resistencia y una trama estructural expuesta pintada en negro que ordena la circulación sin disimular la arquitectura. Iluminación LED empotrada de temperatura neutra, señalética accesible integrada y una serie de detalles constructivos —guardapolvos, ventilaciones, herrajes— pensados para resistir el uso más exigente sin perder carácter ni estándar de terminación.",
+        "highlights": [
+          {
+            "label": "Uso",
+            "value": "Alto tráfico"
+          },
+          {
+            "label": "Estándar",
+            "value": "Institucional"
+          },
+          {
+            "label": "Rol AFOR",
+            "value": "Gerenciamiento integral"
+          }
+        ]
       }
     ],
     "controls": {
