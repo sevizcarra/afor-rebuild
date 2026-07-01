@@ -23,7 +23,10 @@ export default function Hero() {
         </video>
         {/* Overlays sutiles para legibilidad + fade final a blanco */}
         <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-paper/40 to-transparent pointer-events-none" />
-        <div className="absolute inset-x-0 bottom-0 h-full bg-gradient-to-t from-paper via-paper/85 via-40% to-transparent pointer-events-none" />
+        {/* Gradiente que funde el video al blanco */}
+        <div className="absolute inset-x-0 bottom-40 h-3/5 bg-gradient-to-t from-paper via-paper/70 to-transparent pointer-events-none" />
+        {/* Bloque solido blanco al pie: garantiza que no hay linea entre hero y siguiente seccion */}
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-paper pointer-events-none" />
       </div>
 
       {/* Contenido centrado al pie */}
