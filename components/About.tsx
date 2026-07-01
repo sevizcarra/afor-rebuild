@@ -49,7 +49,7 @@ export default function About() {
         </motion.h2>
 
         {/* Principios con foto de fondo */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {principles.map((p, i) => (
             <motion.article
               key={p.n}
@@ -57,7 +57,7 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.6, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
-              className="relative rounded-3xl overflow-hidden border border-paper/10 aspect-[4/3] group"
+              className="relative rounded-2xl overflow-hidden border border-paper/10 aspect-square group"
             >
               {/* Foto de fondo */}
               <img
@@ -70,16 +70,16 @@ export default function About() {
               <div className="absolute inset-0 bg-gradient-to-t from-anthracite via-anthracite/50 to-anthracite/10" />
 
               {/* Contenido */}
-              <div className="absolute inset-0 p-8 md:p-10 flex flex-col justify-between">
+              <div className="absolute inset-0 p-5 flex flex-col justify-between">
                 <div className="flex items-start justify-between">
                   <span className="mono-cap text-accent">{p.n}</span>
                   <span className="chip-outline">{p.tag}</span>
                 </div>
                 <div>
-                  <h3 className="font-sans font-semibold text-paper text-xl md:text-2xl leading-tight tracking-[-0.01em]">
+                  <h3 className="font-sans font-semibold text-paper text-base md:text-lg leading-tight tracking-[-0.01em]">
                     {p.title}
                   </h3>
-                  <p className="mt-3 mono-cap text-paper/80 !text-[11.5px] !leading-[1.7] max-w-md">
+                  <p className="mt-2 mono-cap text-paper/75 !text-[10.5px] !leading-[1.5]">
                     {p.body}
                   </p>
                 </div>
