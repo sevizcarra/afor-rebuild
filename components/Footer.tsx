@@ -8,16 +8,16 @@ export default function Footer() {
   const tSite = useTranslations("site");
 
   return (
-    <footer className="bg-paper py-10 border-t border-gray-200">
+    <footer className="bg-anthracite text-paper py-10 border-t border-paper/15">
       <div className="container-edge flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-small">
         <div className="flex items-center gap-3 flex-wrap">
-          <span className="block w-2 h-2 bg-bhp" aria-hidden="true" />
-          <span className="font-brand text-base tracking-[0.05em] text-ink">
+          <span className="block w-2 h-2 bg-accent" aria-hidden="true" />
+          <span className="font-brand text-base tracking-[0.05em] text-paper">
             aFor<span className="text-accent">.</span>
           </span>
-          <span className="text-gray-500">{tSite("address")}</span>
+          <span className="text-paper/55">{tSite("address")}</span>
         </div>
-        <div className="flex items-center gap-6 text-gray-500 flex-wrap">
+        <div className="flex items-center gap-6 text-paper/55 flex-wrap">
           <a
             href="https://intranet.afor.cl"
             target="_blank"

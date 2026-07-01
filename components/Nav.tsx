@@ -39,7 +39,7 @@ export default function Nav() {
   return (
     <header className={clsx(
       "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-      pastHero ? "bg-paper text-ink hairline-soft-b" : "bg-transparent text-paper",
+      pastHero ? "bg-anthracite/95 backdrop-blur text-paper border-b border-paper/15" : "bg-transparent text-paper",
     )}>
       <nav className="container-edge flex items-center justify-between h-16">
         {/* Wordmark del nav: invisible en hero, aparece al scrollear pasando el video */}
@@ -59,7 +59,7 @@ export default function Nav() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className={clsx("transition-colors", pastHero ? "text-gray-700 hover:text-accent" : "text-paper/85 hover:text-accent")}
+                className={clsx("transition-colors", pastHero ? "text-paper/85 hover:text-accent" : "text-paper/85 hover:text-accent")}
               >
                 {l.label}
               </a>
@@ -75,8 +75,8 @@ export default function Nav() {
                 className={clsx(
                   "transition-colors uppercase",
                   l === locale
-                    ? (pastHero ? "text-ink" : "text-paper")
-                    : (pastHero ? "text-gray-400 hover:text-gray-700" : "text-paper/40 hover:text-paper/70")
+                    ? ("text-paper")
+                    : ("text-paper/40 hover:text-paper/80")
                 )}
               >{tLang(l as "es" | "en")}</button>
             </span>
