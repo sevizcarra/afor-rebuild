@@ -36,7 +36,7 @@ export default function Nav() {
       <header className="fixed top-0 left-0 right-0 z-50">
         <nav className="px-6 md:px-10 pt-6 flex items-center justify-between">
           {/* Logo left */}
-          <Link href="/" aria-label="aFor" className="font-brand text-paper text-base tracking-[0.05em] flex items-baseline gap-1">
+          <Link href="/" aria-label="aFor" className="font-brand text-ink text-base tracking-[0.05em] flex items-baseline gap-1">
             aFor<span className="text-accent align-baseline">.</span>
           </Link>
 
@@ -45,18 +45,18 @@ export default function Nav() {
             <div className="hidden md:flex items-center gap-2 mr-2">
               {LOCALES.map((l, i) => (
                 <span key={l} className="contents">
-                  {i > 0 && <span className="text-paper/25 mono-cap">·</span>}
+                  {i > 0 && <span className="text-ink/25 mono-cap">·</span>}
                   <button
                     onClick={() => router.replace(pathname, { locale: l })}
                     className={clsx(
                       "mono-cap transition-colors",
-                      l === locale ? "text-paper" : "text-paper/40 hover:text-paper/70"
+                      l === locale ? "text-ink" : "text-ink/40 hover:text-ink/70"
                     )}
                   >{tLang(l as "es" | "en")}</button>
                 </span>
               ))}
             </div>
-            <a href="#contacto" className="chip !bg-anthracite-soft/80 !text-paper backdrop-blur border border-paper/10">
+            <a href="#contacto" className="chip !bg-anthracite-soft/80 !text-ink backdrop-blur border border-ink/10">
               {t("contact")} <span className="text-accent">→</span>
             </a>
           </div>

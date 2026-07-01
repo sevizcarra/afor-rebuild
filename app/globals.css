@@ -17,8 +17,8 @@
     -moz-osx-font-smoothing: grayscale;
   }
   body {
-    background-color: #2C2F33;
-    color: #FAFAF7;
+    background-color: #FFFFFF;
+    color: #0E1B22;
     font-family: var(--font-plus-jakarta), system-ui, sans-serif;
     font-size: 16px;
     line-height: 1.65;
@@ -78,22 +78,22 @@
     gap: 0.5rem;
     padding: 0.5rem 1rem;
     border-radius: 9999px;
-    background: rgba(255,255,255,0.06);
-    color: rgba(255,255,255,0.9);
+    background: rgba(14,27,34,0.06);
+    color: rgba(14,27,34,0.9);
     font-family: var(--font-jetbrains-mono), monospace;
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 0.04em;
     transition: background .2s;
   }
-  .chip:hover { background: rgba(255,255,255,0.12); }
+  .chip:hover { background: rgba(14,27,34,0.12); }
   .chip-outline {
     display: inline-flex;
     align-items: center;
     padding: 0.4rem 0.9rem;
     border-radius: 9999px;
-    border: 1px solid rgba(255,255,255,0.2);
-    color: rgba(255,255,255,0.75);
+    border: 1px solid rgba(14,27,34,0.2);
+    color: rgba(14,27,34,0.65);
     font-family: var(--font-jetbrains-mono), monospace;
     font-size: 11px;
     text-transform: uppercase;

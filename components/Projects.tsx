@@ -26,16 +26,16 @@ export default function Projects() {
   const list = t.raw("list") as Project[];
 
   return (
-    <section id="proyectos" className="relative bg-anthracite text-paper py-24 md:py-32">
+    <section id="proyectos" className="relative bg-anthracite text-ink py-24 md:py-32">
       <div className="px-6 md:px-10">
         {/* Header eyebrow + title condensed */}
         <div className="mb-16 md:mb-20">
-          <div className="mono-cap text-paper/70 flex items-center gap-2 mb-6">
+          <div className="mono-cap text-ink/70 flex items-center gap-2 mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-accent" />
             Selected Works
           </div>
           <h2
-            className="font-sans font-semibold text-paper leading-[1.05] tracking-[-0.02em] max-w-4xl"
+            className="font-sans font-semibold text-ink leading-[1.05] tracking-[-0.02em] max-w-4xl"
             style={{ fontSize: "clamp(36px, 5vw, 64px)" }}
           >
             Proyectos destacados<span className="text-accent">.</span>
@@ -59,7 +59,7 @@ export default function Projects() {
                 loading="lazy"
                 className="absolute inset-0 h-full w-full object-cover transition-all duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-anthracite via-anthracite/50 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/40 to-transparent" />
 
               {/* Content overlay */}
               <div className="absolute inset-0 flex flex-col justify-between p-8 md:p-10">

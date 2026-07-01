@@ -26,23 +26,23 @@ export default function About() {
   ];
 
   return (
-    <section id="nosotros" className="relative bg-anthracite text-paper py-24 md:py-32">
+    <section id="nosotros" className="relative bg-anthracite text-ink py-24 md:py-32">
       <div className="px-6 md:px-10">
         {/* Header: eyebrow + CTA Saber más */}
         <div className="flex flex-wrap items-center justify-between gap-4 mb-16 md:mb-20">
-          <div className="mono-cap text-paper/70 flex items-center gap-2">
+          <div className="mono-cap text-ink/70 flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-accent" />
             {t("eyebrow") || "Nosotros"}
           </div>
           <button className="chip">
-            Saber más <span className="text-paper/50">↗</span>
+            Saber más <span className="text-ink/50">↗</span>
           </button>
         </div>
 
         {/* Title */}
         <motion.h2
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={fadeIn}
-          className="font-sans font-semibold text-paper leading-[1.05] tracking-[-0.02em] mb-16 md:mb-24 max-w-4xl"
+          className="font-sans font-semibold text-ink leading-[1.05] tracking-[-0.02em] mb-16 md:mb-24 max-w-4xl"
           style={{ fontSize: "clamp(36px, 5vw, 64px)" }}
         >
           {t("titleStart")}<span className="text-accent">{t("titleHighlight")}</span>{t("titleEnd")}
@@ -57,7 +57,7 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.6, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
-              className="relative rounded-2xl overflow-hidden border border-paper/10 aspect-square group"
+              className="relative rounded-2xl overflow-hidden border border-ink/10 aspect-square group"
             >
               {/* Foto de fondo */}
               <img
@@ -67,7 +67,7 @@ export default function About() {
                 className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               {/* Overlay antracita + gradiente */}
-              <div className="absolute inset-0 bg-gradient-to-t from-anthracite via-anthracite/50 to-anthracite/10" />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/40 to-ink/10" />
 
               {/* Contenido */}
               <div className="absolute inset-0 p-5 flex flex-col justify-between">

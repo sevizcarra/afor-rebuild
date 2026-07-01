@@ -8,16 +8,16 @@ export default function Services() {
   const tags = t.raw("tags") as string[];
 
   return (
-    <section id="servicios" className="relative bg-anthracite text-paper py-24 md:py-32">
+    <section id="servicios" className="relative bg-anthracite text-ink py-24 md:py-32">
       <div className="px-6 md:px-10">
         {/* Header */}
         <div className="mb-16 md:mb-20">
-          <div className="mono-cap text-paper/70 flex items-center gap-2 mb-6">
+          <div className="mono-cap text-ink/70 flex items-center gap-2 mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-accent" />
             {t("eyebrow") || "Practice"}
           </div>
           <h2
-            className="font-sans font-semibold text-paper leading-[1.05] tracking-[-0.02em]"
+            className="font-sans font-semibold text-ink leading-[1.05] tracking-[-0.02em]"
             style={{ fontSize: "clamp(36px, 5vw, 64px)" }}
           >
             Servicios<span className="text-accent">.</span>
@@ -25,7 +25,7 @@ export default function Services() {
         </div>
 
         {/* Lista con chips y hairlines */}
-        <div className="border-t border-paper/10">
+        <div className="border-t border-ink/10">
           {items.map((item, i) => (
             <motion.article
               key={i}
@@ -33,15 +33,15 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.04 }}
-              className="grid grid-cols-12 gap-6 py-8 md:py-10 border-b border-paper/10 group items-start"
+              className="grid grid-cols-12 gap-6 py-8 md:py-10 border-b border-ink/10 group items-start"
             >
               <div className="col-span-2 md:col-span-1 mono-cap text-accent pt-1">
                 {String(i + 1).padStart(2, "0")}
               </div>
-              <h3 className="col-span-10 md:col-span-5 font-sans font-semibold text-paper text-lg md:text-xl leading-tight tracking-[-0.01em]">
+              <h3 className="col-span-10 md:col-span-5 font-sans font-semibold text-ink text-lg md:text-xl leading-tight tracking-[-0.01em]">
                 {item.title}
               </h3>
-              <p className="col-span-12 md:col-span-4 mono-cap text-paper/60 !text-[12px] !leading-[1.7]">
+              <p className="col-span-12 md:col-span-4 mono-cap text-ink/60 !text-[12px] !leading-[1.7]">
                 {item.body}
               </p>
               <div className="col-span-12 md:col-span-2 md:text-right">
