@@ -20,7 +20,7 @@ export default function About() {
   ];
 
   return (
-    <section id="nosotros" className="relative bg-carbon text-paper py-24 md:py-32">
+    <section id="nosotros" className="relative bg-anthracite text-paper py-24 md:py-32">
       <div className="px-6 md:px-10">
         {/* Header split estilo Introduction */}
         <div className="grid grid-cols-12 gap-6 mb-24 md:mb-32">
@@ -49,8 +49,8 @@ export default function About() {
         {/* Title condensado gigante */}
         <motion.h2
           initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={fadeIn}
-          className="font-brand text-paper leading-[0.9] tracking-[0.02em] mb-16 md:mb-24"
-          style={{ fontSize: "clamp(48px, 8vw, 128px)" }}
+          className="font-sans font-semibold text-paper leading-[1.05] tracking-[-0.02em] mb-16 md:mb-24"
+          style={{ fontSize: "clamp(36px, 5vw, 64px)" }}
         >
           {t("titleStart")}<span className="text-accent">{t("titleHighlight")}</span>{t("titleEnd")}
         </motion.h2>
@@ -64,13 +64,13 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.6, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
-              className="bg-carbon-soft border border-paper/5 rounded-3xl p-8 md:p-10 hover:border-paper/20 transition-colors"
+              className="bg-anthracite-soft border border-paper/10 rounded-3xl p-8 md:p-10 hover:border-paper/20 transition-colors"
             >
               <div className="flex items-start justify-between mb-6">
                 <span className="mono-cap text-accent">{p.n}</span>
                 <span className="chip-outline">{p.tag}</span>
               </div>
-              <h3 className="font-brand text-paper text-2xl md:text-3xl leading-tight tracking-[0.01em]">
+              <h3 className="font-sans font-semibold text-paper text-xl md:text-2xl leading-tight tracking-[-0.01em]">
                 {p.title}
               </h3>
               <p className="mt-4 mono-cap text-paper/60 !text-[12px] !leading-[1.7]">

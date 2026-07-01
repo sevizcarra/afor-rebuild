@@ -26,7 +26,7 @@ export default function Projects() {
   const list = t.raw("list") as Project[];
 
   return (
-    <section id="proyectos" className="relative bg-carbon text-paper py-24 md:py-32">
+    <section id="proyectos" className="relative bg-anthracite text-paper py-24 md:py-32">
       <div className="px-6 md:px-10">
         {/* Header eyebrow + title condensed */}
         <div className="mb-16 md:mb-20">
@@ -35,8 +35,8 @@ export default function Projects() {
             Selected Works
           </div>
           <h2
-            className="font-brand text-paper leading-[0.9] tracking-[0.02em]"
-            style={{ fontSize: "clamp(64px, 10vw, 172px)" }}
+            className="font-sans font-semibold text-paper leading-[1.05] tracking-[-0.02em]"
+            style={{ fontSize: "clamp(36px, 5vw, 64px)" }}
           >
             Proyectos<span className="text-accent">.</span>
           </h2>
@@ -51,7 +51,7 @@ export default function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.7, delay: i * 0.06, ease: [0.16, 1, 0.3, 1] }}
-              className="relative rounded-3xl overflow-hidden group aspect-[16/8] bg-carbon-soft"
+              className="relative rounded-3xl overflow-hidden group aspect-[16/8] bg-anthracite-soft"
             >
               <img
                 src={PROJECT_IMAGES[p.id]}
@@ -60,15 +60,15 @@ export default function Projects() {
                 className="absolute inset-0 h-full w-full object-cover opacity-70 transition-all duration-700 group-hover:opacity-90 group-hover:scale-105"
                 style={{ filter: "grayscale(70%) contrast(1.05)" }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-carbon via-carbon/40 to-carbon/40" />
+              <div className="absolute inset-0 bg-gradient-to-t from-anthracite via-anthracite/40 to-anthracite/40" />
 
               {/* Content overlay */}
               <div className="absolute inset-0 flex flex-col justify-between p-8 md:p-10">
                 {/* Top: título + counter */}
                 <div className="flex items-start justify-between gap-6">
                   <h3
-                    className="font-brand text-paper leading-[0.95] tracking-[0.02em] max-w-2xl"
-                    style={{ fontSize: "clamp(28px, 3.5vw, 56px)" }}
+                    className="font-sans font-semibold text-paper leading-[1.05] tracking-[-0.015em] max-w-2xl"
+                    style={{ fontSize: "clamp(22px, 2.6vw, 36px)" }}
                   >
                     {p.title}
                   </h3>

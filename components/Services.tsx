@@ -8,7 +8,7 @@ export default function Services() {
   const tags = t.raw("tags") as string[];
 
   return (
-    <section id="servicios" className="relative bg-carbon text-paper py-24 md:py-32">
+    <section id="servicios" className="relative bg-anthracite text-paper py-24 md:py-32">
       <div className="px-6 md:px-10">
         {/* Header */}
         <div className="mb-16 md:mb-20">
@@ -17,8 +17,8 @@ export default function Services() {
             {t("eyebrow") || "Practice"}
           </div>
           <h2
-            className="font-brand text-paper leading-[0.9] tracking-[0.02em]"
-            style={{ fontSize: "clamp(48px, 8vw, 128px)" }}
+            className="font-sans font-semibold text-paper leading-[1.05] tracking-[-0.02em]"
+            style={{ fontSize: "clamp(36px, 5vw, 64px)" }}
           >
             Servicios<span className="text-accent">.</span>
           </h2>
@@ -38,7 +38,7 @@ export default function Services() {
               <div className="col-span-2 md:col-span-1 mono-cap text-accent pt-1">
                 {String(i + 1).padStart(2, "0")}
               </div>
-              <h3 className="col-span-10 md:col-span-5 font-brand text-paper text-xl md:text-2xl leading-tight tracking-[0.01em]">
+              <h3 className="col-span-10 md:col-span-5 font-sans font-semibold text-paper text-lg md:text-xl leading-tight tracking-[-0.01em]">
                 {item.title}
               </h3>
               <p className="col-span-12 md:col-span-4 mono-cap text-paper/60 !text-[12px] !leading-[1.7]">

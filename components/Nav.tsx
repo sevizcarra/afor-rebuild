@@ -43,7 +43,7 @@ export default function Nav() {
           {/* Chip central + */}
           <button
             aria-label="Menu"
-            className="chip !bg-carbon-soft/80 !text-paper backdrop-blur w-11 h-11 !p-0 justify-center border border-paper/10"
+            className="chip !bg-anthracite-soft/80 !text-paper backdrop-blur w-11 h-11 !p-0 justify-center border border-paper/10"
           >
             +
           </button>
@@ -64,7 +64,7 @@ export default function Nav() {
                 </span>
               ))}
             </div>
-            <a href="#contacto" className="chip !bg-carbon-soft/80 !text-paper backdrop-blur border border-paper/10">
+            <a href="#contacto" className="chip !bg-anthracite-soft/80 !text-paper backdrop-blur border border-paper/10">
               {t("contact")} <span className="text-accent">→</span>
             </a>
           </div>
