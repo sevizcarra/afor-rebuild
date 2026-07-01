@@ -8,7 +8,7 @@ export default function Services() {
   const tags = t.raw("tags") as string[];
 
   return (
-    <section id="servicios" className="relative bg-anthracite text-ink py-24 md:py-32">
+    <section id="servicios" className="relative bg-anthracite text-ink pt-10 md:pt-14 pb-10 md:pb-14">
       <div className="px-6 md:px-10">
         {/* Header */}
         <div className="mb-16 md:mb-20">

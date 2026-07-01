@@ -11,7 +11,7 @@ export default function Contact() {
   const tSite = useTranslations("site");
 
   return (
-    <section id="contacto" className="relative bg-anthracite text-ink py-24 md:py-32">
+    <section id="contacto" className="relative bg-anthracite text-ink pt-10 md:pt-14 pb-24 md:pb-32">
       <div className="px-6 md:px-10">
         <div className="mono-cap text-ink/70 flex items-center gap-2 mb-6">
           <span className="w-1.5 h-1.5 rounded-full bg-accent" />
