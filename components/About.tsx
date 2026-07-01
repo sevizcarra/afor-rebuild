@@ -67,7 +67,7 @@ export default function About() {
                 className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               {/* Overlay antracita + gradiente */}
-              <div className="absolute inset-0 bg-gradient-to-t from-anthracite via-anthracite/70 to-anthracite/30" />
+              <div className="absolute inset-0 bg-gradient-to-t from-anthracite via-anthracite/50 to-anthracite/10" />
 
               {/* Contenido */}
               <div className="absolute inset-0 p-8 md:p-10 flex flex-col justify-between">
