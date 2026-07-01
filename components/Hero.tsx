@@ -17,16 +17,16 @@ export default function Hero() {
           preload="auto"
           poster="/images/hero/hero-poster.jpg"
           className="h-full w-full object-cover"
-          style={{ filter: "grayscale(100%) contrast(1.05)" }}
+          style={{
+            filter: "grayscale(100%) contrast(1.05)",
+            maskImage: "linear-gradient(to bottom, black 0%, black 45%, transparent 92%)",
+            WebkitMaskImage: "linear-gradient(to bottom, black 0%, black 45%, transparent 92%)",
+          }}
         >
           <source src="/videos/hero.mp4" type="video/mp4" />
         </video>
         {/* Overlays sutiles para legibilidad + fade final a blanco */}
-        <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-paper/40 to-transparent pointer-events-none" />
-        {/* Gradiente que funde el video al blanco */}
-        <div className="absolute inset-x-0 bottom-40 h-3/5 bg-gradient-to-t from-paper via-paper/70 to-transparent pointer-events-none" />
-        {/* Bloque solido blanco al pie: garantiza que no hay linea entre hero y siguiente seccion */}
-        <div className="absolute inset-x-0 bottom-0 h-40 bg-paper pointer-events-none" />
+        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-paper/40 to-transparent pointer-events-none" />
       </div>
 
       {/* Contenido centrado al pie */}
