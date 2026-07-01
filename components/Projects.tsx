@@ -35,10 +35,10 @@ export default function Projects() {
             Selected Works
           </div>
           <h2
-            className="font-sans font-semibold text-paper leading-[1.05] tracking-[-0.02em]"
+            className="font-sans font-semibold text-paper leading-[1.05] tracking-[-0.02em] max-w-4xl"
             style={{ fontSize: "clamp(36px, 5vw, 64px)" }}
           >
-            Proyectos<span className="text-accent">.</span>
+            Proyectos seleccionados<span className="text-accent">.</span>
           </h2>
         </div>
 
@@ -57,10 +57,9 @@ export default function Projects() {
                 src={PROJECT_IMAGES[p.id]}
                 alt={p.title}
                 loading="lazy"
-                className="absolute inset-0 h-full w-full object-cover opacity-70 transition-all duration-700 group-hover:opacity-90 group-hover:scale-105"
-                style={{ filter: "grayscale(70%) contrast(1.05)" }}
+                className="absolute inset-0 h-full w-full object-cover transition-all duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-anthracite via-anthracite/40 to-anthracite/40" />
+              <div className="absolute inset-0 bg-gradient-to-t from-anthracite via-anthracite/50 to-transparent" />
 
               {/* Content overlay */}
               <div className="absolute inset-0 flex flex-col justify-between p-8 md:p-10">
