@@ -17,14 +17,16 @@ export default function Hero() {
           playsInline
           preload="auto"
           poster="/images/hero/hero-poster.jpg"
-          className="h-full w-full object-cover"
-          style={{ filter: "grayscale(100%) contrast(1.05)" }}
+          className="absolute inset-x-0 top-0 w-full object-cover"
+          style={{ height: "calc(100% - 80px)", filter: "grayscale(100%) contrast(1.05)" }}
         >
           <source src="/videos/hero.mp4" type="video/mp4" />
         </video>
-        {/* Fade interno del video al blanco (dentro del box) */}
+        {/* Fades del video */}
         <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-paper/40 to-transparent pointer-events-none" />
-        <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-paper via-paper/85 to-transparent pointer-events-none" />
+        <div className="absolute inset-x-0 bottom-20 h-1/3 bg-gradient-to-t from-paper via-paper/80 to-transparent pointer-events-none" />
+        {/* Bloque solido paper al pie: 80px de paper puro tapan cualquier borde del video */}
+        <div className="absolute inset-x-0 bottom-0 h-20 bg-paper pointer-events-none" />
       </div>
 
       {/* Wordmark + summary DEBAJO del video, sobre bg-paper puro */}
