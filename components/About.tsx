@@ -44,23 +44,33 @@ export default function About() {
           </div>
         </div>
 
-        {/* Titulo + summary en grilla Swiss (7/5) */}
-        <div className="grid grid-cols-12 gap-6 md:gap-10 mb-20 md:mb-24 items-end">
-          <motion.h2
-            initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={fadeIn}
-            className="col-span-12 md:col-span-7 font-sans font-semibold text-ink leading-[1.05] tracking-[-0.02em]"
-            style={{ fontSize: "clamp(36px, 4.6vw, 60px)" }}
-          >
-            {t("titleStart")}<span className="text-accent">{t("titleHighlight")}</span>{t("titleEnd")}
-          </motion.h2>
-          <motion.p
-            initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={fadeIn}
-            transition={{ delay: 0.15, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="col-span-12 md:col-span-5 text-ink/70 text-[15px] leading-[1.65] max-w-md md:ml-auto"
-          >
-            {tHero("summary")}
-          </motion.p>
-        </div>
+        {/* Titulo + summary en franja gris con hairline vertical: gesto Swiss que une los dos */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="bg-anthracite-soft rounded-3xl mb-20 md:mb-24"
+        >
+          <div className="grid grid-cols-12 gap-0 items-stretch">
+            <div className="col-span-12 md:col-span-7 p-8 md:p-12 md:pr-14 md:border-r border-ink/10">
+              <h2
+                className="font-sans font-semibold text-ink leading-[1.05] tracking-[-0.02em]"
+                style={{ fontSize: "clamp(32px, 4vw, 54px)" }}
+              >
+                {t("titleStart")}<span className="text-accent">{t("titleHighlight")}</span>{t("titleEnd")}
+              </h2>
+            </div>
+            <div className="col-span-12 md:col-span-5 p-8 md:p-12 md:pl-14 flex flex-col justify-end border-t md:border-t-0 border-ink/10">
+              <div className="text-[11px] tabular-nums tracking-[0.02em] text-ink/50 mb-3">
+                Somos AFOR
+              </div>
+              <p className="text-ink/75 text-[15px] leading-[1.65] max-w-md">
+                {tHero("summary")}
+              </p>
+            </div>
+          </div>
+        </motion.div>
 
         {/* Principios con foto de fondo */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
