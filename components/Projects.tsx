@@ -38,7 +38,7 @@ export default function Projects() {
             className="font-sans font-semibold text-paper leading-[1.05] tracking-[-0.02em] max-w-4xl"
             style={{ fontSize: "clamp(36px, 5vw, 64px)" }}
           >
-            Proyectos seleccionados<span className="text-accent">.</span>
+            Proyectos destacados<span className="text-accent">.</span>
           </h2>
         </div>
 
@@ -77,16 +77,21 @@ export default function Projects() {
                 </div>
 
                 {/* Bottom: tags + body */}
-                <div>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {p.category.split(" · ").slice(0, 3).map((tag) => (
-                      <span key={tag} className="chip-outline">
-                        {tag}
-                      </span>
-                    ))}
+                <div className="grid grid-cols-12 gap-4 items-end">
+                  <div className="col-span-12 md:col-span-6">
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      {p.category.split(" · ").slice(0, 3).map((tag) => (
+                        <span key={tag} className="chip-outline">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <p className="mono-cap text-paper/75 !text-[11.5px] !leading-[1.6]">
+                      {p.client} · {p.year}
+                    </p>
                   </div>
-                  <p className="mono-cap text-paper/75 !text-[11.5px] !leading-[1.6] max-w-lg">
-                    {p.client} · {p.year}
+                  <p className="col-span-12 md:col-span-6 mono-cap text-paper/80 !text-[11px] !leading-[1.65] md:text-right md:max-w-md md:ml-auto">
+                    {p.body}
                   </p>
                 </div>
               </div>
