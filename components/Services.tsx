@@ -1,11 +1,6 @@
 "use client";
-import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-
-const fadeIn = {
-  hidden: { opacity: 0, y: 16 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] } },
-};
+import { motion } from "framer-motion";
 
 export default function Services() {
   const t = useTranslations("services");
@@ -13,50 +8,44 @@ export default function Services() {
   const tags = t.raw("tags") as string[];
 
   return (
-    <section id="servicios" className="relative bg-anthracite text-paper py-24 md:py-32">
-      <div className="container-edge">
-        <div className="grid grid-cols-12 gap-6 mb-16 md:mb-20">
-          <div className="col-span-12 md:col-span-8">
-            <div className="label text-accent mb-5 tracking-[0.18em]">{t("eyebrow")}</div>
-            <motion.h2
-              initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-80px" }} variants={fadeIn}
-              className="font-sans font-bold text-paper leading-[1.05]"
-              style={{ fontSize: "clamp(40px, 5vw, 72px)", letterSpacing: "-0.025em" }}
-            >
-              {t("titleStart")}<span className="font-serif italic font-normal text-accent">{t("titleHighlight")}</span>{t("titleEnd")}
-            </motion.h2>
+    <section id="servicios" className="relative bg-carbon text-paper py-24 md:py-32">
+      <div className="px-6 md:px-10">
+        {/* Header */}
+        <div className="mb-16 md:mb-20">
+          <div className="mono-cap text-paper/70 flex items-center gap-2 mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+            {t("eyebrow") || "Practice"}
           </div>
-          <div className="col-span-12 md:col-span-4 md:text-right">
-            <div className="text-paper/15 font-thin leading-none" style={{ fontSize: "96px" }} aria-hidden="true">+</div>
-          </div>
+          <h2
+            className="font-brand text-paper leading-[0.9] tracking-[0.02em]"
+            style={{ fontSize: "clamp(48px, 8vw, 128px)" }}
+          >
+            Servicios<span className="text-accent">.</span>
+          </h2>
         </div>
 
-        <div className="pt-2" style={{ borderTop: "1px solid rgba(250,250,247,0.15)" }}>
+        {/* Lista con chips y hairlines */}
+        <div className="border-t border-paper/10">
           {items.map((item, i) => (
             <motion.article
               key={i}
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6, delay: i * 0.05, ease: [0.16, 1, 0.3, 1] }}
-              className="grid grid-cols-12 gap-6 py-8 md:py-10 items-start group"
-              style={{ borderBottom: "1px solid rgba(250,250,247,0.15)" }}
+              transition={{ duration: 0.5, delay: i * 0.04 }}
+              className="grid grid-cols-12 gap-6 py-8 md:py-10 border-b border-paper/10 group items-start"
             >
-              <div className="col-span-2 md:col-span-1 pt-1">
-                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-accent text-paper text-[11.5px] tracking-[0.06em] tabular font-semibold">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
+              <div className="col-span-2 md:col-span-1 mono-cap text-accent pt-1">
+                {String(i + 1).padStart(2, "0")}
               </div>
-              <h3 className="col-span-10 md:col-span-3 font-sans font-bold text-paper text-h3 leading-snug">
+              <h3 className="col-span-10 md:col-span-5 font-brand text-paper text-xl md:text-2xl leading-tight tracking-[0.01em]">
                 {item.title}
               </h3>
-              <p className="col-span-12 md:col-span-6 text-small text-paper/75 leading-relaxed">
+              <p className="col-span-12 md:col-span-4 mono-cap text-paper/60 !text-[12px] !leading-[1.7]">
                 {item.body}
               </p>
               <div className="col-span-12 md:col-span-2 md:text-right">
-                <span className="inline-block border border-paper/30 text-[10px] tabular tracking-[0.12em] uppercase text-paper/70 px-3 py-2 group-hover:border-accent group-hover:text-accent transition-colors">
-                  {tags[i] || "AFOR"}
-                </span>
+                <span className="chip-outline">{tags[i]}</span>
               </div>
             </motion.article>
           ))}

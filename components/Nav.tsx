@@ -13,76 +13,63 @@ export default function Nav() {
   const pathname = usePathname();
   const router = useRouter();
   const tLang = useTranslations("languages");
-  const [pastHero, setPastHero] = useState(false);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     const onScroll = () => {
-      const threshold = window.innerHeight * 0.85;
-      setPastHero(window.scrollY > threshold);
+      const h = document.documentElement;
+      const scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+      setProgress(Math.min(Math.max(scrolled, 0), 1));
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
-    };
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const links = [
-    { label: t("about"), href: "#nosotros" },
-    { label: t("projects"), href: "#proyectos" },
-    { label: t("services"), href: "#servicios" },
-    { label: t("contact"), href: "#contacto" },
-  ];
-
   return (
-    <header className={clsx(
-      "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-      pastHero ? "bg-anthracite/95 backdrop-blur text-paper border-b border-paper/15" : "bg-transparent text-paper",
-    )}>
-      <nav className="container-edge flex items-center justify-between h-16">
-        {/* Wordmark del nav: invisible en hero, aparece al scrollear pasando el video */}
-        <Link
-          href="/"
-          aria-label="aFor"
-          className={clsx(
-            "flex items-center gap-2 font-brand text-lg tracking-[0.05em] transition-all duration-500",
-            pastHero ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-1 pointer-events-none"
-          )}
-        >
-          aFor<span className="text-accent">.</span>
-        </Link>
+    <>
+      {/* Barra de scroll accent arriba */}
+      <div className="fixed top-0 left-0 right-0 z-[60] h-[3px] bg-transparent">
+        <div className="h-full bg-accent transition-[width] duration-100" style={{ width: `${progress * 100}%` }} />
+      </div>
 
-        <ul className="hidden md:flex items-center gap-8 text-small">
-          {links.map((l) => (
-            <li key={l.href}>
-              <a
-                href={l.href}
-                className={clsx("transition-colors", pastHero ? "text-paper/85 hover:text-accent" : "text-paper/85 hover:text-accent")}
-              >
-                {l.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-        <div className="flex items-center gap-3 text-small tabular">
-          {LOCALES.map((l, i) => (
-            <span key={l} className="contents">
-              {i > 0 && <span className={clsx(pastHero ? "text-gray-300" : "text-paper/30")}>·</span>}
-              <button
-                onClick={() => router.replace(pathname, { locale: l })}
-                className={clsx(
-                  "transition-colors uppercase",
-                  l === locale
-                    ? ("text-paper")
-                    : ("text-paper/40 hover:text-paper/80")
-                )}
-              >{tLang(l as "es" | "en")}</button>
-            </span>
-          ))}
-        </div>
-      </nav>
-    </header>
+      <header className="fixed top-0 left-0 right-0 z-50">
+        <nav className="px-6 md:px-10 pt-6 flex items-center justify-between">
+          {/* Logo left */}
+          <Link href="/" aria-label="aFor" className="font-brand text-paper text-base tracking-[0.05em] flex items-baseline gap-1">
+            aFor<span className="text-accent align-baseline">.</span>
+          </Link>
+
+          {/* Chip central + */}
+          <button
+            aria-label="Menu"
+            className="chip !bg-carbon-soft/80 !text-paper backdrop-blur w-11 h-11 !p-0 justify-center border border-paper/10"
+          >
+            +
+          </button>
+
+          {/* Chip Contact right */}
+          <div className="flex items-center gap-2">
+            <div className="hidden md:flex items-center gap-2 mr-2">
+              {LOCALES.map((l, i) => (
+                <span key={l} className="contents">
+                  {i > 0 && <span className="text-paper/25 mono-cap">·</span>}
+                  <button
+                    onClick={() => router.replace(pathname, { locale: l })}
+                    className={clsx(
+                      "mono-cap transition-colors",
+                      l === locale ? "text-paper" : "text-paper/40 hover:text-paper/70"
+                    )}
+                  >{tLang(l as "es" | "en")}</button>
+                </span>
+              ))}
+            </div>
+            <a href="#contacto" className="chip !bg-carbon-soft/80 !text-paper backdrop-blur border border-paper/10">
+              {t("contact")} <span className="text-accent">→</span>
+            </a>
+          </div>
+        </nav>
+      </header>
+    </>
   );
 }

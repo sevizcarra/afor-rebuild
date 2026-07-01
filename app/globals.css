@@ -17,7 +17,7 @@
     -moz-osx-font-smoothing: grayscale;
   }
   body {
-    background-color: #2C2F33;
+    background-color: #0A0A0A;
     color: #FAFAF7;
     font-family: var(--font-plus-jakarta), system-ui, sans-serif;
     font-size: 16px;
@@ -61,4 +61,42 @@
   .hairline-b { border-bottom: 1px solid #0A0A0A; }
   .hairline-soft-t { border-top: 1px solid rgba(10,10,10,0.12); }
   .hairline-soft-b { border-bottom: 1px solid rgba(10,10,10,0.12); }
+}
+
+/* James Blade style utilities */
+@layer utilities {
+  .mono-cap {
+    font-family: var(--font-jetbrains-mono), ui-monospace, monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    background: rgba(255,255,255,0.06);
+    color: rgba(255,255,255,0.9);
+    font-family: var(--font-jetbrains-mono), monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    transition: background .2s;
+  }
+  .chip:hover { background: rgba(255,255,255,0.12); }
+  .chip-outline {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4rem 0.9rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: rgba(255,255,255,0.75);
+    font-family: var(--font-jetbrains-mono), monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
 }

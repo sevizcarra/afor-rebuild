@@ -9,6 +9,9 @@ const config: Config = {
     extend: {
       colors: {
         ink: "#0A0A0A",
+        carbon: "#0A0A0A",
+        "carbon-soft": "#161616",
+        "carbon-line": "#242424",
         paper: "#FAFAF7",
         bone: "#F2F0EB",
         accent: "#E25200",
