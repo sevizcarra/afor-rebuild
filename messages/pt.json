@@ -4,7 +4,7 @@
     "slogan": "Ativos para infraestrutura não-processo em mineração e indústria.",
     "address": "Las Condes, Santiago, Chile",
     "metaTitle": "AFOR — Facilities para mineração e indústria | Arquitetura e Engenharia",
-    "metaDescription": "Firma chilena de arquitetura, engenharia e project management especializada no desenvolvimento de facilities para grande mineração e indústria. Mais de 10 anos com BHP e engenharias Tier 1."
+    "metaDescription": "Firma chilena de arquitetura, engenharia e project management especializada no desenvolvimento de facilities para grande mineração e indústria. Mais de 10 anos com clientes de grande mineração e engenharias Tier 1."
   },
   "nav": {
     "about": "Sobre nós",
@@ -78,107 +78,95 @@
     "list": [
       {
         "id": "cho",
-        "client": "BHP · Puerto Coloso",
+        "client": "Cliente Tier 1 · Puerto Coloso",
         "year": "2025",
         "title": "Remediación Edificio CHO",
         "category": "Facility técnica · Ingeniería de detalle",
         "body": "Remediación integral de 420 m² para reconvertir el edificio CHO en una facility técnica de alta disponibilidad. Distribución interna, accesos, sala técnica para equipos eléctricos y UPS, oficinas, áreas de cowork y mejoras arquitectónicas en cielos, mobiliario y sistemas auxiliares.",
         "highlights": [
           {
-            "label": "Superficie",
+            "label": "Tipo",
+            "value": "Facility técnica"
+          },
+          {
+            "label": "Escala",
             "value": "420 m²"
           },
           {
-            "label": "Cliente",
-            "value": "BHP / ARCADIS"
-          },
-          {
-            "label": "Año",
-            "value": "2025"
-          },
-          {
-            "label": "Estado",
-            "value": "Ejecutado"
+            "label": "Papel AFOR",
+            "value": "Engenharia de detalhe"
           }
         ]
       },
       {
         "id": "enat",
-        "client": "Minera Escondida · EN-AT",
+        "client": "Mina Escondida · EN-AT",
         "year": "2025",
         "title": "Facilities Camiones Autónomos",
         "category": "Sala de control + auxiliares · BIM",
         "body": "Diseño de facilities de soporte para el programa de Camiones Autónomos en Minera Escondida. Sala de Control de Perforadoras con piso técnico elevado, revestimientos de madera, estaciones de monitoreo multiscreen, climatización de precisión y señalética normativa. Ingeniería Interim apta para construcción.",
         "highlights": [
           {
+            "label": "Tipo",
+            "value": "Facilities de suporte"
+          },
+          {
             "label": "Programa",
             "value": "EN-AT"
           },
           {
-            "label": "Cliente",
-            "value": "Minera Escondida"
-          },
-          {
-            "label": "Año",
-            "value": "2025"
-          },
-          {
-            "label": "Tipo",
-            "value": "Ingeniería Interim · BIM"
+            "label": "Papel AFOR",
+            "value": "Engenharia Interim + BIM"
           }
         ]
       },
       {
         "id": "gom",
-        "client": "Minera Escondida · EN-AT",
+        "client": "Mina Escondida · EN-AT",
         "year": "2024",
         "title": "Sala de Controle — GOM MEL",
         "category": "Facility técnica · Ingeniería de detalle",
         "body": "Intervención integral del recinto con cielo metálico lineal, revestimiento mural en listonería de madera, iluminación LED lineal empotrada y distribución ergonómica de puestos de operación con brazos articulados y monitores multipantalla. Diseño que prioriza concentración operacional, confort acústico y control lumínico para jornadas extendidas.",
         "highlights": [
           {
+            "label": "Tipo",
+            "value": "Sala de controle"
+          },
+          {
             "label": "Programa",
             "value": "GOM EN-AT"
           },
           {
-            "label": "Cliente",
-            "value": "Minera Escondida"
-          },
-          {
-            "label": "Año",
-            "value": "2024"
-          },
-          {
-            "label": "Tipo",
-            "value": "Ingeniería de detalle"
+            "label": "Papel AFOR",
+            "value": "Engenharia de detalhe"
           }
         ]
       },
       {
         "id": "smh",
-        "client": "SMH — Mina Spence",
+        "client": "SMH · Mina Spence",
         "year": "2024",
         "title": "Sala de Controle — SMH Spence",
         "category": "Sala de controle · Interior",
         "body": "Nova sala de controle para operações, com revestimentos melamínicos e detalhes em alumínio. Forro em perfilaria linear U com iluminação integrada, resolvendo acústica e conforto visual para as jornadas exigidas pela operação. Layout centrado nas consoles dos operadores, com circulações limpas, controle de iluminação regulável e acabamentos robustos pensados para uso industrial contínuo.",
         "highlights": [
           {
-            "label": "Área",
+            "label": "Tipo",
+            "value": "Sala de controle"
+          },
+          {
+            "label": "Escala",
             "value": "180 m²"
           },
           {
-            "label": "Acabamentos",
-            "value": "Melamina + Alumínio"
-          },
-          {
-            "label": "Forro",
-            "value": "Perfilaria linear U"
+            "label": "Papel AFOR",
+            "value": "Design + gerenciamento"
           }
         ]
       },
       {
         "id": "yacas",
-        "client": "Minera Las Yacas · Vicuña",
+        "client": "Mina Las Yacas · Vicuña",
         "year": "2023",
         "title": "Barrio Cívico e Infraestructura",
         "category": "Master plan de facilities · Faena",
@@ -186,19 +174,15 @@
         "highlights": [
           {
             "label": "Tipo",
-            "value": "Master Plan"
+            "value": "Bairro cívico"
           },
           {
-            "label": "Cliente",
-            "value": "Minera Las Yacas"
+            "label": "Escala",
+            "value": "Master plan campus"
           },
           {
-            "label": "Año",
-            "value": "2023"
-          },
-          {
-            "label": "Sector",
-            "value": "Vicuña"
+            "label": "Papel AFOR",
+            "value": "Arquitetura + coordenação"
           }
         ]
       },
@@ -212,19 +196,15 @@
         "highlights": [
           {
             "label": "Tipo",
-            "value": "Diseño integral"
+            "value": "Edifício industrial-corporativo"
           },
           {
-            "label": "Cliente",
-            "value": "Mecasfy"
+            "label": "Escala",
+            "value": "Galpão + escritórios"
           },
           {
-            "label": "Año",
-            "value": "2024"
-          },
-          {
-            "label": "Sector",
-            "value": "Santa Alejandra"
+            "label": "Papel AFOR",
+            "value": "Design integral"
           }
         ]
       },
@@ -238,19 +218,15 @@
         "highlights": [
           {
             "label": "Tipo",
-            "value": "Habilitación corporativa"
+            "value": "Escritórios corporativos"
           },
           {
-            "label": "Cliente",
-            "value": "Grant Thornton Chile"
+            "label": "Escala",
+            "value": "Habilitação integral"
           },
           {
-            "label": "Año",
-            "value": "2024"
-          },
-          {
-            "label": "Estado",
-            "value": "Ejecutado"
+            "label": "Papel AFOR",
+            "value": "Design + PM"
           }
         ]
       },
@@ -263,12 +239,12 @@
         "body": "Gerenciamento integral de uma bateria de sanitários concebida para o pulso constante do fluxo universitário: milhares de usos diários, ciclos de limpeza intensivos e uma vida útil medida em décadas. Divisórias modulares em cinza grafite, paredes com revestimento cimentício, piso porcelanato de alta resistência e uma trama estrutural aparente pintada em preto que ordena a circulação sem disfarçar a arquitetura. Iluminação LED embutida de temperatura neutra, sinalização acessível integrada e uma série de detalhes construtivos —rodapés, ventilações, ferragens— pensados para resistir ao uso mais exigente sem perder caráter nem padrão de acabamento.",
         "highlights": [
           {
-            "label": "Uso",
-            "value": "Alto tráfego"
+            "label": "Tipo",
+            "value": "Bateria sanitária"
           },
           {
-            "label": "Padrão",
-            "value": "Institucional"
+            "label": "Uso",
+            "value": "Alto tráfego institucional"
           },
           {
             "label": "Papel AFOR",
@@ -278,19 +254,19 @@
       },
       {
         "id": "dti",
-        "client": "Infraestrutura Institucional — DTI",
+        "client": "Infraestrutura Institucional · DTI",
         "year": "2024",
         "title": "Cobertura DTI",
         "category": "Cobertura técnica · Data center",
         "body": "Gerenciamento integral da substituição da cobertura técnica de uma sala de servidores institucionais de 600 m². Nova estrutura registrável por trecho, concebida para abrigar equipamentos de precisão que não admitem pausas nem vazamentos: climatização constante, redundância elétrica e uma operação 24/7 que não pode parar durante a obra. Perfilaria metálica pré-pintada, manta sob cobertura, selos térmicos e um plano de obras coordenado com os turnos do datacenter —cada painel montado sem desconectar um único rack— para intervir no coração digital da instituição com a máquina em funcionamento.",
         "highlights": [
           {
-            "label": "Área",
-            "value": "600 m²"
+            "label": "Tipo",
+            "value": "Cobertura técnica"
           },
           {
-            "label": "Uso",
-            "value": "Data center 24/7"
+            "label": "Escala",
+            "value": "600 m² data center"
           },
           {
             "label": "Papel AFOR",
@@ -298,7 +274,11 @@
           }
         ]
       }
-    ]
+    ],
+    "modal": {
+      "client": "Cliente",
+      "year": "Ano"
+    }
   },
   "services": {
     "titleStart": "Serviços ",

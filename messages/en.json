@@ -4,7 +4,7 @@
     "slogan": "Facilities for mining and industry",
     "address": "Las Condes, Santiago, Chile",
     "metaTitle": "AFOR — Facilities for mining and industry | Architecture and Engineering",
-    "metaDescription": "Chilean firm specialized in architecture, engineering and project management for the development of facilities for large-scale mining and industry. Over 10 years of experience with BHP and Tier 1 engineering firms."
+    "metaDescription": "Chilean firm specialized in architecture, engineering and project management for the development of facilities for large-scale mining and industry. Over 10 years of experience with large-scale mining clients and Tier 1 engineering firms."
   },
   "nav": {
     "about": "About",
@@ -71,107 +71,95 @@
     "list": [
       {
         "id": "cho",
-        "client": "BHP · Puerto Coloso",
+        "client": "Tier 1 Client · Puerto Coloso",
         "year": "2025",
         "title": "CHO Building Remediation",
         "category": "Technical facility · Detailed engineering",
         "body": "Comprehensive remediation of 420 m² to convert the CHO building into a high-availability technical facility. Internal layout, accesses, technical room for electrical equipment and UPS, offices, cowork areas and architectural improvements in ceilings, furniture and auxiliary systems.",
         "highlights": [
           {
-            "label": "Surface",
+            "label": "Type",
+            "value": "Technical facility"
+          },
+          {
+            "label": "Scale",
             "value": "420 m²"
           },
           {
-            "label": "Client",
-            "value": "BHP / ARCADIS"
-          },
-          {
-            "label": "Year",
-            "value": "2025"
-          },
-          {
-            "label": "Status",
-            "value": "Completed"
+            "label": "AFOR role",
+            "value": "Detailed engineering"
           }
         ]
       },
       {
         "id": "enat",
-        "client": "Minera Escondida · EN-AT",
+        "client": "Escondida Mine · EN-AT",
         "year": "2025",
         "title": "Autonomous Trucks Facilities",
         "category": "Control room + auxiliaries · BIM",
         "body": "Design of supporting facilities for the Autonomous Trucks program at Minera Escondida. Drilling Control Room with raised technical floor, wood finishes, multiscreen monitoring stations, precision climate control and regulatory signage. Interim engineering ready for construction.",
         "highlights": [
           {
+            "label": "Type",
+            "value": "Support facilities"
+          },
+          {
             "label": "Program",
             "value": "EN-AT"
           },
           {
-            "label": "Client",
-            "value": "Minera Escondida"
-          },
-          {
-            "label": "Year",
-            "value": "2025"
-          },
-          {
-            "label": "Type",
-            "value": "Interim Engineering · BIM"
+            "label": "AFOR role",
+            "value": "Interim engineering + BIM"
           }
         ]
       },
       {
         "id": "gom",
-        "client": "Minera Escondida · EN-AT",
+        "client": "Escondida Mine · EN-AT",
         "year": "2024",
         "title": "Control Room — GOM MEL",
         "category": "Technical facility · Detailed engineering",
         "body": "Complete intervention with linear metal ceiling, wooden batten wall finish, recessed linear LED lighting and ergonomic distribution of operator stations with articulated arms and multi-screen monitors. Design that prioritizes operational concentration, acoustic comfort and luminous control for extended shifts.",
         "highlights": [
           {
+            "label": "Type",
+            "value": "Control room"
+          },
+          {
             "label": "Program",
             "value": "GOM EN-AT"
           },
           {
-            "label": "Client",
-            "value": "Minera Escondida"
-          },
-          {
-            "label": "Year",
-            "value": "2024"
-          },
-          {
-            "label": "Type",
+            "label": "AFOR role",
             "value": "Detailed engineering"
           }
         ]
       },
       {
         "id": "smh",
-        "client": "SMH — Spence Mine",
+        "client": "SMH · Spence Mine",
         "year": "2024",
         "title": "Control Room — SMH Spence",
         "category": "Control room · Interior",
         "body": "New operations control room featuring melamine wall claddings and aluminum trims. Linear U-profile ceiling with integrated lighting, engineered for acoustic performance and visual comfort across the shifts the operation requires. Layout centered on operator consoles with clean circulation paths, dimmable lighting control, and robust finishes designed for continuous industrial use.",
         "highlights": [
           {
-            "label": "Area",
+            "label": "Type",
+            "value": "Control room"
+          },
+          {
+            "label": "Scale",
             "value": "180 m²"
           },
           {
-            "label": "Finishes",
-            "value": "Melamine + Aluminum"
-          },
-          {
-            "label": "Ceiling",
-            "value": "Linear U-profile"
+            "label": "AFOR role",
+            "value": "Design + PM"
           }
         ]
       },
       {
         "id": "yacas",
-        "client": "Minera Las Yacas · Vicuña",
+        "client": "Las Yacas Mine · Vicuña",
         "year": "2023",
         "title": "Civic District and Infrastructure",
         "category": "Master plan of facilities · Site",
@@ -179,19 +167,15 @@
         "highlights": [
           {
             "label": "Type",
-            "value": "Master Plan"
+            "value": "Civic campus"
           },
           {
-            "label": "Client",
-            "value": "Minera Las Yacas"
+            "label": "Scale",
+            "value": "Master plan campus"
           },
           {
-            "label": "Year",
-            "value": "2023"
-          },
-          {
-            "label": "Sector",
-            "value": "Vicuña"
+            "label": "AFOR role",
+            "value": "Architecture + coordination"
           }
         ]
       },
@@ -205,19 +189,15 @@
         "highlights": [
           {
             "label": "Type",
-            "value": "Integral design"
+            "value": "Industrial-corporate building"
           },
           {
-            "label": "Client",
-            "value": "Mecasfy"
+            "label": "Scale",
+            "value": "Warehouse + offices"
           },
           {
-            "label": "Year",
-            "value": "2024"
-          },
-          {
-            "label": "Sector",
-            "value": "Santa Alejandra"
+            "label": "AFOR role",
+            "value": "End-to-end design"
           }
         ]
       },
@@ -231,19 +211,15 @@
         "highlights": [
           {
             "label": "Type",
-            "value": "Corporate fit-out"
+            "value": "Corporate offices"
           },
           {
-            "label": "Client",
-            "value": "Grant Thornton Chile"
+            "label": "Scale",
+            "value": "End-to-end fit-out"
           },
           {
-            "label": "Year",
-            "value": "2024"
-          },
-          {
-            "label": "Status",
-            "value": "Completed"
+            "label": "AFOR role",
+            "value": "Design + PM"
           }
         ]
       },
@@ -256,12 +232,12 @@
         "body": "End-to-end project management of a restroom facility built for the relentless rhythm of campus life: thousands of daily uses, intensive cleaning cycles, and a service life measured in decades. Modular partitions in graphite gray, cementitious wall claddings, heavy-duty porcelain flooring, and an exposed steel frame painted matte black that organizes circulation without concealing the architecture. Recessed LED lighting at neutral color temperature, integrated accessible signage, and a suite of construction details —skirtings, ventilation grilles, ironmongery— engineered to withstand the most demanding use while holding institutional-grade finish.",
         "highlights": [
           {
-            "label": "Use",
-            "value": "High traffic"
+            "label": "Type",
+            "value": "Restroom facility"
           },
           {
-            "label": "Standard",
-            "value": "Institutional"
+            "label": "Use",
+            "value": "High-traffic institutional"
           },
           {
             "label": "AFOR role",
@@ -271,19 +247,19 @@
       },
       {
         "id": "dti",
-        "client": "Institutional Infrastructure — DTI",
+        "client": "Institutional Infrastructure · DTI",
         "year": "2024",
         "title": "DTI Roof",
         "category": "Technical roof · Data center",
         "body": "End-to-end project management for the replacement of the technical roof over a 600 m² institutional server room. New bay-registrable structure engineered to host precision equipment that tolerates no pauses and no leaks: constant HVAC, electrical redundancy, and a 24/7 operation that cannot be stopped during construction. Pre-painted metal profiles, underlay membrane, thermal sealing, and a work plan coordinated with the datacenter shift schedule —each panel installed without disconnecting a single rack— to intervene the institution's digital core while the machine keeps running.",
         "highlights": [
           {
-            "label": "Area",
-            "value": "600 m²"
+            "label": "Type",
+            "value": "Technical roof"
           },
           {
-            "label": "Use",
-            "value": "24/7 data center"
+            "label": "Scale",
+            "value": "600 m² data center"
           },
           {
             "label": "AFOR role",
@@ -297,7 +273,11 @@
       "next": "Next project"
     },
     "eyebrow": "Selected works",
-    "heading": "Featured projects"
+    "heading": "Featured projects",
+    "modal": {
+      "client": "Client",
+      "year": "Year"
+    }
   },
   "services": {
     "titleStart": "Specialized ",

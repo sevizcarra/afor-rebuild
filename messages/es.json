@@ -4,7 +4,7 @@
     "slogan": "Facilities para minería e industria",
     "address": "Las Condes, Santiago, Chile",
     "metaTitle": "AFOR — Facilities para minería e industria | Arquitectura e Ingeniería",
-    "metaDescription": "Firma chilena de arquitectura, ingeniería y project management especializada en el desarrollo de facilities para gran minería e industria. Más de 10 años con BHP e ingenierías Tier 1."
+    "metaDescription": "Firma chilena de arquitectura, ingeniería y project management especializada en el desarrollo de facilities para gran minería e industria. Más de 10 años con clientes de gran minería e ingenierías Tier 1."
   },
   "nav": {
     "about": "Nosotros",
@@ -71,27 +71,23 @@
     "list": [
       {
         "id": "cho",
-        "client": "BHP · Puerto Coloso",
+        "client": "Cliente Tier 1 · Puerto Coloso",
         "year": "2025",
         "title": "Remediación Edificio CHO",
         "category": "Facility técnica · Ingeniería de detalle",
         "body": "Remediación integral de 420 m² para reconvertir el edificio CHO en una facility técnica de alta disponibilidad. Distribución interna, accesos, sala técnica para equipos eléctricos y UPS, oficinas, áreas de cowork y mejoras arquitectónicas en cielos, mobiliario y sistemas auxiliares.",
         "highlights": [
           {
-            "label": "Superficie",
+            "label": "Tipo",
+            "value": "Facility técnica"
+          },
+          {
+            "label": "Escala",
             "value": "420 m²"
           },
           {
-            "label": "Cliente",
-            "value": "BHP / ARCADIS"
-          },
-          {
-            "label": "Año",
-            "value": "2025"
-          },
-          {
-            "label": "Estado",
-            "value": "Ejecutado"
+            "label": "Rol AFOR",
+            "value": "Ingeniería de detalle"
           }
         ]
       },
@@ -104,20 +100,16 @@
         "body": "Diseño de facilities de soporte para el programa de Camiones Autónomos en Minera Escondida. Sala de Control de Perforadoras con piso técnico elevado, revestimientos de madera, estaciones de monitoreo multiscreen, climatización de precisión y señalética normativa. Ingeniería Interim apta para construcción.",
         "highlights": [
           {
+            "label": "Tipo",
+            "value": "Facilities de soporte"
+          },
+          {
             "label": "Programa",
             "value": "EN-AT"
           },
           {
-            "label": "Cliente",
-            "value": "Minera Escondida"
-          },
-          {
-            "label": "Año",
-            "value": "2025"
-          },
-          {
-            "label": "Tipo",
-            "value": "Ingeniería Interim · BIM"
+            "label": "Rol AFOR",
+            "value": "Ingeniería Interim + BIM"
           }
         ]
       },
@@ -130,42 +122,38 @@
         "body": "Intervención integral del recinto con cielo metálico lineal, revestimiento mural en listonería de madera, iluminación LED lineal empotrada y distribución ergonómica de puestos de operación con brazos articulados y monitores multipantalla. Diseño que prioriza concentración operacional, confort acústico y control lumínico para jornadas extendidas.",
         "highlights": [
           {
+            "label": "Tipo",
+            "value": "Sala de control"
+          },
+          {
             "label": "Programa",
             "value": "GOM EN-AT"
           },
           {
-            "label": "Cliente",
-            "value": "Minera Escondida"
-          },
-          {
-            "label": "Año",
-            "value": "2024"
-          },
-          {
-            "label": "Tipo",
+            "label": "Rol AFOR",
             "value": "Ingeniería de detalle"
           }
         ]
       },
       {
         "id": "smh",
-        "client": "SMH — Minera Spence",
+        "client": "SMH · Minera Spence",
         "year": "2024",
         "title": "Sala de Control — SMH Spence",
         "category": "Sala de control · Interior",
         "body": "Nueva sala de control para operaciones con revestimientos melamínicos y detalles en aluminio. Cielo de perfilería lineal U con iluminación incorporada, resolviendo acústica y confort visual para las jornadas requeridas por la operación. Layout centrado en las consolas de operadores, con circulaciones limpias, control lumínico regulable y terminaciones robustas pensadas para uso industrial continuo.",
         "highlights": [
           {
-            "label": "Superficie",
+            "label": "Tipo",
+            "value": "Sala de control"
+          },
+          {
+            "label": "Escala",
             "value": "180 m²"
           },
           {
-            "label": "Terminaciones",
-            "value": "Melamina + Aluminio"
-          },
-          {
-            "label": "Cielo",
-            "value": "Perfilería lineal U"
+            "label": "Rol AFOR",
+            "value": "Diseño + gerenciamiento"
           }
         ]
       },
@@ -179,19 +167,15 @@
         "highlights": [
           {
             "label": "Tipo",
-            "value": "Master Plan"
+            "value": "Barrio cívico"
           },
           {
-            "label": "Cliente",
-            "value": "Minera Las Yacas"
+            "label": "Escala",
+            "value": "Master plan campus"
           },
           {
-            "label": "Año",
-            "value": "2023"
-          },
-          {
-            "label": "Sector",
-            "value": "Vicuña"
+            "label": "Rol AFOR",
+            "value": "Arquitectura + coordinación"
           }
         ]
       },
@@ -205,19 +189,15 @@
         "highlights": [
           {
             "label": "Tipo",
+            "value": "Edificio industrial-corporativo"
+          },
+          {
+            "label": "Escala",
+            "value": "Nave + oficinas"
+          },
+          {
+            "label": "Rol AFOR",
             "value": "Diseño integral"
-          },
-          {
-            "label": "Cliente",
-            "value": "Mecasfy"
-          },
-          {
-            "label": "Año",
-            "value": "2024"
-          },
-          {
-            "label": "Sector",
-            "value": "Santa Alejandra"
           }
         ]
       },
@@ -231,19 +211,15 @@
         "highlights": [
           {
             "label": "Tipo",
-            "value": "Habilitación corporativa"
+            "value": "Oficinas corporativas"
           },
           {
-            "label": "Cliente",
-            "value": "Grant Thornton Chile"
+            "label": "Escala",
+            "value": "Habilitación integral"
           },
           {
-            "label": "Año",
-            "value": "2024"
-          },
-          {
-            "label": "Estado",
-            "value": "Ejecutado"
+            "label": "Rol AFOR",
+            "value": "Diseño + PM"
           }
         ]
       },
@@ -256,12 +232,12 @@
         "body": "Gerenciamiento integral de una batería de servicios higiénicos concebida para el pulso constante del flujo universitario: miles de usos diarios, ciclos de aseo intensivos y una vida útil que se mide en décadas. Tabiques modulares en gris grafito, muros con revestimiento cementicio, piso de porcelanato de alta resistencia y una trama estructural expuesta pintada en negro que ordena la circulación sin disimular la arquitectura. Iluminación LED empotrada de temperatura neutra, señalética accesible integrada y una serie de detalles constructivos —guardapolvos, ventilaciones, herrajes— pensados para resistir el uso más exigente sin perder carácter ni estándar de terminación.",
         "highlights": [
           {
-            "label": "Uso",
-            "value": "Alto tráfico"
+            "label": "Tipo",
+            "value": "Batería sanitaria"
           },
           {
-            "label": "Estándar",
-            "value": "Institucional"
+            "label": "Uso",
+            "value": "Alto tráfico institucional"
           },
           {
             "label": "Rol AFOR",
@@ -271,19 +247,19 @@
       },
       {
         "id": "dti",
-        "client": "Infraestructura Institucional — DTI",
+        "client": "Infraestructura Institucional · DTI",
         "year": "2024",
         "title": "Cubierta DTI",
         "category": "Cubierta técnica · Data center",
         "body": "Gerenciamiento integral del recambio de cubierta técnica de una sala de servidores institucionales de 600 m². Nueva estructura registrable por tramos, concebida para alojar equipos de precisión que no admiten pausas ni goteras: climatización constante, redundancia eléctrica y una operación 24/7 que no puede detenerse durante la obra. Perfilería metálica prepintada, membrana bajo cubierta, sellos térmicos y un plan de faenas coordinado con los turnos del datacenter —cada panel montado sin desconectar un solo rack— para intervenir el corazón digital de la institución con la máquina en marcha.",
         "highlights": [
           {
-            "label": "Superficie",
-            "value": "600 m²"
+            "label": "Tipo",
+            "value": "Cubierta técnica"
           },
           {
-            "label": "Uso",
-            "value": "Data center 24/7"
+            "label": "Escala",
+            "value": "600 m² data center"
           },
           {
             "label": "Rol AFOR",
@@ -297,7 +273,11 @@
       "next": "Siguiente proyecto"
     },
     "eyebrow": "Proyectos destacados",
-    "heading": "Proyectos destacados"
+    "heading": "Proyectos destacados",
+    "modal": {
+      "client": "Cliente",
+      "year": "Año"
+    }
   },
   "services": {
     "titleStart": "Servicios ",

@@ -193,11 +193,11 @@ export default function Projects() {
                   <div className="col-span-12 md:col-span-4 md:border-l md:border-ink/10 md:pl-10">
                     <div className="space-y-6">
                       <div>
-                        <div className="mono-cap text-ink/50 mb-1.5">Cliente</div>
+                        <div className="mono-cap text-ink/50 mb-1.5">{t("modal.client")}</div>
                         <div className="text-ink text-[15px] leading-snug">{active.client}</div>
                       </div>
                       <div>
-                        <div className="mono-cap text-ink/50 mb-1.5">Año</div>
+                        <div className="mono-cap text-ink/50 mb-1.5">{t("modal.year")}</div>
                         <div className="text-ink text-[15px] tabular-nums">{active.year}</div>
                       </div>
                       <div className="pt-6 border-t border-ink/10 space-y-4">
