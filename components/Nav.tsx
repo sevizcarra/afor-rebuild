@@ -40,7 +40,14 @@ export default function Nav() {
             aFor<span className="text-accent align-baseline">.</span>
           </Link>
 
-          {/* Chip Contact right */}
+          {/* Atajos de seccion - sutiles */}
+          <div className="hidden md:flex items-center gap-6 mr-6 text-[13px] tracking-[-0.005em]">
+            <a href="#nosotros" className="text-ink/55 hover:text-ink transition-colors">{t("about")}</a>
+            <a href="#proyectos" className="text-ink/55 hover:text-ink transition-colors">{t("projects")}</a>
+            <a href="#servicios" className="text-ink/55 hover:text-ink transition-colors">{t("services")}</a>
+          </div>
+
+          {/* Idiomas + Contacto */}
           <div className="flex items-center gap-2">
             <div className="hidden md:flex items-center gap-2 mr-2">
               {LOCALES.map((l, i) => (
