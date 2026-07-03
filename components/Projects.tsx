@@ -69,6 +69,7 @@ export default function Projects() {
           {list.map((p, i) => (
             <motion.article
               key={p.id}
+              layoutId={`card-${p.id}`}
               onClick={() => setActiveId(p.id)}
               initial={{ opacity: 0, y: 60, scale: 0.97 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -77,7 +78,8 @@ export default function Projects() {
               whileHover={{ y: -4 }}
               className="relative rounded-2xl overflow-hidden group aspect-[4/3] bg-anthracite-soft cursor-pointer"
             >
-              <img
+              <motion.img
+                layoutId={`img-${p.id}`}
                 src={PROJECT_IMAGES[p.id]}
                 alt={p.title}
                 loading="lazy"
@@ -127,16 +129,15 @@ export default function Projects() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.15, ease: "easeOut" }}
+            transition={{ duration: 0.18, ease: "easeOut" }}
             onClick={() => setActiveId(null)}
             className="fixed inset-0 z-[80] bg-ink/70 backdrop-blur-md flex items-start md:items-center justify-center p-4 md:p-8 overflow-y-auto"
           >
             <motion.article
-              initial={{ opacity: 0, scale: 0.96, y: 24 }}
-              animate={{ opacity: 1, scale: 1, y: 0, transition: { duration: 0.28, ease: [0.16, 1, 0.3, 1] } }}
-              exit={{ opacity: 0, scale: 0.98, transition: { duration: 0.12, ease: "easeIn" } }}
+              layoutId={`card-${active.id}`}
               onClick={(e) => e.stopPropagation()}
               className="relative w-full max-w-6xl bg-paper rounded-3xl overflow-hidden shadow-2xl my-auto"
+              transition={{ type: "spring", stiffness: 500, damping: 40, mass: 0.6 }}
             >
               {/* Close button */}
               <button
@@ -149,7 +150,8 @@ export default function Projects() {
 
               {/* Foto grande limpia (sin overlay ni gradiente) */}
               <div className="relative w-full aspect-[16/9] md:aspect-[21/9] bg-anthracite-soft overflow-hidden">
-                <img
+                <motion.img
+                  layoutId={`img-${active.id}`}
                   src={PROJECT_IMAGES[active.id]}
                   alt={active.title}
                   className="absolute inset-0 h-full w-full object-cover"
@@ -162,7 +164,7 @@ export default function Projects() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 10 }}
-                transition={{ duration: 0.28, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ duration: 0.35, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                 className="p-8 md:p-12"
               >
                 <div className="grid grid-cols-12 gap-8 md:gap-10">
