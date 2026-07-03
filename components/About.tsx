@@ -98,7 +98,6 @@ export default function About() {
               <div className="absolute inset-0 p-5 flex flex-col justify-between">
                 <div className="flex items-start justify-between">
                   <span className="mono-cap text-accent">{p.n}</span>
-                  <span className="chip-outline">{p.tag}</span>
                 </div>
                 <div>
                   <h3 className="font-sans font-semibold text-paper text-base md:text-lg leading-tight tracking-[-0.01em]">

@@ -103,13 +103,6 @@ export default function Projects() {
                 </div>
 
                 <div className="space-y-3">
-                  <div className="flex flex-wrap gap-1.5">
-                    {p.category.split(" · ").slice(0, 2).map((tag) => (
-                      <span key={tag} className="chip-outline !text-[10.5px] !py-1 !px-2.5">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
                   <p className="text-paper/85 text-[12.5px] leading-[1.5] line-clamp-3">
                     {p.body}
                   </p>
