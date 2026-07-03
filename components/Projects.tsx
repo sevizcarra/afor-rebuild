@@ -129,7 +129,7 @@ export default function Projects() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.18, ease: "easeOut" }}
             onClick={() => setActiveId(null)}
             className="fixed inset-0 z-[80] bg-ink/70 backdrop-blur-md flex items-start md:items-center justify-center p-4 md:p-8 overflow-y-auto"
           >
@@ -137,7 +137,7 @@ export default function Projects() {
               layoutId={`card-${active.id}`}
               onClick={(e) => e.stopPropagation()}
               className="relative w-full max-w-6xl bg-paper rounded-3xl overflow-hidden shadow-2xl my-auto"
-              transition={{ type: "spring", damping: 30, stiffness: 250 }}
+              transition={{ type: "spring", stiffness: 500, damping: 40, mass: 0.6 }}
             >
               {/* Close button */}
               <button
@@ -164,7 +164,7 @@ export default function Projects() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 10 }}
-                transition={{ duration: 0.45, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ duration: 0.35, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                 className="p-8 md:p-12"
               >
                 <div className="grid grid-cols-12 gap-8 md:gap-10">
