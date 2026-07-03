@@ -34,21 +34,24 @@ export default function Nav() {
       </div>
 
       <header className="fixed top-0 left-0 right-0 z-50">
-        <nav className="px-6 md:px-10 pt-6 flex items-center justify-between">
+        <nav className="px-6 md:px-10 pt-6 grid grid-cols-3 items-center">
           {/* Logo left */}
-          <Link href="/" aria-label="aFor" className="font-brand text-ink text-base tracking-[0.05em] flex items-baseline gap-1">
+          <Link href="/" aria-label="aFor" className="font-brand text-ink text-base tracking-[0.05em] flex items-baseline gap-1 justify-self-start">
             aFor<span className="text-accent align-baseline">.</span>
           </Link>
 
-          {/* Atajos de seccion - sutiles */}
-          <div className="hidden md:flex items-center gap-6 mr-6 text-[13px] tracking-[-0.005em]">
+          {/* Atajos de seccion - centrados y sutiles */}
+          <div className="hidden md:flex items-center justify-center gap-10 lg:gap-14 text-[13px] tracking-[-0.005em]">
             <a href="#nosotros" className="text-ink/55 hover:text-ink transition-colors">{t("about")}</a>
             <a href="#proyectos" className="text-ink/55 hover:text-ink transition-colors">{t("projects")}</a>
             <a href="#servicios" className="text-ink/55 hover:text-ink transition-colors">{t("services")}</a>
+            <a href="#contacto" className="text-ink/55 hover:text-ink transition-colors">{t("contact")}</a>
           </div>
+          {/* Placeholder para mobile - mantiene columna centro */}
+          <div className="md:hidden" />
 
           {/* Idiomas + Contacto */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 justify-self-end">
             <div className="hidden md:flex items-center gap-2 mr-2">
               {LOCALES.map((l, i) => (
                 <span key={l} className="contents">
