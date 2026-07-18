@@ -2,6 +2,7 @@
 import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
+import { flushSync } from "react-dom";
 
 const PROJECT_IMAGES: Record<string, string> = {
   cho: "/images/projects/edificio-cho.jpg",
@@ -29,8 +30,15 @@ export default function Projects() {
   const t = useTranslations("projects");
   const list = t.raw("list") as Project[];
   const [activeId, setActiveId] = useState<string | null>(null);
+  const [closing, setClosing] = useState(false);
   const active = list.find((p) => p.id === activeId) || null;
   const activeIndex = active ? list.findIndex((p) => p.id === active.id) : -1;
+
+  // Cierre simple: quita el layoutId antes de desmontar para evitar el morph reverso
+  const close = () => {
+    flushSync(() => setClosing(true));
+    setActiveId(null);
+  };
 
   // Bloquear scroll body cuando modal abierto + cerrar con ESC
   useEffect(() => {
@@ -38,7 +46,7 @@ export default function Projects() {
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setActiveId(null);
+      if (e.key === "Escape") close();
     };
     window.addEventListener("keydown", onKey);
     return () => {
@@ -122,7 +130,7 @@ export default function Projects() {
       </div>
 
       {/* Modal expandido */}
-      <AnimatePresence>
+      <AnimatePresence onExitComplete={() => setClosing(false)}>
         {active && (
           <motion.div
             key="overlay"
@@ -130,18 +138,19 @@ export default function Projects() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.18, ease: "easeOut" }}
-            onClick={() => setActiveId(null)}
+            onClick={close}
             className="fixed inset-0 z-[80] bg-ink/70 backdrop-blur-md flex items-start md:items-center justify-center p-4 md:p-8 overflow-y-auto"
           >
             <motion.article
-              layoutId={`card-${active.id}`}
+              layoutId={closing ? undefined : `card-${active.id}`}
               onClick={(e) => e.stopPropagation()}
+              exit={{ opacity: 0, scale: 0.98, transition: { duration: 0.16, ease: "easeOut" } }}
               className="relative w-full max-w-6xl bg-paper rounded-3xl overflow-hidden shadow-2xl my-auto"
-              transition={{ type: "spring", stiffness: 500, damping: 40, mass: 0.6 }}
+              transition={{ duration: 0.38, ease: [0.16, 1, 0.3, 1] }}
             >
               {/* Close button */}
               <button
-                onClick={() => setActiveId(null)}
+                onClick={close}
                 aria-label="Close"
                 className="absolute top-4 right-4 z-10 w-11 h-11 rounded-full bg-paper/95 backdrop-blur-sm border border-ink/10 flex items-center justify-center text-ink hover:bg-accent hover:text-paper transition-colors shadow-lg"
               >
@@ -151,9 +160,10 @@ export default function Projects() {
               {/* Foto grande limpia (sin overlay ni gradiente) */}
               <div className="relative w-full aspect-[16/9] md:aspect-[21/9] bg-anthracite-soft overflow-hidden">
                 <motion.img
-                  layoutId={`img-${active.id}`}
+                  layoutId={closing ? undefined : `img-${active.id}`}
                   src={PROJECT_IMAGES[active.id]}
                   alt={active.title}
+                  transition={{ duration: 0.38, ease: [0.16, 1, 0.3, 1] }}
                   className="absolute inset-0 h-full w-full object-cover"
                   style={{ objectPosition: active.id === "gom" ? "50% 80%" : "50% 50%" }}
                 />

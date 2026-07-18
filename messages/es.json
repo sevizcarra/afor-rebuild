@@ -42,7 +42,23 @@
       "Abordamos cada facility desde una visión integrada: arquitectura, ingeniería, coordinación BIM y normativa, bajo una misma dirección técnica.",
       "Garantizamos continuidad técnica completa y compatibilidad con el sistema documental del cliente."
     ],
-    "cta": "Saber más"
+    "cta": "Saber más",
+    "stats": [
+      {
+        "value": "10+",
+        "label": "años en minería e industria"
+      },
+      {
+        "value": "20+",
+        "label": "facilities desarrolladas"
+      },
+      {
+        "value": "3",
+        "label": "áreas de servicio"
+      }
+    ],
+    "clientsLabel": "Mandantes y partners",
+    "clients": "BHP · Codelco · Teck · SQM · Antofagasta Minerals · ARCADIS"
   },
   "principles": {
     "p1Title": "Diseño operacional",
@@ -280,51 +296,82 @@
     }
   },
   "services": {
-    "titleStart": "Servicios ",
-    "titleHighlight": "especializados",
-    "titleEnd": "",
-    "subtitle": "Servicios técnicos integrados al equipo del proyecto, bajo los protocolos del mandante.",
-    "items": [
+    "eyebrow": "Servicios",
+    "heading": "Servicios",
+    "intro": "Tres áreas que cubren el ciclo completo de una facility: diseñarla, transformarla y mantenerla operativa.",
+    "cta": "Iniciemos un proyecto",
+    "transversalLabel": "Transversal a las tres áreas",
+    "transversal": [
+      "Coordinación multidisciplinar y revisión de contraparte",
+      "Supervisión de terreno y control de avances",
+      "BIM · Revit bajo la codificación del mandante"
+    ],
+    "areas": [
       {
-        "title": "Plot Plan para facilities",
-        "body": "Diseño conceptual de instalaciones para faenas mineras e industriales: layouts, programa arquitectónico, flujos operacionales, estimación de superficies y plan maestro coordinado con disciplinas estructurales y MEP."
+        "n": "01",
+        "featured": true,
+        "title": "Proyectos nuevos",
+        "tagline": "Facilities desde cero: del plot plan a la ingeniería de detalle, listas para construcción.",
+        "subs": [
+          {
+            "title": "Plot plan y master plan de facilities",
+            "body": "Layouts, programa arquitectónico, flujos operacionales y plan maestro coordinado con disciplinas estructurales y MEP."
+          },
+          {
+            "title": "Oficinas administrativas y casas de cambio",
+            "body": "Espacios para personal: oficinas técnicas, salas de reunión, comedores, vestuarios y baños bajo normativa minera."
+          },
+          {
+            "title": "Salas de control, servidores y recintos técnicos",
+            "body": "Recintos críticos con piso técnico, climatización de precisión, control lumínico y acústico y puestos de operación ergonómicos."
+          },
+          {
+            "title": "RESPEL, almacenamiento y truck shops",
+            "body": "Edificación técnica para residuos peligrosos, bodegas industriales y talleres de equipos pesados, con seguridad operacional certificada."
+          }
+        ]
       },
       {
-        "title": "Oficinas administrativas y casas de cambio",
-        "body": "Diseño y ejecución de espacios para personal: oficinas técnicas, salas de reunión, comedores, casas de cambio para operadores, vestuarios y baños bajo normativa minera."
+        "n": "02",
+        "featured": true,
+        "title": "Remodelación interior",
+        "tagline": "Espacios de trabajo en minería e industria, transformados sin detener la operación.",
+        "subs": [
+          {
+            "title": "Remodelación integral de espacios de trabajo",
+            "body": "Oficinas, comedores, casas de cambio y áreas comunes en instalaciones existentes, renovadas de punta a punta."
+          },
+          {
+            "title": "Habilitación y cambio de uso",
+            "body": "Reconversión de edificios y recintos para nuevos programas operacionales, con expediente normativo completo."
+          },
+          {
+            "title": "Actualización de estándar en operación",
+            "body": "Mejora de terminaciones, confort y cumplimiento normativo con faenas planificadas según los turnos de la operación."
+          }
+        ]
       },
       {
-        "title": "Salas de control, servidores, eléctricas y técnicas",
-        "body": "Recintos críticos con piso técnico, climatización de precisión, control lumínico y acústico, distribución ergonómica de puestos de operación con monitores multipantalla y revestimientos especializados."
-      },
-      {
-        "title": "RESPEL, almacenamiento y truck shops",
-        "body": "Edificación técnica para residuos peligrosos, bodegas industriales y talleres de mantenimiento de equipos pesados, con cumplimiento normativo y seguridad operacional certificada."
-      },
-      {
-        "title": "Coordinación multidisciplinar y revisión de contraparte",
-        "body": "Integración de disciplinas estructural, mecánica, eléctrica, instrumentación y civil. Revisión técnica de planos y documentos de terceros bajo los estándares del mandante."
-      },
-      {
-        "title": "Supervisión de terreno y avances",
-        "body": "Inspección técnica en obra, control de avances físicos, validación de entregables, gestión de no conformidades y cierre de proyecto con documentación as-built."
-      },
-      {
-        "title": "Project Management multidisciplinar",
-        "body": "Gestión integral de proyectos: planificación, control de plazos y costos, coordinación de proveedores, gestión de riesgos y reporte ejecutivo al mandante."
+        "n": "03",
+        "featured": false,
+        "title": "Mantención crítica de facilities",
+        "tagline": "Ingeniería para intervenir infraestructura existente que no puede fallar ni detenerse.",
+        "subs": [
+          {
+            "title": "Cubiertas y envolventes técnicas",
+            "body": "Recambio de cubiertas, membranas y sellos sobre recintos operativos — incluidos data centers y salas técnicas 24/7."
+          },
+          {
+            "title": "Revestimientos y terminaciones industriales",
+            "body": "Renovación de revestimientos interiores y exteriores con materiales de resistencia industrial y alto tráfico."
+          },
+          {
+            "title": "Reparaciones y recambios técnicos",
+            "body": "Diagnóstico e ingeniería de reparación para elementos estructurales y constructivos comprometidos."
+          }
+        ]
       }
-    ],
-    "eyebrow": "Áreas de práctica",
-    "tags": [
-      "Master Plan",
-      "Edificación",
-      "Recintos técnicos",
-      "Ingeniería Interim",
-      "Operación",
-      "RESPEL",
-      "Revisión"
-    ],
-    "heading": "Servicios"
+    ]
   },
   "contact": {
     "titleStart": "Iniciemos un ",
@@ -342,11 +389,10 @@
       "submitSuccess": "Mensaje enviado",
       "submitError": "Error al enviar",
       "types": [
-        "Mining Facilities",
-        "Industrial Facilities",
-        "Master Plan",
-        "Project Management",
-        "Coordinación multidisciplinar",
+        "Proyecto nuevo",
+        "Remodelación interior",
+        "Mantención crítica",
+        "Coordinación / revisión",
         "Otro"
       ]
     },

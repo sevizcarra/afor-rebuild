@@ -42,7 +42,23 @@
       "We approach each facility from an integrated view: architecture, engineering, BIM coordination and code, under a single technical direction.",
       "We guarantee complete technical continuity and compatibility with the client document system."
     ],
-    "cta": "Learn more"
+    "cta": "Learn more",
+    "stats": [
+      {
+        "value": "10+",
+        "label": "years in mining and industry"
+      },
+      {
+        "value": "20+",
+        "label": "facilities delivered"
+      },
+      {
+        "value": "3",
+        "label": "service areas"
+      }
+    ],
+    "clientsLabel": "Clients and partners",
+    "clients": "BHP · Codelco · Teck · SQM · Antofagasta Minerals · ARCADIS"
   },
   "principles": {
     "p1Title": "Operational design",
@@ -280,51 +296,82 @@
     }
   },
   "services": {
-    "titleStart": "Specialized ",
-    "titleHighlight": "services",
-    "titleEnd": "",
-    "subtitle": "Technical services integrated with the project team, under the client's protocols.",
-    "items": [
+    "eyebrow": "Services",
+    "heading": "Services",
+    "intro": "Three areas covering the full lifecycle of a facility: design it, transform it, and keep it running.",
+    "cta": "Start a project",
+    "transversalLabel": "Across all three areas",
+    "transversal": [
+      "Multidisciplinary coordination and counterpart review",
+      "Site supervision and progress control",
+      "BIM · Revit under the client's coding standards"
+    ],
+    "areas": [
       {
-        "title": "Plot Plan for facilities",
-        "body": "Conceptual design of facilities for mining and industrial sites: layouts, architectural program, operational flows, surface estimation and master plan coordinated with structural and MEP disciplines."
+        "n": "01",
+        "featured": true,
+        "title": "New-build projects",
+        "tagline": "Facilities from scratch: from plot plan to detail engineering, ready for construction.",
+        "subs": [
+          {
+            "title": "Plot plans and facility master plans",
+            "body": "Layouts, architectural program, operational flows and a master plan coordinated with structural and MEP disciplines."
+          },
+          {
+            "title": "Administrative offices and change houses",
+            "body": "Spaces for personnel: technical offices, meeting rooms, dining halls, locker rooms and restrooms under mining regulations."
+          },
+          {
+            "title": "Control rooms, server and technical rooms",
+            "body": "Critical rooms with raised floors, precision climate control, lighting and acoustic control and ergonomic operator stations."
+          },
+          {
+            "title": "Hazardous waste, storage and truck shops",
+            "body": "Technical buildings for hazardous waste, industrial warehouses and heavy-equipment workshops with certified operational safety."
+          }
+        ]
       },
       {
-        "title": "Administrative offices and change houses",
-        "body": "Design and execution of personnel spaces: technical offices, meeting rooms, dining areas, change houses for operators, locker rooms and restrooms under mining regulations."
+        "n": "02",
+        "featured": true,
+        "title": "Interior remodeling",
+        "tagline": "Workspaces in mining and industry, transformed without stopping the operation.",
+        "subs": [
+          {
+            "title": "Full workspace remodeling",
+            "body": "Offices, dining halls, change houses and common areas in existing installations, renewed end to end."
+          },
+          {
+            "title": "Fit-out and change of use",
+            "body": "Conversion of buildings and rooms for new operational programs, with a complete regulatory dossier."
+          },
+          {
+            "title": "Standard upgrades in operation",
+            "body": "Improved finishes, comfort and regulatory compliance with works planned around the operation's shifts."
+          }
+        ]
       },
       {
-        "title": "Control, server, electrical and technical rooms",
-        "body": "Critical rooms with raised technical floor, precision climate control, lighting and acoustic management, ergonomic distribution of operator stations with multi-screen monitors and specialized finishes."
-      },
-      {
-        "title": "Hazardous waste, warehousing and truck shops",
-        "body": "Technical construction for hazardous waste, industrial warehouses and heavy equipment maintenance shops, with regulatory compliance and certified operational safety."
-      },
-      {
-        "title": "Multidisciplinary coordination and counterpart review",
-        "body": "Integration of structural, mechanical, electrical, instrumentation and civil disciplines. Technical review of third-party plans and documents under the client's standards."
-      },
-      {
-        "title": "Site supervision and progress",
-        "body": "Technical inspection on site, control of physical progress, validation of deliverables, management of non-conformities and project closure with as-built documentation."
-      },
-      {
-        "title": "Multidisciplinary Project Management",
-        "body": "Comprehensive project management: planning, deadline and cost control, supplier coordination, risk management and executive reporting to the client."
+        "n": "03",
+        "featured": false,
+        "title": "Critical facility maintenance",
+        "tagline": "Engineering for existing infrastructure that cannot fail or stop.",
+        "subs": [
+          {
+            "title": "Roofing and technical envelopes",
+            "body": "Replacement of roofs, membranes and seals over operating rooms — including data centers and 24/7 technical rooms."
+          },
+          {
+            "title": "Industrial cladding and finishes",
+            "body": "Renewal of interior and exterior cladding with industrial-grade, high-traffic materials."
+          },
+          {
+            "title": "Technical repairs and replacements",
+            "body": "Assessment and repair engineering for compromised structural and construction elements."
+          }
+        ]
       }
-    ],
-    "eyebrow": "Practice areas",
-    "tags": [
-      "Master Plan",
-      "Building",
-      "Technical rooms",
-      "Interim Engineering",
-      "Operations",
-      "Hazardous waste",
-      "Review"
-    ],
-    "heading": "Services"
+    ]
   },
   "contact": {
     "titleStart": "Let's start a ",
@@ -342,11 +389,10 @@
       "submitSuccess": "Message sent",
       "submitError": "Send error",
       "types": [
-        "Mining Facilities",
-        "Industrial Facilities",
-        "Master Plan",
-        "Project Management",
-        "Multidisciplinary coordination",
+        "New-build project",
+        "Interior remodeling",
+        "Critical maintenance",
+        "Coordination / review",
         "Other"
       ]
     },

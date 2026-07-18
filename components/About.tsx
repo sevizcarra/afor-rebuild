@@ -38,9 +38,9 @@ export default function About() {
             </div>
           </div>
           <div className="col-span-6 md:col-span-9 flex justify-end">
-            <button className="chip">
+            <a href="#servicios" className="chip">
               {t("cta")} <span className="text-ink/50">↗</span>
-            </button>
+            </a>
           </div>
         </div>
 
@@ -51,7 +51,7 @@ export default function About() {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           style={{ backgroundColor: "#FAFAF7" }}
-          className="rounded-3xl mb-20 md:mb-24"
+          className="rounded-xl mb-14 md:mb-16"
         >
           <div className="grid grid-cols-12 gap-0 items-stretch">
             <div className="col-span-12 md:col-span-7 p-8 md:p-12 md:pr-14 md:border-r border-ink/10">
@@ -73,6 +73,33 @@ export default function About() {
           </div>
         </motion.div>
 
+        {/* Cifras + mandantes: credenciales duras antes de los principios */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          className="mb-14 md:mb-16 border-t border-ink/10"
+        >
+          <div className="grid grid-cols-12 gap-6 pt-8">
+            {(t.raw("stats") as { value: string; label: string }[]).map((s, i) => (
+              <div key={i} className="col-span-4 md:col-span-2">
+                <div
+                  className="font-mono tabular-nums text-ink tracking-[-0.02em]"
+                  style={{ fontSize: "clamp(28px, 3.2vw, 44px)" }}
+                >
+                  {s.value}
+                </div>
+                <div className="mono-cap text-ink/50 !text-[11px] mt-1.5">{s.label}</div>
+              </div>
+            ))}
+            <div className="col-span-12 md:col-span-6 md:text-right flex flex-col md:items-end justify-end">
+              <div className="mono-cap text-ink/40 !text-[10.5px] mb-1.5">{t("clientsLabel")}</div>
+              <div className="mono-cap text-ink/70 !text-[12px] !leading-[1.8]">{t("clients")}</div>
+            </div>
+          </div>
+        </motion.div>
+
         {/* Principios con foto de fondo */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {principles.map((p, i) => (
@@ -82,7 +109,7 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.85, delay: i * 0.15, ease: [0.16, 1, 0.3, 1] }}
-              className="relative rounded-2xl overflow-hidden border border-ink/10 aspect-square group hover:scale-[1.02] hover:shadow-2xl transition-transform"
+              className="relative rounded-lg overflow-hidden border border-ink/10 aspect-square group"
             >
               {/* Foto de fondo */}
               <img
