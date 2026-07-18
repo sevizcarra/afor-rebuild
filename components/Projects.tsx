@@ -91,7 +91,7 @@ export default function Projects() {
                 src={PROJECT_IMAGES[p.id]}
                 alt={p.title}
                 loading="lazy"
-                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                className="absolute inset-0 h-full w-full object-cover grayscale group-hover:grayscale-0 transition-[transform,filter] duration-700 group-hover:scale-105"
                 style={{ objectPosition: p.id === "gom" ? "50% 80%" : "50% 50%" }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/40 to-transparent" />
