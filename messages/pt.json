@@ -57,9 +57,7 @@
         "value": "3",
         "label": "áreas de serviço"
       }
-    ],
-    "clientsLabel": "Clientes e parceiros",
-    "clients": "BHP · Codelco · Teck · SQM · Antofagasta Minerals · ARCADIS"
+    ]
   },
   "principles": {
     "p1Title": "Desenho operacional",
@@ -94,7 +92,7 @@
     "list": [
       {
         "id": "cho",
-        "client": "Cliente Tier 1 · Puerto Coloso",
+        "client": "Grande mineração · Litoral de Antofagasta",
         "year": "2025",
         "title": "Remediación Edificio CHO",
         "category": "Facility técnica · Ingeniería de detalle",
@@ -116,11 +114,11 @@
       },
       {
         "id": "enat",
-        "client": "Mina Escondida · EN-AT",
+        "client": "Grande mineração de cobre · Programa de autonomia",
         "year": "2025",
         "title": "Facilities Camiones Autónomos",
         "category": "Sala de control + auxiliares · BIM",
-        "body": "Diseño de facilities de soporte para el programa de Camiones Autónomos en Minera Escondida. Sala de Control de Perforadoras con piso técnico elevado, revestimientos de madera, estaciones de monitoreo multiscreen, climatización de precisión y señalética normativa. Ingeniería Interim apta para construcción.",
+        "body": "Diseño de facilities de soporte para el programa de Camiones Autónomos en uma operação de grande mineração. Sala de Control de Perforadoras con piso técnico elevado, revestimientos de madera, estaciones de monitoreo multiscreen, climatización de precisión y señalética normativa. Ingeniería Interim apta para construcción.",
         "highlights": [
           {
             "label": "Tipo",
@@ -128,7 +126,7 @@
           },
           {
             "label": "Programa",
-            "value": "EN-AT"
+            "value": "Gran minería"
           },
           {
             "label": "Papel AFOR",
@@ -138,9 +136,9 @@
       },
       {
         "id": "gom",
-        "client": "Mina Escondida · EN-AT",
+        "client": "Grande mineração de cobre · Norte do Chile",
         "year": "2024",
-        "title": "Sala de Controle — GOM MEL",
+        "title": "Sala de Controle de Operações Mina",
         "category": "Facility técnica · Ingeniería de detalle",
         "body": "Intervención integral del recinto con cielo metálico lineal, revestimiento mural en listonería de madera, iluminación LED lineal empotrada y distribución ergonómica de puestos de operación con brazos articulados y monitores multipantalla. Diseño que prioriza concentración operacional, confort acústico y control lumínico para jornadas extendidas.",
         "highlights": [
@@ -150,7 +148,7 @@
           },
           {
             "label": "Programa",
-            "value": "GOM EN-AT"
+            "value": "Operación minera"
           },
           {
             "label": "Papel AFOR",
@@ -160,9 +158,9 @@
       },
       {
         "id": "smh",
-        "client": "SMH · Mina Spence",
+        "client": "Grande mineração · Região de Antofagasta",
         "year": "2024",
-        "title": "Sala de Controle — SMH Spence",
+        "title": "Sala de Controle Industrial",
         "category": "Sala de controle · Interior",
         "body": "Nova sala de controle para operações, com revestimentos melamínicos e detalhes em alumínio. Forro em perfilaria linear U com iluminação integrada, resolvendo acústica e conforto visual para as jornadas exigidas pela operação. Layout centrado nas consoles dos operadores, com circulações limpas, controle de iluminação regulável e acabamentos robustos pensados para uso industrial contínuo.",
         "highlights": [
@@ -182,11 +180,11 @@
       },
       {
         "id": "yacas",
-        "client": "Mina Las Yacas · Vicuña",
+        "client": "Projeto de mineração · Vale de Vicuña",
         "year": "2023",
         "title": "Barrio Cívico e Infraestructura",
         "category": "Master plan de facilities · Faena",
-        "body": "Diseño arquitectónico del barrio cívico e infraestructura de apoyo para el proyecto minero Las Yacas. Definición de oficinas administrativas, control de ingreso, baños y salas de cambio con distribución modular orientada a optimizar flujos de circulación y cumplimiento normativo. Layouts de emplazamiento, estacionamientos y accesos vehiculares integrados al plan general de faena.",
+        "body": "Diseño arquitectónico del barrio cívico e infraestructura de apoyo para el proyecto minero o projeto. Definición de oficinas administrativas, control de ingreso, baños y salas de cambio con distribución modular orientada a optimizar flujos de circulación y cumplimiento normativo. Layouts de emplazamiento, estacionamientos y accesos vehiculares integrados al plan general de faena.",
         "highlights": [
           {
             "label": "Tipo",
@@ -204,11 +202,11 @@
       },
       {
         "id": "mecasfy",
-        "client": "Mecasfy · Santa Alejandra",
+        "client": "Indústria · Santa Alejandra",
         "year": "2024",
         "title": "Edificio Industrial y Corporativo",
         "category": "Facility industrial · Diseño integral",
-        "body": "Diseño arquitectónico de edificio industrial y corporativo para Mecasfy. Nave industrial con oficinas administrativas integradas, fachada de policarbonato translúcido con estructura metálica vista, accesos vehiculares y peatonales diferenciados, paisajismo perimetral y estacionamientos.",
+        "body": "Diseño arquitectónico de edificio industrial y corporativo para um cliente industrial. Nave industrial con oficinas administrativas integradas, fachada de policarbonato translúcido con estructura metálica vista, accesos vehiculares y peatonales diferenciados, paisajismo perimetral y estacionamientos.",
         "highlights": [
           {
             "label": "Tipo",
@@ -226,11 +224,11 @@
       },
       {
         "id": "gt",
-        "client": "Grant Thornton Chile",
+        "client": "Serviços profissionais · Santiago",
         "year": "2024",
         "title": "Oficinas Corporativas",
         "category": "Habilitación · Ejecutado",
-        "body": "Habilitación de nuevas oficinas corporativas para Grant Thornton Chile. Diseño elegante y moderno con mobiliario de madera natural, cielo expuesto con iluminación lineal LED, estanterías metálicas con vegetación integrada como separadores de ambientes y estaciones de trabajo colaborativas. Prioridad en luz natural, calidez de materiales y distribución abierta.",
+        "body": "Habilitación de nuevas oficinas corporativas para uma firma de serviços profissionais. Diseño elegante y moderno con mobiliario de madera natural, cielo expuesto con iluminación lineal LED, estanterías metálicas con vegetación integrada como separadores de ambientes y estaciones de trabajo colaborativas. Prioridad en luz natural, calidez de materiales y distribución abierta.",
         "highlights": [
           {
             "label": "Tipo",
@@ -248,7 +246,7 @@
       },
       {
         "id": "sshh",
-        "client": "Infraestrutura Universitária",
+        "client": "Infraestrutura universitária",
         "year": "2023",
         "title": "Sanitários — Infraestrutura Universitária",
         "category": "Bateria sanitária · Alto tráfego",
@@ -270,9 +268,9 @@
       },
       {
         "id": "dti",
-        "client": "Infraestrutura Institucional · DTI",
+        "client": "Infraestrutura institucional",
         "year": "2024",
-        "title": "Cobertura DTI",
+        "title": "Cobertura Técnica — Data Center",
         "category": "Cobertura técnica · Data center",
         "body": "Gerenciamento integral da substituição da cobertura técnica de uma sala de servidores institucionais de 600 m². Nova estrutura registrável por trecho, concebida para abrigar equipamentos de precisão que não admitem pausas nem vazamentos: climatização constante, redundância elétrica e uma operação 24/7 que não pode parar durante a obra. Perfilaria metálica pré-pintada, manta sob cobertura, selos térmicos e um plano de obras coordenado com os turnos do datacenter —cada painel montado sem desconectar um único rack— para intervir no coração digital da instituição com a máquina em funcionamento.",
         "highlights": [

@@ -56,9 +56,7 @@
         "value": "3",
         "label": "service areas"
       }
-    ],
-    "clientsLabel": "Clients and partners",
-    "clients": "BHP · Codelco · Teck · SQM · Antofagasta Minerals · ARCADIS"
+    ]
   },
   "principles": {
     "p1Title": "Operational design",
@@ -87,7 +85,7 @@
     "list": [
       {
         "id": "cho",
-        "client": "Tier 1 Client · Puerto Coloso",
+        "client": "Major mining · Antofagasta coast",
         "year": "2025",
         "title": "CHO Building Remediation",
         "category": "Technical facility · Detailed engineering",
@@ -109,11 +107,11 @@
       },
       {
         "id": "enat",
-        "client": "Escondida Mine · EN-AT",
+        "client": "Copper mining major · Autonomy program",
         "year": "2025",
         "title": "Autonomous Trucks Facilities",
         "category": "Control room + auxiliaries · BIM",
-        "body": "Design of supporting facilities for the Autonomous Trucks program at Minera Escondida. Drilling Control Room with raised technical floor, wood finishes, multiscreen monitoring stations, precision climate control and regulatory signage. Interim engineering ready for construction.",
+        "body": "Design of supporting facilities for the Autonomous Trucks program at a major mining operation. Drilling Control Room with raised technical floor, wood finishes, multiscreen monitoring stations, precision climate control and regulatory signage. Interim engineering ready for construction.",
         "highlights": [
           {
             "label": "Type",
@@ -121,7 +119,7 @@
           },
           {
             "label": "Program",
-            "value": "EN-AT"
+            "value": "Gran minería"
           },
           {
             "label": "AFOR role",
@@ -131,9 +129,9 @@
       },
       {
         "id": "gom",
-        "client": "Escondida Mine · EN-AT",
+        "client": "Copper mining major · Northern Chile",
         "year": "2024",
-        "title": "Control Room — GOM MEL",
+        "title": "Mine Operations Control Room",
         "category": "Technical facility · Detailed engineering",
         "body": "Complete intervention with linear metal ceiling, wooden batten wall finish, recessed linear LED lighting and ergonomic distribution of operator stations with articulated arms and multi-screen monitors. Design that prioritizes operational concentration, acoustic comfort and luminous control for extended shifts.",
         "highlights": [
@@ -143,7 +141,7 @@
           },
           {
             "label": "Program",
-            "value": "GOM EN-AT"
+            "value": "Operación minera"
           },
           {
             "label": "AFOR role",
@@ -153,9 +151,9 @@
       },
       {
         "id": "smh",
-        "client": "SMH · Spence Mine",
+        "client": "Major mining · Antofagasta Region",
         "year": "2024",
-        "title": "Control Room — SMH Spence",
+        "title": "Industrial Control Room",
         "category": "Control room · Interior",
         "body": "New operations control room featuring melamine wall claddings and aluminum trims. Linear U-profile ceiling with integrated lighting, engineered for acoustic performance and visual comfort across the shifts the operation requires. Layout centered on operator consoles with clean circulation paths, dimmable lighting control, and robust finishes designed for continuous industrial use.",
         "highlights": [
@@ -175,11 +173,11 @@
       },
       {
         "id": "yacas",
-        "client": "Las Yacas Mine · Vicuña",
+        "client": "Mining project · Vicuña Valley",
         "year": "2023",
         "title": "Civic District and Infrastructure",
         "category": "Master plan of facilities · Site",
-        "body": "Architectural design of the civic district and supporting infrastructure for the Las Yacas mining project. Definition of administrative offices, access control, restrooms and change rooms with modular distribution oriented to optimize circulation flows and regulatory compliance. Site layouts, parking and vehicle accesses integrated with the general site plan.",
+        "body": "Architectural design of the civic district and supporting infrastructure for a major mining project. Definition of administrative offices, access control, restrooms and change rooms with modular distribution oriented to optimize circulation flows and regulatory compliance. Site layouts, parking and vehicle accesses integrated with the general site plan.",
         "highlights": [
           {
             "label": "Type",
@@ -197,11 +195,11 @@
       },
       {
         "id": "mecasfy",
-        "client": "Mecasfy · Santa Alejandra",
+        "client": "Industry · Santa Alejandra",
         "year": "2024",
         "title": "Industrial and Corporate Building",
         "category": "Industrial facility · Integral design",
-        "body": "Architectural design of an industrial and corporate building for Mecasfy. Industrial warehouse with integrated administrative offices, translucent polycarbonate facade with exposed metallic structure, differentiated vehicle and pedestrian accesses, perimeter landscaping and parking.",
+        "body": "Architectural design of an industrial and corporate building for an industrial client. Industrial warehouse with integrated administrative offices, translucent polycarbonate facade with exposed metallic structure, differentiated vehicle and pedestrian accesses, perimeter landscaping and parking.",
         "highlights": [
           {
             "label": "Type",
@@ -219,11 +217,11 @@
       },
       {
         "id": "gt",
-        "client": "Grant Thornton Chile",
+        "client": "Professional services · Santiago",
         "year": "2024",
         "title": "Corporate Offices",
         "category": "Fit-out · Completed",
-        "body": "Fit-out of new corporate offices for Grant Thornton Chile. Elegant and modern design with natural wood furniture, exposed ceiling with linear LED lighting, metal shelves with integrated vegetation as room dividers and collaborative workstations. Priority on natural light, warmth of materials and open distribution.",
+        "body": "Fit-out of new corporate offices for a professional services firm. Elegant and modern design with natural wood furniture, exposed ceiling with linear LED lighting, metal shelves with integrated vegetation as room dividers and collaborative workstations. Priority on natural light, warmth of materials and open distribution.",
         "highlights": [
           {
             "label": "Type",
@@ -241,7 +239,7 @@
       },
       {
         "id": "sshh",
-        "client": "University Infrastructure",
+        "client": "University infrastructure",
         "year": "2023",
         "title": "Restrooms — University Infrastructure",
         "category": "Restroom facility · High traffic",
@@ -263,9 +261,9 @@
       },
       {
         "id": "dti",
-        "client": "Institutional Infrastructure · DTI",
+        "client": "Institutional infrastructure",
         "year": "2024",
-        "title": "DTI Roof",
+        "title": "Technical Roof — Data Center",
         "category": "Technical roof · Data center",
         "body": "End-to-end project management for the replacement of the technical roof over a 600 m² institutional server room. New bay-registrable structure engineered to host precision equipment that tolerates no pauses and no leaks: constant HVAC, electrical redundancy, and a 24/7 operation that cannot be stopped during construction. Pre-painted metal profiles, underlay membrane, thermal sealing, and a work plan coordinated with the datacenter shift schedule —each panel installed without disconnecting a single rack— to intervene the institution's digital core while the machine keeps running.",
         "highlights": [

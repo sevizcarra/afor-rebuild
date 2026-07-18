@@ -2,139 +2,97 @@
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 
-const fadeIn = {
-  hidden: { opacity: 0, y: 12 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] } },
-};
-
-const PRINCIPLES_IMAGES = [
-  "/images/principios/principio-01-operacional.jpg",
-  "/images/principios/principio-02-normativo.jpg",
-  "/images/principios/principio-03-bim.jpg",
-  "/images/principios/principio-04-integracion.jpg",
-];
+const ease = [0.16, 1, 0.3, 1] as const;
 
 export default function About() {
   const t = useTranslations("about");
-  const tHero = useTranslations("hero");
   const tP = useTranslations("principles");
-  const tags = t.raw("tags") as string[];
+  const stats = t.raw("stats") as { value: string; label: string }[];
   const principles = [
-    { n: "01", title: tP("p1Title"), body: tP("p1Body"), tag: tags[0], image: PRINCIPLES_IMAGES[0] },
-    { n: "02", title: tP("p2Title"), body: tP("p2Body"), tag: tags[1], image: PRINCIPLES_IMAGES[1] },
-    { n: "03", title: tP("p3Title"), body: tP("p3Body"), tag: tags[2], image: PRINCIPLES_IMAGES[2] },
-    { n: "04", title: tP("p4Title"), body: tP("p4Body"), tag: tags[3], image: PRINCIPLES_IMAGES[3] },
+    { n: "01", title: tP("p1Title"), body: tP("p1Body") },
+    { n: "02", title: tP("p2Title"), body: tP("p2Body") },
+    { n: "03", title: tP("p3Title"), body: tP("p3Body") },
+    { n: "04", title: tP("p4Title"), body: tP("p4Body") },
   ];
 
   return (
-    <section id="nosotros" className="relative bg-anthracite text-ink pt-24 md:pt-32 pb-10 md:pb-14">
+    <section id="nosotros" className="relative bg-anthracite text-ink pt-24 md:pt-32 pb-14 md:pb-20">
       <div className="px-6 md:px-10">
-        {/* Header Swiss: hairline + eyebrow tabular numerico + CTA opcional a la derecha */}
-        <div className="grid grid-cols-12 gap-6 pt-8 mb-14 md:mb-20 border-t border-ink">
-          <div className="col-span-6 md:col-span-3">
-            <div className="flex items-center gap-2 text-[12px] tabular-nums tracking-[0.02em] text-ink/70">
-              <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+        {/* Header: hairline dura + eyebrow numerado */}
+        <div className="grid grid-cols-12 gap-6 pt-6 mb-14 md:mb-20 border-t border-ink">
+          <div className="col-span-12 md:col-span-3">
+            <div className="font-mono text-[11.5px] uppercase tracking-[0.08em] text-ink/60">
               01 — {t("eyebrow")}
             </div>
           </div>
-          <div className="col-span-6 md:col-span-9 flex justify-end">
-            <a href="#servicios" className="chip">
-              {t("cta")} <span className="text-ink/50">↗</span>
-            </a>
-          </div>
         </div>
 
-        {/* Titulo + summary en franja gris con hairline vertical: gesto Swiss que une los dos */}
+        {/* Statement + cuerpo en dos columnas */}
+        <div className="grid grid-cols-12 gap-6 md:gap-10 mb-16 md:mb-24">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.8, ease }}
+            className="col-span-12 lg:col-span-7 font-sans font-semibold text-ink leading-[1.02] tracking-[-0.025em]"
+            style={{ fontSize: "clamp(38px, 4.6vw, 68px)" }}
+          >
+            {t("titleStart")}<span className="text-accent">{t("titleHighlight")}</span>{t("titleEnd")}
+          </motion.h2>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.8, delay: 0.1, ease }}
+            className="col-span-12 lg:col-span-4 lg:col-start-9 flex flex-col justify-end gap-5"
+          >
+            <p className="text-ink/70 text-[14.5px] leading-[1.7]">{t("p1")}</p>
+            <p className="text-ink/55 text-[13.5px] leading-[1.7]">{t("p2")}</p>
+          </motion.div>
+        </div>
+
+        {/* Banda de cifras: tabla dura con divisores verticales */}
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          style={{ backgroundColor: "#FAFAF7" }}
-          className="rounded-xl mb-14 md:mb-16"
+          transition={{ duration: 0.8, ease }}
+          className="grid grid-cols-3 border-y border-ink mb-16 md:mb-24"
         >
-          <div className="grid grid-cols-12 gap-0 items-stretch">
-            <div className="col-span-12 md:col-span-7 p-8 md:p-12 md:pr-14 md:border-r border-ink/10">
-              <h2
-                className="font-sans font-semibold text-ink leading-[1.05] tracking-[-0.02em]"
-                style={{ fontSize: "clamp(32px, 4vw, 54px)" }}
+          {stats.map((s, i) => (
+            <div
+              key={i}
+              className={`py-8 md:py-10 pr-6 ${i > 0 ? "pl-6 md:pl-10 border-l border-ink/15" : ""}`}
+            >
+              <div
+                className="font-mono tabular-nums text-ink tracking-[-0.03em] leading-none"
+                style={{ fontSize: "clamp(40px, 6vw, 88px)" }}
               >
-                {t("titleStart")}<span className="text-accent">{t("titleHighlight")}</span>{t("titleEnd")}
-              </h2>
-            </div>
-            <div className="col-span-12 md:col-span-5 p-8 md:p-12 md:pl-14 flex flex-col justify-end border-t md:border-t-0 border-ink/10">
-              <div className="text-[11px] tabular-nums tracking-[0.02em] text-ink/50 mb-3">
-                Somos AFOR
+                {s.value}
               </div>
-              <p className="text-ink/75 text-[15px] leading-[1.65] max-w-md">
-                {tHero("summary")}
-              </p>
+              <div className="font-mono text-[11px] uppercase tracking-[0.08em] text-ink/50 mt-4">
+                {s.label}
+              </div>
             </div>
-          </div>
+          ))}
         </motion.div>
 
-        {/* Cifras + mandantes: credenciales duras antes de los principios */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-14 md:mb-16 border-t border-ink/10"
-        >
-          <div className="grid grid-cols-12 gap-6 pt-8">
-            {(t.raw("stats") as { value: string; label: string }[]).map((s, i) => (
-              <div key={i} className="col-span-4 md:col-span-2">
-                <div
-                  className="font-mono tabular-nums text-ink tracking-[-0.02em]"
-                  style={{ fontSize: "clamp(28px, 3.2vw, 44px)" }}
-                >
-                  {s.value}
-                </div>
-                <div className="mono-cap text-ink/50 !text-[11px] mt-1.5">{s.label}</div>
-              </div>
-            ))}
-            <div className="col-span-12 md:col-span-6 md:text-right flex flex-col md:items-end justify-end">
-              <div className="mono-cap text-ink/40 !text-[10.5px] mb-1.5">{t("clientsLabel")}</div>
-              <div className="mono-cap text-ink/70 !text-[12px] !leading-[1.8]">{t("clients")}</div>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Principios con foto de fondo */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {/* Principios: 4 columnas tipográficas, sin fotos, sin tarjetas */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10">
           {principles.map((p, i) => (
             <motion.article
               key={p.n}
-              initial={{ opacity: 0, y: 40, scale: 0.95 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.85, delay: i * 0.15, ease: [0.16, 1, 0.3, 1] }}
-              className="relative rounded-lg overflow-hidden border border-ink/10 aspect-square group"
+              transition={{ duration: 0.7, delay: i * 0.08, ease }}
+              className="border-t border-ink pt-5"
             >
-              {/* Foto de fondo */}
-              <img
-                src={p.image}
-                alt={p.title}
-                loading="lazy"
-                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              {/* Overlay antracita + gradiente */}
-              <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/40 to-ink/10" />
-
-              {/* Contenido */}
-              <div className="absolute inset-0 p-5 flex flex-col justify-between">
-                <div className="flex items-start justify-between">
-                  <span className="mono-cap text-accent">{p.n}</span>
-                </div>
-                <div>
-                  <h3 className="font-sans font-semibold text-paper text-base md:text-lg leading-tight tracking-[-0.01em]">
-                    {p.title}
-                  </h3>
-                  <p className="mt-2 mono-cap text-paper/75 !text-[10.5px] !leading-[1.5]">
-                    {p.body}
-                  </p>
-                </div>
-              </div>
+              <div className="font-mono tabular-nums text-[12px] text-accent mb-6">{p.n}</div>
+              <h3 className="font-sans font-semibold text-ink text-[17px] md:text-[18px] leading-tight tracking-[-0.01em] mb-3">
+                {p.title}
+              </h3>
+              <p className="text-ink/55 text-[13px] leading-[1.65]">{p.body}</p>
             </motion.article>
           ))}
         </div>
