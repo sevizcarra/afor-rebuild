@@ -54,7 +54,7 @@
       },
       {
         "value": "3",
-        "label": "service areas"
+        "label": "major service areas"
       }
     ]
   },
@@ -296,7 +296,7 @@
   "services": {
     "eyebrow": "Services",
     "heading": "Services",
-    "intro": "Three areas covering the full lifecycle of a facility: design it, transform it, and keep it running.",
+    "intro": "Three major service areas covering the full lifecycle of a facility: design it, transform it, and keep it running.",
     "cta": "Start a project",
     "transversalLabel": "Across all three areas",
     "transversal": [

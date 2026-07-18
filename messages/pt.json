@@ -55,7 +55,7 @@
       },
       {
         "value": "3",
-        "label": "áreas de serviço"
+        "label": "grandes áreas de serviços"
       }
     ]
   },
@@ -297,7 +297,7 @@
   "services": {
     "eyebrow": "Serviços",
     "heading": "Serviços",
-    "intro": "Três áreas que cobrem o ciclo completo de uma facility: projetá-la, transformá-la e mantê-la operacional.",
+    "intro": "Três grandes áreas de serviços que cobrem o ciclo completo de uma facility: projetá-la, transformá-la e mantê-la operacional.",
     "cta": "Vamos começar um projeto",
     "transversalLabel": "Transversal às três áreas",
     "transversal": [
