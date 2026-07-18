@@ -22,7 +22,7 @@ export default function Services() {
             {t("eyebrow")}
           </div>
           <h2
-            className="font-sans font-semibold text-ink leading-[1.02] tracking-[-0.025em]"
+            className="font-display font-semibold text-ink leading-[1.02] tracking-[-0.025em]"
             style={{ fontSize: "clamp(38px, 4.6vw, 68px)" }}
           >
             {t("heading")}<span className="text-accent">.</span>
@@ -45,14 +45,14 @@ export default function Services() {
             >
               {/* Cabecera del área */}
               <div
-                className={`font-sans font-semibold tabular-nums text-[14px] mb-5 ${
+                className={`font-display font-semibold tabular-nums text-[14px] mb-5 ${
                   area.featured ? "text-accent" : "text-ink/40"
                 }`}
               >
                 {area.n}
               </div>
               <h3
-                className="font-sans font-semibold text-ink leading-[1.08] tracking-[-0.015em] mb-4"
+                className="font-display font-semibold text-ink leading-[1.08] tracking-[-0.015em] mb-4"
                 style={{ fontSize: "clamp(22px, 1.9vw, 28px)" }}
               >
                 {area.title}
@@ -67,7 +67,7 @@ export default function Services() {
                       <span className="font-sans tabular-nums text-[11.5px] text-ink/35">
                         {area.n}.{j + 1}
                       </span>
-                      <h4 className="font-sans font-semibold text-ink text-[15px] leading-tight tracking-[-0.01em]">
+                      <h4 className="font-display font-semibold text-ink text-[15px] leading-tight tracking-[-0.01em]">
                         {sub.title}
                       </h4>
                     </div>

@@ -27,6 +27,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-dm-sans)", "system-ui", "sans-serif"],
+        display: ["var(--font-inter-tight)", "var(--font-dm-sans)", "system-ui", "sans-serif"],
         mono: ["var(--font-jetbrains-mono)", "ui-monospace", "monospace"],
         brand: ["var(--font-audiowide)", "Impact", "system-ui", "sans-serif"],
         serif: ["var(--font-instrument-serif)", "Georgia", "serif"],

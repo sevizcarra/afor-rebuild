@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { DM_Sans, JetBrains_Mono, Audiowide, Instrument_Serif } from "next/font/google";
+import { DM_Sans, Inter_Tight, JetBrains_Mono, Audiowide, Instrument_Serif } from "next/font/google";
 import { routing } from "@/i18n/routing";
 import "../globals.css";
 
@@ -11,6 +11,13 @@ const dmSans = DM_Sans({
   display: "swap",
   variable: "--font-dm-sans",
   weight: ["200", "300", "400", "500", "600", "700", "800"],
+});
+
+const interTight = Inter_Tight({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter-tight",
+  weight: ["500", "600", "700"],
 });
 
 const jetbrains = JetBrains_Mono({
@@ -101,7 +108,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${dmSans.variable} ${jetbrains.variable} ${audiowide.variable} ${instrumentSerif.variable}`}>
+    <html lang={locale} className={`${dmSans.variable} ${interTight.variable} ${jetbrains.variable} ${audiowide.variable} ${instrumentSerif.variable}`}>
       <body>
         <NextIntlClientProvider messages={messages}>
           {children}

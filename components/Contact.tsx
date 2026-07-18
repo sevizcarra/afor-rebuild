@@ -22,7 +22,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="font-sans font-semibold text-ink leading-[1.02] tracking-[-0.025em]"
+            className="font-display font-semibold text-ink leading-[1.02] tracking-[-0.025em]"
             style={{ fontSize: "clamp(38px, 4.6vw, 68px)" }}
           >
             {t("title")}<span className="text-accent">.</span>

@@ -65,7 +65,7 @@ export default function Projects() {
             {t("eyebrow")}
           </div>
           <h2
-            className="font-sans font-semibold text-ink leading-[1.02] tracking-[-0.025em]"
+            className="font-display font-semibold text-ink leading-[1.02] tracking-[-0.025em]"
             style={{ fontSize: "clamp(38px, 4.6vw, 68px)" }}
           >
             {t("heading")}<span className="text-accent">.</span>
@@ -100,7 +100,7 @@ export default function Projects() {
               <div className="absolute inset-0 flex flex-col justify-between p-6 md:p-7">
                 <div className="flex items-start justify-between gap-6">
                   <h3
-                    className="font-sans font-semibold text-paper leading-[1.05] tracking-[-0.015em] max-w-2xl"
+                    className="font-display font-semibold text-paper leading-[1.05] tracking-[-0.015em] max-w-2xl"
                     style={{ fontSize: "clamp(20px, 1.8vw, 26px)" }}
                   >
                     {p.title}
@@ -183,7 +183,7 @@ export default function Projects() {
                       {String(activeIndex + 1).padStart(2, "0")} — {active.category}
                     </div>
                     <h3
-                      className="font-sans font-semibold text-ink leading-[1.05] tracking-[-0.02em] mb-6"
+                      className="font-display font-semibold text-ink leading-[1.05] tracking-[-0.02em] mb-6"
                       style={{ fontSize: "clamp(30px, 3.6vw, 48px)" }}
                     >
                       {active.title}

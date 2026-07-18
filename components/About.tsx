@@ -29,10 +29,10 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.8, ease }}
-            className="font-sans font-semibold text-ink leading-[1.02] tracking-[-0.025em] max-w-4xl"
+            className="font-display font-semibold text-ink leading-[1.02] tracking-[-0.025em] max-w-4xl"
             style={{ fontSize: "clamp(38px, 4.6vw, 68px)" }}
           >
-            {t("titleStart")}<span className="font-serif italic font-normal text-accent">{t("titleHighlight")}</span>{t("titleEnd")}
+            {`${t("titleStart")}${t("titleHighlight")}${t("titleEnd")}`.replace(/\.\s*$/, "")}<span className="text-accent">.</span>
           </motion.h2>
         </div>
 
@@ -42,10 +42,10 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.8, delay: 0.1, ease }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14 max-w-4xl mb-20 md:mb-28"
+          className="max-w-2xl mb-20 md:mb-28"
         >
-          <p className="text-ink/70 text-[15px] leading-[1.75]">{t("p1")}</p>
-          <p className="text-ink/55 text-[14px] leading-[1.75]">{t("p2")}</p>
+          <p className="text-ink/80 text-[17px] md:text-[18px] leading-[1.7]">{t("p1")}</p>
+          <p className="mt-6 text-ink/55 text-[14px] leading-[1.75] max-w-xl">{t("p2")}</p>
         </motion.div>
 
         {/* Cifras: solo divisores verticales */}
@@ -62,7 +62,7 @@ export default function About() {
               className={`py-2 pr-6 ${i > 0 ? "pl-8 md:pl-12 border-l border-ink/15" : ""}`}
             >
               <div
-                className="font-sans font-semibold tabular-nums text-ink tracking-[-0.03em] leading-none"
+                className="font-display font-semibold tabular-nums text-ink tracking-[-0.03em] leading-none"
                 style={{ fontSize: "clamp(44px, 5.5vw, 80px)" }}
               >
                 {s.value}
@@ -83,8 +83,8 @@ export default function About() {
               transition={{ duration: 0.7, delay: i * 0.08, ease }}
               className="border-l border-ink/15 pl-6 pr-6 lg:pr-10"
             >
-              <div className="font-sans font-semibold tabular-nums text-[13px] text-accent mb-5">{p.n}</div>
-              <h3 className="font-sans font-semibold text-ink text-[17px] md:text-[18px] leading-tight tracking-[-0.01em] mb-3">
+              <div className="font-display font-semibold tabular-nums text-[13px] text-accent mb-5">{p.n}</div>
+              <h3 className="font-display font-semibold text-ink text-[17px] md:text-[18px] leading-tight tracking-[-0.01em] mb-3">
                 {p.title}
               </h3>
               <p className="text-ink/55 text-[13.5px] leading-[1.7]">{p.body}</p>
