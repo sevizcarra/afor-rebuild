@@ -2,6 +2,7 @@
 import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
+import { flushSync } from "react-dom";
 
 const PROJECT_IMAGES: Record<string, string> = {
   cho: "/images/projects/edificio-cho.jpg",
@@ -29,8 +30,15 @@ export default function Projects() {
   const t = useTranslations("projects");
   const list = t.raw("list") as Project[];
   const [activeId, setActiveId] = useState<string | null>(null);
+  const [closing, setClosing] = useState(false);
   const active = list.find((p) => p.id === activeId) || null;
   const activeIndex = active ? list.findIndex((p) => p.id === active.id) : -1;
+
+  // Cierre simple: quita el layoutId antes de desmontar para evitar el morph reverso
+  const close = () => {
+    flushSync(() => setClosing(true));
+    setActiveId(null);
+  };
 
   // Bloquear scroll body cuando modal abierto + cerrar con ESC
   useEffect(() => {
@@ -38,7 +46,7 @@ export default function Projects() {
     const prev = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setActiveId(null);
+      if (e.key === "Escape") close();
     };
     window.addEventListener("keydown", onKey);
     return () => {
@@ -50,18 +58,21 @@ export default function Projects() {
   return (
     <section id="proyectos" className="relative bg-anthracite text-ink pt-10 md:pt-14 pb-10 md:pb-14">
       <div className="px-6 md:px-10">
-        {/* Header eyebrow + title condensed */}
-        <div className="mb-16 md:mb-20">
-          <div className="mono-cap text-ink/70 flex items-center gap-2 mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-accent" />
-            {t("eyebrow")}
+        {/* Header consistente: hairline dura + eyebrow numerado */}
+        <div className="grid grid-cols-12 gap-6 pt-6 mb-14 md:mb-20 border-t border-ink">
+          <div className="col-span-12 md:col-span-3">
+            <div className="font-mono text-[11.5px] uppercase tracking-[0.08em] text-ink/60">
+              02 — {t("eyebrow")}
+            </div>
           </div>
-          <h2
-            className="font-sans font-semibold text-ink leading-[1.05] tracking-[-0.02em] max-w-4xl"
-            style={{ fontSize: "clamp(36px, 5vw, 64px)" }}
-          >
-            {t("heading")}<span className="text-accent">.</span>
-          </h2>
+          <div className="col-span-12 md:col-span-8">
+            <h2
+              className="font-sans font-semibold text-ink leading-[1.02] tracking-[-0.025em]"
+              style={{ fontSize: "clamp(38px, 4.6vw, 68px)" }}
+            >
+              {t("heading")}<span className="text-accent">.</span>
+            </h2>
+          </div>
         </div>
 
         {/* Cards: click abre modal con transición layoutId */}
@@ -76,7 +87,7 @@ export default function Projects() {
               viewport={{ once: true, margin: "-120px" }}
               transition={{ duration: 1, delay: i * 0.12, ease: [0.16, 1, 0.3, 1] }}
               whileHover={{ y: -4 }}
-              className="relative rounded-2xl overflow-hidden group aspect-[4/3] bg-anthracite-soft cursor-pointer"
+              className="relative overflow-hidden group aspect-[4/3] bg-anthracite-soft cursor-pointer"
             >
               <motion.img
                 layoutId={`img-${p.id}`}
@@ -113,7 +124,7 @@ export default function Projects() {
               </div>
 
               {/* Hint de expansión */}
-              <div className="absolute top-4 right-4 w-9 h-9 rounded-full bg-paper/10 backdrop-blur-sm border border-paper/20 flex items-center justify-center text-paper opacity-0 group-hover:opacity-100 transition-opacity">
+              <div className="absolute top-4 right-4 w-9 h-9 bg-paper/10 backdrop-blur-sm border border-paper/25 flex items-center justify-center text-paper opacity-0 group-hover:opacity-100 transition-opacity">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 3h6v6" /><path d="M9 21H3v-6" /><path d="M21 3l-7 7" /><path d="M3 21l7-7" /></svg>
               </div>
             </motion.article>
@@ -122,7 +133,7 @@ export default function Projects() {
       </div>
 
       {/* Modal expandido */}
-      <AnimatePresence>
+      <AnimatePresence onExitComplete={() => setClosing(false)}>
         {active && (
           <motion.div
             key="overlay"
@@ -130,20 +141,21 @@ export default function Projects() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.18, ease: "easeOut" }}
-            onClick={() => setActiveId(null)}
+            onClick={close}
             className="fixed inset-0 z-[80] bg-ink/70 backdrop-blur-md flex items-start md:items-center justify-center p-4 md:p-8 overflow-y-auto"
           >
             <motion.article
-              layoutId={`card-${active.id}`}
+              layoutId={closing ? undefined : `card-${active.id}`}
               onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-6xl bg-paper rounded-3xl overflow-hidden shadow-2xl my-auto"
-              transition={{ type: "spring", stiffness: 500, damping: 40, mass: 0.6 }}
+              exit={{ opacity: 0, scale: 0.98, transition: { duration: 0.16, ease: "easeOut" } }}
+              className="relative w-full max-w-6xl bg-paper overflow-hidden shadow-2xl my-auto"
+              transition={{ duration: 0.38, ease: [0.16, 1, 0.3, 1] }}
             >
               {/* Close button */}
               <button
-                onClick={() => setActiveId(null)}
+                onClick={close}
                 aria-label="Close"
-                className="absolute top-4 right-4 z-10 w-11 h-11 rounded-full bg-paper/95 backdrop-blur-sm border border-ink/10 flex items-center justify-center text-ink hover:bg-accent hover:text-paper transition-colors shadow-lg"
+                className="absolute top-4 right-4 z-10 w-11 h-11 bg-paper/95 backdrop-blur-sm border border-ink/15 flex items-center justify-center text-ink hover:bg-ink hover:text-paper transition-colors shadow-lg"
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6L6 18" /><path d="M6 6l12 12" /></svg>
               </button>
@@ -151,9 +163,10 @@ export default function Projects() {
               {/* Foto grande limpia (sin overlay ni gradiente) */}
               <div className="relative w-full aspect-[16/9] md:aspect-[21/9] bg-anthracite-soft overflow-hidden">
                 <motion.img
-                  layoutId={`img-${active.id}`}
+                  layoutId={closing ? undefined : `img-${active.id}`}
                   src={PROJECT_IMAGES[active.id]}
                   alt={active.title}
+                  transition={{ duration: 0.38, ease: [0.16, 1, 0.3, 1] }}
                   className="absolute inset-0 h-full w-full object-cover"
                   style={{ objectPosition: active.id === "gom" ? "50% 80%" : "50% 50%" }}
                 />

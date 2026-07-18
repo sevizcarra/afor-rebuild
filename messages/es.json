@@ -42,7 +42,21 @@
       "Abordamos cada facility desde una visión integrada: arquitectura, ingeniería, coordinación BIM y normativa, bajo una misma dirección técnica.",
       "Garantizamos continuidad técnica completa y compatibilidad con el sistema documental del cliente."
     ],
-    "cta": "Saber más"
+    "cta": "Saber más",
+    "stats": [
+      {
+        "value": "10+",
+        "label": "años en minería e industria"
+      },
+      {
+        "value": "20+",
+        "label": "facilities desarrolladas"
+      },
+      {
+        "value": "3",
+        "label": "grandes áreas de servicios"
+      }
+    ]
   },
   "principles": {
     "p1Title": "Diseño operacional",
@@ -71,7 +85,7 @@
     "list": [
       {
         "id": "cho",
-        "client": "Cliente Tier 1 · Puerto Coloso",
+        "client": "Gran minería · Zona costera Antofagasta",
         "year": "2025",
         "title": "Remediación Edificio CHO",
         "category": "Facility técnica · Ingeniería de detalle",
@@ -93,11 +107,11 @@
       },
       {
         "id": "enat",
-        "client": "Minera Escondida · EN-AT",
+        "client": "Gran minería del cobre · Programa de autonomía",
         "year": "2025",
         "title": "Facilities Camiones Autónomos",
         "category": "Sala de control + auxiliares · BIM",
-        "body": "Diseño de facilities de soporte para el programa de Camiones Autónomos en Minera Escondida. Sala de Control de Perforadoras con piso técnico elevado, revestimientos de madera, estaciones de monitoreo multiscreen, climatización de precisión y señalética normativa. Ingeniería Interim apta para construcción.",
+        "body": "Diseño de facilities de soporte para el programa de Camiones Autónomos en una operación de gran minería. Sala de Control de Perforadoras con piso técnico elevado, revestimientos de madera, estaciones de monitoreo multiscreen, climatización de precisión y señalética normativa. Ingeniería Interim apta para construcción.",
         "highlights": [
           {
             "label": "Tipo",
@@ -105,7 +119,7 @@
           },
           {
             "label": "Programa",
-            "value": "EN-AT"
+            "value": "Gran minería"
           },
           {
             "label": "Rol AFOR",
@@ -115,9 +129,9 @@
       },
       {
         "id": "gom",
-        "client": "Minera Escondida · EN-AT",
+        "client": "Gran minería del cobre · Faena Norte Grande",
         "year": "2024",
-        "title": "Sala de Control — GOM MEL",
+        "title": "Sala de Control de Operaciones Mina",
         "category": "Facility técnica · Ingeniería de detalle",
         "body": "Intervención integral del recinto con cielo metálico lineal, revestimiento mural en listonería de madera, iluminación LED lineal empotrada y distribución ergonómica de puestos de operación con brazos articulados y monitores multipantalla. Diseño que prioriza concentración operacional, confort acústico y control lumínico para jornadas extendidas.",
         "highlights": [
@@ -127,7 +141,7 @@
           },
           {
             "label": "Programa",
-            "value": "GOM EN-AT"
+            "value": "Operación minera"
           },
           {
             "label": "Rol AFOR",
@@ -137,9 +151,9 @@
       },
       {
         "id": "smh",
-        "client": "SMH · Minera Spence",
+        "client": "Gran minería · Región de Antofagasta",
         "year": "2024",
-        "title": "Sala de Control — SMH Spence",
+        "title": "Sala de Control Industrial",
         "category": "Sala de control · Interior",
         "body": "Nueva sala de control para operaciones con revestimientos melamínicos y detalles en aluminio. Cielo de perfilería lineal U con iluminación incorporada, resolviendo acústica y confort visual para las jornadas requeridas por la operación. Layout centrado en las consolas de operadores, con circulaciones limpias, control lumínico regulable y terminaciones robustas pensadas para uso industrial continuo.",
         "highlights": [
@@ -159,11 +173,11 @@
       },
       {
         "id": "yacas",
-        "client": "Minera Las Yacas · Vicuña",
+        "client": "Proyecto minero · Valle de Vicuña",
         "year": "2023",
         "title": "Barrio Cívico e Infraestructura",
         "category": "Master plan de facilities · Faena",
-        "body": "Diseño arquitectónico del barrio cívico e infraestructura de apoyo para el proyecto minero Las Yacas. Definición de oficinas administrativas, control de ingreso, baños y salas de cambio con distribución modular orientada a optimizar flujos de circulación y cumplimiento normativo. Layouts de emplazamiento, estacionamientos y accesos vehiculares integrados al plan general de faena.",
+        "body": "Diseño arquitectónico del barrio cívico e infraestructura de apoyo para un proyecto de gran minería. Definición de oficinas administrativas, control de ingreso, baños y salas de cambio con distribución modular orientada a optimizar flujos de circulación y cumplimiento normativo. Layouts de emplazamiento, estacionamientos y accesos vehiculares integrados al plan general de faena.",
         "highlights": [
           {
             "label": "Tipo",
@@ -181,11 +195,11 @@
       },
       {
         "id": "mecasfy",
-        "client": "Mecasfy · Santa Alejandra",
+        "client": "Industria · Santa Alejandra",
         "year": "2024",
         "title": "Edificio Industrial y Corporativo",
         "category": "Facility industrial · Diseño integral",
-        "body": "Diseño arquitectónico de edificio industrial y corporativo para Mecasfy. Nave industrial con oficinas administrativas integradas, fachada de policarbonato translúcido con estructura metálica vista, accesos vehiculares y peatonales diferenciados, paisajismo perimetral y estacionamientos.",
+        "body": "Diseño arquitectónico de edificio industrial y corporativo para un mandante industrial. Nave industrial con oficinas administrativas integradas, fachada de policarbonato translúcido con estructura metálica vista, accesos vehiculares y peatonales diferenciados, paisajismo perimetral y estacionamientos.",
         "highlights": [
           {
             "label": "Tipo",
@@ -203,11 +217,11 @@
       },
       {
         "id": "gt",
-        "client": "Grant Thornton Chile",
+        "client": "Servicios profesionales · Santiago",
         "year": "2024",
         "title": "Oficinas Corporativas",
         "category": "Habilitación · Ejecutado",
-        "body": "Habilitación de nuevas oficinas corporativas para Grant Thornton Chile. Diseño elegante y moderno con mobiliario de madera natural, cielo expuesto con iluminación lineal LED, estanterías metálicas con vegetación integrada como separadores de ambientes y estaciones de trabajo colaborativas. Prioridad en luz natural, calidez de materiales y distribución abierta.",
+        "body": "Habilitación de nuevas oficinas corporativas para una firma de servicios profesionales. Diseño elegante y moderno con mobiliario de madera natural, cielo expuesto con iluminación lineal LED, estanterías metálicas con vegetación integrada como separadores de ambientes y estaciones de trabajo colaborativas. Prioridad en luz natural, calidez de materiales y distribución abierta.",
         "highlights": [
           {
             "label": "Tipo",
@@ -225,7 +239,7 @@
       },
       {
         "id": "sshh",
-        "client": "Infraestructura Universitaria",
+        "client": "Infraestructura universitaria",
         "year": "2023",
         "title": "SSHH — Infraestructura Universitaria",
         "category": "Baterías sanitarias · Alto tráfico",
@@ -247,9 +261,9 @@
       },
       {
         "id": "dti",
-        "client": "Infraestructura Institucional · DTI",
+        "client": "Infraestructura institucional",
         "year": "2024",
-        "title": "Cubierta DTI",
+        "title": "Cubierta Técnica — Data Center",
         "category": "Cubierta técnica · Data center",
         "body": "Gerenciamiento integral del recambio de cubierta técnica de una sala de servidores institucionales de 600 m². Nueva estructura registrable por tramos, concebida para alojar equipos de precisión que no admiten pausas ni goteras: climatización constante, redundancia eléctrica y una operación 24/7 que no puede detenerse durante la obra. Perfilería metálica prepintada, membrana bajo cubierta, sellos térmicos y un plan de faenas coordinado con los turnos del datacenter —cada panel montado sin desconectar un solo rack— para intervenir el corazón digital de la institución con la máquina en marcha.",
         "highlights": [
@@ -280,51 +294,82 @@
     }
   },
   "services": {
-    "titleStart": "Servicios ",
-    "titleHighlight": "especializados",
-    "titleEnd": "",
-    "subtitle": "Servicios técnicos integrados al equipo del proyecto, bajo los protocolos del mandante.",
-    "items": [
+    "eyebrow": "Servicios",
+    "heading": "Servicios",
+    "intro": "Tres grandes áreas de servicios que cubren el ciclo completo de una facility: diseñarla, transformarla y mantenerla operativa.",
+    "cta": "Iniciemos un proyecto",
+    "transversalLabel": "Transversal a las tres áreas",
+    "transversal": [
+      "Coordinación multidisciplinar y revisión de contraparte",
+      "Supervisión de terreno y control de avances",
+      "BIM · Revit bajo la codificación del mandante"
+    ],
+    "areas": [
       {
-        "title": "Plot Plan para facilities",
-        "body": "Diseño conceptual de instalaciones para faenas mineras e industriales: layouts, programa arquitectónico, flujos operacionales, estimación de superficies y plan maestro coordinado con disciplinas estructurales y MEP."
+        "n": "01",
+        "featured": true,
+        "title": "Proyectos nuevos",
+        "tagline": "Facilities desde cero: del plot plan a la ingeniería de detalle, listas para construcción.",
+        "subs": [
+          {
+            "title": "Plot plan y master plan de facilities",
+            "body": "Layouts, programa arquitectónico, flujos operacionales y plan maestro coordinado con disciplinas estructurales y MEP."
+          },
+          {
+            "title": "Oficinas administrativas y casas de cambio",
+            "body": "Espacios para personal: oficinas técnicas, salas de reunión, comedores, vestuarios y baños bajo normativa minera."
+          },
+          {
+            "title": "Salas de control, servidores y recintos técnicos",
+            "body": "Recintos críticos con piso técnico, climatización de precisión, control lumínico y acústico y puestos de operación ergonómicos."
+          },
+          {
+            "title": "RESPEL, almacenamiento y truck shops",
+            "body": "Edificación técnica para residuos peligrosos, bodegas industriales y talleres de equipos pesados, con seguridad operacional certificada."
+          }
+        ]
       },
       {
-        "title": "Oficinas administrativas y casas de cambio",
-        "body": "Diseño y ejecución de espacios para personal: oficinas técnicas, salas de reunión, comedores, casas de cambio para operadores, vestuarios y baños bajo normativa minera."
+        "n": "02",
+        "featured": true,
+        "title": "Remodelación interior",
+        "tagline": "Espacios de trabajo en minería e industria, transformados sin detener la operación.",
+        "subs": [
+          {
+            "title": "Remodelación integral de espacios de trabajo",
+            "body": "Oficinas, comedores, casas de cambio y áreas comunes en instalaciones existentes, renovadas de punta a punta."
+          },
+          {
+            "title": "Habilitación y cambio de uso",
+            "body": "Reconversión de edificios y recintos para nuevos programas operacionales, con expediente normativo completo."
+          },
+          {
+            "title": "Actualización de estándar en operación",
+            "body": "Mejora de terminaciones, confort y cumplimiento normativo con faenas planificadas según los turnos de la operación."
+          }
+        ]
       },
       {
-        "title": "Salas de control, servidores, eléctricas y técnicas",
-        "body": "Recintos críticos con piso técnico, climatización de precisión, control lumínico y acústico, distribución ergonómica de puestos de operación con monitores multipantalla y revestimientos especializados."
-      },
-      {
-        "title": "RESPEL, almacenamiento y truck shops",
-        "body": "Edificación técnica para residuos peligrosos, bodegas industriales y talleres de mantenimiento de equipos pesados, con cumplimiento normativo y seguridad operacional certificada."
-      },
-      {
-        "title": "Coordinación multidisciplinar y revisión de contraparte",
-        "body": "Integración de disciplinas estructural, mecánica, eléctrica, instrumentación y civil. Revisión técnica de planos y documentos de terceros bajo los estándares del mandante."
-      },
-      {
-        "title": "Supervisión de terreno y avances",
-        "body": "Inspección técnica en obra, control de avances físicos, validación de entregables, gestión de no conformidades y cierre de proyecto con documentación as-built."
-      },
-      {
-        "title": "Project Management multidisciplinar",
-        "body": "Gestión integral de proyectos: planificación, control de plazos y costos, coordinación de proveedores, gestión de riesgos y reporte ejecutivo al mandante."
+        "n": "03",
+        "featured": false,
+        "title": "Mantención crítica de facilities",
+        "tagline": "Ingeniería para intervenir infraestructura existente que no puede fallar ni detenerse.",
+        "subs": [
+          {
+            "title": "Cubiertas y envolventes técnicas",
+            "body": "Recambio de cubiertas, membranas y sellos sobre recintos operativos — incluidos data centers y salas técnicas 24/7."
+          },
+          {
+            "title": "Revestimientos y terminaciones industriales",
+            "body": "Renovación de revestimientos interiores y exteriores con materiales de resistencia industrial y alto tráfico."
+          },
+          {
+            "title": "Reparaciones y recambios técnicos",
+            "body": "Diagnóstico e ingeniería de reparación para elementos estructurales y constructivos comprometidos."
+          }
+        ]
       }
-    ],
-    "eyebrow": "Áreas de práctica",
-    "tags": [
-      "Master Plan",
-      "Edificación",
-      "Recintos técnicos",
-      "Ingeniería Interim",
-      "Operación",
-      "RESPEL",
-      "Revisión"
-    ],
-    "heading": "Servicios"
+    ]
   },
   "contact": {
     "titleStart": "Iniciemos un ",
@@ -342,11 +387,10 @@
       "submitSuccess": "Mensaje enviado",
       "submitError": "Error al enviar",
       "types": [
-        "Mining Facilities",
-        "Industrial Facilities",
-        "Master Plan",
-        "Project Management",
-        "Coordinación multidisciplinar",
+        "Proyecto nuevo",
+        "Remodelación interior",
+        "Mantención crítica",
+        "Coordinación / revisión",
         "Otro"
       ]
     },

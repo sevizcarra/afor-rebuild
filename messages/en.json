@@ -42,7 +42,21 @@
       "We approach each facility from an integrated view: architecture, engineering, BIM coordination and code, under a single technical direction.",
       "We guarantee complete technical continuity and compatibility with the client document system."
     ],
-    "cta": "Learn more"
+    "cta": "Learn more",
+    "stats": [
+      {
+        "value": "10+",
+        "label": "years in mining and industry"
+      },
+      {
+        "value": "20+",
+        "label": "facilities delivered"
+      },
+      {
+        "value": "3",
+        "label": "major service areas"
+      }
+    ]
   },
   "principles": {
     "p1Title": "Operational design",
@@ -71,7 +85,7 @@
     "list": [
       {
         "id": "cho",
-        "client": "Tier 1 Client · Puerto Coloso",
+        "client": "Major mining · Antofagasta coast",
         "year": "2025",
         "title": "CHO Building Remediation",
         "category": "Technical facility · Detailed engineering",
@@ -93,11 +107,11 @@
       },
       {
         "id": "enat",
-        "client": "Escondida Mine · EN-AT",
+        "client": "Copper mining major · Autonomy program",
         "year": "2025",
         "title": "Autonomous Trucks Facilities",
         "category": "Control room + auxiliaries · BIM",
-        "body": "Design of supporting facilities for the Autonomous Trucks program at Minera Escondida. Drilling Control Room with raised technical floor, wood finishes, multiscreen monitoring stations, precision climate control and regulatory signage. Interim engineering ready for construction.",
+        "body": "Design of supporting facilities for the Autonomous Trucks program at a major mining operation. Drilling Control Room with raised technical floor, wood finishes, multiscreen monitoring stations, precision climate control and regulatory signage. Interim engineering ready for construction.",
         "highlights": [
           {
             "label": "Type",
@@ -105,7 +119,7 @@
           },
           {
             "label": "Program",
-            "value": "EN-AT"
+            "value": "Gran minería"
           },
           {
             "label": "AFOR role",
@@ -115,9 +129,9 @@
       },
       {
         "id": "gom",
-        "client": "Escondida Mine · EN-AT",
+        "client": "Copper mining major · Northern Chile",
         "year": "2024",
-        "title": "Control Room — GOM MEL",
+        "title": "Mine Operations Control Room",
         "category": "Technical facility · Detailed engineering",
         "body": "Complete intervention with linear metal ceiling, wooden batten wall finish, recessed linear LED lighting and ergonomic distribution of operator stations with articulated arms and multi-screen monitors. Design that prioritizes operational concentration, acoustic comfort and luminous control for extended shifts.",
         "highlights": [
@@ -127,7 +141,7 @@
           },
           {
             "label": "Program",
-            "value": "GOM EN-AT"
+            "value": "Operación minera"
           },
           {
             "label": "AFOR role",
@@ -137,9 +151,9 @@
       },
       {
         "id": "smh",
-        "client": "SMH · Spence Mine",
+        "client": "Major mining · Antofagasta Region",
         "year": "2024",
-        "title": "Control Room — SMH Spence",
+        "title": "Industrial Control Room",
         "category": "Control room · Interior",
         "body": "New operations control room featuring melamine wall claddings and aluminum trims. Linear U-profile ceiling with integrated lighting, engineered for acoustic performance and visual comfort across the shifts the operation requires. Layout centered on operator consoles with clean circulation paths, dimmable lighting control, and robust finishes designed for continuous industrial use.",
         "highlights": [
@@ -159,11 +173,11 @@
       },
       {
         "id": "yacas",
-        "client": "Las Yacas Mine · Vicuña",
+        "client": "Mining project · Vicuña Valley",
         "year": "2023",
         "title": "Civic District and Infrastructure",
         "category": "Master plan of facilities · Site",
-        "body": "Architectural design of the civic district and supporting infrastructure for the Las Yacas mining project. Definition of administrative offices, access control, restrooms and change rooms with modular distribution oriented to optimize circulation flows and regulatory compliance. Site layouts, parking and vehicle accesses integrated with the general site plan.",
+        "body": "Architectural design of the civic district and supporting infrastructure for a major mining project. Definition of administrative offices, access control, restrooms and change rooms with modular distribution oriented to optimize circulation flows and regulatory compliance. Site layouts, parking and vehicle accesses integrated with the general site plan.",
         "highlights": [
           {
             "label": "Type",
@@ -181,11 +195,11 @@
       },
       {
         "id": "mecasfy",
-        "client": "Mecasfy · Santa Alejandra",
+        "client": "Industry · Santa Alejandra",
         "year": "2024",
         "title": "Industrial and Corporate Building",
         "category": "Industrial facility · Integral design",
-        "body": "Architectural design of an industrial and corporate building for Mecasfy. Industrial warehouse with integrated administrative offices, translucent polycarbonate facade with exposed metallic structure, differentiated vehicle and pedestrian accesses, perimeter landscaping and parking.",
+        "body": "Architectural design of an industrial and corporate building for an industrial client. Industrial warehouse with integrated administrative offices, translucent polycarbonate facade with exposed metallic structure, differentiated vehicle and pedestrian accesses, perimeter landscaping and parking.",
         "highlights": [
           {
             "label": "Type",
@@ -203,11 +217,11 @@
       },
       {
         "id": "gt",
-        "client": "Grant Thornton Chile",
+        "client": "Professional services · Santiago",
         "year": "2024",
         "title": "Corporate Offices",
         "category": "Fit-out · Completed",
-        "body": "Fit-out of new corporate offices for Grant Thornton Chile. Elegant and modern design with natural wood furniture, exposed ceiling with linear LED lighting, metal shelves with integrated vegetation as room dividers and collaborative workstations. Priority on natural light, warmth of materials and open distribution.",
+        "body": "Fit-out of new corporate offices for a professional services firm. Elegant and modern design with natural wood furniture, exposed ceiling with linear LED lighting, metal shelves with integrated vegetation as room dividers and collaborative workstations. Priority on natural light, warmth of materials and open distribution.",
         "highlights": [
           {
             "label": "Type",
@@ -225,7 +239,7 @@
       },
       {
         "id": "sshh",
-        "client": "University Infrastructure",
+        "client": "University infrastructure",
         "year": "2023",
         "title": "Restrooms — University Infrastructure",
         "category": "Restroom facility · High traffic",
@@ -247,9 +261,9 @@
       },
       {
         "id": "dti",
-        "client": "Institutional Infrastructure · DTI",
+        "client": "Institutional infrastructure",
         "year": "2024",
-        "title": "DTI Roof",
+        "title": "Technical Roof — Data Center",
         "category": "Technical roof · Data center",
         "body": "End-to-end project management for the replacement of the technical roof over a 600 m² institutional server room. New bay-registrable structure engineered to host precision equipment that tolerates no pauses and no leaks: constant HVAC, electrical redundancy, and a 24/7 operation that cannot be stopped during construction. Pre-painted metal profiles, underlay membrane, thermal sealing, and a work plan coordinated with the datacenter shift schedule —each panel installed without disconnecting a single rack— to intervene the institution's digital core while the machine keeps running.",
         "highlights": [
@@ -280,51 +294,82 @@
     }
   },
   "services": {
-    "titleStart": "Specialized ",
-    "titleHighlight": "services",
-    "titleEnd": "",
-    "subtitle": "Technical services integrated with the project team, under the client's protocols.",
-    "items": [
+    "eyebrow": "Services",
+    "heading": "Services",
+    "intro": "Three major service areas covering the full lifecycle of a facility: design it, transform it, and keep it running.",
+    "cta": "Start a project",
+    "transversalLabel": "Across all three areas",
+    "transversal": [
+      "Multidisciplinary coordination and counterpart review",
+      "Site supervision and progress control",
+      "BIM · Revit under the client's coding standards"
+    ],
+    "areas": [
       {
-        "title": "Plot Plan for facilities",
-        "body": "Conceptual design of facilities for mining and industrial sites: layouts, architectural program, operational flows, surface estimation and master plan coordinated with structural and MEP disciplines."
+        "n": "01",
+        "featured": true,
+        "title": "New-build projects",
+        "tagline": "Facilities from scratch: from plot plan to detail engineering, ready for construction.",
+        "subs": [
+          {
+            "title": "Plot plans and facility master plans",
+            "body": "Layouts, architectural program, operational flows and a master plan coordinated with structural and MEP disciplines."
+          },
+          {
+            "title": "Administrative offices and change houses",
+            "body": "Spaces for personnel: technical offices, meeting rooms, dining halls, locker rooms and restrooms under mining regulations."
+          },
+          {
+            "title": "Control rooms, server and technical rooms",
+            "body": "Critical rooms with raised floors, precision climate control, lighting and acoustic control and ergonomic operator stations."
+          },
+          {
+            "title": "Hazardous waste, storage and truck shops",
+            "body": "Technical buildings for hazardous waste, industrial warehouses and heavy-equipment workshops with certified operational safety."
+          }
+        ]
       },
       {
-        "title": "Administrative offices and change houses",
-        "body": "Design and execution of personnel spaces: technical offices, meeting rooms, dining areas, change houses for operators, locker rooms and restrooms under mining regulations."
+        "n": "02",
+        "featured": true,
+        "title": "Interior remodeling",
+        "tagline": "Workspaces in mining and industry, transformed without stopping the operation.",
+        "subs": [
+          {
+            "title": "Full workspace remodeling",
+            "body": "Offices, dining halls, change houses and common areas in existing installations, renewed end to end."
+          },
+          {
+            "title": "Fit-out and change of use",
+            "body": "Conversion of buildings and rooms for new operational programs, with a complete regulatory dossier."
+          },
+          {
+            "title": "Standard upgrades in operation",
+            "body": "Improved finishes, comfort and regulatory compliance with works planned around the operation's shifts."
+          }
+        ]
       },
       {
-        "title": "Control, server, electrical and technical rooms",
-        "body": "Critical rooms with raised technical floor, precision climate control, lighting and acoustic management, ergonomic distribution of operator stations with multi-screen monitors and specialized finishes."
-      },
-      {
-        "title": "Hazardous waste, warehousing and truck shops",
-        "body": "Technical construction for hazardous waste, industrial warehouses and heavy equipment maintenance shops, with regulatory compliance and certified operational safety."
-      },
-      {
-        "title": "Multidisciplinary coordination and counterpart review",
-        "body": "Integration of structural, mechanical, electrical, instrumentation and civil disciplines. Technical review of third-party plans and documents under the client's standards."
-      },
-      {
-        "title": "Site supervision and progress",
-        "body": "Technical inspection on site, control of physical progress, validation of deliverables, management of non-conformities and project closure with as-built documentation."
-      },
-      {
-        "title": "Multidisciplinary Project Management",
-        "body": "Comprehensive project management: planning, deadline and cost control, supplier coordination, risk management and executive reporting to the client."
+        "n": "03",
+        "featured": false,
+        "title": "Critical facility maintenance",
+        "tagline": "Engineering for existing infrastructure that cannot fail or stop.",
+        "subs": [
+          {
+            "title": "Roofing and technical envelopes",
+            "body": "Replacement of roofs, membranes and seals over operating rooms — including data centers and 24/7 technical rooms."
+          },
+          {
+            "title": "Industrial cladding and finishes",
+            "body": "Renewal of interior and exterior cladding with industrial-grade, high-traffic materials."
+          },
+          {
+            "title": "Technical repairs and replacements",
+            "body": "Assessment and repair engineering for compromised structural and construction elements."
+          }
+        ]
       }
-    ],
-    "eyebrow": "Practice areas",
-    "tags": [
-      "Master Plan",
-      "Building",
-      "Technical rooms",
-      "Interim Engineering",
-      "Operations",
-      "Hazardous waste",
-      "Review"
-    ],
-    "heading": "Services"
+    ]
   },
   "contact": {
     "titleStart": "Let's start a ",
@@ -342,11 +387,10 @@
       "submitSuccess": "Message sent",
       "submitError": "Send error",
       "types": [
-        "Mining Facilities",
-        "Industrial Facilities",
-        "Master Plan",
-        "Project Management",
-        "Multidisciplinary coordination",
+        "New-build project",
+        "Interior remodeling",
+        "Critical maintenance",
+        "Coordination / review",
         "Other"
       ]
     },
