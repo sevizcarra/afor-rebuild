@@ -32,7 +32,7 @@ export default function About() {
             className="font-sans font-semibold text-ink leading-[1.02] tracking-[-0.025em] max-w-4xl"
             style={{ fontSize: "clamp(38px, 4.6vw, 68px)" }}
           >
-            {t("titleStart")}<span className="text-accent">{t("titleHighlight")}</span>{t("titleEnd")}
+            {t("titleStart")}<span className="font-serif italic font-normal text-accent">{t("titleHighlight")}</span>{t("titleEnd")}
           </motion.h2>
         </div>
 

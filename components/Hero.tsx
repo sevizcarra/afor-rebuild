@@ -6,7 +6,7 @@ export default function Hero() {
   const t = useTranslations("hero");
 
   return (
-    <section id="top" className="relative bg-paper min-h-screen flex flex-col pb-16 md:pb-24">
+    <section id="top" className="relative bg-anthracite min-h-screen flex flex-col pb-16 md:pb-24">
       {/* Video en su propio contenedor: 65vh de alto, fade interno al pie hacia paper.
           Ningún elemento se superpone con el flujo siguiente. */}
       <div className="relative h-[62vh] md:h-[68vh] w-full overflow-hidden">
@@ -23,10 +23,10 @@ export default function Hero() {
           <source src="/videos/hero.mp4" type="video/mp4" />
         </video>
         {/* Fades del video */}
-        <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-paper/40 to-transparent pointer-events-none" />
-        <div className="absolute inset-x-0 bottom-20 h-1/3 bg-gradient-to-t from-paper via-paper/80 to-transparent pointer-events-none" />
+        <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-anthracite/40 to-transparent pointer-events-none" />
+        <div className="absolute inset-x-0 bottom-20 h-1/3 bg-gradient-to-t from-anthracite via-anthracite/80 to-transparent pointer-events-none" />
         {/* Bloque solido paper al pie: 80px de paper puro tapan cualquier borde del video */}
-        <div className="absolute inset-x-0 bottom-0 h-20 bg-paper pointer-events-none" />
+        <div className="absolute inset-x-0 bottom-0 h-20 bg-anthracite pointer-events-none" />
       </div>
 
       {/* Wordmark + summary DEBAJO del video, sobre bg-paper puro */}
