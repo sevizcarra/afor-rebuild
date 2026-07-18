@@ -58,21 +58,18 @@ export default function Projects() {
   return (
     <section id="proyectos" className="relative bg-anthracite text-ink pt-10 md:pt-14 pb-10 md:pb-14">
       <div className="px-6 md:px-10">
-        {/* Header consistente: hairline dura + eyebrow numerado */}
-        <div className="grid grid-cols-12 gap-6 pt-6 mb-14 md:mb-20 border-t border-ink">
-          <div className="col-span-12 md:col-span-3">
-            <div className="font-mono text-[11.5px] uppercase tracking-[0.08em] text-ink/60">
-              02 — {t("eyebrow")}
-            </div>
+        {/* Header alineado a la izquierda */}
+        <div className="mb-14 md:mb-20">
+          <div className="mono-cap text-ink/60 flex items-center gap-2 mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+            {t("eyebrow")}
           </div>
-          <div className="col-span-12 md:col-span-8">
-            <h2
-              className="font-sans font-semibold text-ink leading-[1.02] tracking-[-0.025em]"
-              style={{ fontSize: "clamp(38px, 4.6vw, 68px)" }}
-            >
-              {t("heading")}<span className="text-accent">.</span>
-            </h2>
-          </div>
+          <h2
+            className="font-sans font-semibold text-ink leading-[1.02] tracking-[-0.025em]"
+            style={{ fontSize: "clamp(38px, 4.6vw, 68px)" }}
+          >
+            {t("heading")}<span className="text-accent">.</span>
+          </h2>
         </div>
 
         {/* Cards: click abre modal con transición layoutId */}
@@ -206,7 +203,7 @@ export default function Projects() {
                         <div className="mono-cap text-ink/50 mb-1.5">{t("modal.year")}</div>
                         <div className="text-ink text-[15px] tabular-nums">{active.year}</div>
                       </div>
-                      <div className="pt-6 border-t border-ink/10 space-y-4">
+                      <div className="pt-6 space-y-4">
                         {active.highlights.map((h) => (
                           <div key={h.label} className="flex items-baseline justify-between gap-4">
                             <span className="mono-cap text-ink/50">{h.label}</span>

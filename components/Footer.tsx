@@ -8,7 +8,7 @@ export default function Footer() {
   const tSite = useTranslations("site");
 
   return (
-    <footer className="bg-anthracite text-ink py-10 border-t border-ink/10">
+    <footer className="bg-anthracite text-ink py-10">
       <div className="px-6 md:px-10 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div className="flex items-center gap-3 flex-wrap">
           <span className="w-1.5 h-1.5 rounded-full bg-accent" />
